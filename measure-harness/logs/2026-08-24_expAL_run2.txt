@@ -1,0 +1,119 @@
+CPU is running at low speed (8289 kHz).
+CPU is running at low speed (8286 kHz).
+measurement ELF SHA-256: 555777958E99D2871115D2E74035F665239B7363B6091C3311CBC0EF06A4CFE8
+measurement SREC SHA-256: 23C184F93989B0716F3FA1CB177B9AAF9F63714F75734C8258EAD92DEFAD898E
+connected: Cortex-M85
+flash code readback PASS: bytes=699328 segments=2 sha256=25E2525420E7C83C4E085745E54F7D6E9EE8D0688E713B9611914C558A372973
+=== EK-RA8M1 harness: KAT + DWT/PMU (ITCM/DTCM) ===
+
+== KAT: X25519 (RFC 7748 s6.1) ==
+alice_pk: OK
+bob_pk  : OK
+K(a,B)  : OK
+K(b,A)  : OK
+== KAT: SHA3-256 via asm Keccak-f1600 ==
+sha3("")   : OK
+sha3("abc"): OK
+
+KAT ALL PASS -- streams A+B verified on board
+
+DAUTHCTRL readback: 15
+
+[calib-empty] x1
+  dwt_cyc/op   : 136
+  pmu_cyc/op   : 161
+  insts        : 0
+  stall_op     : 0
+  stall_op_fe  : 0
+  stall_op_be  : 0
+  IPC x100     : 0
+  slot-waste % : 0
+
+[keccak-f1600] x1000
+  dwt_cyc/op   : 5504
+  pmu_cyc/op   : 5504
+  insts        : 0
+  stall_op     : 0
+  stall_op_fe  : 0
+  stall_op_be  : 0
+  IPC x100     : 0
+  slot-waste % : 0
+
+[x25519-scalarmult] x10
+  dwt_cyc/op   : 357520
+  pmu_cyc/op   : 357521
+  insts        : 0
+  stall_op     : 0
+  stall_op_fe  : 0
+  stall_op_be  : 0
+  IPC x100     : 0
+  slot-waste % : 0
+
+== K3: ML-KEM-768 (pqm4 m4fspeed) ==
+roundtrip+reject: OK
+keccak perms/op: keygen 43  encaps 44  decaps 44  combiner 1
+expX bytes-mm: 0 smoke-fails=0 align-base-bits=257 align-candidate-bits=257
+expX timing-mm: 0 stack-fails=0 stack-used=7640
+expY bytes-mm: 0 smoke-fails=0 oracle-mm=0 oracle-canary=0 align-base-bits=257 align-candidate-bits=257 input-min=-1664 input-max=1664 output-min=-14304 output-max=24656
+expY timing-mm: 0 stack-fails=0 stack-used=7640
+expZ bytes-mm: 0 smoke-fails=0 fwd-align-base=257 fwd-align-candidate=257 inv-align-base=257 inv-align-candidate=257
+expZ timing-mm: 0 stack-fails=0 stack-used=7640
+expAA bytes-mm: 0 smoke-fails=0 fwd-align-base=257 fwd-align-candidate=257
+expAA timing-mm: 0 stack-fails=0 stack-used=7640
+expAB bytes-mm: 0 smoke-fails=0
+expAB timing-mm: 0 stack-fails=0 stack-used=7832
+expAE x4-kat-fails: 0 u-kat-fails=0
+expAE bytes-mm: 0 smoke-fails=0
+expAE timing-mm: 0 stack-fails=0 stack-used=9028
+expAF path counts (u4-rounds/u8-rounds/real/dummy):
+  op0: 0/0/0/0
+  op1: 0/0/0/0
+  op2: 0/0/0/0
+expAF mismatch: 0
+expAI mismatch: 0 stack-fails=0 stack-used=9020
+bfull_slothy diag: prod-mm=0 lane-mm=0 first-bad-prod= first-bad-lane=
+mul256 full-vs-budget mismatch: 0  /  stitched(product+theta) mismatch: 0  /  bmid(theta x3) mismatch: 0  /  bfull mismatch: 0  /  expc mismatch: 0  /  expd mismatch: 0  /  expe mismatch: 0  /  mve4 mismatch: 0  /  coissue mismatch: 0  /  cosol mismatch: 0  /  expg mismatch: 0  /  exph mismatch: 0  /  expi mismatch: 0  /  v04 mismatch: 0  /  expj mismatch: 0  /  expk mismatch: 0  /  expl mismatch: 0  /  expm mismatch: 0  /  expt mismatch: 0  /  expu mismatch: 0  /  expv mismatch: 0  /  expw mismatch: 0 m55-unavailable=1 m85-inv-mm=0 m85-roundtrip-mm=0
+expAJ kat-mm: 0
+expAJ bytes-mm: 0 smoke-fails=0
+expAJ xw-bytes-mm: 0 xw-smoke-fails=0
+expAJ timing-mm: 0 stack-fails=0 stack-used=7832
+expAK timing-mm: 0 stack-fails=0 stack-used=7832
+expAL xw-bytes-mm: 0 xw-smoke-fails=0
+expAL timing-mm: 0 stack-fails=0 stack-used=7848
+rep arrays ready x100 (333 slots)
+HARNESS DONE
+
+[N=100] expal-xwing-00a-keygen: median=796032 (calib 25 차감시 796007) min=794904 max=809582
+[N=100] expal-xwing-00a-encaps: median=1184065 (calib 25 차감시 1184040) min=1183901 max=1184233
+[N=100] expal-xwing-00a-decaps: median=877513 (calib 25 차감시 877488) min=877261 max=877705
+[N=100] expal-xwing-10a-keygen: median=773306 (calib 25 차감시 773281) min=772086 max=786772
+[N=100] expal-xwing-10a-encaps: median=1165711 (calib 25 차감시 1165686) min=1165461 max=1165889
+[N=100] expal-xwing-10a-decaps: median=849283 (calib 25 차감시 849258) min=849105 max=849483
+[N=100] expal-xwing-11a-keygen: median=761850 (calib 25 차감시 761825) min=760652 max=775312
+[N=100] expal-xwing-11a-encaps: median=1134842 (calib 25 차감시 1134817) min=1134672 max=1135048
+[N=100] expal-xwing-11a-decaps: median=809822 (calib 25 차감시 809797) min=809638 max=810056
+[N=100] expal-xwing-01a-keygen: median=784574 (calib 25 차감시 784549) min=783434 max=797940
+[N=100] expal-xwing-01a-encaps: median=1152979 (calib 25 차감시 1152954) min=1152846 max=1153154
+[N=100] expal-xwing-01a-decaps: median=838166 (calib 25 차감시 838141) min=837928 max=838394
+[N=100] expal-xwing-01b-keygen: median=784582 (calib 25 차감시 784557) min=783376 max=797942
+[N=100] expal-xwing-01b-encaps: median=1152993 (calib 25 차감시 1152968) min=1152767 max=1153146
+[N=100] expal-xwing-01b-decaps: median=838262 (calib 25 차감시 838237) min=838098 max=838496
+[N=100] expal-xwing-11b-keygen: median=761872 (calib 25 차감시 761847) min=760718 max=775236
+[N=100] expal-xwing-11b-encaps: median=1134844 (calib 25 차감시 1134819) min=1134674 max=1135088
+[N=100] expal-xwing-11b-decaps: median=809828 (calib 25 차감시 809803) min=809626 max=810038
+[N=100] expal-xwing-10b-keygen: median=773276 (calib 25 차감시 773251) min=772084 max=786731
+[N=100] expal-xwing-10b-encaps: median=1165695 (calib 25 차감시 1165670) min=1165519 max=1165874
+[N=100] expal-xwing-10b-decaps: median=849281 (calib 25 차감시 849256) min=849039 max=849440
+[N=100] expal-xwing-00b-keygen: median=796042 (calib 25 차감시 796017) min=794998 max=809518
+[N=100] expal-xwing-00b-encaps: median=1184081 (calib 25 차감시 1184056) min=1183845 max=1184215
+[N=100] expal-xwing-00b-decaps: median=877545 (calib 25 차감시 877520) min=877337 max=877765
+
+[exp AL] same-ELF X/Y/C8 x C9-v1 factorial
+  keygen: 00->11 a=+34182 b=+34170 conservative=+34170 (+4.293%)
+    N@C0=+22726 N@C1=+22710 C@N0=+11458 C@N1=+11404 synergy(a/b/min)=-2/-56/-56
+  encaps: 00->11 a=+49223 b=+49237 conservative=+49223 (+4.157%)
+    N@C0=+18354 N@C1=+18137 C@N0=+31086 C@N1=+30851 synergy(a/b/min)=-217/-237/-237
+  decaps: 00->11 a=+67691 b=+67717 conservative=+67691 (+7.714%)
+    N@C0=+28230 N@C1=+28344 C@N0=+39283 C@N1=+39453 synergy(a/b/min)=+114/+170/+114
+[exp AL host gate] PASS; harness_fails=0
+EXPAL_JSON {"calib": 25, "effects": {"decaps": {"c9_at_xyc8_0": {"a": 39347, "b": 39283, "conservative": 39283, "pct_a": 4.484049924329449, "pct_b": 4.476593126082597, "pct_conservative": 4.476593126082597}, "c9_at_xyc8_1": {"a": 39461, "b": 39453, "conservative": 39453, "pct_a": 4.646526732747882, "pct_b": 4.645595674331415, "pct_conservative": 4.645595674331415}, "direct_00_to_11": {"a": 67691, "b": 67717, "conservative": 67691, "pct_a": 7.714179567127983, "pct_b": 7.716861154161729, "pct_conservative": 7.714179567127983}, "synergy": {"a": 114, "b": 170, "conservative": 114}, "xyc8_at_c9_0": {"a": 28230, "b": 28264, "conservative": 28230, "pct_a": 3.217138012143756, "pct_b": 3.2208952502507064, "pct_conservative": 3.217138012143756}, "xyc8_at_c9_1": {"a": 28344, "b": 28434, "conservative": 28344, "pct_a": 3.3817698931325397, "pct_b": 3.3921194125289147, "pct_conservative": 3.3817698931325397}}, "encaps": {"c9_at_xyc8_0": {"a": 31086, "b": 31088, "conservative": 31086, "pct_a": 2.625418060200669, "pct_b": 2.6255514941860856, "pct_conservative": 2.625418060200669}, "c9_at_xyc8_1": {"a": 30869, "b": 30851, "conservative": 30851, "pct_a": 2.6481402367361366, "pct_b": 2.646632408829257, "pct_conservative": 2.646632408829257}, "direct_00_to_11": {"a": 49223, "b": 49237, "conservative": 49223, "pct_a": 4.157207526772744, "pct_b": 4.158333727458836, "pct_conservative": 4.157207526772744}, "synergy": {"a": -217, "b": -237, "conservative": -237}, "xyc8_at_c9_0": {"a": 18354, "b": 18386, "conservative": 18354, "pct_a": 1.5501165501165501, "pct_b": 1.5527981784645322, "pct_conservative": 1.5501165501165501}, "xyc8_at_c9_1": {"a": 18137, "b": 18149, "conservative": 18137, "pct_a": 1.5730896462478123, "pct_b": 1.5741113370015474, "pct_conservative": 1.5730896462478123}}, "keygen": {"c9_at_xyc8_0": {"a": 11458, "b": 11460, "conservative": 11458, "pct_a": 1.439434577836627, "pct_b": 1.4396677457893488, "pct_conservative": 1.439434577836627}, "c9_at_xyc8_1": {"a": 11456, "b": 11404, "conservative": 11404, "pct_a": 1.48147956564302, "pct_b": 1.4748121890563348, "pct_conservative": 1.4748121890563348}, "direct_00_to_11": {"a": 34182, "b": 34170, "conservative": 34170, "pct_a": 4.294183342608796, "pct_b": 4.292621891241017, "pct_conservative": 4.292621891241017}, "synergy": {"a": -2, "b": -56, "conservative": -56}, "xyc8_at_c9_0": {"a": 22726, "b": 22766, "conservative": 22726, "pct_a": 2.855000018844055, "pct_b": 2.8599891710855423, "pct_conservative": 2.855000018844055}, "xyc8_at_c9_1": {"a": 22724, "b": 22710, "conservative": 22710, "pct_a": 2.8964411400690078, "pct_b": 2.8946271590209505, "pct_conservative": 2.8946271590209505}}}, "elf_sha256": "555777958E99D2871115D2E74035F665239B7363B6091C3311CBC0EF06A4CFE8", "gate_pass": true, "harness_fails": 0, "harvester_sha256": "75C1F651B055DE529CD560CF6815CFA41CDE3B43B59668EBFC19D9541C3B9696", "measurements": {"00a": {"decaps": 877488, "encaps": 1184040, "keygen": 796007}, "00b": {"decaps": 877520, "encaps": 1184056, "keygen": 796017}, "01a": {"decaps": 838141, "encaps": 1152954, "keygen": 784549}, "01b": {"decaps": 838237, "encaps": 1152968, "keygen": 784557}, "10a": {"decaps": 849258, "encaps": 1165686, "keygen": 773281}, "10b": {"decaps": 849256, "encaps": 1165670, "keygen": 773251}, "11a": {"decaps": 809797, "encaps": 1134817, "keygen": 761825}, "11b": {"decaps": 809803, "encaps": 1134819, "keygen": 761847}}, "missing_gates": [], "order": ["00a", "10a", "11a", "01a", "01b", "11b", "10b", "00b"], "readback_bytes": 699328, "readback_sha256": "25E2525420E7C83C4E085745E54F7D6E9EE8D0688E713B9611914C558A372973", "rep_n": 100, "slot_n": 333, "srec_sha256": "23C184F93989B0716F3FA1CB177B9AAF9F63714F75734C8258EAD92DEFAD898E", "stack_used": 7848}

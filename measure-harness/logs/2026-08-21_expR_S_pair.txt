@@ -1,0 +1,48 @@
+실험 R/S — A-pair(통칭 2:1) 지퍼, EK-RA8M1 Cortex-M85 실측
+날짜: 2026-08-21
+반복: N=100 중앙값, 각 커널 1000회, calib=25 차감
+사전등록:
+  ../2026-08-21_expR_2to1_prereg.md
+  ../2026-08-21_expS_realratio_prereg.md
+
+검증
+  build: 0 errors, 2 pre-existing warnings
+  X25519/SHA3 KAT: ALL PASS
+  ML-KEM roundtrip+reject: OK
+  expj mismatch: 0
+  expm mismatch: 0
+  harness_fails: 0
+
+실험 R — J/Q A-pair
+  J seq:        1066.040 cyc/iter
+  J 1:1:        979.040 cyc/iter
+  J A-pair:     951.040 cyc/iter
+  J 추가 절감:   28.000 cyc/iter
+
+  Q 1:1 노출:   113.0 cyc/iter
+  Q A-pair 노출: 109.0 cyc/iter
+  회수:            4.0 cyc/iter = 잔여의 3.5%
+  사전등록 판정: 효과 없음(±10% 이내)
+
+해석
+  J에서는 A-pair가 28사이클을 줄였지만, vstrw를 제거한 Q에서는 4사이클만 줄었다.
+  따라서 Q의 잔여 113사이클이 A 자기 듀얼이슈 상실 때문에 생겼다는 가설은 지지되지 않는다.
+  J의 개선은 원본 B의 load/store 배치와 A 그룹화 사이 상호작용으로 보이며, 원인 분해는 미완이다.
+
+실험 S — 실제 X-Wing 비율
+  8:1 기존:     3016.050 cyc/iter
+  8:1 A-pair:   3034.102 cyc/iter
+  변화:            -0.60% (느려짐) — 사전등록상 실질 차이 없음
+
+  4:1 기존:     1772.044 cyc/iter
+  4:1 A-pair:   1773.029 cyc/iter
+  변화:            -0.06% (느려짐) — 사전등록상 실질 차이 없음
+
+최종 판정
+  A-pair는 실제 4:1/8:1 스케줄을 개선하지 않는다. 최종 구현에는 기존 스케줄을 유지한다.
+  기존 종단간 결과 5.5~7.7%(평균 6.8%)는 변하지 않는다.
+
+재현성 메모
+  실험 R은 실험 S 추가 전후 두 펌웨어에서 동일 중앙값을 재현했다:
+  J 1:1 979.041/979.040, J A-pair 951.041/951.040,
+  Q 1:1 868.043/868.043, Q A-pair 864.040/864.040 (각각 1000회 합산값).

@@ -1,0 +1,133 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\abx@aux@refcontext{anyt/global//global/global/global}
+\abx@aux@cite{0}{XWing24}
+\abx@aux@segm{0}{0}{XWing24}
+\abx@aux@cite{0}{DualCore25}
+\abx@aux@segm{0}{0}{DualCore25}
+\abx@aux@cite{0}{ParHyb26}
+\abx@aux@segm{0}{0}{ParHyb26}
+\abx@aux@cite{0}{Intel10}
+\abx@aux@segm{0}{0}{Intel10}
+\abx@aux@cite{0}{Slothy22}
+\abx@aux@segm{0}{0}{Slothy22}
+\@writefile{toc}{\contentsline {paragraph}{Keywords.}{1}{section*.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\newlabel{sec:intro}{{1}{1}{Introduction}{section.1}{}}
+\newlabel{sec:intro@cref}{{[section][1][]1}{[1][1][]1}{}{}{}}
+\abx@aux@cite{0}{Intel10}
+\abx@aux@segm{0}{0}{Intel10}
+\abx@aux@cite{0}{XWing24}
+\abx@aux@segm{0}{0}{XWing24}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Background}{2}{section.2}\protected@file@percent }
+\newlabel{sec:background}{{2}{2}{Background}{section.2}{}}
+\newlabel{sec:background@cref}{{[section][2][]2}{[1][2][]2}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Function stitching and its promise}{2}{subsection.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Cortex-M85: the arithmetic of the ceiling}{2}{subsection.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}X-Wing{} and its Keccak share}{2}{subsection.2.3}\protected@file@percent }
+\abx@aux@cite{0}{Slothy22}
+\abx@aux@segm{0}{0}{Slothy22}
+\abx@aux@cite{0}{SlothyM7_25}
+\abx@aux@segm{0}{0}{SlothyM7_25}
+\abx@aux@cite{0}{RFC7748}
+\abx@aux@segm{0}{0}{RFC7748}
+\abx@aux@cite{0}{FIPS203}
+\abx@aux@segm{0}{0}{FIPS203}
+\abx@aux@cite{0}{pqm4}
+\abx@aux@segm{0}{0}{pqm4}
+\abx@aux@cite{0}{Lenngren}
+\abx@aux@segm{0}{0}{Lenngren}
+\abx@aux@cite{0}{Sim26}
+\abx@aux@segm{0}{0}{Sim26}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Stand-alone measurements and slot waste (median cycles).}}{3}{table.1}\protected@file@percent }
+\newlabel{tab:base}{{1}{3}{Stand-alone measurements and slot waste (median cycles)}{table.1}{}}
+\newlabel{tab:base@cref}{{[table][1][]1}{[1][3][]3}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}SLOTHY{}}{3}{subsection.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}Pre-Registered Bounds: How Much Is There to Win?}{3}{section.3}\protected@file@percent }
+\newlabel{sec:bounds}{{3}{3}{Pre-Registered Bounds: How Much Is There to Win?}{section.3}{}}
+\newlabel{sec:bounds@cref}{{[section][3][]3}{[1][3][]3}{}{}{}}
+\@writefile{toc}{\contentsline {paragraph}{Method.}{3}{section*.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Pre-registered overlap upper bounds per X-Wing{} operation.}}{4}{table.2}\protected@file@percent }
+\newlabel{tab:bound}{{2}{4}{Pre-registered overlap upper bounds per \xwing {} operation}{table.2}{}}
+\newlabel{tab:bound@cref}{{[table][2][]2}{[1][3][]4}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Why stitching should pay on an in-order dual-issue core. The multiply-accumulate chain of a Montgomery ladder step serialises on its own carry dependencies, leaving one of the two issue slots empty in 48.7\% of cycles (measured, \cref  {tab:base}). A second, register-disjoint instruction stream can occupy that slot without displacing the first---the microbenchmark of \cref  {sec:auto} reaches IPC 1.99, the two-issue floor. The gap between this picture and the 7--11\% actually recovered is the subject of this paper.}}{4}{figure.1}\protected@file@percent }
+\newlabel{fig:slots}{{1}{4}{Why stitching should pay on an in-order dual-issue core. The multiply-accumulate chain of a Montgomery ladder step serialises on its own carry dependencies, leaving one of the two issue slots empty in 48.7\% of cycles (measured, \cref {tab:base}). A second, register-disjoint instruction stream can occupy that slot without displacing the first---the microbenchmark of \cref {sec:auto} reaches IPC 1.99, the two-issue floor. The gap between this picture and the 7--11\% actually recovered is the subject of this paper}{figure.1}{}}
+\newlabel{fig:slots@cref}{{[figure][1][]1}{[1][3][]4}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Automation: Two-Stream SLOTHY{}}{4}{section.4}\protected@file@percent }
+\newlabel{sec:auto}{{4}{4}{Automation: Two-Stream \slothy {}}{section.4}{}}
+\newlabel{sec:auto@cref}{{[section][4][]4}{[1][3][]4}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Feasibility by hand first}{4}{subsection.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}What the solver needed}{4}{subsection.4.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Serial vs.\ best manual stitch vs.\ solver, board-measured (cycles/iteration, correctness-checked against C references).}}{5}{table.3}\protected@file@percent }
+\newlabel{tab:solver}{{3}{5}{Serial vs.\ best manual stitch vs.\ solver, board-measured (cycles/iteration, correctness-checked against C references)}{table.3}{}}
+\newlabel{tab:solver@cref}{{[table][3][]3}{[1][5][]5}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Validation ladder}{5}{subsection.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Why Recovery Is Thin: A Decomposition}{5}{section.5}\protected@file@percent }
+\newlabel{sec:causes}{{5}{5}{Why Recovery Is Thin: A Decomposition}{section.5}{}}
+\newlabel{sec:causes@cref}{{[section][5][]5}{[1][5][]5}{}{}{}}
+\@writefile{toc}{\contentsline {paragraph}{(a) The scalar plan self-cannibalizes.}{5}{section*.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Causes of the bound-to-actual gap, each isolated on silicon.}}{6}{table.4}\protected@file@percent }
+\newlabel{tab:causes}{{4}{6}{Causes of the bound-to-actual gap, each isolated on silicon}{table.4}{}}
+\newlabel{tab:causes@cref}{{[table][4][]4}{[1][5][]6}{}{}{}}
+\@writefile{toc}{\contentsline {paragraph}{(b) The yield tax is structural.}{6}{section*.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{(c) LSU contention, quantified.}{6}{section*.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{(d--e) The pairing rule.}{6}{section*.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{The co-issue ceiling has one owner.}{6}{section*.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}Plan B Results: Scalar $\times $ MVE, End to End}{6}{section.6}\protected@file@percent }
+\newlabel{sec:planb}{{6}{6}{Plan B Results: Scalar $\times $ MVE, End to End}{section.6}{}}
+\newlabel{sec:planb@cref}{{[section][6][]6}{[1][6][]6}{}{}{}}
+\@writefile{toc}{\contentsline {paragraph}{4-way batched MVE Keccak-f1600{}.}{6}{section*.8}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Hiding rate by pairing and pipe. Two streams that share an execution resource do not stitch at all (scalar NTT against the UMAAL chain: $-1\%$, a multiplier tug-of-war); a real, spill-heavy X25519 pairs poorly because its spill traffic contends with the partner on the load/store unit ($27\%$); moving the partner to a different pipe (MVE) recovers most of the slot ($58$--$62\%$). The residual is not a scheduling failure but a structural one: vector stores occupy the scalar issue slot, and $121$ stores $\times \,2$ cycles account for the exposure exactly (\cref  {sec:causes}).}}{7}{figure.2}\protected@file@percent }
+\newlabel{fig:hiding}{{2}{7}{Hiding rate by pairing and pipe. Two streams that share an execution resource do not stitch at all (scalar NTT against the UMAAL chain: $-1\%$, a multiplier tug-of-war); a real, spill-heavy X25519 pairs poorly because its spill traffic contends with the partner on the load/store unit ($27\%$); moving the partner to a different pipe (MVE) recovers most of the slot ($58$--$62\%$). The residual is not a scheduling failure but a structural one: vector stores occupy the scalar issue slot, and $121$ stores $\times \,2$ cycles account for the exposure exactly (\cref {sec:causes})}{figure.2}{}}
+\newlabel{fig:hiding@cref}{{[figure][2][]2}{[1][6][]7}{}{}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces X-Wing{} operations at real ratios: measured units, projected operations, and controls.}}{7}{table.5}\protected@file@percent }
+\newlabel{tab:final}{{5}{7}{\xwing {} operations at real ratios: measured units, projected operations, and controls}{table.5}{}}
+\newlabel{tab:final@cref}{{[table][5][]5}{[1][7][]7}{}{}{}}
+\@writefile{toc}{\contentsline {paragraph}{End-to-end at real ratios.}{7}{section*.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Verdict against the pre-registered bar.}{7}{section*.10}\protected@file@percent }
+\abx@aux@cite{0}{Intel10}
+\abx@aux@segm{0}{0}{Intel10}
+\abx@aux@cite{0}{Slothy22}
+\abx@aux@segm{0}{0}{Slothy22}
+\abx@aux@cite{0}{SlothyM7_25}
+\abx@aux@segm{0}{0}{SlothyM7_25}
+\abx@aux@cite{0}{BK22}
+\abx@aux@segm{0}{0}{BK22}
+\abx@aux@cite{0}{DualCore25}
+\abx@aux@segm{0}{0}{DualCore25}
+\abx@aux@cite{0}{ParHyb26}
+\abx@aux@segm{0}{0}{ParHyb26}
+\abx@aux@cite{0}{Sim26}
+\abx@aux@segm{0}{0}{Sim26}
+\abx@aux@cite{0}{pqm4}
+\abx@aux@segm{0}{0}{pqm4}
+\abx@aux@cite{0}{FIPS203}
+\abx@aux@segm{0}{0}{FIPS203}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Constant Time}{8}{section.7}\protected@file@percent }
+\newlabel{sec:ct}{{7}{8}{Constant Time}{section.7}{}}
+\newlabel{sec:ct@cref}{{[section][7][]7}{[1][8][]8}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Related Work}{8}{section.8}\protected@file@percent }
+\newlabel{sec:related}{{8}{8}{Related Work}{section.8}{}}
+\newlabel{sec:related@cref}{{[section][8][]8}{[1][8][]8}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {9}Conclusion}{8}{section.9}\protected@file@percent }
+\newlabel{sec:conclusion}{{9}{8}{Conclusion}{section.9}{}}
+\newlabel{sec:conclusion@cref}{{[section][9][]9}{[1][8][]8}{}{}{}}
+\@writefile{toc}{\contentsline {paragraph}{Limitations.}{8}{section*.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {A}Measurement Details}{9}{section.A}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {B}Reproduction Hazards}{10}{section.B}\protected@file@percent }
+\abx@aux@read@bbl@mdfivesum{20DA0EB15E2741D5C3749E69F5D4CDC2}
+\abx@aux@defaultrefcontext{0}{Slothy22}{anyt/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{SlothyM7_25}{anyt/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{XWing24}{anyt/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{BK22}{anyt/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{ParHyb26}{anyt/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{Intel10}{anyt/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{pqm4}{anyt/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{Lenngren}{anyt/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{RFC7748}{anyt/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{FIPS203}{anyt/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{DualCore25}{anyt/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{Sim26}{anyt/global//global/global/global}
+\gdef \@abspage@last{10}

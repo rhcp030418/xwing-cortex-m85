@@ -1,0 +1,351 @@
+# EK-RA8M1 자동 회수: J-Link로 굽고 → 실행 → RAM 로그 버퍼를 읽어 출력
+#
+# 사용법 (Windows, e2 studio는 반드시 닫은 상태 — J-Link는 단일 클라이언트):
+#   py harvest_ra8m1.py
+#
+# 동작: blinky.srec 플래시 → 리셋·실행 → harness_done 폴링 → log_buf 덤프.
+# UART/RTT 불필요 (harness.c가 RAM에 로그를 쌓고, 여기서 심볼 주소로 읽는다).
+# 심볼 주소는 매번 ELF에서 nm으로 다시 뽑으므로 코드가 바뀌어도 그대로 재사용.
+
+import subprocess
+import sys
+import time
+
+import pylink
+
+WS = r"C:\Users\cnscj\e2_studio\workspace\blinky\Debug"
+ELF = WS + r"\blinky.elf"
+SREC = WS + r"\blinky.srec"
+NM = r"C:\Renesas\RA\e2studio_v2026-04.2_fsp_v6.5.0\toolchains\gcc_arm\13.2.rel1\bin\arm-none-eabi-nm.exe"
+DLL = r"C:\Program Files\SEGGER\JLink_V968\JLink_x64.dll"
+DEVICE = "R7FA8M1AH"  # J-Link 디바이스명은 패키지 접미사(ECBD) 없음
+
+SYMS = ("harness_done", "harness_fails", "log_len", "log_buf", "rep_cyc")
+REP_N = 100
+
+
+def sym_addrs():
+    addrs = {}
+    for line in subprocess.check_output([NM, ELF], text=True).splitlines():
+        parts = line.split()
+        if len(parts) == 3 and parts[2] in SYMS:
+            addrs[parts[2]] = int(parts[0], 16)
+    missing = set(SYMS) - set(addrs)
+    if missing:
+        sys.exit(f"ELF에 심볼 없음: {missing} (빌드가 하네스를 포함했는지 확인)")
+    return addrs
+
+
+def main():
+    a = sym_addrs()
+    jlink = pylink.JLink(lib=pylink.Library(dllpath=DLL))
+    jlink.open()
+    jlink.set_tif(pylink.enums.JLinkInterfaces.SWD)
+    jlink.connect(DEVICE, speed=4000)
+    print(f"connected: {jlink.core_name()}")
+
+    jlink.reset(halt=True)
+    jlink.exec_command("SetSkipProgOnCRCMatch = 0")   # RAMCode CRC 타임아웃 회피 (2026-08-16)
+    jlink.exec_command("SetVerifyDownload = 0")
+    jlink.flash_file(SREC, 0x0)
+    jlink.reset(ms=10, halt=False)  # 리셋 후 자유 실행
+
+    for _ in range(400):  # 최대 40초 대기 (슬롯 71개 전체 실측이 십수 초)
+        time.sleep(0.1)
+        if jlink.memory_read32(a["harness_done"], 1)[0] == 1:
+            break
+    else:
+        sys.exit("timeout: harness_done이 1이 안 됨 (하드폴트 가능성 — 디버거로 확인)")
+
+    n = min(jlink.memory_read32(a["log_len"], 1)[0], 8191)
+    log = bytes(jlink.memory_read8(a["log_buf"], n)).decode("utf-8", "replace")
+    fails = jlink.memory_read32(a["harness_fails"], 1)[0]
+    reps = jlink.memory_read32(a["rep_cyc"], 86 * REP_N)
+    jlink.close()
+
+    print(log)
+
+    # 계획서 §6.2: N=100 중앙값 채택, 최소/최대 병기 (calib = 측정 오버헤드, 차감용)
+    calib = sorted(reps[2 * REP_N:3 * REP_N])[REP_N // 2]
+    meds = {}
+    for idx, name in ((0, "keccak-f1600"), (1, "x25519-scalarmult"),
+                      (3, "mlkem768-keygen"), (4, "mlkem768-encaps"),
+                      (5, "mlkem768-decaps"), (6, "combiner-sha3-134B"),
+                      (7, "stitch-A-mulchain"), (8, "stitch-B-logicchain"),
+                      (9, "stitch-S-interleaved"),
+                      (10, "stitch-Bm-memchain"), (11, "stitch-Sm-interleaved-mem"),
+                      (12, "mul256-full-x100"), (13, "mul256-budget-x100"),
+                      (14, "mul256-flat-x100"), (15, "theta-frag-x100"),
+                      (16, "stitched-x100"),
+                      (17, "round-frag-x100"), (18, "stitched-round-x100"),
+                      (19, "mul256-flat6-x100"), (20, "round6-frag-x100"),
+                      (21, "stitched-round6-x100"), (22, "stitched-k2-x100"),
+                      (23, "slothy-seq-x1000"), (24, "slothy-opt-x1000"),
+                      (25, "bmid-seq-x1000"), (26, "bmid-zip-x1000"),
+                      (27, "bmid-slothy-x1000"),
+                      (28, "bfull-seq-x1000"), (29, "bfull-zip-x1000"),
+                      (30, "bfull-slothy-x1000"),
+                      (31, "expc-seq-x1000"), (32, "expc-slothy-x1000"),
+                      (33, "expd-seq-x1000"), (34, "expd-slothy-x1000"),
+                      (35, "expe-seq-x1000"), (36, "expe-slothy-x1000"),
+                      (37, "mve4-round-x1000"),
+                      (38, "coissue-A-x1000"), (39, "coissue-zip-x1000"),
+                      (40, "coissue-slothy-x1000"),
+                      (41, "mve3-round-x1000"), (42, "coissue3-zip-x1000"),
+                      (43, "glue-roundtrip-x1000"),
+                      (44, "fiat-base-x100"), (45, "fiat-yield3-x100"),
+                      (46, "mve2-round-x1000"), (47, "coissue2-zip-x1000"),
+                      (48, "fiat-yield2-x100"),
+                      (49, "expj-seq-x1000"), (50, "expj-stitch-x1000"),
+                      (51, "expk-seq-x1000"), (52, "expk-coarse-x1000"),
+                      (53, "expk-stitch-x1000"),
+                      (54, "expl-ntt-x1000"), (55, "expl-zip-x1000"),
+                      (56, "expl-sntt-x1000"), (57, "expl-szip-x1000"),
+                      (58, "expj-stitch-alt-x1000"),
+                      (59, "expm-seq-x1000"), (60, "expm-stitch-x1000"),
+                      (61, "expm4-seq-x1000"), (62, "expm4-stitch-x1000"),
+                      (63, "pairn-veor-x1000"), (64, "pairn-veor-zip-x1000"),
+                      (65, "pairn-ldr-x1000"), (66, "pairn-ldr-zip-x1000"),
+                      (67, "pairn-str-x1000"), (68, "pairn-str-zip-x1000"),
+                      (69, "pairn-rot-x1000"), (70, "pairn-rot-zip-x1000"),
+                      (71, "coissue-slothy2-x1000"),
+                      (72, "pairn2-ldr-x1000"), (73, "pairn2-str-x1000"),
+                      (74, "pairn2-rot-x1000"),
+                      (75, "pairn-lsmix-x1000"), (76, "pairn-lsmix-zip-x1000"),
+                      (77, "pairp-vec-x1000"),
+                      (78, "pairp-s0-x1000"), (79, "pairp-s0-zip-x1000"),
+                      (80, "pairp-s1-x1000"), (81, "pairp-s1-zip-x1000"),
+                      (82, "pairp-s2-x1000"), (83, "pairp-s2-zip-x1000"),
+                      (84, "pairp-s3-x1000"), (85, "pairp-s3-zip-x1000")):
+        vals = sorted(reps[idx * REP_N:(idx + 1) * REP_N])
+        med = vals[REP_N // 2]
+        meds[name] = med - calib
+        print(f"[N={REP_N}] {name}: median={med} (calib {calib} 차감시 {med - calib})"
+              f"  min={vals[0]}  max={vals[-1]}")
+
+
+    # 실험 P — DTCM 뱅크 스펙트럼: 뱅크에 따라 zip 사이클이 변하는가?
+    v = meds.get("pairp-vec-x1000")
+    if v:
+        print("")
+        print("[exp P] DTCM 뱅크 스펙트럼 (MVE 단독 vec=%d)" % v)
+        hid = []
+        for b in range(4):
+            a_, z = meds.get(f"pairp-s{b}-x1000"), meds.get(f"pairp-s{b}-zip-x1000")
+            if not (a_ and z):
+                continue
+            h = (a_ + v - z) / min(a_, v) * 100   # 짧은 스트림의 몇 %를 은닉했나
+            hid.append(h)
+            print(f"  bank {b}: scalar={a_} zip={z}  순차합={a_ + v}  은닉 {h:.1f}%")
+        if len(hid) == 4:
+            spread = max(hid) - min(hid)
+            print(f"  -> 은닉률 폭 {spread:.1f}%p  "
+                  + ("뱅크 충돌이 원인의 일부 (레이아웃으로 회수 가능)"
+                     if spread >= 3 else "평평 = 순수 LSU 경합 (음성 결과)"))
+
+    # 합성 스티칭 분석: S vs A+B vs max(A,B)
+    a, b, s = (meds.get("stitch-A-mulchain"), meds.get("stitch-B-logicchain"),
+               meds.get("stitch-S-interleaved"))
+    if a and b and s:
+        saved = a + b - s
+        recover = saved / min(a, b) * 100
+        print(f"\n[stitch micro] A={a} B={b} S={s}  |  A+B={a + b}  max={max(a, b)}"
+              f"\n  절감 {saved} cyc = 짧은 스트림의 {recover:.0f}% 회수"
+              f"  (이상적 100% = S가 max(A,B)에 도달)")
+    mf, mb = meds.get("mul256-full-x100"), meds.get("mul256-budget-x100")
+    if mf and mb:
+        print(f"[A-tax] mul256 full={mf / 100:.0f} budget(r8-r11 예약)={mb / 100:.0f} cyc/회"
+              f"  → 세금 {(mb - mf) / mf * 100:+.1f}%")
+    fl, th, st = (meds.get("mul256-flat-x100"), meds.get("theta-frag-x100"),
+                  meds.get("stitched-x100"))
+    if fl and th and st:
+        seq = fl + th
+        print(f"[REAL STITCH] mul={fl / 100:.0f} theta={th / 100:.0f} 순차합={seq / 100:.0f}"
+              f" 스티치={st / 100:.0f} cyc/회  → 절감 {(seq - st) / 100:.0f} cyc"
+              f" = theta의 {(seq - st) / th * 100:.0f}% 은닉")
+    rf, sr = meds.get("round-frag-x100"), meds.get("stitched-round-x100")
+    if fl and rf and sr:
+        seq = fl + rf
+        print(f"[FULL ROUND ] mul={fl / 100:.0f} round={rf / 100:.0f} 순차합={seq / 100:.0f}"
+              f" 스티치={sr / 100:.0f} cyc/회  → 절감 {(seq - sr) / 100:.0f} cyc"
+              f" = 교차 구간 기준 은닉률 {(seq - sr) / min(fl, rf) * 100:.0f}%")
+    f6, r6, s6 = (meds.get("mul256-flat6-x100"), meds.get("round6-frag-x100"),
+                  meds.get("stitched-round6-x100"))
+    if f6 and r6 and s6:
+        seq = f6 + r6
+        print(f"[SWEEP r6   ] mul6={f6 / 100:.0f} round6={r6 / 100:.0f} 순차합={seq / 100:.0f}"
+              f" 스티치={s6 / 100:.0f} cyc/회  → 절감 {(seq - s6) / 100:.0f} cyc")
+    ss, so = meds.get("slothy-seq-x1000"), meds.get("slothy-opt-x1000")
+    if ss and so:
+        print(f"[SLOTHY expA] 원본순서={ss / 1000:.2f} 솔버스케줄={so / 1000:.2f} cyc/iter"
+              f"  (모델 예측: 본문 9 + 루프 — 17명령)")
+    bs, bz, bo = (meds.get("bmid-seq-x1000"), meds.get("bmid-zip-x1000"),
+                  meds.get("bmid-slothy-x1000"))
+    if bs and bz and bo:
+        print(f"[BMID 3파전  ] 순차={bs / 1000:.2f} 지퍼={bz / 1000:.2f}"
+              f" 솔버={bo / 1000:.2f} cyc/iter (모델 예측: 본문 82 + 루프 ~4)")
+    fs, fz, fo = (meds.get("bfull-seq-x1000"), meds.get("bfull-zip-x1000"),
+                  meds.get("bfull-slothy-x1000"))
+    if fs:
+        line = f"[BFULL      ] 순차={fs / 1000:.1f}"
+        if fo:
+            line += f" 솔버={fo / 1000:.1f}"
+        print(line + " cyc/iter (지퍼 기준값: flat6 기반 681cyc — 로드맵 8차)")
+    cs, co = meds.get("expc-seq-x1000"), meds.get("expc-slothy-x1000")
+    if cs:
+        line = f"[EXPC fiat  ] 순차={cs / 1000:.1f}"
+        if co:
+            line += f" 솔버={co / 1000:.1f}"
+        print(line + " cyc/iter (진짜 fiat 필드 곱 × round6)")
+    ds, do_ = meds.get("expd-seq-x1000"), meds.get("expd-slothy-x1000")
+    if ds:
+        line = f"[EXPD interleaved] 순차={ds / 1000:.1f}"
+        if do_:
+            line += f" 솔버={do_ / 1000:.1f}"
+        print(line + " cyc/iter (fiat × 비트-인터리브 라운드)")
+    es, eo = meds.get("expe-seq-x1000"), meds.get("expe-slothy-x1000")
+    if es:
+        line = f"[EXPE 4:1코어] 순차={es / 1000:.1f}"
+        if eo:
+            line += f" 솔버={eo / 1000:.1f}"
+        print(line + " cyc/iter (곱x4+라운드 — X-Wing 실비율)")
+    mv = meds.get("mve4-round-x1000")
+    if mv:
+        print(f"[PLAN-B MVE ] 4-way 라운드={mv / 1000:.1f} cyc/iter = 상태당 {mv / 4000:.1f} cyc"
+              f" (스칼라 round6i 단독 ~350 대비)")
+    ca, cz = meds.get("coissue-A-x1000"), meds.get("coissue-zip-x1000")
+    if ca and cz and mv:
+        seq = ca + mv
+        print(f"[CO-ISSUE F ] A(스칼라)={ca / 1000:.1f} B(MVE)={mv / 1000:.1f}"
+              f" 순차합={seq / 1000:.1f} 교차={cz / 1000:.1f} cyc/iter"
+              f"  → 절감 {(seq - cz) / 1000:.1f} = 짧은쪽의 {(seq - cz) / min(ca, mv) * 100:.0f}% 은닉")
+    cso = meds.get("coissue-slothy-x1000")
+    if ca and cz and mv and cso:
+        seq = ca + mv
+        print(f"[F-SOLVER   ] 지퍼={cz / 1000:.1f} 솔버={cso / 1000:.1f} cyc/iter"
+              f"  → 지퍼 대비 {(cz - cso) / cz * 100:+.1f}%"
+              f", 은닉률 {(seq - cso) / min(ca, mv) * 100:.0f}% (지퍼 {(seq - cz) / min(ca, mv) * 100:.0f}%)")
+    cs2 = meds.get("coissue-slothy2-x1000")
+    if ca and mv and cs2:
+        seq = ca + mv
+        print(f"[F-SOLVER v04] 솔버(v0.4)={cs2 / 1000:.1f} cyc/iter"
+              f"  → v0.3 대비 {(cso - cs2) / cso * 100:+.1f}%, 지퍼 대비 {(cz - cs2) / cz * 100:+.1f}%"
+              f", 은닉률 {(seq - cs2) / min(ca, mv) * 100:.0f}%"
+              f" (구조 하한: 스칼라 611 + 스토어 242 = 853)")
+    m3, c3 = meds.get("mve3-round-x1000"), meds.get("coissue3-zip-x1000")
+    if m3 and c3 and ca:
+        seq3 = ca + m3
+        print(f"[EXP-G b3   ] MVE3단독={m3 / 1000:.1f}(5베이스판 {mv / 1000:.1f})"
+              f" 코이슈={c3 / 1000:.1f} vs 순차합={seq3 / 1000:.1f}"
+              f" → 은닉 {(seq3 - c3) / min(ca, m3) * 100:.0f}% (3-베이스 예산 검증)")
+    gl = meds.get("glue-roundtrip-x1000")   # 실제 단일 왕복(x1 실행)
+    if gl and mv:
+        mve_per_batch = 24 * mv / 1000      # 배치당 순열 일량(24라운드×상태묶음)
+        print(f"[EXP-H glue ] pack+unpack 왕복={gl:.0f} cyc/배치 = 배치 순열({mve_per_batch:.0f})"
+              f" 대비 {gl / mve_per_batch * 100:.1f}% (naive 스칼라 전치 상한 — vld4/absorb 융합 시 ~0)")
+    fb, fy = meds.get("fiat-base-x100"), meds.get("fiat-yield3-x100")
+    if fb and fy:
+        print(f"[EXP-I 양보 ] fiat 곱 base={fb / 100:.1f} yield3(r10/11/12 양보)={fy / 100:.1f}"
+              f" cyc/회 → 세금 {(fy - fb) / fb * 100:+.1f}% (정답 불변, MVE 베이스 3개 확보)")
+    m2, c2, fy2 = (meds.get("mve2-round-x1000"), meds.get("coissue2-zip-x1000"),
+                   meds.get("fiat-yield2-x100"))
+    if m2 and c2 and fy2 and fb and ca:
+        seq2 = ca + m2
+        print(f"[V0.4 b2    ] MVE2단독={m2 / 1000:.1f}(3베이스 {meds.get('mve3-round-x1000', 0) / 1000:.1f})"
+              f" 코이슈은닉={(seq2 - c2) / min(ca, m2) * 100:.0f}%")
+        print(f"[V0.4 양보2 ] fiat yield2={fy2 / 100:.1f} vs base={fb / 100:.1f}"
+              f" → 세금 {(fy2 - fb) / fb * 100:+.1f}% (yield3는 +13.5%)")
+    ks, kc, kt = (meds.get("expk-seq-x1000"), meds.get("expk-coarse-x1000"),
+                  meds.get("expk-stitch-x1000"))
+    if ks and kc and kt:
+        print(f"[EXP-K 3파전] 순차={ks / 1000:.0f} 굵은교대={kc / 1000:.0f}"
+              f" 스티칭={kt / 1000:.0f} cyc (곱3+라운드3)"
+              f" → 스티칭 이득: vs순차 {(ks - kt) / ks * 100:.1f}%"
+              f" vs교대 {(kc - kt) / kc * 100:.1f}% (교차 덕 분리 입증)")
+    ln_, lz = meds.get("expl-ntt-x1000"), meds.get("expl-zip-x1000")
+    if ln_ and lz and ca:
+        seql = ca + ln_
+        hid_ntt = (seql - lz) / min(ca, ln_) * 100
+        print(f"[EXP-L NTT ] A(umaal)={ca / 1000:.1f} B(NTT형)={ln_ / 1000:.1f}"
+              f" 순차합={seql / 1000:.1f} 교차={lz / 1000:.1f}"
+              f" → 은닉 {hid_ntt:.0f}% (Keccak짝 58% 대비 — 곱셈기 쟁탈전 판정)")
+    sn, sz = meds.get("expl-sntt-x1000"), meds.get("expl-szip-x1000")
+    if sn and sz and ca:
+        seqs = ca + sn
+        print(f"[EXP-L 스칼라] A(umaal)={ca / 1000:.1f} B(smull)={sn / 1000:.1f}"
+              f" 순차합={seqs / 1000:.1f} 교차={sz / 1000:.1f}"
+              f" → 은닉 {(seqs - sz) / min(ca, sn) * 100:.0f}%"
+              f" (스칼라×스칼라 = 같은 MAC 파이프 쟁탈)")
+    jalt = meds.get("expj-stitch-alt-x1000")
+    if jalt and meds.get("expj-stitch-x1000"):
+        d = jalt - meds["expj-stitch-x1000"]
+        print(f"[상수시간   ] expj_stitch 입력 2벌 median Δ={d} cyc"
+              f" ({'PASS: 입력 무관' if abs(d) <= 2 else 'FAIL: 입력 의존 의심'})")
+    ms, mt = meds.get("expm-seq-x1000"), meds.get("expm-stitch-x1000")
+    if ms and mt:
+        # encaps 투영: 유닛(곱8+라운드1) × 264배치라운드 + 잔여 곱 81회(비율 8.3의 끝수)
+        fy2c = meds.get("fiat-yield2-x100", 32400) / 100
+        enc_seq = ms / 1000 * 264 + 81 * fy2c
+        enc_st = mt / 1000 * 264 + 81 * fy2c
+        print(f"[EXP-M 실비율] 유닛(곱8+라운드1): 순차={ms / 1000:.0f} 스티칭={mt / 1000:.0f}"
+              f" (−{(ms - mt) / ms * 100:.1f}%)")
+        print(f"[encaps 투영] 순차={enc_seq / 1000:.0f}k 스티칭={enc_st / 1000:.0f}k"
+              f" → 절감 {(enc_seq - enc_st) / enc_seq * 100:.1f}% (측정 유닛 기반)")
+    m4s, m4t = meds.get("expm4-seq-x1000"), meds.get("expm4-stitch-x1000")
+    if m4s and m4t:
+        # keygen/decaps: 스칼라곱 1회 ≈ 곱 1,100 = 264라운드×4 + 44 → 유닛 264개 + 잔여 44곱
+        fy2c = meds.get("fiat-yield2-x100", 32400) / 100
+        kg_seq = m4s / 1000 * 264 + 44 * fy2c
+        kg_st = m4t / 1000 * 264 + 44 * fy2c
+        print(f"[EXP-M4 4:1 ] 유닛(곱4+라운드1): 순차={m4s / 1000:.0f} 스티칭={m4t / 1000:.0f}"
+              f" (−{(m4s - m4t) / m4s * 100:.1f}%)")
+        print(f"[kg/dec 투영] 순차={kg_seq / 1000:.0f}k 스티칭={kg_st / 1000:.0f}k"
+              f" → 절감 {(kg_seq - kg_st) / kg_seq * 100:.1f}%")
+    js, jt = meds.get("expj-seq-x1000"), meds.get("expj-stitch-x1000")
+    if js and jt:
+        print(f"[EXP-J 통합 ] 순차={js / 1000:.0f} 스티칭={jt / 1000:.0f} cyc"
+              f" → 절감 {(js - jt) / js * 100:.1f}% (진짜 fiat 곱 × MVE 라운드, 정답 ✓)")
+    k2 = meds.get("stitched-k2-x100")
+    if f6 and r6 and k2:
+        seq2 = 2 * f6 + r6
+        print(f"[SWEEP k=2  ] 순차합(2mul+round6)={seq2 / 100:.0f} 스티치={k2 / 100:.0f} cyc/회"
+              f"  → 절감 {(seq2 - k2) / 100:.0f} cyc = round6의 {(seq2 - k2) / r6 * 100:.0f}% 은닉")
+    bm, sm = meds.get("stitch-Bm-memchain"), meds.get("stitch-Sm-interleaved-mem")
+    if a and bm and sm:
+        saved = a + bm - sm
+        recover = saved / min(a, bm) * 100
+        print(f"[stitch mem  ] A={a} B'={bm} S'={sm}  |  A+B'={a + bm}  max={max(a, bm)}"
+              f"\n  절감 {saved} cyc = 짧은 스트림의 {recover:.0f}% 회수 (메모리 상주 B')")
+
+    # 실험 N — 페어링 스펙트럼: 클래스별 코이슈 노출량 (모델 v0.4 입력)
+    if meds.get("pairn-veor-x1000") and ca:
+        print("\n[실험 N 페어링 스펙트럼] umaal 611 × MVE 클래스 611 (1:1 지퍼)")
+        for key in ("veor", "ldr", "str", "rot"):
+            solo = meds.get(f"pairn-{key}-x1000")
+            z = meds.get(f"pairn-{key}-zip-x1000")
+            if not (solo and z):
+                continue
+            seq = ca + solo
+            expo = z - max(ca, solo)
+            print(f"  {key:4s}: 단독={solo / 1000:7.1f} 지퍼={z / 1000:7.1f}"
+                  f" 순차합={seq / 1000:7.1f} → 은닉 {(seq - z) / min(ca, solo) * 100:3.0f}%"
+                  f", 노출 {expo / 1000:.1f} cyc")
+
+    # 실험 N2 — 2:1 비율(umaal 1222 × 클래스 611): 사이클당 스칼라 수용량 판별
+    if meds.get("pairn2-ldr-x1000"):
+        print("[실험 N2 수용량] umaal 1222 × 클래스 611 (기준: 1/cyc→~1228 · 0.5/cyc→~1833 · 차단→~2444)")
+        for key in ("ldr", "str", "rot"):
+            z = meds.get(f"pairn2-{key}-x1000")
+            if z:
+                print(f"  {key:4s}: {z / 1000:7.1f}")
+        ls, lz = meds.get("pairn-lsmix-x1000"), meds.get("pairn-lsmix-zip-x1000")
+        if ls and lz:
+            print(f"  lsmix(로드/스토어 교대): 단독={ls / 1000:.1f} 지퍼={lz / 1000:.1f}"
+                  f" (스토어 306개 차단만이면 지퍼 ≈ 단독+스칼라잔여)")
+
+    print(f"harness_fails = {fails}")
+    sys.exit(1 if fails else 0)
+
+
+if __name__ == "__main__":
+    main()

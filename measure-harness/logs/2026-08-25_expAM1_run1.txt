@@ -1,0 +1,123 @@
+﻿python.exe : CPU is running at low speed (8290 kHz).
+At line:3 char:8
++ $out = & "C:\Users\cnscj\AppData\Local\Programs\Python\Python314\pyth ...
++        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (CPU is running at low speed (8290 kHz).:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+CPU is running at low speed (8291 kHz).
+measurement ELF SHA-256: 5DA9EADA44B37E76BCA5565ABFDA08E90CAC9224DA241A3C3C0CD446E73A7C26
+measurement SREC SHA-256: 4DBAA7EF27760167122239B6578D270DD5C69518948A8F17FA4DB75A63B7A103
+connected: Cortex-M85
+flash code readback PASS: bytes=706712 segments=2 sha256=BD2A47721470B97E31162AE5132C853F3842B916CB15FC4C59641693CFBC7131
+=== EK-RA8M1 harness: KAT + DWT/PMU (ITCM/DTCM) ===
+
+== KAT: X25519 (RFC 7748 s6.1) ==
+alice_pk: OK
+bob_pk  : OK
+K(a,B)  : OK
+K(b,A)  : OK
+== KAT: SHA3-256 via asm Keccak-f1600 ==
+sha3("")   : OK
+sha3("abc"): OK
+
+KAT ALL PASS -- streams A+B verified on board
+
+DAUTHCTRL readback: 15
+
+[calib-empty] x1
+  dwt_cyc/op   : 150
+  pmu_cyc/op   : 185
+  insts        : 0
+  stall_op     : 0
+  stall_op_fe  : 0
+  stall_op_be  : 0
+  IPC x100     : 0
+  slot-waste % : 0
+
+[keccak-f1600] x1000
+  dwt_cyc/op   : 5504
+  pmu_cyc/op   : 5504
+  insts        : 0
+  stall_op     : 0
+  stall_op_fe  : 0
+  stall_op_be  : 0
+  IPC x100     : 0
+  slot-waste % : 0
+
+[x25519-scalarmult] x10
+  dwt_cyc/op   : 357504
+  pmu_cyc/op   : 357506
+  insts        : 0
+  stall_op     : 0
+  stall_op_fe  : 0
+  stall_op_be  : 0
+  IPC x100     : 0
+  slot-waste % : 0
+
+== K3: ML-KEM-768 (pqm4 m4fspeed) ==
+roundtrip+reject: OK
+keccak perms/op: keygen 43  encaps 44  decaps 44  combiner 1
+expX bytes-mm: 0 smoke-fails=0 align-base-bits=257 align-candidate-bits=257
+expX timing-mm: 0 stack-fails=0 stack-used=7640
+expY bytes-mm: 0 smoke-fails=0 oracle-mm=0 oracle-canary=0 align-base-bits=257 align-candidate-bits=257 input-min=-1664 input-max=1664 output-min=-14304 output-max=24656
+expY timing-mm: 0 stack-fails=0 stack-used=7640
+expZ bytes-mm: 0 smoke-fails=0 fwd-align-base=257 fwd-align-candidate=257 inv-align-base=257 inv-align-candidate=257
+expZ timing-mm: 0 stack-fails=0 stack-used=7640
+expAA bytes-mm: 0 smoke-fails=0 fwd-align-base=257 fwd-align-candidate=257
+expAA timing-mm: 0 stack-fails=0 stack-used=7640
+expAB bytes-mm: 0 smoke-fails=0
+expAB timing-mm: 0 stack-fails=0 stack-used=7832
+expAE x4-kat-fails: 0 u-kat-fails=0
+expAE bytes-mm: 0 smoke-fails=0
+expAE timing-mm: 0 stack-fails=0 stack-used=9028
+expAF path counts (u4-rounds/u8-rounds/real/dummy):
+  op0: 0/0/0/0
+  op1: 0/0/0/0
+  op2: 0/0/0/0
+expAF mismatch: 0
+expAI mismatch: 0 stack-fails=0 stack-used=9020
+bfull_slothy diag: prod-mm=0 lane-mm=0 first-bad-prod= first-bad-lane=
+mul256 full-vs-budget mismatch: 0  /  stitched(product+theta) mismatch: 0  /  bmid(theta x3) mismatch: 0  /  bfull mismatch: 0  /  expc mismatch: 0  /  expd mismatch: 0  /  expe mismatch: 0  /  mve4 mismatch: 0  /  coissue mismatch: 0  /  cosol mismatch: 0  /  expg mismatch: 0  /  exph mismatch: 0  /  expi mismatch: 0  /  v04 mismatch: 0  /  expj mismatch: 0  /  expk mismatch: 0  /  expl mismatch: 0  /  expm mismatch: 0  /  expt mismatch: 0  /  expu mismatch: 0  /  expv mismatch: 0  /  expw mismatch: 0 m55-unavailable=1 m85-inv-mm=0 m85-roundtrip-mm=0
+expAJ kat-mm: 0
+expAJ bytes-mm: 0 smoke-fails=0
+expAJ xw-bytes-mm: 0 xw-smoke-fails=0
+expAJ timing-mm: 0 stack-fails=0 stack-used=7832
+expAK timing-mm: 0 stack-fails=0 stack-used=7832
+expAL xw-bytes-mm: 0 xw-smoke-fails=0
+expAL timing-mm: 0 stack-fails=0 stack-used=7848
+expAM correctness: oracle-mm=0 lenn-mm=0 boundary-mm=0 alias-mm=0 align-mm=0 checks=1025 stack-fails=0 stack-used=1084
+expAM ct-delta: 0 batch=64 stack-fails=0 stack-used=348
+rep arrays ready x100 (348 slots)
+HARNESS DONE
+
+[N=100] expAM slot333 A_indep: median=10169 (calib 25 차감시 10144) -> 158.50 cyc/mul  min=10169 max=10198
+[N=100] expAM slot334 B_indep: median=22201 (calib 25 차감시 22176) -> 346.50 cyc/mul  min=22201 max=22206
+[N=100] expAM slot335 B_indep: median=22201 (calib 25 차감시 22176) -> 346.50 cyc/mul  min=22194 max=22201
+[N=100] expAM slot336 A_indep: median=10169 (calib 25 차감시 10144) -> 158.50 cyc/mul  min=10169 max=10185
+[N=100] expAM slot337 A_chain: median=11687 (calib 25 차감시 11662) -> 182.22 cyc/mul  min=11687 max=11738
+[N=100] expAM slot338 B_chain: median=23655 (calib 25 차감시 23630) -> 369.22 cyc/mul  min=23655 max=23667
+[N=100] expAM slot339 B_chain: median=23655 (calib 25 차감시 23630) -> 369.22 cyc/mul  min=23655 max=23655
+[N=100] expAM slot340 A_chain: median=11687 (calib 25 차감시 11662) -> 182.22 cyc/mul  min=11687 max=11714
+[N=100] expAM slot341 mac_indep: median=218 -> 2.203 cyc/instr   (vmlaldava.u32 x64, 4 rotating accumulators)
+[N=100] expAM slot342 mac_dep: median=213 -> 2.125 cyc/instr   (vmlaldava.u32 x64, single chained accumulator)
+[N=100] expAM slot343 vldrw: median=208 -> 2.047 cyc/instr   (vldrw.u32 x64)
+[N=100] expAM slot344 vmull: median=213 -> 2.125 cyc/instr   (vmullb.u32 x64)
+[N=100] expAM slot345 umaal: median=153 -> 1.188 cyc/instr   (scalar umaal x64)
+[N=100] expAM slot346 mixed: median=177 -> 1.562 cyc/instr   (vldrw x32 alternating with scalar ldr x32)
+[N=100] expAM slot347 empty: median=77 (calib 차감 52 cyc, 호출 오버헤드)
+
+독립 피연산자: A=158.50/158.50  B1=346.50/346.50 cyc/mul  절감 a=-118.61% b=-118.61% -> min -118.61%
+의존 체인    : A=182.22/182.22  B1=369.22/369.22 cyc/mul  절감 a=-102.62% b=-102.62% -> min -102.62%
+
+FLOOR_B1 (사전등록식 33*mac_dep + 50*vldrw + 135) = 307.5 cyc
+FLOOR_B1 (실제 명령 구성 33*mac_dep + 79*vldrw + 170) = 401.8 cyc
+0.85 x A(의존 체인) = 154.9 cyc
+조기 종료 조건(FLOOR > 0.85*A) 충족: 예
+
+=== expAM1 판정 ===
+정확성: PASS (harness_fails=0, KAT=True, {'oracle-mm': 0, 'lenn-mm': 0, 'boundary-mm': 0, 'alias-mm': 0, 'align-mm': 0, 'checks': 1025, 'stack-fails': 0, 'stack-used': 1084})
+상수시간 ct-delta: 0 cyc (배치 64회 기준)
+성능 판정(의존 체인 min): -102.62% -> FAIL
+kill gate: >=15%% PASS / 5~15%% HOLD / <5%% FAIL
+EXPAM1_JSON {"a_chain_ref": 182.21875, "calib": 25, "correctness": {"alias-mm": 0, "align-mm": 0, "boundary-mm": 0, "checks": 1025, "lenn-mm": 0, "oracle-mm": 0, "stack-fails": 0, "stack-used": 1084}, "correctness_pass": true, "ct_delta": 0, "elf_sha256": "5DA9EADA44B37E76BCA5565ABFDA08E90CAC9224DA241A3C3C0CD446E73A7C26", "floor_actual": 401.828125, "floor_prereg": 307.46875, "gate_pass": true, "harness_fails": 0, "kat_all_pass": true, "micro_cyc_per_instr": {"empty": 52.0, "mac_dep": 2.125, "mac_indep": 2.203125, "mixed": 1.5625, "umaal": 1.1875, "vldrw": 2.046875, "vmull": 2.125}, "per_mul": {"333": 158.5, "334": 346.5, "335": 346.5, "336": 158.5, "337": 182.21875, "338": 369.21875, "339": 369.21875, "340": 182.21875}, "raw": {"333": {"max": 10198, "median": 10169, "min": 10169}, "334": {"max": 22206, "median": 22201, "min": 22201}, "335": {"max": 22201, "median": 22201, "min": 22194}, "336": {"max": 10185, "median": 10169, "min": 10169}, "337": {"max": 11738, "median": 11687, "min": 11687}, "338": {"max": 23667, "median": 23655, "min": 23655}, "339": {"max": 23655, "median": 23655, "min": 23655}, "340": {"max": 11714, "median": 11687, "min": 11687}, "341": {"max": 391, "median": 218, "min": 217}, "342": {"max": 361, "median": 213, "min": 213}, "343": {"max": 351, "median": 208, "min": 208}, "344": {"max": 315, "median": 213, "min": 213}, "345": {"max": 247, "median": 153, "min": 153}, "346": {"max": 278, "median": 177, "min": 176}, "347": {"max": 143, "median": 77, "min": 77}}, "readback_bytes": 706712, "readback_sha256": "BD2A47721470B97E31162AE5132C853F3842B916CB15FC4C59641693CFBC7131", "saving_chain_pct": {"a": -102.62390670553935, "b": -102.62390670553935, "min": -102.62390670553935}, "saving_indep_pct": {"a": -118.61198738170347, "b": -118.61198738170347, "min": -118.61198738170347}, "srec_sha256": "4DBAA7EF27760167122239B6578D270DD5C69518948A8F17FA4DB75A63B7A103", "verdict": "FAIL"}

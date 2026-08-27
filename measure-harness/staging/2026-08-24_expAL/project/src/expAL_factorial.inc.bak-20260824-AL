@@ -1,0 +1,142 @@
+/* Experiment AL: same-ELF X/Y/C8 x C9-v1 2x2 factorial.
+ * Included by harness.c after the expAJ helpers.  Slots 309..332.
+ */
+
+volatile uint32_t expal_xw_byte_mismatch = 9;
+volatile uint32_t expal_xw_smoke_fails = 9;
+volatile uint32_t expal_timing_mismatch = 9;
+
+static volatile uint32_t expal_bench_xyc8;
+static volatile uint32_t expal_bench_c9;
+static volatile uint32_t expal_bench_slot_base;
+
+static const uint8_t expal_order_xyc8[8] = {0, 1, 1, 0, 0, 1, 1, 0};
+static const uint8_t expal_order_c9[8]   = {0, 0, 1, 1, 1, 1, 0, 0};
+
+static void expal_set_modes(uint32_t xyc8, uint32_t c9)
+{
+    mlkem_ntt_mode = xyc8 ? 2u : 0u;
+    mlkem_invntt_mode = xyc8 ? 1u : 0u;
+    mlkem_invntt_observe = 0;
+    mlkem_c9_mode = c9;
+}
+
+/* Four-cell, eight-seed full-output and implicit-rejection equivalence gate. */
+static void xwing_expal_equivalence(void)
+{
+    static const uint8_t cell_xyc8[4] = {0, 1, 1, 0};
+    static const uint8_t cell_c9[4]   = {0, 0, 1, 1};
+    uint32_t mismatch = 0;
+    uint32_t fails = 0;
+
+    for (uint32_t s = 0; s < 8u; s++) {
+        const uint32_t seed = 0xa1110000u + s * 0x00009e37u;
+
+        for (uint32_t cell = 0; cell < 4u; cell++) {
+            expal_set_modes(cell_xyc8[cell], cell_c9[cell]);
+            PQCLEAN_randombytes_reset(seed);
+            xwing_keypair(xw_pk, xw_sk);
+            xwing_enc(xw_ct, xw_ss_e, xw_pk);
+            xwing_dec(xw_ss_d, xw_ct, xw_sk);
+            fails += (memcmp(xw_ss_e, xw_ss_d, 32) != 0);
+
+            if (cell == 0u) {
+                memcpy(xw_ref_pk, xw_pk, sizeof(xw_ref_pk));
+                memcpy(xw_ref_sk, xw_sk, sizeof(xw_ref_sk));
+                memcpy(xw_ref_ct, xw_ct, sizeof(xw_ref_ct));
+                memcpy(xw_ref_ss_e, xw_ss_e, sizeof(xw_ref_ss_e));
+                memcpy(xw_ref_ss_d, xw_ss_d, sizeof(xw_ref_ss_d));
+            } else {
+                mismatch += byte_mismatches(xw_pk, xw_ref_pk, sizeof(xw_ref_pk));
+                mismatch += byte_mismatches(xw_sk, xw_ref_sk, sizeof(xw_ref_sk));
+                mismatch += byte_mismatches(xw_ct, xw_ref_ct, sizeof(xw_ref_ct));
+                mismatch += byte_mismatches(xw_ss_e, xw_ref_ss_e, sizeof(xw_ref_ss_e));
+                mismatch += byte_mismatches(xw_ss_d, xw_ref_ss_d, sizeof(xw_ref_ss_d));
+            }
+
+            xw_ct[0] ^= 1u;
+            xwing_dec(xw_ss_d, xw_ct, xw_sk);
+            fails += (memcmp(xw_ss_e, xw_ss_d, 32) == 0);
+            if (cell == 0u) {
+                memcpy(xw_ref_reject, xw_ss_d, sizeof(xw_ref_reject));
+            } else {
+                mismatch += byte_mismatches(xw_ss_d, xw_ref_reject,
+                                            sizeof(xw_ref_reject));
+            }
+            xw_ct[0] ^= 1u;
+        }
+    }
+
+    expal_xw_byte_mismatch = mismatch;
+    expal_xw_smoke_fails = fails;
+    expal_set_modes(0, 0);
+    PQCLEAN_randombytes_reset(0x42424242u);
+}
+
+static void bench_expal_xwing_reps(void)
+{
+    const uint32_t slot = expal_bench_slot_base;
+
+    expal_set_modes(expal_bench_xyc8, expal_bench_c9);
+    PQCLEAN_randombytes_reset(0xa1ab5a5au);
+    for (uint32_t r = 0; r < REP_N; r++) {
+        dwt_span_begin();
+        xwing_keypair(xw_pk, xw_sk);
+        rep_cyc[slot][r] = dwt_span_end();
+    }
+    for (uint32_t r = 0; r < REP_N; r++) {
+        dwt_span_begin();
+        xwing_enc(xw_ct, xw_ss_e, xw_pk);
+        rep_cyc[slot + 1u][r] = dwt_span_end();
+    }
+    for (uint32_t r = 0; r < REP_N; r++) {
+        dwt_span_begin();
+        xwing_dec(xw_ss_d, xw_ct, xw_sk);
+        rep_cyc[slot + 2u][r] = dwt_span_end();
+    }
+
+    if (slot == 309u) {
+        memcpy(xw_ref_pk, xw_pk, sizeof(xw_ref_pk));
+        memcpy(xw_ref_sk, xw_sk, sizeof(xw_ref_sk));
+        memcpy(xw_ref_ct, xw_ct, sizeof(xw_ref_ct));
+        memcpy(xw_ref_ss_e, xw_ss_e, sizeof(xw_ref_ss_e));
+        memcpy(xw_ref_ss_d, xw_ss_d, sizeof(xw_ref_ss_d));
+    } else {
+        expal_timing_mismatch += byte_mismatches(xw_pk, xw_ref_pk,
+                                                 sizeof(xw_ref_pk));
+        expal_timing_mismatch += byte_mismatches(xw_sk, xw_ref_sk,
+                                                 sizeof(xw_ref_sk));
+        expal_timing_mismatch += byte_mismatches(xw_ct, xw_ref_ct,
+                                                 sizeof(xw_ref_ct));
+        expal_timing_mismatch += byte_mismatches(xw_ss_e, xw_ref_ss_e,
+                                                 sizeof(xw_ref_ss_e));
+        expal_timing_mismatch += byte_mismatches(xw_ss_d, xw_ref_ss_d,
+                                                 sizeof(xw_ref_ss_d));
+    }
+    expal_set_modes(0, 0);
+}
+
+static void expal_run_all(void)
+{
+    run_on_stack(xwing_expal_equivalence, dtcm_stack + sizeof(dtcm_stack));
+    uart_puts("expAL xw-bytes-mm: "); uart_put_u32(expal_xw_byte_mismatch);
+    uart_puts(" xw-smoke-fails="); uart_put_u32(expal_xw_smoke_fails);
+    uart_puts("\n");
+    harness_fails += expal_xw_byte_mismatch + expal_xw_smoke_fails;
+
+    expal_timing_mismatch = 0;
+    expaj_stack_prepare();
+    for (uint32_t i = 0; i < 8u; i++) {
+        expal_bench_xyc8 = expal_order_xyc8[i];
+        expal_bench_c9 = expal_order_c9[i];
+        expal_bench_slot_base = 309u + 3u * i;
+        run_on_stack(bench_expal_xwing_reps, dtcm_stack + sizeof(dtcm_stack));
+    }
+    expaj_stack_check();
+    uart_puts("expAL timing-mm: "); uart_put_u32(expal_timing_mismatch);
+    uart_puts(" stack-fails="); uart_put_u32(expaj_stack_canary_fails);
+    uart_puts(" stack-used="); uart_put_u32(expaj_stack_highwater);
+    uart_puts("\n");
+    harness_fails += expal_timing_mismatch + expaj_stack_canary_fails;
+    expal_set_modes(0, 0);
+}

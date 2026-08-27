@@ -1,0 +1,126 @@
+﻿python.exe : CPU is running at low speed (8291 kHz).
+At line:7 char:1
++ & $Python (Join-Path $H 'harvest_ra8m1_expAN_check489.py') 2>&1 | Tee ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (CPU is running at low speed (8291 kHz).:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+CPU is running at low speed (8291 kHz).
+measurement ELF SHA-256: C0DED190661F24D7259EFE16DE9218C67606F692B7AA09BC4606E6E48C626754
+measurement SREC SHA-256: 9445B62CD75FDA2ECDAC894E921BD37454A2C2376E07ED36275CA5C1611BD1F0
+connected: Cortex-M85
+flash code readback PASS: bytes=719392 segments=2 sha256=37755E1EE018D178390AECA84FAEE422827ABD88C28166A3974AD0B7F645B654
+=== EK-RA8M1 harness: KAT + DWT/PMU (ITCM/DTCM) ===
+
+== KAT: X25519 (RFC 7748 s6.1) ==
+alice_pk: OK
+bob_pk  : OK
+K(a,B)  : OK
+K(b,A)  : OK
+== KAT: SHA3-256 via asm Keccak-f1600 ==
+sha3("")   : OK
+sha3("abc"): OK
+
+KAT ALL PASS -- streams A+B verified on board
+
+DAUTHCTRL readback: 15
+
+[calib-empty] x1
+  dwt_cyc/op   : 168
+  pmu_cyc/op   : 187
+  insts        : 0
+  stall_op     : 0
+  stall_op_fe  : 0
+  stall_op_be  : 0
+  IPC x100     : 0
+  slot-waste % : 0
+
+[keccak-f1600] x1000
+  dwt_cyc/op   : 5504
+  pmu_cyc/op   : 5504
+  insts        : 0
+  stall_op     : 0
+  stall_op_fe  : 0
+  stall_op_be  : 0
+  IPC x100     : 0
+  slot-waste % : 0
+
+[x25519-scalarmult] x10
+  dwt_cyc/op   : 357497
+  pmu_cyc/op   : 357499
+  insts        : 0
+  stall_op     : 0
+  stall_op_fe  : 0
+  stall_op_be  : 0
+  IPC x100     : 0
+  slot-waste % : 0
+
+== K3: ML-KEM-768 (pqm4 m4fspeed) ==
+roundtrip+reject: OK
+keccak perms/op: keygen 43  encaps 44  decaps 44  combiner 1
+expX bytes-mm: 0 smoke-fails=0 align-base-bits=257 align-candidate-bits=257
+expX timing-mm: 0 stack-fails=0 stack-used=7640
+expY bytes-mm: 0 smoke-fails=0 oracle-mm=0 oracle-canary=0 align-base-bits=257 align-candidate-bits=257 input-min=-1664 input-max=1664 output-min=-14304 output-max=24656
+expY timing-mm: 0 stack-fails=0 stack-used=7640
+expZ bytes-mm: 0 smoke-fails=0 fwd-align-base=257 fwd-align-candidate=257 inv-align-base=257 inv-align-candidate=257
+expZ timing-mm: 0 stack-fails=0 stack-used=7640
+expAA bytes-mm: 0 smoke-fails=0 fwd-align-base=257 fwd-align-candidate=257
+expAA timing-mm: 0 stack-fails=0 stack-used=7640
+expAB bytes-mm: 0 smoke-fails=0
+expAB timing-mm: 0 stack-fails=0 stack-used=7832
+expAE x4-kat-fails: 0 u-kat-fails=0
+expAE bytes-mm: 0 smoke-fails=0
+expAE timing-mm: 0 stack-fails=0 stack-used=9028
+expAF path counts (u4-rounds/u8-rounds/real/dummy):
+  op0: 0/0/0/0
+  op1: 0/0/0/0
+  op2: 0/0/0/0
+expAF mismatch: 0
+expAI mismatch: 0 stack-fails=0 stack-used=9020
+bfull_slothy diag: prod-mm=0 lane-mm=0 first-bad-prod= first-bad-lane=
+mul256 full-vs-budget mismatch: 0  /  stitched(product+theta) mismatch: 0  /  bmid(theta x3) mismatch: 0  /  bfull mismatch: 0  /  expc mismatch: 0  /  expd mismatch: 0  /  expe mismatch: 0  /  mve4 mismatch: 0  /  coissue mismatch: 0  /  cosol mismatch: 0  /  expg mismatch: 0  /  exph mismatch: 0  /  expi mismatch: 0  /  v04 mismatch: 0  /  expj mismatch: 0  /  expk mismatch: 0  /  expl mismatch: 0  /  expm mismatch: 0  /  expt mismatch: 0  /  expu mismatch: 0  /  expv mismatch: 0  /  expw mismatch: 0 m55-unavailable=1 m85-inv-mm=0 m85-roundtrip-mm=0
+expAJ kat-mm: 0
+expAJ bytes-mm: 0 smoke-fails=0
+expAJ xw-bytes-mm: 0 xw-smoke-fails=0
+expAJ timing-mm: 0 stack-fails=0 stack-used=7832
+expAK timing-mm: 0 stack-fails=0 stack-used=7832
+expAL xw-bytes-mm: 0 xw-smoke-fails=0
+expAL timing-mm: 0 stack-fails=0 stack-used=7848
+expAM correctness: oracle-mm=0 lenn-mm=0 boundary-mm=0 alias-mm=0 align-mm=0 checks=1025 stack-fails=0 stack-used=1084
+expAM ct-delta: 0 batch=64 stack-fails=0 stack-used=348
+expAMb correctness: opt-mm=0 sqr-mm=0 sqrlenn-mm=0 conv-mm=0 sem-mm=0 checks=1000 stack-fails=0 stack-used=804
+expAMb bench done stack-fails=0 stack-used=404
+expAN equiv: bytes-mm=0 smoke-fails=0 checks=48
+expAN bench: stack-fails=0 stack-used=7864
+expAT correctness: scalar-mm=0 mve-mm=0 checks=240
+expAT bench: stack-fails=0 stack-used=176
+rep arrays ready x100 (489 slots)
+HARNESS DONE
+
+
+=== expAN — X-Wing 최상위 cycle 귀속 ===
+정확성: PASS (harness_fails=0, bytes-mm=0, smoke=0, checks=48, KAT=True)
+계측 오버헤드: 빈 span 26 cyc, 체크포인트 13.00 cyc/개
+
+--- keygen  total=762072 cyc   (expAL cell-11 761811~761847, 차이 +261, 1%이내=True)
+    ML-KEM-768 keygen                                    404221   53.04%
+    X25519 fixed-base                                    357819   46.95%
+    glue (rng/clamp/copy)                                    32    0.00%
+    checkpoint overhead (measured, included above)         26.0    0.00%
+
+--- encaps  total=1134709 cyc   (expAL cell-11 1134806~1134825, 차이 -97, 1%이내=True)
+    ML-KEM-768 encaps                                    411614   36.27%
+    X25519 fixed-base ctX                                357816   31.53%
+    X25519 var-base ssX                                  357324   31.49%
+    X-Wing combiner                                        7929    0.70%
+    glue (rng/clamp)                                         26    0.00%
+    checkpoint overhead (measured, included above)         52.0    0.00%
+
+--- decaps  total=810087 cyc   (expAL cell-11 809797~809817, 차이 +290, 1%이내=True)
+    ML-KEM-768 decaps                                    444650   54.89%
+    X25519 var-base ssX                                  357479   44.13%
+    X-Wing combiner                                        7933    0.98%
+    glue                                                     25    0.00%
+    checkpoint overhead (measured, included above)         39.0    0.00%
+
+EXPAN_JSON {"breakdown": {"decaps": {"parts": [{"cycles": 444650, "part": "ML-KEM-768 decaps", "pct_of_total": 54.88916622535604}, {"cycles": 357479, "part": "X25519 var-base ssX", "pct_of_total": 44.12847015197133}, {"cycles": 7933, "part": "X-Wing combiner", "pct_of_total": 0.9792775343882818}, {"cycles": 25, "part": "glue", "pct_of_total": 0.003086088284344768}, {"cycles": 39.0, "part": "checkpoint overhead (measured, included above)", "pct_of_total": 0.004814297723577838}], "total": 810087}, "encaps": {"parts": [{"cycles": 411614, "part": "ML-KEM-768 encaps", "pct_of_total": 36.274851085168095}, {"cycles": 357816, "part": "X25519 fixed-base ctX", "pct_of_total": 31.533723624294865}, {"cycles": 357324, "part": "X25519 var-base ssX", "pct_of_total": 31.490364489926492}, {"cycles": 7929, "part": "X-Wing combiner", "pct_of_total": 0.6987694642414928}, {"cycles": 26, "part": "glue (rng/clamp)", "pct_of_total": 0.0022913363690602612}, {"cycles": 52.0, "part": "checkpoint overhead (measured, included above)", "pct_of_total": 0.0045826727381205225}], "total": 1134709}, "keygen": {"parts": [{"cycles": 404221, "part": "ML-KEM-768 keygen", "pct_of_total": 53.04236345122246}, {"cycles": 357819, "part": "X25519 fixed-base", "pct_of_total": 46.95343747047523}, {"cycles": 32, "part": "glue (rng/clamp/copy)", "pct_of_total": 0.004199078302312642}, {"cycles": 26.0, "part": "checkpoint overhead (measured, included above)", "pct_of_total": 0.0034117511206290217}], "total": 762072}}, "calib_empty_span_cyc": 26, "calib_four_checkpoints_cyc": 78, "calib_per_checkpoint_cyc": 13.0, "code_flash_readback_bytes": 719392, "code_flash_readback_sha256": "37755E1EE018D178390AECA84FAEE422827ABD88C28166A3974AD0B7F645B654", "correctness_pass": true, "cross_check_expAL_cell11": {"decaps": {"delta_vs_low": 290, "expAL_cell11": [809797, 809817], "expAN_total": 810087, "within_1pct": true}, "encaps": {"delta_vs_low": -97, "expAL_cell11": [1134806, 1134825], "expAN_total": 1134709, "within_1pct": true}, "keygen": {"delta_vs_low": 261, "expAL_cell11": [761811, 761847], "expAN_total": 762072, "within_1pct": true}}, "elf_sha256": "C0DED190661F24D7259EFE16DE9218C67606F692B7AA09BC4606E6E48C626754", "equiv_bytes_mismatch": 0, "equiv_checks": 48, "equiv_smoke_fails": 0, "experiment": "AN", "gate_pass": true, "harness_fails": 0, "kat_all_pass": true, "raw": {"calib": {"empty_span": {"max": 26, "median": 26, "min": 26}, "four_checkpoints": {"max": 79, "median": 78, "min": 78}}, "decaps": {"c1_mlkem_dec": {"max": 444772, "median": 444650, "min": 444528}, "c2_x25519_ssX": {"max": 802245, "median": 802129, "min": 802008}, "c3_combiner": {"max": 810182, "median": 810062, "min": 809938}, "total": {"max": 810207, "median": 810087, "min": 809963}}, "encaps": {"c1_mlkem_enc": {"max": 411754, "median": 411614, "min": 411516}, "c2_x25519_ctX": {"max": 769570, "median": 769430, "min": 769332}, "c3_x25519_ssX": {"max": 1126894, "median": 1126754, "min": 1126656}, "c4_combiner": {"max": 1134819, "median": 1134683, "min": 1134587}, "total": {"max": 1134845, "median": 1134709, "min": 1134613}}, "keygen": {"c1_mlkem_keypair": {"max": 417683, "median": 404221, "min": 403035}, "c2_x25519_fixed": {"max": 775513, "median": 762040, "min": 760865}, "total": {"max": 775545, "median": 762072, "min": 760897}}}, "srec_sha256": "9445B62CD75FDA2ECDAC894E921BD37454A2C2376E07ED36275CA5C1611BD1F0"}

@@ -1,0 +1,13 @@
+﻿python.exe : CPU is running at low speed (8289 kHz).
+At line:8 char:3
++   & $Python (Join-Path $H 'harvest_ra8m1_expAU.py') 2>&1 | Tee-Object ...
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (CPU is running at low speed (8289 kHz).:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+CPU is running at low speed (8290 kHz).
+measurement ELF SHA-256: 1A323868FAB1551D786DC5A057EAB46BF4D1DE370DE42F3BFACE5D4DC6B88C0E
+measurement SREC SHA-256: CAAA75B6048C86F67A10B2D8BA3C6962D569D2FE779D9C4179EAFEBF95AEA61C
+connected: Cortex-M85
+flash code readback PASS: bytes=756504 segments=2 sha256=496F74487FD6C9C417FBE6B3F0EFD498B719D1098281B703BCCBEE8A5AE29D91
+timeout: harness_done이 1이 안 됨

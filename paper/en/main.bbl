@@ -1,0 +1,457 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{anyt/global//global/global/global}
+    \entry{Slothy22}{misc}{}{}
+      \name{author}{4}{}{%
+        {{hash=e18bac8172953187172ba2a24661ced3}{%
+           family={Abdulrahman},
+           familyi={A\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=e4a9136c212ead5f7da39d1999f64aa8}{%
+           family={Becker},
+           familyi={B\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+        {{hash=772f7c96fde28ed52aaeaaeb3c310ed8}{%
+           family={Kannwischer},
+           familyi={K\bibinitperiod},
+           given={M.\bibnamedelimi J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=8a12bbda3527668c37a237d8fd732198}{%
+           family={Klein},
+           familyi={K\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{c3ff9cd4e3030dc717a02379214d2ae6}
+      \strng{fullhash}{4258ff4d7eba2b4dba2f8530debde4d2}
+      \strng{fullhashraw}{4258ff4d7eba2b4dba2f8530debde4d2}
+      \strng{bibnamehash}{4258ff4d7eba2b4dba2f8530debde4d2}
+      \strng{authorbibnamehash}{4258ff4d7eba2b4dba2f8530debde4d2}
+      \strng{authornamehash}{c3ff9cd4e3030dc717a02379214d2ae6}
+      \strng{authorfullhash}{4258ff4d7eba2b4dba2f8530debde4d2}
+      \strng{authorfullhashraw}{4258ff4d7eba2b4dba2f8530debde4d2}
+      \field{labelalpha}{Abd+22}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{IACR ePrint 2022/1303}
+      \field{title}{Fast and Clean: Auditable High-Performance Assembly via Constraint Solving}
+      \field{year}{2022}
+    \endentry
+    \entry{SlothyM7_25}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=e18bac8172953187172ba2a24661ced3}{%
+           family={Abdulrahman},
+           familyi={A\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=772f7c96fde28ed52aaeaaeb3c310ed8}{%
+           family={Kannwischer},
+           familyi={K\bibinitperiod},
+           given={M.\bibnamedelimi J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=ad462d5db0315824e4ef17f3d0c8d3f5}{%
+           family={Lim},
+           familyi={L\bibinitperiod},
+           given={T.-H.},
+           giveni={T\bibinithyphendelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{f7b354f6a8a7400d9fcd8cd31f981761}
+      \strng{fullhash}{f7b354f6a8a7400d9fcd8cd31f981761}
+      \strng{fullhashraw}{f7b354f6a8a7400d9fcd8cd31f981761}
+      \strng{bibnamehash}{f7b354f6a8a7400d9fcd8cd31f981761}
+      \strng{authorbibnamehash}{f7b354f6a8a7400d9fcd8cd31f981761}
+      \strng{authornamehash}{f7b354f6a8a7400d9fcd8cd31f981761}
+      \strng{authorfullhash}{f7b354f6a8a7400d9fcd8cd31f981761}
+      \strng{authorfullhashraw}{f7b354f6a8a7400d9fcd8cd31f981761}
+      \field{labelalpha}{AKL25}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{AsiaCCS}
+      \field{title}{Enabling Microarchitectural Agility: Taking ML-KEM and ML-DSA from Cortex-M4 to M7 with SLOTHY}
+      \field{year}{2025}
+    \endentry
+    \entry{XWing24}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{3}{}{%
+        {{hash=782e19c4a38b7c1557783841b9f022cf}{%
+           family={Barbosa},
+           familyi={B\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=5c2ebbb91fb38d5c2e0084c2817a4b0e}{%
+           family={Connolly},
+           familyi={C\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=abbe602416a930090757ffb9e0e69edb}{%
+           family={Duarte},
+           familyi={D\bibinitperiod},
+           given={J.\bibnamedelimi D.},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{8a5a157851e9ebc76acf7fd001a67eb8}
+      \strng{fullhash}{8a5a157851e9ebc76acf7fd001a67eb8}
+      \strng{fullhashraw}{8a5a157851e9ebc76acf7fd001a67eb8}
+      \strng{bibnamehash}{8a5a157851e9ebc76acf7fd001a67eb8}
+      \strng{authorbibnamehash}{8a5a157851e9ebc76acf7fd001a67eb8}
+      \strng{authornamehash}{8a5a157851e9ebc76acf7fd001a67eb8}
+      \strng{authorfullhash}{8a5a157851e9ebc76acf7fd001a67eb8}
+      \strng{authorfullhashraw}{8a5a157851e9ebc76acf7fd001a67eb8}
+      \field{labelalpha}{BCD+24}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IACR Communications in Cryptology}
+      \field{note}{ePrint 2024/039}
+      \field{number}{1}
+      \field{title}{X-Wing: The Hybrid KEM You've Been Looking For}
+      \field{volume}{1}
+      \field{year}{2024}
+    \endentry
+    \entry{BK22}{misc}{}{}
+      \name{author}{2}{}{%
+        {{hash=e4a9136c212ead5f7da39d1999f64aa8}{%
+           family={Becker},
+           familyi={B\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+        {{hash=772f7c96fde28ed52aaeaaeb3c310ed8}{%
+           family={Kannwischer},
+           familyi={K\bibinitperiod},
+           given={M.\bibnamedelimi J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{3ea792801f741d6076c147ccbcbabb2f}
+      \strng{fullhash}{3ea792801f741d6076c147ccbcbabb2f}
+      \strng{fullhashraw}{3ea792801f741d6076c147ccbcbabb2f}
+      \strng{bibnamehash}{3ea792801f741d6076c147ccbcbabb2f}
+      \strng{authorbibnamehash}{3ea792801f741d6076c147ccbcbabb2f}
+      \strng{authornamehash}{3ea792801f741d6076c147ccbcbabb2f}
+      \strng{authorfullhash}{3ea792801f741d6076c147ccbcbabb2f}
+      \strng{authorfullhashraw}{3ea792801f741d6076c147ccbcbabb2f}
+      \field{labelalpha}{BK22}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{IACR ePrint 2022/1243}
+      \field{title}{Hybrid Scalar/Vector Implementations of Keccak and SPHINCS+ on AArch64}
+      \field{year}{2022}
+    \endentry
+    \entry{ParHyb26}{misc}{}{}
+      \name{author}{3}{}{%
+        {{hash=2d818707ad467eb9a904070357498722}{%
+           family={Eum},
+           familyi={E\bibinitperiod},
+           given={S.-W.},
+           giveni={S\bibinithyphendelim W\bibinitperiod}}}%
+        {{hash=e5a16a4512f672c60c0d10a1e43efcd0}{%
+           family={Song},
+           familyi={S\bibinitperiod},
+           given={M.-H.},
+           giveni={M\bibinithyphendelim H\bibinitperiod}}}%
+        {{hash=84b9626a15022bfa2631e3a30eee813b}{%
+           family={Seo},
+           familyi={S\bibinitperiod},
+           given={H.-J.},
+           giveni={H\bibinithyphendelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{6d0ab7c6060c31cf0a948b15835e29fc}
+      \strng{fullhash}{6d0ab7c6060c31cf0a948b15835e29fc}
+      \strng{fullhashraw}{6d0ab7c6060c31cf0a948b15835e29fc}
+      \strng{bibnamehash}{6d0ab7c6060c31cf0a948b15835e29fc}
+      \strng{authorbibnamehash}{6d0ab7c6060c31cf0a948b15835e29fc}
+      \strng{authornamehash}{6d0ab7c6060c31cf0a948b15835e29fc}
+      \strng{authorfullhash}{6d0ab7c6060c31cf0a948b15835e29fc}
+      \strng{authorfullhashraw}{6d0ab7c6060c31cf0a948b15835e29fc}
+      \field{labelalpha}{ESS26}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{IACR ePrint 2026/440}
+      \field{title}{Performance Analysis of a Thread Pool-Based Parallel Execution Model for Hybrid Post-Quantum TLS 1.3 Handshakes}
+      \field{year}{2026}
+    \endentry
+    \entry{Intel10}{report}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{3}{}{%
+        {{hash=e4bfb562fd1c20fb8877420b64647911}{%
+           family={Gopal},
+           familyi={G\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod}}}%
+        {{hash=bb663f4b4998e8bc8cb4b1d2a57edede}{%
+           family={Feghali},
+           familyi={F\bibinitperiod},
+           given={W.},
+           giveni={W\bibinitperiod}}}%
+        {{hash=21cc7f64d9e7d64f01961066a54c8364}{%
+           family={Guilford},
+           familyi={G\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Intel}%
+      }
+      \strng{namehash}{bd2dcf9222430968f6426b21ed97c7cc}
+      \strng{fullhash}{bd2dcf9222430968f6426b21ed97c7cc}
+      \strng{fullhashraw}{bd2dcf9222430968f6426b21ed97c7cc}
+      \strng{bibnamehash}{bd2dcf9222430968f6426b21ed97c7cc}
+      \strng{authorbibnamehash}{bd2dcf9222430968f6426b21ed97c7cc}
+      \strng{authornamehash}{bd2dcf9222430968f6426b21ed97c7cc}
+      \strng{authorfullhash}{bd2dcf9222430968f6426b21ed97c7cc}
+      \strng{authorfullhashraw}{bd2dcf9222430968f6426b21ed97c7cc}
+      \field{labelalpha}{GFG+10}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{323686}
+      \field{title}{Fast Cryptographic Computation on Intel Architecture Processors Via Function Stitching}
+      \field{type}{techreport}
+      \field{year}{2010}
+    \endentry
+    \entry{pqm4}{misc}{}{}
+      \name{author}{5}{}{%
+        {{hash=772f7c96fde28ed52aaeaaeb3c310ed8}{%
+           family={Kannwischer},
+           familyi={K\bibinitperiod},
+           given={M.\bibnamedelimi J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=0a2873af6edf930bb4c3e497a20c470a}{%
+           family={Petri},
+           familyi={P\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=635ad55b712f1fcd94f2eb404a61fae6}{%
+           family={Rijneveld},
+           familyi={R\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=a7fa2680a50095cbf0624792c197f587}{%
+           family={Schwabe},
+           familyi={S\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=6d57194fa093d199287e0bdbd8023607}{%
+           family={Stoffelen},
+           familyi={S\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{be3d492c56091d2191d5ad83c6146f54}
+      \strng{fullhash}{ced3a4632b2408c20b61afc6dd895657}
+      \strng{fullhashraw}{ced3a4632b2408c20b61afc6dd895657}
+      \strng{bibnamehash}{ced3a4632b2408c20b61afc6dd895657}
+      \strng{authorbibnamehash}{ced3a4632b2408c20b61afc6dd895657}
+      \strng{authornamehash}{be3d492c56091d2191d5ad83c6146f54}
+      \strng{authorfullhash}{ced3a4632b2408c20b61afc6dd895657}
+      \strng{authorfullhashraw}{ced3a4632b2408c20b61afc6dd895657}
+      \field{labelalpha}{Kan+}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://github.com/mupq/pqm4}}
+      \field{note}{commit \texttt{cc2c1b992b60}}
+      \field{title}{pqm4: Testing and Benchmarking {NIST} {PQC} on {ARM} {Cortex-M4}}
+    \endentry
+    \entry{Lenngren}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=cb26568f8ff00704cc9baa6cd93f08e9}{%
+           family={Lenngren},
+           familyi={L\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{cb26568f8ff00704cc9baa6cd93f08e9}
+      \strng{fullhash}{cb26568f8ff00704cc9baa6cd93f08e9}
+      \strng{fullhashraw}{cb26568f8ff00704cc9baa6cd93f08e9}
+      \strng{bibnamehash}{cb26568f8ff00704cc9baa6cd93f08e9}
+      \strng{authorbibnamehash}{cb26568f8ff00704cc9baa6cd93f08e9}
+      \strng{authornamehash}{cb26568f8ff00704cc9baa6cd93f08e9}
+      \strng{authorfullhash}{cb26568f8ff00704cc9baa6cd93f08e9}
+      \strng{authorfullhashraw}{cb26568f8ff00704cc9baa6cd93f08e9}
+      \field{labelalpha}{Len17}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://github.com/Emill/X25519-Cortex-M4}}
+      \field{title}{X25519 for {ARM} {Cortex-M4}}
+      \field{year}{2017}
+    \endentry
+    \entry{RFC7748}{report}{}{}
+      \name{author}{3}{}{%
+        {{hash=0f9f41c2b1fc13edbfba0a612bf9ca8f}{%
+           family={Langley},
+           familyi={L\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=25ea07bdd5f8540e6c1cb65f08f5021d}{%
+           family={Hamburg},
+           familyi={H\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=f6dbbe5bf35532c05f0dfb1c0eb444e3}{%
+           family={Turner},
+           familyi={T\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {IETF}%
+      }
+      \strng{namehash}{987e55ab32885f5d983708eb3e30a429}
+      \strng{fullhash}{987e55ab32885f5d983708eb3e30a429}
+      \strng{fullhashraw}{987e55ab32885f5d983708eb3e30a429}
+      \strng{bibnamehash}{987e55ab32885f5d983708eb3e30a429}
+      \strng{authorbibnamehash}{987e55ab32885f5d983708eb3e30a429}
+      \strng{authornamehash}{987e55ab32885f5d983708eb3e30a429}
+      \strng{authorfullhash}{987e55ab32885f5d983708eb3e30a429}
+      \strng{authorfullhashraw}{987e55ab32885f5d983708eb3e30a429}
+      \field{labelalpha}{LHT16}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{RFC 7748}
+      \field{title}{Elliptic Curves for Security}
+      \field{type}{techreport}
+      \field{year}{2016}
+    \endentry
+    \entry{FIPS203}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=ef9cb61878e61d434507444346b29d1a}{%
+           family={{National Institute of Standards and Technology}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {NIST}%
+      }
+      \strng{namehash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{fullhash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{fullhashraw}{ef9cb61878e61d434507444346b29d1a}
+      \strng{bibnamehash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{authorbibnamehash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{authornamehash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{authorfullhash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{authorfullhashraw}{ef9cb61878e61d434507444346b29d1a}
+      \field{labelalpha}{Nat24}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{FIPS 203}
+      \field{title}{Module-Lattice-Based Key-Encapsulation Mechanism Standard}
+      \field{type}{techreport}
+      \field{year}{2024}
+    \endentry
+    \entry{DualCore25}{misc}{}{}
+      \name{author}{2}{}{%
+        {{hash=9d9efdb7c89684dac99242072871c5a6}{%
+           family={Segatz},
+           familyi={S\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=66aa99fa18c9cab238feed9a93bc7656}{%
+           family={Al\bibnamedelima Hafiz},
+           familyi={A\bibinitperiod\bibinitdelim H\bibinitperiod},
+           given={M.\bibnamedelimi I.},
+           giveni={M\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+      }
+      \strng{namehash}{a18f3236e19a6fed47c184d6c63e6d7b}
+      \strng{fullhash}{a18f3236e19a6fed47c184d6c63e6d7b}
+      \strng{fullhashraw}{a18f3236e19a6fed47c184d6c63e6d7b}
+      \strng{bibnamehash}{a18f3236e19a6fed47c184d6c63e6d7b}
+      \strng{authorbibnamehash}{a18f3236e19a6fed47c184d6c63e6d7b}
+      \strng{authornamehash}{a18f3236e19a6fed47c184d6c63e6d7b}
+      \strng{authorfullhash}{a18f3236e19a6fed47c184d6c63e6d7b}
+      \strng{authorfullhashraw}{a18f3236e19a6fed47c184d6c63e6d7b}
+      \field{labelalpha}{SA25}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{arXiv:2503.10207}
+      \field{title}{Efficient Implementation of CRYSTALS-KYBER Key Encapsulation Mechanism on ESP32}
+      \field{year}{2025}
+    \endentry
+    \entry{Sim26}{misc}{}{}
+      \name{author}{5}{}{%
+        {{hash=3a05bc9ab4fcb93bd402bdacfdf58587}{%
+           family={Sim},
+           familyi={S\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=14f87fbb1fcbb064a8eb8c80398f618b}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=65c741b3c9a91bc27c532dd14b35b231}{%
+           family={Cho},
+           familyi={C\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=08fe94fb984635c6ace04bb8ad595e6f}{%
+           family={Hyoung},
+           familyi={H\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=1894da978e32996741075cae4811c543}{%
+           family={Seo},
+           familyi={S\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{c20d6c9a737eaa6b21b0bab9a60ae6c7}
+      \strng{fullhash}{677841c2980c82937a97054245a19af3}
+      \strng{fullhashraw}{677841c2980c82937a97054245a19af3}
+      \strng{bibnamehash}{677841c2980c82937a97054245a19af3}
+      \strng{authorbibnamehash}{677841c2980c82937a97054245a19af3}
+      \strng{authornamehash}{c20d6c9a737eaa6b21b0bab9a60ae6c7}
+      \strng{authorfullhash}{677841c2980c82937a97054245a19af3}
+      \strng{authorfullhashraw}{677841c2980c82937a97054245a19af3}
+      \field{labelalpha}{Sim+26}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{IACR ePrint 2026/1414}
+      \field{title}{Evaluating Hybrid KEM/DSA for KpqC and NIST PQC on ARM Cortex-M4}
+      \field{year}{2026}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

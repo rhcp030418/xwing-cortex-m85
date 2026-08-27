@@ -1,0 +1,563 @@
+﻿python.exe : CPU is running at low speed (8297 kHz).
+At line:1 char:302
++ ... tch {} } }; & "C:\Users\cnscj\AppData\Local\Programs\Python\Python314 ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (CPU is running at low speed (8297 kHz).:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+CPU is running at low speed (8298 kHz).
+connected: Cortex-M85
+=== EK-RA8M1 harness: KAT + DWT/PMU (ITCM/DTCM) ===
+
+== KAT: X25519 (RFC 7748 s6.1) ==
+alice_pk: OK
+bob_pk  : OK
+K(a,B)  : OK
+K(b,A)  : OK
+== KAT: SHA3-256 via asm Keccak-f1600 ==
+sha3("")   : OK
+sha3("abc"): OK
+
+KAT ALL PASS -- streams A+B verified on board
+
+DAUTHCTRL readback: 15
+
+[calib-empty] x1
+  dwt_cyc/op   : 143
+  pmu_cyc/op   : 180
+  insts        : 0
+  stall_op     : 0
+  stall_op_fe  : 0
+  stall_op_be  : 0
+  IPC x100     : 0
+  slot-waste % : 0
+
+[keccak-f1600] x1000
+  dwt_cyc/op   : 5504
+  pmu_cyc/op   : 5504
+  insts        : 0
+  stall_op     : 0
+  stall_op_fe  : 0
+  stall_op_be  : 0
+  IPC x100     : 0
+  slot-waste % : 0
+
+[x25519-scalarmult] x10
+  dwt_cyc/op   : 357493
+  pmu_cyc/op   : 357497
+  insts        : 0
+  stall_op     : 0
+  stall_op_fe  : 0
+  stall_op_be  : 0
+  IPC x100     : 0
+  slot-waste % : 0
+
+== K3: ML-KEM-768 (pqm4 m4fspeed) ==
+roundtrip+reject: OK
+keccak perms/op: keygen 43  encaps 44  decaps 44  combiner 1
+expX bytes-mm: 0 smoke-fails=0 align-base-bits=257 align-candidate-bits=257
+expX timing-mm: 0 stack-fails=0 stack-used=7640
+expY bytes-mm: 0 smoke-fails=0 oracle-mm=0 oracle-canary=0 align-base-bits=257 align-candidate-bits=257 input-min=-1664 input-max=1664 output-min=-14304 output-max=24656
+expY timing-mm: 0 stack-fails=0 stack-used=7640
+expZ bytes-mm: 0 smoke-fails=0 fwd-align-base=257 fwd-align-candidate=257 inv-align-base=257 inv-align-candidate=257
+expZ timing-mm: 0 stack-fails=0 stack-used=7640
+expAA bytes-mm: 0 smoke-fails=0 fwd-align-base=257 fwd-align-candidate=257
+expAA timing-mm: 0 stack-fails=0 stack-used=7640
+expAB bytes-mm: 0 smoke-fails=0
+expAB timing-mm: 0 stack-fails=0 stack-used=7832
+expAE x4-kat-fails: 0 u-kat-fails=0
+expAE bytes-mm: 0 smoke-fails=0
+expAE timing-mm: 0 stack-fails=0 stack-used=9028
+expAF path counts (u4-rounds/u8-rounds/real/dummy):
+  op0: 0/0/0/0
+  op1: 0/0/0/0
+  op2: 0/0/0/0
+expAF mismatch: 0
+expAI mismatch: 0 stack-fails=0 stack-used=9020
+bfull_slothy diag: prod-mm=0 lane-mm=0 first-bad-prod= first-bad-lane=
+mul256 full-vs-budget mismatch: 0  /  stitched(product+theta) mismatch: 0  /  bmid(theta x3) mismatch: 0  /  bfull mismatch: 0  /  expc mismatch: 0  /  expd mismatch: 0  /  expe mismatch: 0  /  mve4 mismatch: 0  /  coissue mismatch: 0  /  cosol mismatch: 0  /  expg mismatch: 0  /  exph mismatch: 0  /  expi mismatch: 0  /  v04 mismatch: 0  /  expj mismatch: 0  /  expk mismatch: 0  /  expl mismatch: 0  /  expm mismatch: 0  /  expt mismatch: 0  /  expu mismatch: 0  /  expv mismatch: 0  /  expw mismatch: 0 m55-unavailable=1 m85-inv-mm=0 m85-roundtrip-mm=0
+expAJ kat-mm: 0
+expAJ bytes-mm: 0 smoke-fails=0
+expAJ xw-bytes-mm: 0 xw-smoke-fails=0
+expAJ timing-mm: 0 stack-fails=0 stack-used=7832
+expAK timing-mm: 0 stack-fails=0 stack-used=7832
+rep arrays ready x100 (309 slots)
+HARNESS DONE
+
+[N=100] keccak-f1600: median=5551 (calib 25 차감시 5526)  min=5547  max=5551
+[N=100] x25519-scalarmult: median=357508 (calib 25 차감시 357483)  min=357508  max=357657
+[N=100] mlkem768-keygen: median=438288 (calib 25 차감시 438263)  min=437178  max=452136
+[N=100] mlkem768-encaps: median=453698 (calib 25 차감시 453673)  min=453580  max=453822
+[N=100] mlkem768-decaps: median=505057 (calib 25 차감시 505032)  min=504831  max=505201
+[N=100] combiner-sha3-134B: median=7820 (calib 25 차감시 7795)  min=7820  max=7852
+[N=100] stitch-A-mulchain: median=8071 (calib 25 차감시 8046)  min=8071  max=8092
+[N=100] stitch-B-logicchain: median=5070 (calib 25 차감시 5045)  min=5070  max=5084
+[N=100] stitch-S-interleaved: median=9076 (calib 25 차감시 9051)  min=9075  max=9088
+[N=100] stitch-Bm-memchain: median=6080 (calib 25 차감시 6055)  min=6080  max=6103
+[N=100] stitch-Sm-interleaved-mem: median=10082 (calib 25 차감시 10057)  min=10082  max=10105
+[N=100] mul256-full-x100: median=84423 (calib 25 차감시 84398)  min=84417  max=85328
+[N=100] mul256-budget-x100: median=85286 (calib 25 차감시 85261)  min=84593  max=85606
+[N=100] mul256-flat-x100: median=37775 (calib 25 차감시 37750)  min=37775  max=38734
+[N=100] theta-frag-x100: median=7046 (calib 25 차감시 7021)  min=7046  max=7309
+[N=100] stitched-x100: median=39576 (calib 25 차감시 39551)  min=39576  max=39650
+[N=100] round-frag-x100: median=65946 (calib 25 차감시 65921)  min=65946  max=68159
+[N=100] stitched-round-x100: median=78064 (calib 25 차감시 78039)  min=78064  max=81405
+[N=100] mul256-flat6-x100: median=39485 (calib 25 차감시 39460)  min=39485  max=39547
+[N=100] round6-frag-x100: median=39746 (calib 25 차감시 39721)  min=39746  max=40342
+[N=100] stitched-round6-x100: median=66260 (calib 25 차감시 66235)  min=66260  max=69086
+[N=100] stitched-k2-x100: median=99964 (calib 25 차감시 99939)  min=99964  max=103855
+[N=100] slothy-seq-x1000: median=13064 (calib 25 차감시 13039)  min=13063  max=13171
+[N=100] slothy-opt-x1000: median=11064 (calib 25 차감시 11039)  min=11063  max=11112
+[N=100] bmid-seq-x1000: median=110064 (calib 25 차감시 110039)  min=110064  max=110072
+[N=100] bmid-zip-x1000: median=88064 (calib 25 차감시 88039)  min=88064  max=88073
+[N=100] bmid-slothy-x1000: median=85055 (calib 25 차감시 85030)  min=85055  max=85112
+[N=100] bfull-seq-x1000: median=727061 (calib 25 차감시 727036)  min=727061  max=727149
+[N=100] bfull-zip-x1000: median=0 (calib 25 차감시 -25)  min=0  max=0
+[N=100] bfull-slothy-x1000: median=654061 (calib 25 차감시 654036)  min=654061  max=654155
+[N=100] expc-seq-x1000: median=701036 (calib 25 차감시 701011)  min=701036  max=701119
+[N=100] expc-slothy-x1000: median=629036 (calib 25 차감시 629011)  min=629036  max=629108
+[N=100] expd-seq-x1000: median=635036 (calib 25 차감시 635011)  min=635036  max=635122
+[N=100] expd-slothy-x1000: median=579036 (calib 25 차감시 579011)  min=579036  max=579222
+[N=100] expe-seq-x1000: median=1572037 (calib 25 차감시 1572012)  min=1572037  max=3360456
+[N=100] expe-slothy-x1000: median=1520036 (calib 25 차감시 1520011)  min=1520036  max=1523028
+[N=100] mve4-round-x1000: median=754071 (calib 25 차감시 754046)  min=754071  max=754151
+[N=100] coissue-A-x1000: median=611062 (calib 25 차감시 611037)  min=611062  max=612442
+[N=100] coissue-zip-x1000: median=1013063 (calib 25 차감시 1013038)  min=1013063  max=1013172
+[N=100] coissue-slothy-x1000: median=996071 (calib 25 차감시 996046)  min=996071  max=996161
+[N=100] mve3-round-x1000: median=754071 (calib 25 차감시 754046)  min=754071  max=754149
+[N=100] coissue3-zip-x1000: median=1013061 (calib 25 차감시 1013036)  min=1013061  max=1013274
+[N=100] glue-roundtrip-x1000: median=473 (calib 25 차감시 448)  min=473  max=473
+[N=100] fiat-base-x100: median=28893 (calib 25 차감시 28868)  min=28893  max=29609
+[N=100] fiat-yield3-x100: median=32593 (calib 25 차감시 32568)  min=32593  max=32606
+[N=100] mve2-round-x1000: median=754070 (calib 25 차감시 754045)  min=754070  max=754159
+[N=100] coissue2-zip-x1000: median=1013061 (calib 25 차감시 1013036)  min=1013061  max=1013145
+[N=100] fiat-yield2-x100: median=32379 (calib 25 차감시 32354)  min=32379  max=32660
+[N=100] expj-seq-x1000: median=1065066 (calib 25 차감시 1065041)  min=1065066  max=1067118
+[N=100] expj-stitch-x1000: median=979065 (calib 25 차감시 979040)  min=979065  max=979149
+[N=100] expk-seq-x1000: median=3203053 (calib 25 차감시 3203028)  min=3203053  max=3227855
+[N=100] expk-coarse-x1000: median=3200249 (calib 25 차감시 3200224)  min=3200183  max=3213952
+[N=100] expk-stitch-x1000: median=2943052 (calib 25 차감시 2943027)  min=2943052  max=2950487
+[N=100] expl-ntt-x1000: median=901072 (calib 25 차감시 901047)  min=901072  max=901153
+[N=100] expl-zip-x1000: median=1135061 (calib 25 차감시 1135036)  min=1135061  max=1140106
+[N=100] expl-sntt-x1000: median=600072 (calib 25 차감시 600047)  min=600072  max=601441
+[N=100] expl-szip-x1000: median=1217061 (calib 25 차감시 1217036)  min=1217061  max=1219810
+[N=100] expj-stitch-alt-x1000: median=979065 (calib 25 차감시 979040)  min=979065  max=981313
+[N=100] expm-seq-x1000: median=3254120 (calib 25 차감시 3254095)  min=3248126  max=10073528
+[N=100] expm-stitch-x1000: median=3006053 (calib 25 차감시 3006028)  min=3006053  max=3021553
+[N=100] expm4-seq-x1000: median=2004053 (calib 25 차감시 2004028)  min=2004053  max=2008956
+[N=100] expm4-stitch-x1000: median=1770053 (calib 25 차감시 1770028)  min=1770053  max=1785098
+[N=100] pairn-veor-x1000: median=611066 (calib 25 차감시 611041)  min=611066  max=612524
+[N=100] pairn-veor-zip-x1000: median=617055 (calib 25 차감시 617030)  min=617055  max=621419
+[N=100] pairn-ldr-x1000: median=1222066 (calib 25 차감시 1222041)  min=1222066  max=1222853
+[N=100] pairn-ldr-zip-x1000: median=1228055 (calib 25 차감시 1228030)  min=1228055  max=1230801
+[N=100] pairn-str-x1000: median=1222066 (calib 25 차감시 1222041)  min=1222066  max=1222829
+[N=100] pairn-str-zip-x1000: median=1839055 (calib 25 차감시 1839030)  min=1839055  max=1841211
+[N=100] pairn-rot-x1000: median=1222066 (calib 25 차감시 1222041)  min=1222066  max=1222839
+[N=100] pairn-rot-zip-x1000: median=1227055 (calib 25 차감시 1227030)  min=1227055  max=1229815
+[N=100] coissue-slothy2-x1000: median=1018071 (calib 25 차감시 1018046)  min=1018071  max=1018293
+[N=100] pairn2-ldr-x1000: median=1229055 (calib 25 차감시 1229030)  min=1229055  max=1234845
+[N=100] pairn2-str-x1000: median=2450055 (calib 25 차감시 2450030)  min=2450055  max=2453572
+[N=100] pairn2-rot-x1000: median=1228055 (calib 25 차감시 1228030)  min=1228055  max=1232874
+[N=100] pairn-lsmix-x1000: median=612066 (calib 25 차감시 612041)  min=612066  max=613447
+[N=100] pairn-lsmix-zip-x1000: median=1228055 (calib 25 차감시 1228030)  min=1228055  max=1230802
+[N=100] pairp-vec-x1000: median=1222066 (calib 25 차감시 1222041)  min=1222066  max=1222842
+[N=100] pairp-s0-x1000: median=611070 (calib 25 차감시 611045)  min=611070  max=611453
+[N=100] pairp-s0-zip-x1000: median=1833069 (calib 25 차감시 1833044)  min=1833069  max=1834213
+[N=100] pairp-s1-x1000: median=611068 (calib 25 차감시 611043)  min=611068  max=611505
+[N=100] pairp-s1-zip-x1000: median=1833067 (calib 25 차감시 1833042)  min=1833067  max=1834230
+[N=100] pairp-s2-x1000: median=611068 (calib 25 차감시 611043)  min=611068  max=611467
+[N=100] pairp-s2-zip-x1000: median=1833067 (calib 25 차감시 1833042)  min=1833067  max=1834237
+[N=100] pairp-s3-x1000: median=611068 (calib 25 차감시 611043)  min=611068  max=611467
+[N=100] pairp-s3-zip-x1000: median=1833067 (calib 25 차감시 1833042)  min=1833067  max=1834222
+[N=100] expj-a-x1000: median=312068 (calib 25 차감시 312043)  min=312068  max=313022
+[N=100] expj-b-x1000: median=755068 (calib 25 차감시 755043)  min=755068  max=756332
+[N=100] expj-loop-x1000: median=3076 (calib 25 차감시 3051)  min=3076  max=3089
+[N=100] expq-b-x1000: median=754069 (calib 25 차감시 754044)  min=754069  max=755408
+[N=100] expq-stitch-x1000: median=868069 (calib 25 차감시 868044)  min=868069  max=870393
+[N=100] expq-seq-x1000: median=1064069 (calib 25 차감시 1064044)  min=1064069  max=1066219
+[N=100] expj-stitch2-x1000: median=947066 (calib 25 차감시 947041)  min=947066  max=947303
+[N=100] expq-stitch2-x1000: median=861065 (calib 25 차감시 861040)  min=861065  max=863417
+[N=100] expm-stitch2-x1000: median=3034082 (calib 25 차감시 3034057)  min=3016111  max=3074176
+[N=100] expm4-stitch2-x1000: median=1770053 (calib 25 차감시 1770028)  min=1770053  max=1775174
+[N=100] expt-fiat-x1000: median=272065 (calib 25 차감시 272040)  min=272065  max=272892
+[N=100] expt-b0-x1000: median=967103 (calib 25 차감시 967078)  min=967103  max=968155
+[N=100] expt-seq-x1000: median=1238100 (calib 25 차감시 1238075)  min=1238100  max=1239986
+[N=100] expt-stitch-x1000: median=1097102 (calib 25 차감시 1097077)  min=1097102  max=1099079
+[N=100] expt-m8-seq-x1000: median=3151583 (calib 25 차감시 3151558)  min=3151482  max=4840244
+[N=100] expt-m8-stitch-x1000: median=2923091 (calib 25 차감시 2923066)  min=2923091  max=2936239
+[N=100] expt-m4-seq-x1000: median=2056090 (calib 25 차감시 2056065)  min=2056089  max=2060314
+[N=100] expt-m4-stitch-x1000: median=1866091 (calib 25 차감시 1866066)  min=1866091  max=1870470
+[N=100] expu-y10-x1000: median=266064 (calib 25 차감시 266039)  min=266064  max=266943
+[N=100] expu-y11-x1000: median=267065 (calib 25 차감시 267040)  min=267065  max=267907
+[N=100] expu-lo10-b1-x1000: median=850100 (calib 25 차감시 850075)  min=850100  max=851274
+[N=100] expu-lo10-seq-x1000: median=1114100 (calib 25 차감시 1114075)  min=1114100  max=1116081
+[N=100] expu-lo10-stitch-x1000: median=1041100 (calib 25 차감시 1041075)  min=1041100  max=1043180
+[N=100] expu-lo10-m4-seq-x1000: median=1912088 (calib 25 차감시 1912063)  min=1912088  max=1916683
+[N=100] expu-lo10-m4-stitch-x1000: median=1762089 (calib 25 차감시 1762064)  min=1762089  max=1766692
+[N=100] expu-lo10-m8-seq-x1000: median=2968088 (calib 25 차감시 2968063)  min=2968088  max=2981594
+[N=100] expu-lo10-m8-stitch-x1000: median=2890090 (calib 25 차감시 2890065)  min=2808186  max=8714064
+[N=100] expu-lo11-b1-x1000: median=850100 (calib 25 차감시 850075)  min=850100  max=851293
+[N=100] expu-lo11-seq-x1000: median=1115100 (calib 25 차감시 1115075)  min=1115100  max=1117057
+[N=100] expu-lo11-stitch-x1000: median=1030100 (calib 25 차감시 1030075)  min=1030100  max=1032140
+[N=100] expu-lo11-m4-seq-x1000: median=1919088 (calib 25 차감시 1919063)  min=1919088  max=1923463
+[N=100] expu-lo11-m4-stitch-x1000: median=1758089 (calib 25 차감시 1758064)  min=1758089  max=1762650
+[N=100] expu-lo11-m8-seq-x1000: median=2992418 (calib 25 차감시 2992393)  min=2992194  max=8404220
+[N=100] expu-lo11-m8-stitch-x1000: median=2810118 (calib 25 차감시 2810093)  min=2810118  max=8436185
+[N=100] expu-hi11-b1-x1000: median=910102 (calib 25 차감시 910077)  min=910102  max=911227
+[N=100] expu-hi11-seq-x1000: median=1176099 (calib 25 차감시 1176074)  min=1176099  max=1177993
+[N=100] expu-hi11-stitch-x1000: median=1039101 (calib 25 차감시 1039076)  min=1039101  max=1041133
+[N=100] expu-hi11-m4-seq-x1000: median=1979089 (calib 25 차감시 1979064)  min=1979089  max=1983368
+[N=100] expu-hi11-m4-stitch-x1000: median=1762089 (calib 25 차감시 1762064)  min=1762089  max=1766599
+[N=100] expu-hi11-m8-seq-x1000: median=3043106 (calib 25 차감시 3043081)  min=3043106  max=8364295
+[N=100] expu-hi11-m8-stitch-x1000: median=2842177 (calib 25 차감시 2842152)  min=2828484  max=2842261
+[N=100] expv-ntt-x1000: median=5434045 (calib 25 차감시 5434020)  min=5434045  max=5434127
+[N=100] expv-invntt-x1000: median=6686046 (calib 25 차감시 6686021)  min=6686046  max=6686128
+[N=100] expw-fwd-l1222-x1000: median=2856051 (calib 25 차감시 2856026)  min=2856051  max=2856141
+[N=100] expw-fwd-l1222-vld4-x1000: median=2866047 (calib 25 차감시 2866022)  min=2866047  max=2866127
+[N=100] expw-fwd-l232-size-x1000: median=2814044 (calib 25 차감시 2814019)  min=2814044  max=2814124
+[N=100] expw-fwd-l232-speed-x1000: median=2814045 (calib 25 차감시 2814020)  min=2814045  max=2814129
+[N=100] expw-rev4-x1000: median=664050 (calib 25 차감시 664025)  min=664050  max=664176
+[N=100] expw-inv-m85-wip-x1000: median=3294049 (calib 25 차감시 3294024)  min=3294049  max=3294141
+[N=100] expx-mlkem-keygen: median=427664 (calib 25 차감시 427639)  min=426434  max=441602
+[N=100] expx-mlkem-encaps: median=448434 (calib 25 차감시 448409)  min=448222  max=448540
+[N=100] expx-mlkem-decaps: median=494357 (calib 25 차감시 494332)  min=494259  max=494481
+[N=100] expx-ba-candidate-keygen: median=427646 (calib 25 차감시 427621)  min=426406  max=441670
+[N=100] expx-ba-candidate-encaps: median=448418 (calib 25 차감시 448393)  min=448256  max=448540
+[N=100] expx-ba-candidate-decaps: median=494379 (calib 25 차감시 494354)  min=494209  max=494475
+[N=100] expx-ba-baseline-keygen: median=438284 (calib 25 차감시 438259)  min=437154  max=452092
+[N=100] expx-ba-baseline-encaps: median=453706 (calib 25 차감시 453681)  min=453538  max=453812
+[N=100] expx-ba-baseline-decaps: median=505073 (calib 25 차감시 505048)  min=504891  max=505195
+[N=100] expy-ab-baseline-keygen: median=427731 (calib 25 차감시 427706)  min=426581  max=435161
+[N=100] expy-ab-baseline-encaps: median=448099 (calib 25 차감시 448074)  min=447965  max=448263
+[N=100] expy-ab-baseline-decaps: median=494181 (calib 25 차감시 494156)  min=493999  max=494349
+[N=100] expy-ab-candidate-keygen: median=419369 (calib 25 차감시 419344)  min=418043  max=426863
+[N=100] expy-ab-candidate-encaps: median=437156 (calib 25 차감시 437131)  min=437048  max=437316
+[N=100] expy-ab-candidate-decaps: median=480282 (calib 25 차감시 480257)  min=480122  max=480428
+[N=100] expy-ba-candidate-keygen: median=419389 (calib 25 차감시 419364)  min=418079  max=426789
+[N=100] expy-ba-candidate-encaps: median=437162 (calib 25 차감시 437137)  min=436987  max=437310
+[N=100] expy-ba-candidate-decaps: median=480344 (calib 25 차감시 480319)  min=480226  max=480454
+[N=100] expy-ba-baseline-keygen: median=427751 (calib 25 차감시 427726)  min=426665  max=435197
+[N=100] expy-ba-baseline-encaps: median=448084 (calib 25 차감시 448059)  min=447964  max=448222
+[N=100] expy-ba-baseline-decaps: median=494176 (calib 25 차감시 494151)  min=494058  max=494298
+[N=100] expz-ab-baseline-keygen: median=438286 (calib 25 차감시 438261)  min=437166  max=451804
+[N=100] expz-ab-baseline-encaps: median=453599 (calib 25 차감시 453574)  min=453461  max=453695
+[N=100] expz-ab-baseline-decaps: median=504810 (calib 25 차감시 504785)  min=504603  max=504964
+[N=100] expz-ab-candidate-keygen: median=419304 (calib 25 차감시 419279)  min=418052  max=432682
+[N=100] expz-ab-candidate-encaps: median=437374 (calib 25 차감시 437349)  min=437249  max=437552
+[N=100] expz-ab-candidate-decaps: median=480250 (calib 25 차감시 480225)  min=480042  max=480376
+[N=100] expz-ba-candidate-keygen: median=419278 (calib 25 차감시 419253)  min=418128  max=432730
+[N=100] expz-ba-candidate-encaps: median=437386 (calib 25 차감시 437361)  min=437193  max=437512
+[N=100] expz-ba-candidate-decaps: median=480320 (calib 25 차감시 480295)  min=480064  max=480490
+[N=100] expz-ba-baseline-keygen: median=438276 (calib 25 차감시 438251)  min=437220  max=451674
+[N=100] expz-ba-baseline-encaps: median=453602 (calib 25 차감시 453577)  min=453476  max=453754
+[N=100] expz-ba-baseline-decaps: median=504816 (calib 25 차감시 504791)  min=504736  max=504934
+[N=100] expaa-ab-baseline-keygen: median=419189 (calib 25 차감시 419164)  min=417937  max=426477
+[N=100] expaa-ab-baseline-encaps: median=437033 (calib 25 차감시 437008)  min=436828  max=437153
+[N=100] expaa-ab-baseline-decaps: median=479996 (calib 25 차감시 479971)  min=479822  max=480150
+[N=100] expaa-ab-candidate-keygen: median=415336 (calib 25 차감시 415311)  min=414122  max=422578
+[N=100] expaa-ab-candidate-encaps: median=435109 (calib 25 차감시 435084)  min=434865  max=435253
+[N=100] expaa-ab-candidate-decaps: median=476314 (calib 25 차감시 476289)  min=476084  max=476490
+[N=100] expaa-ba-candidate-keygen: median=415340 (calib 25 차감시 415315)  min=414082  max=422558
+[N=100] expaa-ba-candidate-encaps: median=435091 (calib 25 차감시 435066)  min=434895  max=435289
+[N=100] expaa-ba-candidate-decaps: median=476298 (calib 25 차감시 476273)  min=476156  max=476430
+[N=100] expaa-ba-baseline-keygen: median=419166 (calib 25 차감시 419141)  min=417930  max=426618
+[N=100] expaa-ba-baseline-encaps: median=437027 (calib 25 차감시 437002)  min=436883  max=437161
+[N=100] expaa-ba-baseline-decaps: median=480020 (calib 25 차감시 479995)  min=479892  max=480162
+[N=100] expab-ab-baseline-keygen: median=796001 (calib 25 차감시 795976)  min=794906  max=803745
+[N=100] expab-ab-baseline-encaps: median=1176642 (calib 25 차감시 1176617)  min=1176470  max=1176864
+[N=100] expab-ab-baseline-decaps: median=870308 (calib 25 차감시 870283)  min=870174  max=870534
+[N=100] expab-ab-candidate-keygen: median=773222 (calib 25 차감시 773197)  min=772144  max=780921
+[N=100] expab-ab-candidate-encaps: median=1158338 (calib 25 차감시 1158313)  min=1158175  max=1158498
+[N=100] expab-ab-candidate-decaps: median=841934 (calib 25 차감시 841909)  min=841774  max=842178
+[N=100] expab-ba-candidate-keygen: median=773221 (calib 25 차감시 773196)  min=772234  max=781005
+[N=100] expab-ba-candidate-encaps: median=1158404 (calib 25 차감시 1158379)  min=1158101  max=1158626
+[N=100] expab-ba-candidate-decaps: median=841950 (calib 25 차감시 841925)  min=841762  max=842164
+[N=100] expab-ba-baseline-keygen: median=795991 (calib 25 차감시 795966)  min=794986  max=803767
+[N=100] expab-ba-baseline-encaps: median=1176630 (calib 25 차감시 1176605)  min=1176518  max=1176770
+[N=100] expab-ba-baseline-decaps: median=870294 (calib 25 차감시 870269)  min=870174  max=870510
+[N=100] expac-ab-baseline-keygen: median=773443 (calib 25 차감시 773418)  min=772509  max=786827
+[N=100] expac-ab-baseline-encaps: median=1159064 (calib 25 차감시 1159039)  min=1158864  max=1159240
+[N=100] expac-ab-baseline-decaps: median=842632 (calib 25 차감시 842607)  min=842486  max=842810
+[N=100] expac-ab-candidate-keygen: median=1355409 (calib 25 차감시 1355384)  min=1354204  max=1368615
+[N=100] expac-ab-candidate-encaps: median=2327632 (calib 25 차감시 2327607)  min=2327470  max=2327913
+[N=100] expac-ab-candidate-decaps: median=1423942 (calib 25 차감시 1423917)  min=1423760  max=1424204
+[N=100] expac-ba-candidate-keygen: median=1355335 (calib 25 차감시 1355310)  min=1354375  max=1368577
+[N=100] expac-ba-candidate-encaps: median=2327636 (calib 25 차감시 2327611)  min=2327440  max=2327889
+[N=100] expac-ba-candidate-decaps: median=1423980 (calib 25 차감시 1423955)  min=1423674  max=1424134
+[N=100] expac-ba-baseline-keygen: median=773397 (calib 25 차감시 773372)  min=772551  max=786915
+[N=100] expac-ba-baseline-encaps: median=1159058 (calib 25 차감시 1159033)  min=1158783  max=1159218
+[N=100] expac-ba-baseline-decaps: median=842640 (calib 25 차감시 842615)  min=842468  max=842798
+[N=100] expad-sx-ab-scalar-keygen: median=773434 (calib 25 차감시 773409)  min=772514  max=786984
+[N=100] expad-sx-ab-scalar-encaps: median=1159069 (calib 25 차감시 1159044)  min=1158859  max=1159283
+[N=100] expad-sx-ab-scalar-decaps: median=842632 (calib 25 차감시 842607)  min=842476  max=842824
+[N=100] expad-sx-ab-x4-keygen: median=797152 (calib 25 차감시 797127)  min=796188  max=810442
+[N=100] expad-sx-ab-x4-encaps: median=1182701 (calib 25 차감시 1182676)  min=1182559  max=1182901
+[N=100] expad-sx-ab-x4-decaps: median=866366 (calib 25 차감시 866341)  min=866145  max=866554
+[N=100] expad-sx-ba-x4-keygen: median=797180 (calib 25 차감시 797155)  min=796128  max=810488
+[N=100] expad-sx-ba-x4-encaps: median=1182707 (calib 25 차감시 1182682)  min=1182549  max=1182939
+[N=100] expad-sx-ba-x4-decaps: median=866356 (calib 25 차감시 866331)  min=866144  max=866584
+[N=100] expad-sx-ba-scalar-keygen: median=773432 (calib 25 차감시 773407)  min=772530  max=786902
+[N=100] expad-sx-ba-scalar-encaps: median=1159065 (calib 25 차감시 1159040)  min=1158757  max=1159255
+[N=100] expad-sx-ba-scalar-decaps: median=842642 (calib 25 차감시 842617)  min=842482  max=842772
+[N=100] expae-fu-ab-fiat-keygen: median=1327976 (calib 25 차감시 1327951)  min=1326913  max=1341275
+[N=100] expae-fu-ab-fiat-encaps: median=2243608 (calib 25 차감시 2243583)  min=2243320  max=2244014
+[N=100] expae-fu-ab-fiat-decaps: median=1396928 (calib 25 차감시 1396903)  min=1396690  max=1397272
+[N=100] expae-fu-ab-u-keygen: median=1355387 (calib 25 차감시 1355362)  min=1354479  max=1368641
+[N=100] expae-fu-ab-u-encaps: median=2327620 (calib 25 차감시 2327595)  min=2327446  max=2327764
+[N=100] expae-fu-ab-u-decaps: median=1423948 (calib 25 차감시 1423923)  min=1423740  max=1424240
+[N=100] expae-fu-ba-u-keygen: median=1355383 (calib 25 차감시 1355358)  min=1354185  max=1368663
+[N=100] expae-fu-ba-u-encaps: median=2327616 (calib 25 차감시 2327591)  min=2327462  max=2327812
+[N=100] expae-fu-ba-u-decaps: median=1423958 (calib 25 차감시 1423933)  min=1423778  max=1424198
+[N=100] expae-fu-ba-fiat-keygen: median=1328013 (calib 25 차감시 1327988)  min=1326901  max=1341171
+[N=100] expae-fu-ba-fiat-encaps: median=2243544 (calib 25 차감시 2243519)  min=2243264  max=2243932
+[N=100] expae-fu-ba-fiat-decaps: median=1396962 (calib 25 차감시 1396937)  min=1396728  max=1397249
+[N=100] expaf-u4-ab-seq: median=85103 (calib 25 차감시 85078)  min=85047  max=85301
+[N=100] expaf-u4-ab-fused: median=86973 (calib 25 차감시 86948)  min=86969  max=87167
+[N=100] expaf-u4-ba-fused: median=86973 (calib 25 차감시 86948)  min=86969  max=87003
+[N=100] expaf-u4-ba-seq: median=85117 (calib 25 차감시 85092)  min=85065  max=85237
+[N=100] expaf-u8-ab-seq: median=153507 (calib 25 차감시 153482)  min=153435  max=153567
+[N=100] expaf-u8-ab-fused: median=163387 (calib 25 차감시 163362)  min=163283  max=163639
+[N=100] expaf-u8-ba-fused: median=163393 (calib 25 차감시 163368)  min=163283  max=163427
+[N=100] expaf-u8-ba-seq: median=153501 (calib 25 차감시 153476)  min=153439  max=153609
+[N=100] expai-fu-ab-f-total: checkpoint-median=2261882 min=2261574 max=2262230
+[N=100] expai-fu-ab-f-fused: checkpoint-median=478501 min=478213 max=478811
+[N=100] expai-fu-ab-f-residual: checkpoint-median=1775344 min=1775280 max=1775561
+[N=100] expai-fu-ab-u-total: checkpoint-median=2343392 min=2343222 max=2343920
+[N=100] expai-fu-ab-u-fused: checkpoint-median=903459 min=903285 max=903879
+[N=100] expai-fu-ab-u-residual: checkpoint-median=1431907 min=1431882 max=1431998
+[N=100] expai-fu-ba-u-total: checkpoint-median=2343398 min=2343204 max=2343594
+[N=100] expai-fu-ba-u-fused: checkpoint-median=903465 min=903279 max=903655
+[N=100] expai-fu-ba-u-residual: checkpoint-median=1431900 min=1431882 max=1431988
+[N=100] expai-fu-ba-f-total: checkpoint-median=2261846 min=2261634 max=2262197
+[N=100] expai-fu-ba-f-fused: checkpoint-median=478469 min=478247 max=478801
+[N=100] expai-fu-ba-f-residual: checkpoint-median=1775354 min=1775272 max=1775444
+[N=100] expai-fu1-ab-f-total: checkpoint-median=2261848 min=2261538 max=2262176
+[N=100] expai-fu1-ab-f-fused: checkpoint-median=478459 min=478143 max=478809
+[N=100] expai-fu1-ab-f-residual: checkpoint-median=1775352 min=1775270 max=1775442
+[N=100] expai-fu1-ab-u1-total: checkpoint-median=2287796 min=2287616 max=2288124
+[N=100] expai-fu1-ab-u1-fused: checkpoint-median=675739 min=675567 max=676095
+[N=100] expai-fu1-ab-u1-residual: checkpoint-median=1604006 min=1604001 max=1604096
+[N=100] expai-fu1-ba-u1-total: checkpoint-median=2287780 min=2287618 max=2287980
+[N=100] expai-fu1-ba-u1-fused: checkpoint-median=675733 min=675563 max=675925
+[N=100] expai-fu1-ba-u1-residual: checkpoint-median=1604006 min=1603999 max=1604094
+[N=100] expai-fu1-ba-f-total: checkpoint-median=2261820 min=2261618 max=2262188
+[N=100] expai-fu1-ba-f-fused: checkpoint-median=478411 min=478221 max=478795
+[N=100] expai-fu1-ba-f-residual: checkpoint-median=1775357 min=1775272 max=1775466
+[N=100] expaj-mlkem-a1-keygen: median=415465 (calib 25 차감시 415440)  min=413951  max=422719
+[N=100] expaj-mlkem-a1-encaps: median=435354 (calib 25 차감시 435329)  min=435188  max=435512
+[N=100] expaj-mlkem-a1-decaps: median=476416 (calib 25 차감시 476391)  min=476284  max=476588
+[N=100] expaj-mlkem-b1-keygen: median=404113 (calib 25 차감시 404088)  min=402867  max=411499
+[N=100] expaj-mlkem-b1-encaps: median=404518 (calib 25 차감시 404493)  min=404342  max=404670
+[N=100] expaj-mlkem-b1-decaps: median=437450 (calib 25 차감시 437425)  min=437268  max=437654
+[N=100] expaj-mlkem-b2-keygen: median=404109 (calib 25 차감시 404084)  min=402645  max=411525
+[N=100] expaj-mlkem-b2-encaps: median=404528 (calib 25 차감시 404503)  min=404370  max=404648
+[N=100] expaj-mlkem-b2-decaps: median=437452 (calib 25 차감시 437427)  min=437298  max=437610
+[N=100] expaj-mlkem-a2-keygen: median=415469 (calib 25 차감시 415444)  min=413995  max=422831
+[N=100] expaj-mlkem-a2-encaps: median=435370 (calib 25 차감시 435345)  min=435208  max=435550
+[N=100] expaj-mlkem-a2-decaps: median=476442 (calib 25 차감시 476417)  min=476286  max=476592
+[N=100] expaj-xwing-a1-keygen: median=773376 (calib 25 차감시 773351)  min=772397  max=780455
+[N=100] expaj-xwing-a1-encaps: median=1158404 (calib 25 차감시 1158379)  min=1158264  max=1158626
+[N=100] expaj-xwing-a1-decaps: median=842058 (calib 25 차감시 842033)  min=841838  max=842318
+[N=100] expaj-xwing-b1-keygen: median=761946 (calib 25 차감시 761921)  min=761070  max=769224
+[N=100] expaj-xwing-b1-encaps: median=1127744 (calib 25 차감시 1127719)  min=1127591  max=1127918
+[N=100] expaj-xwing-b1-decaps: median=803062 (calib 25 차감시 803037)  min=802914  max=803228
+[N=100] expaj-xwing-b2-keygen: median=762005 (calib 25 차감시 761980)  min=761068  max=769221
+[N=100] expaj-xwing-b2-encaps: median=1127760 (calib 25 차감시 1127735)  min=1127600  max=1127992
+[N=100] expaj-xwing-b2-decaps: median=803070 (calib 25 차감시 803045)  min=802850  max=803274
+[N=100] expaj-xwing-a2-keygen: median=773331 (calib 25 차감시 773306)  min=772388  max=780529
+[N=100] expaj-xwing-a2-encaps: median=1158478 (calib 25 차감시 1158453)  min=1158320  max=1158662
+[N=100] expaj-xwing-a2-decaps: median=842030 (calib 25 차감시 842005)  min=841892  max=842224
+[N=100] expak-mlkem-v1a-keygen: median=404105 (calib 25 차감시 404080)  min=402675  max=411449
+[N=100] expak-mlkem-v1a-encaps: median=404500 (calib 25 차감시 404475)  min=404362  max=404672
+[N=100] expak-mlkem-v1a-decaps: median=437442 (calib 25 차감시 437417)  min=437324  max=437572
+[N=100] expak-mlkem-v2a-keygen: median=404087 (calib 25 차감시 404062)  min=402789  max=411409
+[N=100] expak-mlkem-v2a-encaps: median=405764 (calib 25 차감시 405739)  min=405564  max=405888
+[N=100] expak-mlkem-v2a-decaps: median=438516 (calib 25 차감시 438491)  min=438386  max=438662
+[N=100] expak-mlkem-v2b-keygen: median=404085 (calib 25 차감시 404060)  min=402715  max=411519
+[N=100] expak-mlkem-v2b-encaps: median=405758 (calib 25 차감시 405733)  min=405562  max=405888
+[N=100] expak-mlkem-v2b-decaps: median=438526 (calib 25 차감시 438501)  min=438428  max=438650
+[N=100] expak-mlkem-v1b-keygen: median=404101 (calib 25 차감시 404076)  min=402567  max=411521
+[N=100] expak-mlkem-v1b-encaps: median=404520 (calib 25 차감시 404495)  min=404300  max=404622
+[N=100] expak-mlkem-v1b-decaps: median=437436 (calib 25 차감시 437411)  min=437304  max=437582
+[N=100] expak-xwing-v1a-keygen: median=761982 (calib 25 차감시 761957)  min=760990  max=769281
+[N=100] expak-xwing-v1a-encaps: median=1127760 (calib 25 차감시 1127735)  min=1127525  max=1127946
+[N=100] expak-xwing-v1a-decaps: median=803058 (calib 25 차감시 803033)  min=802836  max=803270
+[N=100] expak-xwing-v2a-keygen: median=762027 (calib 25 차감시 762002)  min=761087  max=769131
+[N=100] expak-xwing-v2a-encaps: median=1129054 (calib 25 차감시 1129029)  min=1128825  max=1129220
+[N=100] expak-xwing-v2a-decaps: median=804070 (calib 25 차감시 804045)  min=803922  max=804300
+[N=100] expak-xwing-v2b-keygen: median=761991 (calib 25 차감시 761966)  min=761001  max=769167
+[N=100] expak-xwing-v2b-encaps: median=1129064 (calib 25 차감시 1129039)  min=1128902  max=1129204
+[N=100] expak-xwing-v2b-decaps: median=804044 (calib 25 차감시 804019)  min=803878  max=804228
+[N=100] expak-xwing-v1b-keygen: median=762000 (calib 25 차감시 761975)  min=761060  max=769267
+[N=100] expak-xwing-v1b-encaps: median=1127766 (calib 25 차감시 1127741)  min=1127565  max=1127950
+[N=100] expak-xwing-v1b-decaps: median=802980 (calib 25 차감시 802955)  min=802792  max=803156
+
+[exp P] DTCM 뱅크 스펙트럼 (MVE 단독 vec=1222041)
+  bank 0: scalar=611045 zip=1833044  순차합=1833086  은닉 0.0%
+  bank 1: scalar=611043 zip=1833042  순차합=1833084  은닉 0.0%
+  bank 2: scalar=611043 zip=1833042  순차합=1833084  은닉 0.0%
+  bank 3: scalar=611043 zip=1833042  순차합=1833084  은닉 0.0%
+  -> 은닉률 폭 0.0%p  평평 = 순수 LSU 경합 (음성 결과)
+
+[exp J-solo] A(fiat+LOADP)=309.0 B(MVE라운드)=752.0 래퍼루프=3.1 cyc/iter
+  순차 예측=1064.0 vs 실측 expj_seq=1065.0 (오차 +1.0 cyc = 검산)
+  절감=86.0  은닉=27.8% (분모 min(A,B)=309.0)
+  노출=223.0 cyc = 짧은 쪽에서 숨지 못한 사이클
+
+[exp Q] vstrw-free B' (측정 전용, 기능 등가 아님 -> KAT 대상 아님)
+  B'_solo=751.0 vs B_solo=752.0 (치환 편차 -1.0 cyc)
+  순차 예측=1063.0 vs 실측 expq_seq=1064.0 (오차 +1.0 cyc = 검산)
+  zip'=868.0 절감'=196.0  ->  노출'=113.0 cyc (J 노출=223.0)
+  교차검산: zip'-B'_raw=114.0 (노출'과 일치해야 함)
+  => ⓐ vstrw 차단 기여 = 110.0 cyc (121개 x 0.91 cyc/개, 33차 모델은 x2.00 예측)
+  => 잔여 = 113.0 cyc  vs  ⓑ 예측(스칼라 로드 157개) = 157
+  판정: 사전 등록 어느 가지에도 안 들어감 (20 < 노출' < 140) — 미분류로 기록할 것
+
+[exp R] A-pair zipper (A 두 명령 인접, A/B 명령 수와 순서 불변)
+  J: 1:1=979.0 -> pair=947.0 cyc/iter (추가 절감=32.0)
+  Q: 1:1 노출=113.0 -> pair 노출=106.0 cyc (회수=7.0, 6.2%)
+  사전등록 판정: 효과 없음: 변화가 잔여 노출의 ±10% 이내
+
+[exp S] 실제 비율 A-pair zipper
+  8:1 encaps: 기존=3006.0 pair=3034.1 cyc (변화=-0.93%) -> 실질 차이 없음
+  4:1 keygen/decaps: 기존=1770.0 pair=1770.0 cyc (변화=+0.00%) -> 실질 차이 없음
+
+[exp T] b0 + GP 무양보 fiat (-fno-tree-slp-vectorize, -ffixed 없음)
+  단독 fiat=272.0 vs 일반 base=288.7 cyc (SLP 제거 비용=-5.76%)
+  단독 b0=967.1 vs 기존 b2=754.0 cyc (개더/scatter 비용=+28.25%)
+  1:1: seq=1238.1 stitch=1097.1 (교차 이득=11.39%) | 기존=979.0, 대비=-12.06% -> 악화
+  8:1: seq=3151.6 stitch=2923.1 (교차 이득=7.25%) | 기존=3006.0, 대비=+2.76% -> 작은 개선
+  4:1: seq=2056.1 stitch=1866.1 (교차 이득=9.24%) | 기존=1770.0, 대비=-5.43% -> 악화
+
+[exp U] yield1 + one-GP b1 feasibility gate
+  scalar: r10-fixed=266.039, r11-fixed=267.040 cyc (no-yield T=272.040, yield2=323.540)
+  r10 fixed, low contiguous: MVE solo=850.075 cyc
+    1:1: seq=1114.075 stitch=1041.075 (내부 6.55%) | 현재 최선=947.041, 대비=-9.93% -> 악화
+    4:1: seq=1912.063 stitch=1762.064 (내부 7.84%) | 현재 최선=1770.028, 대비=+0.45% -> 부분 개선
+    8:1: seq=2968.063 stitch=2890.065 (내부 2.63%) | 현재 최선=2923.066, 대비=+1.13% -> 부분 개선
+  r11 fixed, low contiguous: MVE solo=850.075 cyc
+    1:1: seq=1115.075 stitch=1030.075 (내부 7.62%) | 현재 최선=947.041, 대비=-8.77% -> 악화
+    4:1: seq=1919.063 stitch=1758.064 (내부 8.39%) | 현재 최선=1770.028, 대비=+0.68% -> 부분 개선
+    8:1: seq=2992.393 stitch=2810.093 (내부 6.09%) | 현재 최선=2923.066, 대비=+3.86% -> 강한 개선
+  r11 fixed, high contiguous: MVE solo=910.077 cyc
+    1:1: seq=1176.074 stitch=1039.076 (내부 11.65%) | 현재 최선=947.041, 대비=-9.72% -> 악화
+    4:1: seq=1979.064 stitch=1762.064 (내부 10.96%) | 현재 최선=1770.028, 대비=+0.45% -> 부분 개선
+    8:1: seq=3043.081 stitch=2842.152 (내부 6.60%) | 현재 최선=2923.066, 대비=+2.77% -> 부분 개선
+
+[exp V] current ML-KEM NTT attribution
+  forward NTT=5434.020 cyc, inverse NTT=6686.021 cyc
+  keygen: current NTT total=52662.183 cyc, zero-cost upper bound=52662.183 vs gate=5000 -> gate theoretically reachable
+  encaps: current NTT total=43046.144 cyc, zero-cost upper bound=43046.144 vs gate=20000 -> gate theoretically reachable
+  decaps: current NTT total=66034.225 cyc, zero-cost upper bound=66034.225 vs gate=15000 -> gate theoretically reachable
+
+[exp W] pqmx/SLOTHY NTT on EK-RA8M1 (ITCM)
+  forward 1+2+2+2: 2856.026 cyc, current 대비 47.44% faster
+  forward 1+2+2+2 vld4: 2866.022 cyc, current 대비 47.26% faster
+  forward 2+3+2 size: 2814.019 cyc, current 대비 48.21% faster
+  forward 2+3+2 speed: 2814.020 cyc, current 대비 48.21% faster
+  explicit rev4 conversion: 664.025 cyc
+  inverse M55 comparator: unavailable — upstream overlap-writeback LDRD caused RA8M1 UNDEFINSTR at 0x96c0
+  inverse M85 WIP schedule: 3294.024 cyc
+  best forward=2+3+2 size 2814.019 cyc; one rev4 포함=3478.044 cyc
+  correctness: forward mismatch=0, M55 unavailable=1, M85 inverse-mm=0, M85 roundtrip-mm=0
+  scope: direct-call, one aligned DTCM buffer transformed repeatedly; ML-KEM caller/glue not integrated
+  primitive-only projection (caller/order glue 미포함):
+    keygen: saved=25895.997 cyc vs gate=5000 -> gate pass
+    encaps: saved=21427.991 cyc vs gate=20000 -> gate pass
+    decaps: saved=32679.991 cyc vs gate=15000 -> gate pass
+
+[exp X] pqmx forward+rev4 full ML-KEM same-function ABBA
+  correctness: byte-mm=0, smoke-fails=0, alignment bitsets base/candidate=257/257
+  timing workload: byte-mm=0, stack-fails=0, stack-highwater=7640 B
+  keygen: AB saved=10624.000, BA saved=10638.000, conservative=10624.000 cyc vs gate=8000 -> gate pass
+  encaps: AB saved=5264.000, BA saved=5288.000, conservative=5264.000 cyc vs gate=4000 -> gate pass
+  decaps: AB saved=10700.000, BA saved=10694.000, conservative=10694.000 cyc vs gate=8000 -> gate pass
+
+[exp Y] pqmx inverse full ML-KEM same-function ABBA
+  correctness: byte-mm=0, smoke-fails=0, oracle-mm=0, oracle-canary=0
+  alignment bitsets base/candidate=257/257, input-range=[-1664,1664], output-range=[-14304,24656]
+  timing workload: byte-mm=0, stack-fails=0, stack-highwater=7640 B
+  keygen: AB saved=8362.000, BA saved=8362.000, conservative=8362.000 cyc vs gate=6000 -> gate pass
+  encaps: AB saved=10943.000, BA saved=10922.000, conservative=10922.000 cyc vs gate=8000 -> gate pass
+  decaps: AB saved=13899.000, BA saved=13832.000, conservative=13832.000 cyc vs gate=10000 -> gate pass
+
+[exp Z1] X+Y combined full ML-KEM same-function ABBA
+  correctness: byte-mm=0, smoke-fails=0
+  alignment forward base/candidate=257/257, inverse base/candidate=257/257
+  timing workload: byte-mm=0, stack-fails=0, stack-highwater=7640 B
+  keygen: AB saved=18982.000, BA saved=18998.000, conservative=18982.000 cyc, isolated-sum preservation=101.12% -> strong pass
+  encaps: AB saved=16225.000, BA saved=16216.000, conservative=16216.000 cyc, isolated-sum preservation=100.24% -> strong pass
+  decaps: AB saved=24560.000, BA saved=24496.000, conservative=24496.000 cyc, isolated-sum preservation=101.21% -> strong pass
+
+[stitch micro] A=8046 B=5045 S=9051  |  A+B=13091  max=8046
+  절감 4040 cyc = 짧은 스트림의 80% 회수  (이상적 100% = S가 max(A,B)에 도달)
+[A-tax] mul256 full=844 budget(r8-r11 예약)=853 cyc/회  → 세금 +1.0%
+[REAL STITCH] mul=378 theta=70 순차합=448 스티치=396 cyc/회  → 절감 52 cyc = theta의 74% 은닉
+[FULL ROUND ] mul=378 round=659 순차합=1037 스티치=780 cyc/회  → 절감 256 cyc = 교차 구간 기준 은닉률 68%
+[SWEEP r6   ] mul6=395 round6=397 순차합=792 스티치=662 cyc/회  → 절감 129 cyc
+[SLOTHY expA] 원본순서=13.04 솔버스케줄=11.04 cyc/iter  (모델 예측: 본문 9 + 루프 — 17명령)
+[BMID 3파전  ] 순차=110.04 지퍼=88.04 솔버=85.03 cyc/iter (모델 예측: 본문 82 + 루프 ~4)
+[BFULL      ] 순차=727.0 솔버=654.0 cyc/iter (지퍼 기준값: flat6 기반 681cyc — 로드맵 8차)
+[EXPC fiat  ] 순차=701.0 솔버=629.0 cyc/iter (진짜 fiat 필드 곱 × round6)
+[EXPD interleaved] 순차=635.0 솔버=579.0 cyc/iter (fiat × 비트-인터리브 라운드)
+[EXPE 4:1코어] 순차=1572.0 솔버=1520.0 cyc/iter (곱x4+라운드 — X-Wing 실비율)
+[PLAN-B MVE ] 4-way 라운드=754.0 cyc/iter = 상태당 188.5 cyc (스칼라 round6i 단독 ~350 대비)
+[CO-ISSUE F ] A(스칼라)=611.0 B(MVE)=754.0 순차합=1365.1 교차=1013.0 cyc/iter  → 절감 352.0 = 짧은쪽의 58% 은닉
+[F-SOLVER   ] 지퍼=1013.0 솔버=996.0 cyc/iter  → 지퍼 대비 +1.7%, 은닉률 60% (지퍼 58%)
+[F-SOLVER v04] 솔버(v0.4)=1018.0 cyc/iter  → v0.3 대비 -2.2%, 지퍼 대비 -0.5%, 은닉률 57% (구조 하한: 스칼라 611 + 스토어 242 = 853)
+[EXP-G b3   ] MVE3단독=754.0(5베이스판 754.0) 코이슈=1013.0 vs 순차합=1365.1 → 은닉 58% (3-베이스 예산 검증)
+[EXP-H glue ] pack+unpack 왕복=448 cyc/배치 = 배치 순열(18097) 대비 2.5% (naive 스칼라 전치 상한 — vld4/absorb 융합 시 ~0)
+[EXP-I 양보 ] fiat 곱 base=288.7 yield3(r10/11/12 양보)=325.7 cyc/회 → 세금 +12.8% (정답 불변, MVE 베이스 3개 확보)
+[V0.4 b2    ] MVE2단독=754.0(3베이스 754.0) 코이슈은닉=58%
+[V0.4 양보2 ] fiat yield2=323.5 vs base=288.7 → 세금 +12.1% (yield3는 +13.5%)
+[EXP-K 3파전] 순차=3203 굵은교대=3200 스티칭=2943 cyc (곱3+라운드3) → 스티칭 이득: vs순차 8.1% vs교대 8.0% (교차 덕 분리 입증)
+[EXP-L NTT ] A(umaal)=611.0 B(NTT형)=901.0 순차합=1512.1 교차=1135.0 → 은닉 62% (Keccak짝 58% 대비 — 곱셈기 쟁탈전 판정)
+[EXP-L 스칼라] A(umaal)=611.0 B(smull)=600.0 순차합=1211.1 교차=1217.0 → 은닉 -1% (스칼라×스칼라 = 같은 MAC 파이프 쟁탈)
+[상수시간   ] expj_stitch 입력 2벌 median Δ=0 cyc (PASS: 입력 무관)
+[EXP-M 실비율] 유닛(곱8+라운드1): 순차=3254 스티칭=3006 (−7.6%)
+[encaps 투영] 순차=885k 스티칭=820k → 절감 7.4% (측정 유닛 기반)
+[EXP-M4 4:1 ] 유닛(곱4+라운드1): 순차=2004 스티칭=1770 (−11.7%)
+[keygen 투영] 순차=539k 스티칭=479k → 절감 11.2%
+[decaps 투영] 순차=543k 스티칭=482k → 절감 11.4%
+[EXP-J 통합 ] 순차=1065 스티칭=979 cyc → 절감 8.1% (진짜 fiat 곱 × MVE 라운드, 정답 ✓)
+[SWEEP k=2  ] 순차합(2mul+round6)=1186 스티치=999 cyc/회  → 절감 187 cyc = round6의 47% 은닉
+[stitch mem  ] A=8046 B'=6055 S'=10057  |  A+B'=14101  max=8046
+  절감 4044 cyc = 짧은 스트림의 67% 회수 (메모리 상주 B')
+
+[실험 N 페어링 스펙트럼] umaal 611 × MVE 클래스 611 (1:1 지퍼)
+  veor: 단독=  611.0 지퍼=  617.0 순차합= 1222.1 → 은닉  99%, 노출 6.0 cyc
+  ldr : 단독= 1222.0 지퍼= 1228.0 순차합= 1833.1 → 은닉  99%, 노출 6.0 cyc
+  str : 단독= 1222.0 지퍼= 1839.0 순차합= 1833.1 → 은닉  -1%, 노출 617.0 cyc
+  rot : 단독= 1222.0 지퍼= 1227.0 순차합= 1833.1 → 은닉  99%, 노출 5.0 cyc
+[실험 N2 수용량] umaal 1222 × 클래스 611 (기준: 1/cyc→~1228 · 0.5/cyc→~1833 · 차단→~2444)
+  ldr :  1229.0
+  str :  2450.0
+  rot :  1228.0
+  lsmix(로드/스토어 교대): 단독=612.0 지퍼=1228.0 (스토어 306개 차단만이면 지퍼 ≈ 단독+스칼라잔여)
+
+[exp AE] true Fiat yield1+b1 + Keccak-f1600x4 X-Wing ABBA
+  primitive KAT: x4=0, U=0
+  end-to-end: byte-mm=0, smoke=0, timing-mm=0, stack-fails=0, stack-highwater=9028 B
+  keygen: AB 773418->1355384 (-581966 cyc), BA 773372->1355310 (-581938 cyc), conservative -581966 cyc (-75.25%)
+  encaps: AB 1159039->2327607 (-1168568 cyc), BA 1159033->2327611 (-1168578 cyc), conservative -1168578 cyc (-100.82%)
+  decaps: AB 842607->1423917 (-581310 cyc), BA 842615->1423955 (-581340 cyc), conservative -581340 cyc (-68.99%)
+  correctness gate: PASS
+
+[exp AE attribution]
+  x4 batching (S->X) keygen: AB 773409->797127 (-23718 cyc), BA 773407->797155 (-23748 cyc), conservative -23748 cyc (-3.07%)
+  true U (F->U) keygen: AB 1327951->1355362 (-27411 cyc), BA 1327988->1355358 (-27370 cyc), conservative -27411 cyc (-2.06%)
+  x4 batching (S->X) encaps: AB 1159044->1182676 (-23632 cyc), BA 1159040->1182682 (-23642 cyc), conservative -23642 cyc (-2.04%)
+  true U (F->U) encaps: AB 2243583->2327595 (-84012 cyc), BA 2243519->2327591 (-84072 cyc), conservative -84072 cyc (-3.75%)
+  x4 batching (S->X) decaps: AB 842607->866341 (-23734 cyc), BA 842617->866331 (-23714 cyc), conservative -23734 cyc (-2.82%)
+  true U (F->U) decaps: AB 1396903->1423923 (-27020 cyc), BA 1396937->1423933 (-26996 cyc), conservative -27020 cyc (-1.93%)
+
+[exp AF] identical-work U4/U8 batch attribution
+  U4: AB seq=85078 fused=86948 P4=+1870; BA seq=85092 fused=86948 P4=+1856
+  U8: AB seq=153482 fused=163362 P8=+9880; BA seq=153476 fused=163368 P8=+9892
+  U8-specific P8-2*P4: AB=+6140, BA=+6180 cycles per 24-round batch
+
+[exp AI] encaps F/U/U1 interval attribution (raw checkpoint medians)
+  F->U: AB total=+81510 fused=+424958 residual=-343437 other=-11; BA total=+81552 fused=+424996 residual=-343454 other=+10
+  F->U1: AB total=+25948 fused=+197280 residual=-171346 other=+14; BA total=+25960 fused=+197322 residual=-171351 other=-11
+  2-job fused-path delta U-U1=+227726.0 cycles
+harness_fails = 0

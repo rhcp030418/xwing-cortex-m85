@@ -1,0 +1,130 @@
+﻿python.exe : CPU is running at low speed (8295 kHz).
+At line:6 char:3
++   & $Python (Join-Path $H 'harvest_ra8m1_expAO.py') 2>&1 | Tee-Object ...
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (CPU is running at low speed (8295 kHz).:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+CPU is running at low speed (8293 kHz).
+measurement ELF SHA-256: 38F2E56FF2381EF47BD6E3DA8FF16C43461DB1274C481A9BDED37A5ABFF4EE13
+measurement SREC SHA-256: 54800DFDC71442E3925478CE50A6E70985302A2D910DE24B8C2780FBF7F8C9F1
+connected: Cortex-M85
+flash code readback PASS: bytes=717704 segments=2 sha256=9E8FA320B782A8B78384FEBB7EC05DCE13326CA3C0D3350464258E66FAD4BDBB
+=== EK-RA8M1 harness: KAT + DWT/PMU (ITCM/DTCM) ===
+
+== KAT: X25519 (RFC 7748 s6.1) ==
+alice_pk: OK
+bob_pk  : OK
+K(a,B)  : OK
+K(b,A)  : OK
+== KAT: SHA3-256 via asm Keccak-f1600 ==
+sha3("")   : OK
+sha3("abc"): OK
+
+KAT ALL PASS -- streams A+B verified on board
+
+DAUTHCTRL readback: 15
+
+[calib-empty] x1
+  dwt_cyc/op   : 144
+  pmu_cyc/op   : 163
+  insts        : 0
+  stall_op     : 0
+  stall_op_fe  : 0
+  stall_op_be  : 0
+  IPC x100     : 0
+  slot-waste % : 0
+
+[keccak-f1600] x1000
+  dwt_cyc/op   : 5504
+  pmu_cyc/op   : 5504
+  insts        : 0
+  stall_op     : 0
+  stall_op_fe  : 0
+  stall_op_be  : 0
+  IPC x100     : 0
+  slot-waste % : 0
+
+[x25519-scalarmult] x10
+  dwt_cyc/op   : 357499
+  pmu_cyc/op   : 357501
+  insts        : 0
+  stall_op     : 0
+  stall_op_fe  : 0
+  stall_op_be  : 0
+  IPC x100     : 0
+  slot-waste % : 0
+
+== K3: ML-KEM-768 (pqm4 m4fspeed) ==
+roundtrip+reject: OK
+keccak perms/op: keygen 43  encaps 44  decaps 44  combiner 1
+expX bytes-mm: 0 smoke-fails=0 align-base-bits=257 align-candidate-bits=257
+expX timing-mm: 0 stack-fails=0 stack-used=7656
+expY bytes-mm: 0 smoke-fails=0 oracle-mm=0 oracle-canary=0 align-base-bits=257 align-candidate-bits=257 input-min=-1664 input-max=1664 output-min=-14304 output-max=24656
+expY timing-mm: 0 stack-fails=0 stack-used=7656
+expZ bytes-mm: 0 smoke-fails=0 fwd-align-base=257 fwd-align-candidate=257 inv-align-base=257 inv-align-candidate=257
+expZ timing-mm: 0 stack-fails=0 stack-used=7656
+expAA bytes-mm: 0 smoke-fails=0 fwd-align-base=257 fwd-align-candidate=257
+expAA timing-mm: 0 stack-fails=0 stack-used=7656
+expAB bytes-mm: 0 smoke-fails=0
+expAB timing-mm: 0 stack-fails=0 stack-used=7848
+expAE x4-kat-fails: 0 u-kat-fails=0
+expAE bytes-mm: 0 smoke-fails=0
+expAE timing-mm: 0 stack-fails=0 stack-used=9028
+expAF path counts (u4-rounds/u8-rounds/real/dummy):
+  op0: 0/0/0/0
+  op1: 0/0/0/0
+  op2: 0/0/0/0
+expAF mismatch: 0
+expAI mismatch: 0 stack-fails=0 stack-used=9020
+bfull_slothy diag: prod-mm=0 lane-mm=0 first-bad-prod= first-bad-lane=
+mul256 full-vs-budget mismatch: 0  /  stitched(product+theta) mismatch: 0  /  bmid(theta x3) mismatch: 0  /  bfull mismatch: 0  /  expc mismatch: 0  /  expd mismatch: 0  /  expe mismatch: 0  /  mve4 mismatch: 0  /  coissue mismatch: 0  /  cosol mismatch: 0  /  expg mismatch: 0  /  exph mismatch: 0  /  expi mismatch: 0  /  v04 mismatch: 0  /  expj mismatch: 0  /  expk mismatch: 0  /  expl mismatch: 0  /  expm mismatch: 0  /  expt mismatch: 0  /  expu mismatch: 0  /  expv mismatch: 0  /  expw mismatch: 0 m55-unavailable=1 m85-inv-mm=0 m85-roundtrip-mm=0
+expAJ kat-mm: 0
+expAJ bytes-mm: 0 smoke-fails=0
+expAJ xw-bytes-mm: 0 xw-smoke-fails=0
+expAJ timing-mm: 0 stack-fails=0 stack-used=7848
+expAK timing-mm: 0 stack-fails=0 stack-used=7848
+expAL xw-bytes-mm: 0 xw-smoke-fails=0
+expAL timing-mm: 0 stack-fails=0 stack-used=7864
+expAM correctness: oracle-mm=0 lenn-mm=0 boundary-mm=0 alias-mm=0 align-mm=0 checks=1025 stack-fails=0 stack-used=1084
+expAM ct-delta: 0 batch=64 stack-fails=0 stack-used=348
+expAMb correctness: opt-mm=0 sqr-mm=0 sqrlenn-mm=0 conv-mm=0 sem-mm=0 checks=1000 stack-fails=0 stack-used=804
+expAMb bench done stack-fails=0 stack-used=404
+expAN equiv: bytes-mm=0 smoke-fails=0 checks=48
+expAN bench: stack-fails=0 stack-used=7880
+expAO equiv: bytes-mm=0 checks=40
+expAO bench: stack-fails=0 stack-used=7848
+rep arrays ready x100 (390 slots)
+HARNESS DONE
+
+
+=== expAO — X-Wing 내 Keccak permutation in-context 실측 ===
+정확성: PASS (harness_fails=0, bytes-mm=0, checks=40, KAT=True)
+단독 [keccak-f1600] 참조값: 5504 cyc
+
+--- keygen
+    total prof-off / prof-on                  763986 / 765367  (probe +1381, 32.12 cyc/call)
+    Keccak 누산 (실측)                        237952 cyc  / 43 calls = 5533.8 cyc/call
+    같은 calls 의 투영 (calls x 5504)         236672 cyc  → 실측이 +0.54%
+    calls 산포 43~45 (rejection sampling 변동),  Keccak cyc 산포 237892~249036
+    같은 ELF expAN 버킷: ML-KEM 406154 / X-Wing total 764020
+    ML-KEM 중 비중  58.59%   X-Wing 총합 중  31.14%   비-Keccak 잔여 168202 cyc
+
+--- encaps
+    total prof-off / prof-on                 1137478 / 1138931  (probe +1453, 31.59 cyc/call)
+    Keccak 누산 (실측)                        254526 cyc  / 46 calls = 5533.2 cyc/call
+    같은 calls 의 투영 (calls x 5504)         253184 cyc  → 실측이 +0.53%
+    calls 산포 46~46 (rejection sampling 변동),  Keccak cyc 산포 254502~254589
+    같은 ELF expAN 버킷: ML-KEM 414328 / X-Wing total 1137572
+    ML-KEM 중 비중  61.43%   X-Wing 총합 중  22.37%   비-Keccak 잔여 159802 cyc
+
+--- decaps
+    total prof-off / prof-on                  812478 / 813929  (probe +1451, 31.54 cyc/call)
+    Keccak 누산 (실측)                        254517 cyc  / 46 calls = 5533.0 cyc/call
+    같은 calls 의 투영 (calls x 5504)         253184 cyc  → 실측이 +0.53%
+    calls 산포 46~46 (rejection sampling 변동),  Keccak cyc 산포 254493~254553
+    같은 ELF expAN 버킷: ML-KEM 447095 / X-Wing total 812666
+    ML-KEM 중 비중  56.93%   X-Wing 총합 중  31.32%   비-Keccak 잔여 192578 cyc
+
+--- combiner 단독: total 8051 = permutation 5514 + glue 2537
+EXPAO_JSON {"code_flash_readback_bytes": 717704, "code_flash_readback_sha256": "9E8FA320B782A8B78384FEBB7EC05DCE13326CA3C0D3350464258E66FAD4BDBB", "combiner": {"glue": 2537, "keccak_cycles": 5514, "total": 8051}, "correctness_pass": true, "elf_sha256": "38F2E56FF2381EF47BD6E3DA8FF16C43461DB1274C481A9BDED37A5ABFF4EE13", "equiv_bytes_mismatch": 0, "equiv_checks": 40, "experiment": "AO", "gate_pass": true, "harness_fails": 0, "kat_all_pass": true, "keccak_standalone_reference": 5504, "per_op": {"decaps": {"keccak_calls": 46, "keccak_calls_max": 46, "keccak_calls_min": 46, "keccak_cyc_per_call": 5532.978260869565, "keccak_cycles": 254517, "keccak_cycles_max": 254553, "keccak_cycles_min": 254493, "measured_vs_projection_pct": 0.5264945652173914, "mlkem_non_keccak": 192578, "mlkem_same_elf": 447095, "pct_of_mlkem": 56.92682763171138, "pct_of_xwing_total": 31.318770565029176, "probe_cost_per_call": 31.543478260869566, "probe_cost_total": 1451, "projection_cycles": 253184, "total_prof_off": 812478, "total_prof_on": 813929, "xwing_total_same_elf": 812666}, "encaps": {"keccak_calls": 46, "keccak_calls_max": 46, "keccak_calls_min": 46, "keccak_cyc_per_call": 5533.173913043478, "keccak_cycles": 254526, "keccak_cycles_max": 254589, "keccak_cycles_min": 254502, "measured_vs_projection_pct": 0.5300492922143579, "mlkem_non_keccak": 159802, "mlkem_same_elf": 414328, "pct_of_mlkem": 61.43104014210963, "pct_of_xwing_total": 22.374495856086472, "probe_cost_per_call": 31.58695652173913, "probe_cost_total": 1453, "projection_cycles": 253184, "total_prof_off": 1137478, "total_prof_on": 1138931, "xwing_total_same_elf": 1137572}, "keygen": {"keccak_calls": 43, "keccak_calls_max": 45, "keccak_calls_min": 43, "keccak_cyc_per_call": 5533.767441860465, "keccak_cycles": 237952, "keccak_cycles_max": 249036, "keccak_cycles_min": 237892, "measured_vs_projection_pct": 0.5408328826392644, "mlkem_non_keccak": 168202, "mlkem_same_elf": 406154, "pct_of_mlkem": 58.58664447475588, "pct_of_xwing_total": 31.144734431035836, "probe_cost_per_call": 32.116279069767444, "probe_cost_total": 1381, "projection_cycles": 236672, "total_prof_off": 763986, "total_prof_on": 765367, "xwing_total_same_elf": 764020}}, "srec_sha256": "54800DFDC71442E3925478CE50A6E70985302A2D910DE24B8C2780FBF7F8C9F1"}

@@ -1,0 +1,382 @@
+# 지퍼 스티처 v0.2 — 두 직선 명령 스트림의 기계적 교차 (2026-08-16)
+#
+# 파일럿 산출물이자 기여 ③(SLOTHY 2-스트림 확장)의 최소 원형:
+#   스트림 A = GCC 생성 직선형 256비트 곱 (r8-r11 미사용 보장: -ffixed)
+#   스트림 B = 실제 Keccak θ 패리티 또는 전체 라운드 (r8=상태 포인터 + r9-r11)
+# 규칙:
+#   - A의 'it' 명령은 다음 조건부 명령과 한 덩어리(클럼프)로 취급
+#   - B를 A 전체에 균등 분산 삽입, B가 A보다 길면 나머지는 꼬리로
+#   - 긴 함수의 심볼 주소는 movw/movt (ldr= 리터럴 풀은 4KB 사거리 초과)
+#
+# 사용법: py stitch_zip.py  (mul256_flat.s는 스크래치패드에서 읽음)
+
+import re
+
+SP = r"C:\Users\cnscj\AppData\Local\Temp\claude\c--Users-cnscj-Dropbox--------\87cc9899-01a4-4c61-b1f5-c392fd51dbfe\scratchpad"
+OUT = r"C:\Users\cnscj\e2_studio\workspace\blinky\src\gen"
+
+
+def theta_stream():
+    """Keccak θ 패리티만: out[2x+h] = XOR_{y} state[2*(x+5y)+h], out은 state+200부터."""
+    ins = []
+    for x in range(5):
+        for h in range(2):
+            offs = [4 * (2 * (x + 5 * y) + h) for y in range(5)]
+            ins.append(f"\tldr\tr9, [r8, #{offs[0]}]")
+            for o in offs[1:]:
+                ins.append(f"\tldr\tr10, [r8, #{o}]")
+                ins.append(f"\teor\tr9, r9, r10")
+            ins.append(f"\tstr\tr9, [r8, #{200 + 4 * (2 * x + h)}]")
+    return ins
+
+
+def round_stream():
+    """진짜 Keccak-f1600 라운드 1개 (평면 표현: 레인 i = state[2i](lo)+state[2i+1](hi)).
+    레이아웃(r8 기준 바이트): A=0..199, B(ρπ 스크래치)=200..399, C=400..439, D=440..479.
+    ι는 라운드0 상수(lo^=1). 레지스터: r8=포인터, r9/r10/r11 데이터."""
+    RHO = [[0, 36, 3, 41, 18], [1, 44, 10, 45, 2], [62, 6, 43, 15, 61],
+           [28, 55, 25, 21, 56], [27, 20, 39, 8, 14]]   # RHO[x][y]
+    A = lambda i, h: 4 * (2 * i + h)
+    B = lambda i, h: 200 + 4 * (2 * i + h)
+    C = lambda x, h: 400 + 4 * (2 * x + h)
+    D = lambda x, h: 440 + 4 * (2 * x + h)
+    ins = []
+
+    for x in range(5):                      # θ 패리티
+        for h in range(2):
+            ins.append(f"\tldr\tr9, [r8, #{A(x, h)}]")
+            for y in range(1, 5):
+                ins.append(f"\tldr\tr10, [r8, #{A(x + 5 * y, h)}]")
+                ins.append(f"\teor\tr9, r9, r10")
+            ins.append(f"\tstr\tr9, [r8, #{C(x, h)}]")
+
+    for x in range(5):                      # D[x] = C[x-1] ^ rol64(C[x+1], 1)
+        x1, x4 = (x + 1) % 5, (x + 4) % 5
+        ins += [f"\tldr\tr9, [r8, #{C(x1, 0)}]",
+                f"\tldr\tr10, [r8, #{C(x1, 1)}]",
+                f"\tlsl\tr11, r9, #1",
+                f"\torr\tr11, r11, r10, lsr #31",
+                f"\tldr\tr9, [r8, #{C(x4, 0)}]",
+                f"\teor\tr11, r11, r9",
+                f"\tstr\tr11, [r8, #{D(x, 0)}]",
+                f"\tldr\tr9, [r8, #{C(x1, 0)}]",
+                f"\tlsl\tr11, r10, #1",
+                f"\torr\tr11, r11, r9, lsr #31",
+                f"\tldr\tr10, [r8, #{C(x4, 1)}]",
+                f"\teor\tr11, r11, r10",
+                f"\tstr\tr11, [r8, #{D(x, 1)}]"]
+
+    for i in range(25):                     # A[i] ^= D[i%5]
+        for h in range(2):
+            ins += [f"\tldr\tr9, [r8, #{A(i, h)}]",
+                    f"\tldr\tr10, [r8, #{D(i % 5, h)}]",
+                    f"\teor\tr9, r9, r10",
+                    f"\tstr\tr9, [r8, #{A(i, h)}]"]
+
+    for x in range(5):                      # ρπ: B[y+5((2x+3y)%5)] = rol64(A[x+5y], RHO)
+        for y in range(5):
+            src, dst, n = x + 5 * y, y + 5 * ((2 * x + 3 * y) % 5), RHO[x][y]
+            swap, m = n >= 32, n % 32
+            lo_src, hi_src = (1, 0) if swap else (0, 1)
+            ins += [f"\tldr\tr9, [r8, #{A(src, lo_src)}]",
+                    f"\tldr\tr10, [r8, #{A(src, hi_src)}]"]
+            if m == 0:
+                ins += [f"\tstr\tr9, [r8, #{B(dst, 0)}]",
+                        f"\tstr\tr10, [r8, #{B(dst, 1)}]"]
+            else:
+                ins += [f"\tlsl\tr11, r9, #{m}",
+                        f"\torr\tr11, r11, r10, lsr #{32 - m}",
+                        f"\tstr\tr11, [r8, #{B(dst, 0)}]",
+                        f"\tlsl\tr11, r10, #{m}",
+                        f"\torr\tr11, r11, r9, lsr #{32 - m}",
+                        f"\tstr\tr11, [r8, #{B(dst, 1)}]"]
+
+    for y in range(5):                      # χ
+        for x in range(5):
+            b0, b1, b2 = x + 5 * y, (x + 1) % 5 + 5 * y, (x + 2) % 5 + 5 * y
+            for h in range(2):
+                ins += [f"\tldr\tr9, [r8, #{B(b0, h)}]",
+                        f"\tldr\tr10, [r8, #{B(b1, h)}]",
+                        f"\tldr\tr11, [r8, #{B(b2, h)}]",
+                        f"\tbic\tr11, r11, r10",
+                        f"\teor\tr9, r9, r11",
+                        f"\tstr\tr9, [r8, #{A(b0, h)}]"]
+
+    ins += ["\tldr\tr9, [r8, #0]", "\teor\tr9, r9, #1", "\tstr\tr9, [r8, #0]"]   # ι
+    return ins
+
+
+def round_stream6():
+    """예산 스윕: B 레지스터 6개(r8 ptr + r6,r7,r9,r10,r11) 융합판.
+    ① 'A^=D' 패스를 ρπ에 흡수 — D쌍을 r6/r7에 컬럼당 1회 로드 (200명령 제거)
+    ② χ를 슬라이딩 윈도우로 (행별 재로드 7회, 300→220명령)
+    의미는 round_stream()과 동일 → 같은 C 레퍼런스로 검증."""
+    RHO = [[0, 36, 3, 41, 18], [1, 44, 10, 45, 2], [62, 6, 43, 15, 61],
+           [28, 55, 25, 21, 56], [27, 20, 39, 8, 14]]
+    A = lambda i, h: 4 * (2 * i + h)
+    B = lambda i, h: 200 + 4 * (2 * i + h)
+    C = lambda x, h: 400 + 4 * (2 * x + h)
+    D = lambda x, h: 440 + 4 * (2 * x + h)
+    ins = []
+
+    for x in range(5):                      # θ 패리티 (동일)
+        for h in range(2):
+            ins.append(f"\tldr\tr9, [r8, #{A(x, h)}]")
+            for y in range(1, 5):
+                ins.append(f"\tldr\tr10, [r8, #{A(x + 5 * y, h)}]")
+                ins.append(f"\teor\tr9, r9, r10")
+            ins.append(f"\tstr\tr9, [r8, #{C(x, h)}]")
+
+    for x in range(5):                      # D[x] (동일)
+        x1, x4 = (x + 1) % 5, (x + 4) % 5
+        ins += [f"\tldr\tr9, [r8, #{C(x1, 0)}]",
+                f"\tldr\tr10, [r8, #{C(x1, 1)}]",
+                f"\tlsl\tr11, r9, #1",
+                f"\torr\tr11, r11, r10, lsr #31",
+                f"\tldr\tr9, [r8, #{C(x4, 0)}]",
+                f"\teor\tr11, r11, r9",
+                f"\tstr\tr11, [r8, #{D(x, 0)}]",
+                f"\tldr\tr9, [r8, #{C(x1, 0)}]",
+                f"\tlsl\tr11, r10, #1",
+                f"\torr\tr11, r11, r9, lsr #31",
+                f"\tldr\tr10, [r8, #{C(x4, 1)}]",
+                f"\teor\tr11, r11, r10",
+                f"\tstr\tr11, [r8, #{D(x, 1)}]"]
+
+    for x in range(5):                      # 융합: B[dst] = rol64(A[src]^D[x])
+        ins += [f"\tldr\tr6, [r8, #{D(x, 0)}]",
+                f"\tldr\tr7, [r8, #{D(x, 1)}]"]
+        for y in range(5):
+            src, dst, n = x + 5 * y, y + 5 * ((2 * x + 3 * y) % 5), RHO[x][y]
+            swap, m = n >= 32, n % 32
+            ins += [f"\tldr\tr9, [r8, #{A(src, 0)}]",
+                    f"\tldr\tr10, [r8, #{A(src, 1)}]",
+                    f"\teor\tr9, r9, r6",
+                    f"\teor\tr10, r10, r7"]
+            la, ha = ("r10", "r9") if swap else ("r9", "r10")
+            if m == 0:
+                ins += [f"\tstr\t{la}, [r8, #{B(dst, 0)}]",
+                        f"\tstr\t{ha}, [r8, #{B(dst, 1)}]"]
+            else:
+                ins += [f"\tlsl\tr11, {la}, #{m}",
+                        f"\torr\tr11, r11, {ha}, lsr #{32 - m}",
+                        f"\tstr\tr11, [r8, #{B(dst, 0)}]",
+                        f"\tlsl\tr11, {ha}, #{m}",
+                        f"\torr\tr11, r11, {la}, lsr #{32 - m}",
+                        f"\tstr\tr11, [r8, #{B(dst, 1)}]"]
+
+    for y in range(5):                      # χ 슬라이딩 윈도우
+        for h in range(2):
+            b = lambda x: B(x % 5 + 5 * y, h)
+            o = lambda x: A(x % 5 + 5 * y, h)
+            ins += [f"\tldr\tr9, [r8, #{b(0)}]",     # w0=b0
+                    f"\tldr\tr10, [r8, #{b(1)}]",    # w1=b1
+                    f"\tldr\tr11, [r8, #{b(2)}]",    # w2=b2
+                    f"\tbic\tr6, r11, r10", f"\teor\tr6, r6, r9",  f"\tstr\tr6, [r8, #{o(0)}]",
+                    f"\tldr\tr9, [r8, #{b(3)}]",     # w0=b3
+                    f"\tbic\tr6, r9, r11",  f"\teor\tr6, r6, r10", f"\tstr\tr6, [r8, #{o(1)}]",
+                    f"\tldr\tr10, [r8, #{b(4)}]",    # w1=b4
+                    f"\tbic\tr6, r10, r9",  f"\teor\tr6, r6, r11", f"\tstr\tr6, [r8, #{o(2)}]",
+                    f"\tldr\tr11, [r8, #{b(0)}]",    # w2=b0
+                    f"\tbic\tr6, r11, r10", f"\teor\tr6, r6, r9",  f"\tstr\tr6, [r8, #{o(3)}]",
+                    f"\tldr\tr9, [r8, #{b(1)}]",     # w0=b1
+                    f"\tbic\tr6, r9, r11",  f"\teor\tr6, r6, r10", f"\tstr\tr6, [r8, #{o(4)}]"]
+
+    ins += ["\tldr\tr9, [r8, #0]", "\teor\tr9, r9, #1", "\tstr\tr9, [r8, #0]"]   # ι
+    return ins
+
+
+def round_stream6i():
+    """비트-인터리브(pqm4 표현) Keccak-f1600 라운드 — B 충실도 최종형.
+    레인 i = state[2i](even 비트), state[2i+1](odd 비트).
+    rol64(v,n): n=2m → 두 반쪽 각각 rol32 m / n=2m+1 → e'=rol32(o,m+1), o'=rol32(e,m).
+    인터리브 덕에 회전이 eor의 ror 시프트 오퍼랜드로 접힘 → 명령 수 감소.
+    레이아웃·레지스터는 round_stream6과 동일 (A=0..199, B=200..399, C=400.., D=440..)."""
+    RHO = [[0, 36, 3, 41, 18], [1, 44, 10, 45, 2], [62, 6, 43, 15, 61],
+           [28, 55, 25, 21, 56], [27, 20, 39, 8, 14]]
+    A = lambda i, h: 4 * (2 * i + h)
+    B = lambda i, h: 200 + 4 * (2 * i + h)
+    C = lambda x, h: 400 + 4 * (2 * x + h)
+    D = lambda x, h: 440 + 4 * (2 * x + h)
+    ins = []
+
+    for x in range(5):                      # θ 패리티 (표현 무관 — 반쪽별 XOR)
+        for h in range(2):
+            ins.append(f"\tldr\tr9, [r8, #{A(x, h)}]")
+            for y in range(1, 5):
+                ins.append(f"\tldr\tr10, [r8, #{A(x + 5 * y, h)}]")
+                ins.append(f"\teor\tr9, r9, r10")
+            ins.append(f"\tstr\tr9, [r8, #{C(x, h)}]")
+
+    for x in range(5):                      # D[x] = C[x-1] ^ rol64(C[x+1], 1) — 인터리브
+        x1, x4 = (x + 1) % 5, (x + 4) % 5
+        # D_e = C4_e ^ rol32(C1_o, 1)  /  D_o = C4_o ^ C1_e
+        ins += [f"\tldr\tr9, [r8, #{C(x1, 1)}]",
+                f"\tldr\tr10, [r8, #{C(x4, 0)}]",
+                f"\teor\tr11, r10, r9, ror #31",
+                f"\tstr\tr11, [r8, #{D(x, 0)}]",
+                f"\tldr\tr9, [r8, #{C(x1, 0)}]",
+                f"\tldr\tr10, [r8, #{C(x4, 1)}]",
+                f"\teor\tr11, r10, r9",
+                f"\tstr\tr11, [r8, #{D(x, 1)}]"]
+
+    for x in range(5):                      # 융합 ρπ⊕D: B[dst] = rol64(A[src]^D[x], n)
+        ins += [f"\tldr\tr6, [r8, #{D(x, 0)}]",
+                f"\tldr\tr7, [r8, #{D(x, 1)}]"]
+        for y in range(5):
+            src, dst, n = x + 5 * y, y + 5 * ((2 * x + 3 * y) % 5), RHO[x][y]
+            m, odd = n // 2, n % 2
+            # tmp_e = A_e^D_e, tmp_o = A_o^D_o 후:
+            #   n=2m:   B_e = rol32(tmp_e, m),   B_o = rol32(tmp_o, m)
+            #   n=2m+1: B_e = rol32(tmp_o, m+1), B_o = rol32(tmp_e, m)
+            ins += [f"\tldr\tr9, [r8, #{A(src, 0)}]",
+                    f"\tldr\tr10, [r8, #{A(src, 1)}]",
+                    f"\teor\tr9, r9, r6",
+                    f"\teor\tr10, r10, r7"]
+            if odd:
+                se, ro_e = "r10", (m + 1) % 32   # B_e ← tmp_o rol m+1
+                so, ro_o = "r9", m % 32          # B_o ← tmp_e rol m
+            else:
+                se, ro_e = "r9", m % 32
+                so, ro_o = "r10", m % 32
+            for reg, amt, h in ((se, ro_e, 0), (so, ro_o, 1)):
+                if amt == 0:
+                    ins.append(f"\tstr\t{reg}, [r8, #{B(dst, h)}]")
+                else:
+                    ins.append(f"\tror\tr11, {reg}, #{32 - amt}")
+                    ins.append(f"\tstr\tr11, [r8, #{B(dst, h)}]")
+
+    for y in range(5):                      # χ (표현 무관, 슬라이딩 윈도우)
+        for h in range(2):
+            b = lambda x: B(x % 5 + 5 * y, h)
+            o = lambda x: A(x % 5 + 5 * y, h)
+            ins += [f"\tldr\tr9, [r8, #{b(0)}]",
+                    f"\tldr\tr10, [r8, #{b(1)}]",
+                    f"\tldr\tr11, [r8, #{b(2)}]",
+                    f"\tbic\tr6, r11, r10", f"\teor\tr6, r6, r9",  f"\tstr\tr6, [r8, #{o(0)}]",
+                    f"\tldr\tr9, [r8, #{b(3)}]",
+                    f"\tbic\tr6, r9, r11",  f"\teor\tr6, r6, r10", f"\tstr\tr6, [r8, #{o(1)}]",
+                    f"\tldr\tr10, [r8, #{b(4)}]",
+                    f"\tbic\tr6, r10, r9",  f"\teor\tr6, r6, r11", f"\tstr\tr6, [r8, #{o(2)}]",
+                    f"\tldr\tr11, [r8, #{b(0)}]",
+                    f"\tbic\tr6, r11, r10", f"\teor\tr6, r6, r9",  f"\tstr\tr6, [r8, #{o(3)}]",
+                    f"\tldr\tr9, [r8, #{b(1)}]",
+                    f"\tbic\tr6, r9, r11",  f"\teor\tr6, r6, r10", f"\tstr\tr6, [r8, #{o(4)}]"]
+
+    # ι (라운드 0: RC=1 → even 반쪽만 bit0)
+    ins += ["\tldr\tr9, [r8, #0]", "\teor\tr9, r9, #1", "\tstr\tr9, [r8, #0]"]
+    return ins
+
+
+def parse_a_body(path, label="mul256_flat"):
+    """mul256_flat*.s에서 본문 명령 클럼프 추출 (push/pop 제외, it는 클럼프)."""
+    lines = open(path, encoding="utf-8", errors="replace").read().splitlines()
+    body, in_fn = [], False
+    for ln in lines:
+        if re.match(rf"^{label}:", ln):
+            in_fn = True
+            continue
+        if not in_fn:
+            continue
+        s = ln.strip()
+        if not s or s.startswith((".", "@")):
+            if s.startswith(".size"):
+                break
+            continue
+        if s.startswith(("push", "pop")):
+            continue
+        body.append("\t" + s)
+    clumps, i = [], 0
+    while i < len(body):
+        if body[i].strip().startswith("it"):
+            clumps.append(body[i:i + 2])
+            i += 2
+        else:
+            clumps.append([body[i]])
+            i += 1
+    return clumps
+
+
+def zip_streams(a_clumps, b_ins):
+    """Bresenham식 비율 분산: B를 A 전체 길이에 균등하게 (정수 스텝의 몰림 방지)."""
+    out, bi, err = [], 0, 0.0
+    ratio = len(b_ins) / len(a_clumps)
+    for clump in a_clumps:
+        out.extend(clump)
+        err += ratio
+        while err >= 1.0 and bi < len(b_ins):
+            out.append(b_ins[bi])
+            bi += 1
+            err -= 1.0
+    out.extend(b_ins[bi:])
+    return out
+
+
+LOAD_STATE = ["\tmovw\tr8, #:lower16:g_theta_state",
+              "\tmovt\tr8, #:upper16:g_theta_state"]
+
+
+def main():
+    a = parse_a_body(SP + r"\mul256_flat.s")
+    b = theta_stream()
+    z = zip_streams(a, b)
+    n_a = sum(len(c) for c in a)
+    print(f"A clumps={len(a)} ({n_a} instrs)  B(theta)={len(b)}  zipped={len(z)}")
+
+    rnd = round_stream()
+    zr = zip_streams(a, rnd)
+    print(f"B(round)={len(rnd)} instrs  zipped(round)={len(zr)}")
+
+    a6 = parse_a_body(SP + r"\mul256_flat6.s", "mul256_flat6")
+    rnd6 = round_stream6()
+    zr6 = zip_streams(a6, rnd6)
+    n_a6 = sum(len(c) for c in a6)
+    print(f"A6 clumps={len(a6)} ({n_a6} instrs)  B(round6)={len(rnd6)}  zipped={len(zr6)}")
+
+    # k-스윕: 곱 2개 × 라운드 1개 (같은 곱 2회 — 밸런스 실험용).
+    # GCC 본문이 r0-r2(인자)를 파괴하므로 진입 시 push{r0-r2} 해두고
+    # 두 본문 사이에 sp 기준 복원 클럼프를 끼운다 (본문의 sub/add sp는 자체 균형).
+    restore = [["\tldr\tr0, [sp, #0]"], ["\tldr\tr1, [sp, #4]"], ["\tldr\tr2, [sp, #8]"]]
+    zk2 = zip_streams(a6 + restore + a6, rnd6)
+    print(f"k=2: A6x2={2 * n_a6}+3 instrs  zipped={len(zk2)}")
+
+    # 실험 4~7 커널은 기록 완료(리포트 v1.5) → ITCM 공간 확보 위해 플래시(.text)로 이전
+    # (2026-08-16: expc 추가로 ITCM 992B 초과. 이 커널들의 향후 재측정치는 I-cache 조건임을 주의)
+    out = [".text", ".syntax unified", ".thumb", ""]
+    out += ["// zip: mul256 x theta (stitch_zip.py v0.2)",
+            ".global mul256_theta_stitched", ".type mul256_theta_stitched, %function",
+            ".thumb_func", ".balign 16", "mul256_theta_stitched:",
+            "\tpush\t{r4-r11, lr}"] + LOAD_STATE + z + ["\tpop\t{r4-r11, pc}", ""]
+    out += ["// theta 단독 기준선",
+            ".global theta_frag", ".type theta_frag, %function",
+            ".thumb_func", ".balign 16", "theta_frag:",
+            "\tpush\t{r8-r10, lr}", "\tmov\tr8, r0"] + theta_stream() + ["\tpop\t{r8-r10, pc}", ""]
+    out += ["// 전체 라운드 단독 기준선",
+            ".global round_frag", ".type round_frag, %function",
+            ".thumb_func", ".balign 16", "round_frag:",
+            "\tpush\t{r8-r11, lr}", "\tmov\tr8, r0"] + round_stream() + ["\tpop\t{r8-r11, pc}", ""]
+    out += ["// zip: mul256 x full round",
+            ".global mul256_round_stitched", ".type mul256_round_stitched, %function",
+            ".thumb_func", ".balign 16", "mul256_round_stitched:",
+            "\tpush\t{r4-r11, lr}"] + LOAD_STATE + zr + ["\tpop\t{r4-r11, pc}", ""]
+    out += ["// 예산 스윕: 6-reg 융합 라운드 단독",
+            ".global round6_frag", ".type round6_frag, %function",
+            ".thumb_func", ".balign 16", "round6_frag:",
+            "\tpush\t{r4-r11, lr}", "\tmov\tr8, r0"] + round_stream6() + ["\tpop\t{r4-r11, pc}", ""]
+    out += ["// zip: mul256(6-fixed) x round6",
+            ".global mul256_round6_stitched", ".type mul256_round6_stitched, %function",
+            ".thumb_func", ".balign 16", "mul256_round6_stitched:",
+            "\tpush\t{r4-r11, lr}"] + LOAD_STATE + zr6 + ["\tpop\t{r4-r11, pc}", ""]
+    out += ["// k-스윕: 곱x2 x round6",
+            ".global mul2_round6_stitched", ".type mul2_round6_stitched, %function",
+            ".thumb_func", ".balign 16", "mul2_round6_stitched:",
+            "\tpush\t{r4-r11, lr}",
+            "\tpush\t{r0-r2}"] + LOAD_STATE + zk2 + [
+            "\tadd\tsp, #12", "\tpop\t{r4-r11, pc}", ""]
+
+    open(OUT + r"\stitched.s", "w", encoding="utf-8", newline="\n").write("\n".join(out) + "\n")
+    print("wrote", OUT + r"\stitched.s")
+
+
+if __name__ == "__main__":
+    main()

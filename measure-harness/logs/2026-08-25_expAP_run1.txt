@@ -1,0 +1,138 @@
+﻿python.exe : CPU is running at low speed (8290 kHz).
+At line:8 char:3
++   & $Python (Join-Path $H 'harvest_ra8m1_expAP.py') 2>&1 | Tee-Object ...
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (CPU is running at low speed (8290 kHz).:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+CPU is running at low speed (8289 kHz).
+measurement ELF SHA-256: F790D28CBB3C3B4346F2DB641C3E46E94B7A0C5057756CD930E0ED191A2B20B6
+measurement SREC SHA-256: D399E0DE44041F6F415A8856DDD86926E286811FF1618201A9E6E37864F03CB7
+connected: Cortex-M85
+flash code readback PASS: bytes=721356 segments=1 sha256=F0B69D89005E9D3886767C5123B056763BD668C23BC85298A311E496C188B73F
+=== EK-RA8M1 harness: KAT + DWT/PMU (ITCM/DTCM) ===
+
+== KAT: X25519 (RFC 7748 s6.1) ==
+alice_pk: OK
+bob_pk  : OK
+K(a,B)  : OK
+K(b,A)  : OK
+== KAT: SHA3-256 via asm Keccak-f1600 ==
+sha3("")   : OK
+sha3("abc"): OK
+
+KAT ALL PASS -- streams A+B verified on board
+
+DAUTHCTRL readback: 15
+
+[calib-empty] x1
+  dwt_cyc/op   : 141
+  pmu_cyc/op   : 160
+  insts        : 0
+  stall_op     : 0
+  stall_op_fe  : 0
+  stall_op_be  : 0
+  IPC x100     : 0
+  slot-waste % : 0
+
+[keccak-f1600] x1000
+  dwt_cyc/op   : 5504
+  pmu_cyc/op   : 5504
+  insts        : 0
+  stall_op     : 0
+  stall_op_fe  : 0
+  stall_op_be  : 0
+  IPC x100     : 0
+  slot-waste % : 0
+
+[x25519-scalarmult] x10
+  dwt_cyc/op   : 357512
+  pmu_cyc/op   : 357514
+  insts        : 0
+  stall_op     : 0
+  stall_op_fe  : 0
+  stall_op_be  : 0
+  IPC x100     : 0
+  slot-waste % : 0
+
+== K3: ML-KEM-768 (pqm4 m4fspeed) ==
+roundtrip+reject: OK
+keccak perms/op: keygen 43  encaps 44  decaps 44  combiner 1
+expX bytes-mm: 0 smoke-fails=0 align-base-bits=257 align-candidate-bits=257
+expX timing-mm: 0 stack-fails=0 stack-used=7656
+expY bytes-mm: 0 smoke-fails=0 oracle-mm=0 oracle-canary=0 align-base-bits=257 align-candidate-bits=257 input-min=-1664 input-max=1664 output-min=-14304 output-max=24656
+expY timing-mm: 0 stack-fails=0 stack-used=7656
+expZ bytes-mm: 0 smoke-fails=0 fwd-align-base=257 fwd-align-candidate=257 inv-align-base=257 inv-align-candidate=257
+expZ timing-mm: 0 stack-fails=0 stack-used=7656
+expAA bytes-mm: 0 smoke-fails=0 fwd-align-base=257 fwd-align-candidate=257
+expAA timing-mm: 0 stack-fails=0 stack-used=7656
+expAB bytes-mm: 0 smoke-fails=0
+expAB timing-mm: 0 stack-fails=0 stack-used=7848
+expAE x4-kat-fails: 0 u-kat-fails=0
+expAE bytes-mm: 0 smoke-fails=0
+expAE timing-mm: 0 stack-fails=0 stack-used=9028
+expAF path counts (u4-rounds/u8-rounds/real/dummy):
+  op0: 0/0/0/0
+  op1: 0/0/0/0
+  op2: 0/0/0/0
+expAF mismatch: 0
+expAI mismatch: 0 stack-fails=0 stack-used=9020
+bfull_slothy diag: prod-mm=0 lane-mm=0 first-bad-prod= first-bad-lane=
+mul256 full-vs-budget mismatch: 0  /  stitched(product+theta) mismatch: 0  /  bmid(theta x3) mismatch: 0  /  bfull mismatch: 0  /  expc mismatch: 0  /  expd mismatch: 0  /  expe mismatch: 0  /  mve4 mismatch: 0  /  coissue mismatch: 0  /  cosol mismatch: 0  /  expg mismatch: 0  /  exph mismatch: 0  /  expi mismatch: 0  /  v04 mismatch: 0  /  expj mismatch: 0  /  expk mismatch: 0  /  expl mismatch: 0  /  expm mismatch: 0  /  expt mismatch: 0  /  expu mismatch: 0  /  expv mismatch: 0  /  expw mismatch: 0 m55-unavailable=1 m85-inv-mm=0 m85-roundtrip-mm=0
+expAJ kat-mm: 0
+expAJ bytes-mm: 0 smoke-fails=0
+expAJ xw-bytes-mm: 0 xw-smoke-fails=0
+expAJ timing-mm: 0 stack-fails=0 stack-used=7848
+expAK timing-mm: 0 stack-fails=0 stack-used=7848
+expAL xw-bytes-mm: 0 xw-smoke-fails=0
+expAL timing-mm: 0 stack-fails=0 stack-used=7864
+expAM correctness: oracle-mm=0 lenn-mm=0 boundary-mm=0 alias-mm=0 align-mm=0 checks=1025 stack-fails=0 stack-used=1084
+expAM ct-delta: 0 batch=64 stack-fails=0 stack-used=348
+expAMb correctness: opt-mm=0 sqr-mm=0 sqrlenn-mm=0 conv-mm=0 sem-mm=0 checks=1000 stack-fails=0 stack-used=804
+expAMb bench done stack-fails=0 stack-used=404
+expAN equiv: bytes-mm=0 smoke-fails=0 checks=48
+expAN bench: stack-fails=0 stack-used=7880
+expAO equiv: bytes-mm=0 checks=40
+expAO bench: stack-fails=0 stack-used=7848
+expAP equiv: bytes-mm=0 checks=40
+expAP bench: stack-fails=0 stack-used=7872
+rep arrays ready x100 (420 slots)
+HARNESS DONE
+
+
+=== expAP — ML-KEM 비-Keccak 내부 재귀속 ===
+정확성: PASS (harness_fails=0, bytes-mm=0, checks=40, KAT=True)
+
+--- keygen   ML-KEM 407233 = Keccak 237916 + 비-Keccak 169317   (probe +4332)
+    matacc            89222.8 cyc   52.70%  (3.0 calls/op)
+    packing           18958.5 cyc   11.20%  (6.0 calls/op)
+    NTT               18075.8 cyc   10.68%  (6.0 calls/op)
+    noise(CBD)        16601.5 cyc    9.80%  (6.0 calls/op)
+    invNTT            11882.0 cyc    7.02%  (3.0 calls/op)
+    basemul               0.0 cyc    0.00%  (0.0 calls/op)
+    arith                 0.0 cyc    0.00%  (0.0 calls/op)
+    verify/cmov           0.0 cyc    0.00%  (0.0 calls/op)
+    미귀속               14576.4 cyc    8.61%   ← 계측 밖 잔여
+
+--- encaps   ML-KEM 415391 = Keccak 254478 + 비-Keccak 160913   (probe +5597)
+    matacc            90761.4 cyc   56.40%  (3.0 calls/op)
+    noise(CBD)        19598.1 cyc   12.18%  (7.0 calls/op)
+    invNTT            15794.8 cyc    9.82%  (4.0 calls/op)
+    packing            9579.0 cyc    5.95%  (8.0 calls/op)
+    NTT                9018.7 cyc    5.60%  (3.0 calls/op)
+    arith              5550.4 cyc    3.45%  (5.0 calls/op)
+    basemul            3562.0 cyc    2.21%  (3.0 calls/op)
+    verify/cmov           0.0 cyc    0.00%  (0.0 calls/op)
+    미귀속                7048.6 cyc    4.38%   ← 계측 밖 잔여
+
+--- decaps   ML-KEM 448630 = Keccak 254490 + 비-Keccak 194140   (probe +7191)
+    matacc            90737.4 cyc   46.74%  (3.0 calls/op)
+    invNTT            19723.8 cyc   10.16%  (5.0 calls/op)
+    noise(CBD)        19571.8 cyc   10.08%  (7.0 calls/op)
+    NTT               18021.0 cyc    9.28%  (6.0 calls/op)
+    basemul           13205.0 cyc    6.80%  (6.0 calls/op)
+    packing           10527.3 cyc    5.42%  (9.0 calls/op)
+    arith              7272.4 cyc    3.75%  (7.0 calls/op)
+    verify/cmov         262.0 cyc    0.13%  (1.0 calls/op)
+    미귀속               14819.4 cyc    7.63%   ← 계측 밖 잔여
+EXPAP_JSON {"code_flash_readback_bytes": 721356, "code_flash_readback_sha256": "F0B69D89005E9D3886767C5123B056763BD668C23BC85298A311E496C188B73F", "correctness_pass": true, "elf_sha256": "F790D28CBB3C3B4346F2DB641C3E46E94B7A0C5057756CD930E0ED191A2B20B6", "equiv_bytes_mismatch": 0, "equiv_checks": 40, "experiment": "AP", "gate_pass": true, "harness_fails": 0, "kat_all_pass": true, "per_op": {"decaps": {"buckets": [{"bucket": "NTT", "calls_per_op": 6.0, "cycles_per_op": 18020.96, "pct_of_non_keccak": 9.28245595961677}, {"bucket": "invNTT", "calls_per_op": 5.0, "cycles_per_op": 19723.78, "pct_of_non_keccak": 10.15956526218193}, {"bucket": "matacc", "calls_per_op": 3.0, "cycles_per_op": 90737.44, "pct_of_non_keccak": 46.738147728443394}, {"bucket": "basemul", "calls_per_op": 6.0, "cycles_per_op": 13205.0, "pct_of_non_keccak": 6.801792520861234}, {"bucket": "noise(CBD)", "calls_per_op": 7.0, "cycles_per_op": 19571.75, "pct_of_non_keccak": 10.081255794787268}, {"bucket": "packing", "calls_per_op": 9.0, "cycles_per_op": 10527.34, "pct_of_non_keccak": 5.422550736581848}, {"bucket": "arith", "calls_per_op": 7.0, "cycles_per_op": 7272.35, "pct_of_non_keccak": 3.745930771608118}, {"bucket": "verify/cmov", "calls_per_op": 1.0, "cycles_per_op": 262.02, "pct_of_non_keccak": 0.13496445863809622}], "coverage_pct": 92.36666323271865, "covered": 179320.63999999998, "keccak_same_elf": 254490, "mlkem_non_keccak": 194140, "mlkem_same_elf": 448630, "probe_cost_total": 7191, "total_prof_off": 813867, "total_prof_on": 821058, "unattributed": 14819.360000000015}, "encaps": {"buckets": [{"bucket": "NTT", "calls_per_op": 3.0, "cycles_per_op": 9018.66, "pct_of_non_keccak": 5.604680790240689}, {"bucket": "invNTT", "calls_per_op": 4.0, "cycles_per_op": 15794.82, "pct_of_non_keccak": 9.815751368752059}, {"bucket": "matacc", "calls_per_op": 3.0, "cycles_per_op": 90761.37, "pct_of_non_keccak": 56.40400091975167}, {"bucket": "basemul", "calls_per_op": 3.0, "cycles_per_op": 3562.0, "pct_of_non_keccak": 2.2136185392106293}, {"bucket": "noise(CBD)", "calls_per_op": 7.0, "cycles_per_op": 19598.12, "pct_of_non_keccak": 12.179326716921567}, {"bucket": "packing", "calls_per_op": 8.0, "cycles_per_op": 9578.98, "pct_of_non_keccak": 5.952893799755147}, {"bucket": "arith", "calls_per_op": 5.0, "cycles_per_op": 5550.45, "pct_of_non_keccak": 3.4493484056602015}, {"bucket": "verify/cmov", "calls_per_op": 0.0, "cycles_per_op": 0.0, "pct_of_non_keccak": 0.0}], "coverage_pct": 95.61962054029198, "covered": 153864.40000000002, "keccak_same_elf": 254478, "mlkem_non_keccak": 160913, "mlkem_same_elf": 415391, "probe_cost_total": 5597, "total_prof_off": 1138459, "total_prof_on": 1144056, "unattributed": 7048.599999999977}, "keygen": {"buckets": [{"bucket": "NTT", "calls_per_op": 6.0, "cycles_per_op": 18075.84, "pct_of_non_keccak": 10.675738407838551}, {"bucket": "invNTT", "calls_per_op": 3.0, "cycles_per_op": 11881.96, "pct_of_non_keccak": 7.0175824046020185}, {"bucket": "matacc", "calls_per_op": 3.0, "cycles_per_op": 89222.79, "pct_of_non_keccak": 52.695706869363384}, {"bucket": "basemul", "calls_per_op": 0.0, "cycles_per_op": 0.0, "pct_of_non_keccak": 0.0}, {"bucket": "noise(CBD)", "calls_per_op": 6.0, "cycles_per_op": 16601.46, "pct_of_non_keccak": 9.804957564804479}, {"bucket": "packing", "calls_per_op": 6.0, "cycles_per_op": 18958.52, "pct_of_non_keccak": 11.19705640898433}, {"bucket": "arith", "calls_per_op": 0.0, "cycles_per_op": 0.0, "pct_of_non_keccak": 0.0}, {"bucket": "verify/cmov", "calls_per_op": 0.0, "cycles_per_op": 0.0, "pct_of_non_keccak": 0.0}], "coverage_pct": 91.39104165559276, "covered": 154740.56999999998, "keccak_same_elf": 237916, "mlkem_non_keccak": 169317, "mlkem_same_elf": 407233, "probe_cost_total": 4332, "total_prof_off": 765041, "total_prof_on": 769373, "unattributed": 14576.430000000022}}, "srec_sha256": "D399E0DE44041F6F415A8856DDD86926E286811FF1618201A9E6E37864F03CB7"}

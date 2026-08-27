@@ -1,0 +1,194 @@
+CPU is running at low speed (8288 kHz).
+CPU is running at low speed (8286 kHz).
+connected: Cortex-M85
+=== EK-RA8M1 harness: KAT + DWT/PMU (ITCM/DTCM) ===
+
+== KAT: X25519 (RFC 7748 s6.1) ==
+alice_pk: OK
+bob_pk  : OK
+K(a,B)  : OK
+K(b,A)  : OK
+== KAT: SHA3-256 via asm Keccak-f1600 ==
+sha3("")   : OK
+sha3("abc"): OK
+
+KAT ALL PASS -- streams A+B verified on board
+
+DAUTHCTRL readback: 15
+
+[calib-empty] x1
+  dwt_cyc/op   : 157
+  pmu_cyc/op   : 212
+  insts        : 0
+  stall_op     : 0
+  stall_op_fe  : 0
+  stall_op_be  : 0
+  IPC x100     : 0
+  slot-waste % : 0
+
+[keccak-f1600] x1000
+  dwt_cyc/op   : 5504
+  pmu_cyc/op   : 5504
+  insts        : 0
+  stall_op     : 0
+  stall_op_fe  : 0
+  stall_op_be  : 0
+  IPC x100     : 0
+  slot-waste % : 0
+
+[x25519-scalarmult] x10
+  dwt_cyc/op   : 357507
+  pmu_cyc/op   : 357511
+  insts        : 0
+  stall_op     : 0
+  stall_op_fe  : 0
+  stall_op_be  : 0
+  IPC x100     : 0
+  slot-waste % : 0
+
+== K3: ML-KEM-768 (pqm4 m4fspeed) ==
+roundtrip+reject: OK
+keccak perms/op: keygen 43  encaps 44  decaps 44  combiner 1
+bfull_slothy diag: prod-mm=0 lane-mm=0 first-bad-prod= first-bad-lane=
+mul256 full-vs-budget mismatch: 0  /  stitched(product+theta) mismatch: 0  /  bmid(theta x3) mismatch: 0  /  bfull mismatch: 0  /  expc mismatch: 0  /  expd mismatch: 0  /  expe mismatch: 0  /  mve4 mismatch: 0  /  coissue mismatch: 0  /  cosol mismatch: 0  /  expg mismatch: 0  /  exph mismatch: 0  /  expi mismatch: 0  /  v04 mismatch: 0  /  expj mismatch: 0  /  expk mismatch: 0  /  expl mismatch: 0  /  expm mismatch: 0
+rep arrays ready x100 (17 slots)
+HARNESS DONE
+
+[N=100] keccak-f1600: median=5551 (calib 25 차감시 5526)  min=5544  max=5551
+[N=100] x25519-scalarmult: median=357516 (calib 25 차감시 357491)  min=357516  max=357694
+[N=100] mlkem768-keygen: median=436985 (calib 25 차감시 436960)  min=436212  max=444805
+[N=100] mlkem768-encaps: median=453158 (calib 25 차감시 453133)  min=452974  max=453348
+[N=100] mlkem768-decaps: median=503923 (calib 25 차감시 503898)  min=503753  max=504059
+[N=100] combiner-sha3-134B: median=7831 (calib 25 차감시 7806)  min=7830  max=7861
+[N=100] stitch-A-mulchain: median=8071 (calib 25 차감시 8046)  min=8071  max=8091
+[N=100] stitch-B-logicchain: median=5070 (calib 25 차감시 5045)  min=5070  max=5096
+[N=100] stitch-S-interleaved: median=9074 (calib 25 차감시 9049)  min=9074  max=9088
+[N=100] stitch-Bm-memchain: median=6080 (calib 25 차감시 6055)  min=6080  max=6107
+[N=100] stitch-Sm-interleaved-mem: median=10082 (calib 25 차감시 10057)  min=10082  max=10105
+[N=100] mul256-full-x100: median=84493 (calib 25 차감시 84468)  min=84438  max=85158
+[N=100] mul256-budget-x100: median=85239 (calib 25 차감시 85214)  min=84903  max=85595
+[N=100] mul256-flat-x100: median=37772 (calib 25 차감시 37747)  min=37771  max=38716
+[N=100] theta-frag-x100: median=7046 (calib 25 차감시 7021)  min=7046  max=7116
+[N=100] stitched-x100: median=39588 (calib 25 차감시 39563)  min=39588  max=40771
+[N=100] round-frag-x100: median=65946 (calib 25 차감시 65921)  min=65945  max=67847
+[N=100] stitched-round-x100: median=78087 (calib 25 차감시 78062)  min=78087  max=80563
+[N=100] mul256-flat6-x100: median=39481 (calib 25 차감시 39456)  min=39481  max=39547
+[N=100] round6-frag-x100: median=39738 (calib 25 차감시 39713)  min=39738  max=41453
+[N=100] stitched-round6-x100: median=65872 (calib 25 차감시 65847)  min=65872  max=68259
+[N=100] stitched-k2-x100: median=100168 (calib 25 차감시 100143)  min=100168  max=103279
+[N=100] slothy-seq-x1000: median=13056 (calib 25 차감시 13031)  min=13056  max=13149
+[N=100] slothy-opt-x1000: median=11056 (calib 25 차감시 11031)  min=11056  max=11116
+[N=100] bmid-seq-x1000: median=110056 (calib 25 차감시 110031)  min=110056  max=110100
+[N=100] bmid-zip-x1000: median=88057 (calib 25 차감시 88032)  min=88056  max=88081
+[N=100] bmid-slothy-x1000: median=85063 (calib 25 차감시 85038)  min=85062  max=85063
+[N=100] bfull-seq-x1000: median=726037 (calib 25 차감시 726012)  min=726037  max=726915
+[N=100] bfull-zip-x1000: median=0 (calib 25 차감시 -25)  min=0  max=0
+[N=100] bfull-slothy-x1000: median=656036 (calib 25 차감시 656011)  min=656036  max=656120
+[N=100] expc-seq-x1000: median=701037 (calib 25 차감시 701012)  min=701037  max=701522
+[N=100] expc-slothy-x1000: median=629036 (calib 25 차감시 629011)  min=629036  max=629123
+[N=100] expd-seq-x1000: median=635036 (calib 25 차감시 635011)  min=635036  max=636154
+[N=100] expd-slothy-x1000: median=579036 (calib 25 차감시 579011)  min=579036  max=579238
+[N=100] expe-seq-x1000: median=1573063 (calib 25 차감시 1573038)  min=1573062  max=1573147
+[N=100] expe-slothy-x1000: median=1521061 (calib 25 차감시 1521036)  min=1521061  max=1521135
+[N=100] mve4-round-x1000: median=754079 (calib 25 차감시 754054)  min=754079  max=754158
+[N=100] coissue-A-x1000: median=611062 (calib 25 차감시 611037)  min=611062  max=612457
+[N=100] coissue-zip-x1000: median=1013071 (calib 25 차감시 1013046)  min=1013071  max=1013310
+[N=100] coissue-slothy-x1000: median=996071 (calib 25 차감시 996046)  min=996071  max=996312
+[N=100] mve3-round-x1000: median=754079 (calib 25 차감시 754054)  min=754079  max=754161
+[N=100] coissue3-zip-x1000: median=1013061 (calib 25 차감시 1013036)  min=1013061  max=1013142
+[N=100] glue-roundtrip-x1000: median=481 (calib 25 차감시 456)  min=481  max=530
+[N=100] fiat-base-x100: median=28774 (calib 25 차감시 28749)  min=28774  max=28793
+[N=100] fiat-yield3-x100: median=32674 (calib 25 차감시 32649)  min=32673  max=32698
+[N=100] mve2-round-x1000: median=754078 (calib 25 차감시 754053)  min=754078  max=754248
+[N=100] coissue2-zip-x1000: median=1013069 (calib 25 차감시 1013044)  min=1013069  max=1013149
+[N=100] fiat-yield2-x100: median=32490 (calib 25 차감시 32465)  min=32489  max=32501
+[N=100] expj-seq-x1000: median=1066065 (calib 25 차감시 1066040)  min=1066065  max=1066149
+[N=100] expj-stitch-x1000: median=979065 (calib 25 차감시 979040)  min=979065  max=979301
+[N=100] expk-seq-x1000: median=3206054 (calib 25 차감시 3206029)  min=3206054  max=3216325
+[N=100] expk-coarse-x1000: median=3202131 (calib 25 차감시 3202106)  min=3202119  max=3225252
+[N=100] expk-stitch-x1000: median=2943053 (calib 25 차감시 2943028)  min=2943053  max=2963212
+[N=100] expl-ntt-x1000: median=901072 (calib 25 차감시 901047)  min=901071  max=901153
+[N=100] expl-zip-x1000: median=1135061 (calib 25 차감시 1135036)  min=1135061  max=1137894
+[N=100] expl-sntt-x1000: median=600072 (calib 25 차감시 600047)  min=600072  max=601451
+[N=100] expl-szip-x1000: median=1217061 (calib 25 차감시 1217036)  min=1217061  max=1219801
+[N=100] expj-stitch-alt-x1000: median=979065 (calib 25 차감시 979040)  min=979065  max=981327
+[N=100] expm-seq-x1000: median=3260143 (calib 25 차감시 3260118)  min=3260069  max=3275153
+[N=100] expm-stitch-x1000: median=3010053 (calib 25 차감시 3010028)  min=3010053  max=10073487
+[N=100] expm4-seq-x1000: median=2008053 (calib 25 차감시 2008028)  min=2008053  max=2013983
+[N=100] expm4-stitch-x1000: median=1772053 (calib 25 차감시 1772028)  min=1772053  max=1792518
+[N=100] pairn-veor-x1000: median=611066 (calib 25 차감시 611041)  min=611066  max=612485
+[N=100] pairn-veor-zip-x1000: median=617055 (calib 25 차감시 617030)  min=617055  max=621449
+[N=100] pairn-ldr-x1000: median=1222066 (calib 25 차감시 1222041)  min=1222066  max=1222839
+[N=100] pairn-ldr-zip-x1000: median=1228055 (calib 25 차감시 1228030)  min=1228055  max=1230821
+[N=100] pairn-str-x1000: median=1222066 (calib 25 차감시 1222041)  min=1222066  max=1222837
+[N=100] pairn-str-zip-x1000: median=1839055 (calib 25 차감시 1839030)  min=1839055  max=1841211
+[N=100] pairn-rot-x1000: median=1222066 (calib 25 차감시 1222041)  min=1222066  max=1222839
+[N=100] pairn-rot-zip-x1000: median=1227055 (calib 25 차감시 1227030)  min=1227055  max=1229796
+[N=100] coissue-slothy2-x1000: median=1018071 (calib 25 차감시 1018046)  min=1018071  max=1018158
+[N=100] pairn2-ldr-x1000: median=1229055 (calib 25 차감시 1229030)  min=1229055  max=1234781
+[N=100] pairn2-str-x1000: median=2450055 (calib 25 차감시 2450030)  min=2450055  max=2453564
+[N=100] pairn2-rot-x1000: median=1228055 (calib 25 차감시 1228030)  min=1228055  max=1232783
+[N=100] pairn-lsmix-x1000: median=612066 (calib 25 차감시 612041)  min=612066  max=613463
+[N=100] pairn-lsmix-zip-x1000: median=1228055 (calib 25 차감시 1228030)  min=1228055  max=1230810
+[N=100] pairp-vec-x1000: median=1222065 (calib 25 차감시 1222040)  min=1222065  max=1222866
+[N=100] pairp-s0-x1000: median=611067 (calib 25 차감시 611042)  min=611067  max=611455
+[N=100] pairp-s0-zip-x1000: median=1833068 (calib 25 차감시 1833043)  min=1833068  max=1834211
+[N=100] pairp-s1-x1000: median=611067 (calib 25 차감시 611042)  min=611067  max=611457
+[N=100] pairp-s1-zip-x1000: median=1833068 (calib 25 차감시 1833043)  min=1833068  max=1834220
+[N=100] pairp-s2-x1000: median=611069 (calib 25 차감시 611044)  min=611069  max=611474
+[N=100] pairp-s2-zip-x1000: median=1833068 (calib 25 차감시 1833043)  min=1833068  max=1834216
+[N=100] pairp-s3-x1000: median=611067 (calib 25 차감시 611042)  min=611067  max=611447
+[N=100] pairp-s3-zip-x1000: median=1833066 (calib 25 차감시 1833041)  min=1833066  max=1834220
+
+[exp P] DTCM 뱅크 스펙트럼 (MVE 단독 vec=1222040)
+  bank 0: scalar=611042 zip=1833043  순차합=1833082  은닉 0.0%
+  bank 1: scalar=611042 zip=1833043  순차합=1833082  은닉 0.0%
+  bank 2: scalar=611044 zip=1833043  순차합=1833084  은닉 0.0%
+  bank 3: scalar=611042 zip=1833041  순차합=1833082  은닉 0.0%
+  -> 은닉률 폭 0.0%p  평평 = 순수 LSU 경합 (음성 결과)
+
+[stitch micro] A=8046 B=5045 S=9049  |  A+B=13091  max=8046
+  절감 4042 cyc = 짧은 스트림의 80% 회수  (이상적 100% = S가 max(A,B)에 도달)
+[A-tax] mul256 full=845 budget(r8-r11 예약)=852 cyc/회  → 세금 +0.9%
+[REAL STITCH] mul=377 theta=70 순차합=448 스티치=396 cyc/회  → 절감 52 cyc = theta의 74% 은닉
+[FULL ROUND ] mul=377 round=659 순차합=1037 스티치=781 cyc/회  → 절감 256 cyc = 교차 구간 기준 은닉률 68%
+[SWEEP r6   ] mul6=395 round6=397 순차합=792 스티치=658 cyc/회  → 절감 133 cyc
+[SLOTHY expA] 원본순서=13.03 솔버스케줄=11.03 cyc/iter  (모델 예측: 본문 9 + 루프 — 17명령)
+[BMID 3파전  ] 순차=110.03 지퍼=88.03 솔버=85.04 cyc/iter (모델 예측: 본문 82 + 루프 ~4)
+[BFULL      ] 순차=726.0 솔버=656.0 cyc/iter (지퍼 기준값: flat6 기반 681cyc — 로드맵 8차)
+[EXPC fiat  ] 순차=701.0 솔버=629.0 cyc/iter (진짜 fiat 필드 곱 × round6)
+[EXPD interleaved] 순차=635.0 솔버=579.0 cyc/iter (fiat × 비트-인터리브 라운드)
+[EXPE 4:1코어] 순차=1573.0 솔버=1521.0 cyc/iter (곱x4+라운드 — X-Wing 실비율)
+[PLAN-B MVE ] 4-way 라운드=754.1 cyc/iter = 상태당 188.5 cyc (스칼라 round6i 단독 ~350 대비)
+[CO-ISSUE F ] A(스칼라)=611.0 B(MVE)=754.1 순차합=1365.1 교차=1013.0 cyc/iter  → 절감 352.0 = 짧은쪽의 58% 은닉
+[F-SOLVER   ] 지퍼=1013.0 솔버=996.0 cyc/iter  → 지퍼 대비 +1.7%, 은닉률 60% (지퍼 58%)
+[F-SOLVER v04] 솔버(v0.4)=1018.0 cyc/iter  → v0.3 대비 -2.2%, 지퍼 대비 -0.5%, 은닉률 57% (구조 하한: 스칼라 611 + 스토어 242 = 853)
+[EXP-G b3   ] MVE3단독=754.1(5베이스판 754.1) 코이슈=1013.0 vs 순차합=1365.1 → 은닉 58% (3-베이스 예산 검증)
+[EXP-H glue ] pack+unpack 왕복=456 cyc/배치 = 배치 순열(18097) 대비 2.5% (naive 스칼라 전치 상한 — vld4/absorb 융합 시 ~0)
+[EXP-I 양보 ] fiat 곱 base=287.5 yield3(r10/11/12 양보)=326.5 cyc/회 → 세금 +13.6% (정답 불변, MVE 베이스 3개 확보)
+[V0.4 b2    ] MVE2단독=754.1(3베이스 754.1) 코이슈은닉=58%
+[V0.4 양보2 ] fiat yield2=324.6 vs base=287.5 → 세금 +12.9% (yield3는 +13.5%)
+[EXP-K 3파전] 순차=3206 굵은교대=3202 스티칭=2943 cyc (곱3+라운드3) → 스티칭 이득: vs순차 8.2% vs교대 8.1% (교차 덕 분리 입증)
+[EXP-L NTT ] A(umaal)=611.0 B(NTT형)=901.0 순차합=1512.1 교차=1135.0 → 은닉 62% (Keccak짝 58% 대비 — 곱셈기 쟁탈전 판정)
+[EXP-L 스칼라] A(umaal)=611.0 B(smull)=600.0 순차합=1211.1 교차=1217.0 → 은닉 -1% (스칼라×스칼라 = 같은 MAC 파이프 쟁탈)
+[상수시간   ] expj_stitch 입력 2벌 median Δ=0 cyc (PASS: 입력 무관)
+[EXP-M 실비율] 유닛(곱8+라운드1): 순차=3260 스티칭=3010 (−7.7%)
+[encaps 투영] 순차=887k 스티칭=821k → 절감 7.4% (측정 유닛 기반)
+[EXP-M4 4:1 ] 유닛(곱4+라운드1): 순차=2008 스티칭=1772 (−11.8%)
+[kg/dec 투영] 순차=544k 스티칭=482k → 절감 11.4%
+[EXP-J 통합 ] 순차=1066 스티칭=979 cyc → 절감 8.2% (진짜 fiat 곱 × MVE 라운드, 정답 ✓)
+[SWEEP k=2  ] 순차합(2mul+round6)=1186 스티치=1001 cyc/회  → 절감 185 cyc = round6의 47% 은닉
+[stitch mem  ] A=8046 B'=6055 S'=10057  |  A+B'=14101  max=8046
+  절감 4044 cyc = 짧은 스트림의 67% 회수 (메모리 상주 B')
+
+[실험 N 페어링 스펙트럼] umaal 611 × MVE 클래스 611 (1:1 지퍼)
+  veor: 단독=  611.0 지퍼=  617.0 순차합= 1222.1 → 은닉  99%, 노출 6.0 cyc
+  ldr : 단독= 1222.0 지퍼= 1228.0 순차합= 1833.1 → 은닉  99%, 노출 6.0 cyc
+  str : 단독= 1222.0 지퍼= 1839.0 순차합= 1833.1 → 은닉  -1%, 노출 617.0 cyc
+  rot : 단독= 1222.0 지퍼= 1227.0 순차합= 1833.1 → 은닉  99%, 노출 5.0 cyc
+[실험 N2 수용량] umaal 1222 × 클래스 611 (기준: 1/cyc→~1228 · 0.5/cyc→~1833 · 차단→~2444)
+  ldr :  1229.0
+  str :  2450.0
+  rot :  1228.0
+  lsmix(로드/스토어 교대): 단독=612.0 지퍼=1228.0 (스토어 306개 차단만이면 지퍼 ≈ 단독+스칼라잔여)
+harness_fails = 0

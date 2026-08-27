@@ -1,0 +1,1069 @@
+INFO:slothy.start:SLOTHY version: unknown
+INFO:slothy:Instructions in body: 1184
+INFO:slothy.start.split.0_99:Perform internal binary search for minimal number of stalls...
+INFO:slothy.start.split.0_99:Attempt optimization with max 64 stalls...
+INFO:slothy.start.split.0_99:Setting timeout of 600 seconds...
+INFO:slothy.start.split.0_99:Objective: minimize cycles
+INFO:slothy.start.split.0_99:Invoking external constraint solver (OR-Tools CP-SAT v9.15.6755) ...
+INFO:slothy.start.split.0_99:[0.3953s]: Found 1 solutions so far... objective (minimize cycles): currently  (Cycles ~ 67.0, IPC ~ 1.48), bound  (Cycles ~ 62.0, IPC ~ 1.60)
+INFO:slothy.start.split.0_99:OPTIMAL, wall time: 0.437826 s
+INFO:slothy.start.split.0_99:Booleans in result: 62
+INFO:slothy.start.split.0_99.selfcheck:OK!
+WARNING:slothy-config:LLVM (llvm-mc, llvm-nm, llvm-readobj) not found, disabling selftest. Consider installing LLVM.
+INFO:slothy.start.split.0_99:Minimum number of stalls: 17
+INFO:slothy.start.split.99_197:Perform internal binary search for minimal number of stalls...
+INFO:slothy.start.split.99_197:Attempt optimization with max 64 stalls...
+INFO:slothy.start.split.99_197:Setting timeout of 600 seconds...
+INFO:slothy.start.split.99_197:Objective: minimize cycles
+INFO:slothy.start.split.99_197:Invoking external constraint solver (OR-Tools CP-SAT v9.15.6755) ...
+INFO:slothy.start.split.99_197:[0.3587s]: Found 1 solutions so far... objective (minimize cycles): currently  (Cycles ~ 59.0, IPC ~ 1.66), bound  (Cycles ~ 56.0, IPC ~ 1.75)
+INFO:slothy.start.split.99_197:OPTIMAL, wall time: 0.391417 s
+INFO:slothy.start.split.99_197:Booleans in result: 81
+INFO:slothy.start.split.99_197.selfcheck:OK!
+WARNING:slothy-config:LLVM (llvm-mc, llvm-nm, llvm-readobj) not found, disabling selftest. Consider installing LLVM.
+INFO:slothy.start.split.99_197:Minimum number of stalls: 10
+INFO:slothy.start.split.197_296:Perform internal binary search for minimal number of stalls...
+INFO:slothy.start.split.197_296:Attempt optimization with max 64 stalls...
+INFO:slothy.start.split.197_296:Setting timeout of 600 seconds...
+INFO:slothy.start.split.197_296:Objective: minimize cycles
+INFO:slothy.start.split.197_296:Invoking external constraint solver (OR-Tools CP-SAT v9.15.6755) ...
+INFO:slothy.start.split.197_296:[0.3827s]: Found 1 solutions so far... objective (minimize cycles): currently  (Cycles ~ 67.0, IPC ~ 1.48), bound  (Cycles ~ 58.0, IPC ~ 1.71)
+INFO:slothy.start.split.197_296:[0.3848s]: Found 2 solutions so far... objective (minimize cycles): currently  (Cycles ~ 62.0, IPC ~ 1.60), bound  (Cycles ~ 58.0, IPC ~ 1.71)
+INFO:slothy.start.split.197_296:OPTIMAL, wall time: 0.415013 s
+INFO:slothy.start.split.197_296:Booleans in result: 210
+INFO:slothy.start.split.197_296.selfcheck:OK!
+WARNING:slothy-config:LLVM (llvm-mc, llvm-nm, llvm-readobj) not found, disabling selftest. Consider installing LLVM.
+INFO:slothy.start.split.197_296:Minimum number of stalls: 12
+INFO:slothy.start.split.296_395:Perform internal binary search for minimal number of stalls...
+INFO:slothy.start.split.296_395:Attempt optimization with max 64 stalls...
+INFO:slothy.start.split.296_395:Setting timeout of 600 seconds...
+INFO:slothy.start.split.296_395:Objective: minimize cycles
+INFO:slothy.start.split.296_395:Invoking external constraint solver (OR-Tools CP-SAT v9.15.6755) ...
+INFO:slothy.start.split.296_395:[0.3673s]: Found 1 solutions so far... objective (minimize cycles): currently  (Cycles ~ 70.0, IPC ~ 1.41), bound  (Cycles ~ 67.0, IPC ~ 1.48)
+INFO:slothy.start.split.296_395:OPTIMAL, wall time: 0.402465 s
+INFO:slothy.start.split.296_395:Booleans in result: 52
+INFO:slothy.start.split.296_395.selfcheck:OK!
+WARNING:slothy-config:LLVM (llvm-mc, llvm-nm, llvm-readobj) not found, disabling selftest. Consider installing LLVM.
+INFO:slothy.start.split.296_395:Minimum number of stalls: 20
+INFO:slothy.start.split.395_493:Perform internal binary search for minimal number of stalls...
+INFO:slothy.start.split.395_493:Attempt optimization with max 64 stalls...
+INFO:slothy.start.split.395_493:Setting timeout of 600 seconds...
+INFO:slothy.start.split.395_493:Objective: minimize cycles
+INFO:slothy.start.split.395_493:Invoking external constraint solver (OR-Tools CP-SAT v9.15.6755) ...
+INFO:slothy.start.split.395_493:[0.3753s]: Found 1 solutions so far... objective (minimize cycles): currently  (Cycles ~ 67.0, IPC ~ 1.46), bound  (Cycles ~ 63.0, IPC ~ 1.56)
+INFO:slothy.start.split.395_493:[0.3774s]: Found 2 solutions so far... objective (minimize cycles): currently  (Cycles ~ 63.0, IPC ~ 1.56), bound  (Cycles ~ 63.0, IPC ~ 1.56)
+INFO:slothy.start.split.395_493:Closer than 0 stalls to theoretical optimum... stop
+INFO:slothy.start.split.395_493:OPTIMAL, wall time: 0.392147 s
+INFO:slothy.start.split.395_493:Booleans in result: 65
+INFO:slothy.start.split.395_493.selfcheck:OK!
+WARNING:slothy-config:LLVM (llvm-mc, llvm-nm, llvm-readobj) not found, disabling selftest. Consider installing LLVM.
+INFO:slothy.start.split.395_493:Minimum number of stalls: 14
+INFO:slothy.start.split.493_592:Perform internal binary search for minimal number of stalls...
+INFO:slothy.start.split.493_592:Attempt optimization with max 64 stalls...
+INFO:slothy.start.split.493_592:Setting timeout of 600 seconds...
+INFO:slothy.start.split.493_592:Objective: minimize cycles
+INFO:slothy.start.split.493_592:Invoking external constraint solver (OR-Tools CP-SAT v9.15.6755) ...
+INFO:slothy.start.split.493_592:[0.3472s]: Found 1 solutions so far... objective (minimize cycles): currently  (Cycles ~ 64.0, IPC ~ 1.55), bound  (Cycles ~ 57.0, IPC ~ 1.74)
+INFO:slothy.start.split.493_592:[0.3495s]: Found 2 solutions so far... objective (minimize cycles): currently  (Cycles ~ 57.0, IPC ~ 1.74), bound  (Cycles ~ 57.0, IPC ~ 1.74)
+INFO:slothy.start.split.493_592:Closer than 0 stalls to theoretical optimum... stop
+INFO:slothy.start.split.493_592:OPTIMAL, wall time: 0.358844 s
+INFO:slothy.start.split.493_592:Booleans in result: 49
+INFO:slothy.start.split.493_592.selfcheck:OK!
+WARNING:slothy-config:LLVM (llvm-mc, llvm-nm, llvm-readobj) not found, disabling selftest. Consider installing LLVM.
+INFO:slothy.start.split.493_592:Minimum number of stalls: 7
+INFO:slothy.start.split.592_691:Perform internal binary search for minimal number of stalls...
+INFO:slothy.start.split.592_691:Attempt optimization with max 64 stalls...
+INFO:slothy.start.split.592_691:Setting timeout of 600 seconds...
+INFO:slothy.start.split.592_691:Objective: minimize cycles
+INFO:slothy.start.split.592_691:Invoking external constraint solver (OR-Tools CP-SAT v9.15.6755) ...
+INFO:slothy.start.split.592_691:[0.3350s]: Found 1 solutions so far... objective (minimize cycles): currently  (Cycles ~ 64.0, IPC ~ 1.55), bound  (Cycles ~ 64.0, IPC ~ 1.55)
+INFO:slothy.start.split.592_691:Closer than 0 stalls to theoretical optimum... stop
+INFO:slothy.start.split.592_691:OPTIMAL, wall time: 0.341595 s
+INFO:slothy.start.split.592_691:Booleans in result: 38
+INFO:slothy.start.split.592_691.selfcheck:OK!
+WARNING:slothy-config:LLVM (llvm-mc, llvm-nm, llvm-readobj) not found, disabling selftest. Consider installing LLVM.
+INFO:slothy.start.split.592_691:Minimum number of stalls: 14
+INFO:slothy.start.split.691_789:Perform internal binary search for minimal number of stalls...
+INFO:slothy.start.split.691_789:Attempt optimization with max 64 stalls...
+INFO:slothy.start.split.691_789:Setting timeout of 600 seconds...
+INFO:slothy.start.split.691_789:Objective: minimize cycles
+INFO:slothy.start.split.691_789:Invoking external constraint solver (OR-Tools CP-SAT v9.15.6755) ...
+INFO:slothy.start.split.691_789:[0.3355s]: Found 1 solutions so far... objective (minimize cycles): currently  (Cycles ~ 68.0, IPC ~ 1.44), bound  (Cycles ~ 66.0, IPC ~ 1.48)
+INFO:slothy.start.split.691_789:OPTIMAL, wall time: 0.368616 s
+INFO:slothy.start.split.691_789:Booleans in result: 175
+INFO:slothy.start.split.691_789.selfcheck:OK!
+WARNING:slothy-config:LLVM (llvm-mc, llvm-nm, llvm-readobj) not found, disabling selftest. Consider installing LLVM.
+INFO:slothy.start.split.691_789:Minimum number of stalls: 19
+INFO:slothy.start.split.789_888:Perform internal binary search for minimal number of stalls...
+INFO:slothy.start.split.789_888:Attempt optimization with max 64 stalls...
+INFO:slothy.start.split.789_888:Setting timeout of 600 seconds...
+INFO:slothy.start.split.789_888:Objective: minimize cycles
+INFO:slothy.start.split.789_888:Invoking external constraint solver (OR-Tools CP-SAT v9.15.6755) ...
+INFO:slothy.start.split.789_888:[0.3572s]: Found 1 solutions so far... objective (minimize cycles): currently  (Cycles ~ 71.0, IPC ~ 1.39), bound  (Cycles ~ 69.0, IPC ~ 1.43)
+INFO:slothy.start.split.789_888:OPTIMAL, wall time: 0.384743 s
+INFO:slothy.start.split.789_888:Booleans in result: 181
+INFO:slothy.start.split.789_888.selfcheck:OK!
+WARNING:slothy-config:LLVM (llvm-mc, llvm-nm, llvm-readobj) not found, disabling selftest. Consider installing LLVM.
+INFO:slothy.start.split.789_888:Minimum number of stalls: 21
+INFO:slothy.start.split.888_987:Perform internal binary search for minimal number of stalls...
+INFO:slothy.start.split.888_987:Attempt optimization with max 64 stalls...
+INFO:slothy.start.split.888_987:Setting timeout of 600 seconds...
+INFO:slothy.start.split.888_987:Objective: minimize cycles
+INFO:slothy.start.split.888_987:Invoking external constraint solver (OR-Tools CP-SAT v9.15.6755) ...
+INFO:slothy.start.split.888_987:[0.3447s]: Found 1 solutions so far... objective (minimize cycles): currently  (Cycles ~ 72.0, IPC ~ 1.38), bound  (Cycles ~ 69.0, IPC ~ 1.43)
+INFO:slothy.start.split.888_987:OPTIMAL, wall time: 0.380181 s
+INFO:slothy.start.split.888_987:Booleans in result: 155
+INFO:slothy.start.split.888_987.selfcheck:OK!
+WARNING:slothy-config:LLVM (llvm-mc, llvm-nm, llvm-readobj) not found, disabling selftest. Consider installing LLVM.
+INFO:slothy.start.split.888_987:Minimum number of stalls: 22
+INFO:slothy.start.split.987_1085:Perform internal binary search for minimal number of stalls...
+INFO:slothy.start.split.987_1085:Attempt optimization with max 64 stalls...
+INFO:slothy.start.split.987_1085:Setting timeout of 600 seconds...
+INFO:slothy.start.split.987_1085:Objective: minimize cycles
+INFO:slothy.start.split.987_1085:Invoking external constraint solver (OR-Tools CP-SAT v9.15.6755) ...
+INFO:slothy.start.split.987_1085:[0.3839s]: Found 1 solutions so far... objective (minimize cycles): currently  (Cycles ~ 76.0, IPC ~ 1.29), bound  (Cycles ~ 72.0, IPC ~ 1.36)
+INFO:slothy.start.split.987_1085:OPTIMAL, wall time: 0.420087 s
+INFO:slothy.start.split.987_1085:Booleans in result: 175
+INFO:slothy.start.split.987_1085.selfcheck:OK!
+WARNING:slothy-config:LLVM (llvm-mc, llvm-nm, llvm-readobj) not found, disabling selftest. Consider installing LLVM.
+INFO:slothy.start.split.987_1085:Minimum number of stalls: 27
+INFO:slothy.start.split.1085_1184:Perform internal binary search for minimal number of stalls...
+INFO:slothy.start.split.1085_1184:Attempt optimization with max 64 stalls...
+INFO:slothy.start.split.1085_1184:Setting timeout of 600 seconds...
+INFO:slothy.start.split.1085_1184:Objective: minimize cycles
+INFO:slothy.start.split.1085_1184:Invoking external constraint solver (OR-Tools CP-SAT v9.15.6755) ...
+INFO:slothy.start.split.1085_1184:[0.3705s]: Found 1 solutions so far... objective (minimize cycles): currently  (Cycles ~ 77.0, IPC ~ 1.29), bound  (Cycles ~ 74.0, IPC ~ 1.34)
+INFO:slothy.start.split.1085_1184:OPTIMAL, wall time: 0.415273 s
+INFO:slothy.start.split.1085_1184:Booleans in result: 200
+INFO:slothy.start.split.1085_1184.selfcheck:OK!
+WARNING:slothy-config:LLVM (llvm-mc, llvm-nm, llvm-readobj) not found, disabling selftest. Consider installing LLVM.
+INFO:slothy.start.split.1085_1184:Minimum number of stalls: 27
+INFO:slothy.start.split:Initial stalls
+INFO:slothy.start.split:[  0- 23]: **************.......................................... (14)
+INFO:slothy.start.split:[ 23- 47]: ********************.................................... (20)
+INFO:slothy.start.split:[ 47- 71]: *********************................................... (21)
+INFO:slothy.start.split:[ 71- 94]: *********************................................... (21)
+INFO:slothy.start.split:[ 94-118]: ********************.................................... (20)
+INFO:slothy.start.split:[118-142]: ******************...................................... (18)
+INFO:slothy.start.split:[142-165]: **************.......................................... (14)
+INFO:slothy.start.split:[165-189]: ***************......................................... (15)
+INFO:slothy.start.split:[189-213]: *************........................................... (13)
+INFO:slothy.start.split:[213-236]: ****************........................................ (16)
+INFO:slothy.start.split:[236-260]: *******************..................................... (19)
+INFO:slothy.start.split:[260-284]: *******************..................................... (19)
+INFO:slothy.start.split:[284-307]: ************************................................ (24)
+INFO:slothy.start.split:[307-331]: ***********************................................. (23)
+INFO:slothy.start.split:[331-355]: **************************.............................. (26)
+INFO:slothy.start.split:[355-378]: **************************.............................. (26)
+INFO:slothy.start.split:[378-402]: **********************.................................. (22)
+INFO:slothy.start.split:[402-426]: ***********************................................. (23)
+INFO:slothy.start.split:[426-449]: ******************...................................... (18)
+INFO:slothy.start.split:[449-473]: ****************........................................ (16)
+INFO:slothy.start.split:[473-497]: **************.......................................... (14)
+INFO:slothy.start.split:[497-520]: **************.......................................... (14)
+INFO:slothy.start.split:[520-544]: ***************......................................... (15)
+INFO:slothy.start.split:[544-568]: ****************........................................ (16)
+INFO:slothy.start.split:[568-592]: *******************..................................... (19)
+INFO:slothy.start.split:[592-615]: ********************.................................... (20)
+INFO:slothy.start.split:[615-639]: ***********************................................. (23)
+INFO:slothy.start.split:[639-663]: **************************.............................. (26)
+INFO:slothy.start.split:[663-686]: ****************************............................ (28)
+INFO:slothy.start.split:[686-710]: *******************************......................... (31)
+INFO:slothy.start.split:[710-734]: *********************************....................... (33)
+INFO:slothy.start.split:[734-757]: **********************************...................... (34)
+INFO:slothy.start.split:[757-781]: ************************************.................... (36)
+INFO:slothy.start.split:[781-805]: ************************************.................... (36)
+INFO:slothy.start.split:[805-828]: ************************************.................... (36)
+INFO:slothy.start.split:[828-852]: ************************************.................... (36)
+INFO:slothy.start.split:[852-876]: ************************************.................... (36)
+INFO:slothy.start.split:[876-899]: ***********************************..................... (35)
+INFO:slothy.start.split:[899-923]: ***********************************..................... (35)
+INFO:slothy.start.split:[923-947]: ***************************************................. (39)
+INFO:slothy.start.split:[947-970]: *******************************************............. (43)
+INFO:slothy.start.split:[970-994]: ***********************************************......... (47)
+INFO:slothy.start.split:[994-1018]: ****************************************************.... (52)
+INFO:slothy.start.split:[1018-1041]: *****************************************************... (53)
+INFO:slothy.start.split:[1041-1065]: *******************************************************. (55)
+INFO:slothy.start.split:[1065-1089]: *******************************************************. (55)
+INFO:slothy.start.split:[1089-1112]: *******************************************************. (55)
+INFO:slothy.start.split:[1112-1136]: *******************************************************. (55)
+INFO:slothy.start.split:[1136-1160]: **********************************************.......... (46)
+INFO:slothy.start.split:[1160-1184]: *********************************....................... (33)
+INFO:slothy.start.split.0_99:Perform internal binary search for minimal number of stalls...
+INFO:slothy.start.split.0_99:Attempt optimization with max 64 stalls...
+INFO:slothy.start.split.0_99:Setting timeout of 600 seconds...
+INFO:slothy.start.split.0_99:Objective: minimize cycles
+INFO:slothy.start.split.0_99:Invoking external constraint solver (OR-Tools CP-SAT v9.15.6755) ...
+INFO:slothy.start.split.0_99:[170.5780s]: Found 1 solutions so far... objective (minimize cycles): currently  (Cycles ~ 114.0, IPC ~ 0.87), bound  (Cycles ~ 50.0, IPC ~ 1.98)
+INFO:slothy.start.split.0_99:[170.6858s]: Found 2 solutions so far... objective (minimize cycles): currently  (Cycles ~ 113.0, IPC ~ 0.88), bound  (Cycles ~ 50.0, IPC ~ 1.98)
+INFO:slothy.start.split.0_99:[171.4903s]: Found 3 solutions so far... objective (minimize cycles): currently  (Cycles ~ 50.0, IPC ~ 1.98), bound  (Cycles ~ 50.0, IPC ~ 1.98)
+INFO:slothy.start.split.0_99:Closer than 0 stalls to theoretical optimum... stop
+INFO:slothy.start.split.0_99:OPTIMAL, wall time: 171.505020 s
+INFO:slothy.start.split.0_99:Booleans in result: 6752
+INFO:slothy.start.split.0_99.selfcheck:OK!
+WARNING:slothy-config:LLVM (llvm-mc, llvm-nm, llvm-readobj) not found, disabling selftest. Consider installing LLVM.
+INFO:slothy.start.split.0_99:Minimum number of stalls: 0
+INFO:slothy.start.split:[  0- 23]: ........................................................ (0)
+INFO:slothy.start.split:[ 23- 47]: *....................................................... (1)
+INFO:slothy.start.split:[ 47- 71]: **...................................................... (2)
+INFO:slothy.start.split:[ 71- 94]: *******................................................. (7)
+INFO:slothy.start.split:[ 94-118]: **********.............................................. (10)
+INFO:slothy.start.split:[118-142]: *************........................................... (13)
+INFO:slothy.start.split:[142-165]: **************.......................................... (14)
+INFO:slothy.start.split:[165-189]: ***************......................................... (15)
+INFO:slothy.start.split:[189-213]: *************........................................... (13)
+INFO:slothy.start.split:[213-236]: ****************........................................ (16)
+INFO:slothy.start.split:[236-260]: *******************..................................... (19)
+INFO:slothy.start.split:[260-284]: *******************..................................... (19)
+INFO:slothy.start.split:[284-307]: ************************................................ (24)
+INFO:slothy.start.split:[307-331]: ***********************................................. (23)
+INFO:slothy.start.split:[331-355]: **************************.............................. (26)
+INFO:slothy.start.split:[355-378]: **************************.............................. (26)
+INFO:slothy.start.split:[378-402]: **********************.................................. (22)
+INFO:slothy.start.split:[402-426]: ***********************................................. (23)
+INFO:slothy.start.split:[426-449]: ******************...................................... (18)
+INFO:slothy.start.split:[449-473]: ****************........................................ (16)
+INFO:slothy.start.split:[473-497]: **************.......................................... (14)
+INFO:slothy.start.split:[497-520]: **************.......................................... (14)
+INFO:slothy.start.split:[520-544]: ***************......................................... (15)
+INFO:slothy.start.split:[544-568]: ****************........................................ (16)
+INFO:slothy.start.split:[568-592]: *******************..................................... (19)
+INFO:slothy.start.split:[592-615]: ********************.................................... (20)
+INFO:slothy.start.split:[615-639]: ***********************................................. (23)
+INFO:slothy.start.split:[639-663]: **************************.............................. (26)
+INFO:slothy.start.split:[663-686]: ****************************............................ (28)
+INFO:slothy.start.split:[686-710]: *******************************......................... (31)
+INFO:slothy.start.split:[710-734]: *********************************....................... (33)
+INFO:slothy.start.split:[734-757]: **********************************...................... (34)
+INFO:slothy.start.split:[757-781]: ************************************.................... (36)
+INFO:slothy.start.split:[781-805]: ************************************.................... (36)
+INFO:slothy.start.split:[805-828]: ************************************.................... (36)
+INFO:slothy.start.split:[828-852]: ************************************.................... (36)
+INFO:slothy.start.split:[852-876]: ************************************.................... (36)
+INFO:slothy.start.split:[876-899]: ***********************************..................... (35)
+INFO:slothy.start.split:[899-923]: ***********************************..................... (35)
+INFO:slothy.start.split:[923-947]: ***************************************................. (39)
+INFO:slothy.start.split:[947-970]: *******************************************............. (43)
+INFO:slothy.start.split:[970-994]: ***********************************************......... (47)
+INFO:slothy.start.split:[994-1018]: ****************************************************.... (52)
+INFO:slothy.start.split:[1018-1041]: *****************************************************... (53)
+INFO:slothy.start.split:[1041-1065]: *******************************************************. (55)
+INFO:slothy.start.split:[1065-1089]: *******************************************************. (55)
+INFO:slothy.start.split:[1089-1112]: *******************************************************. (55)
+INFO:slothy.start.split:[1112-1136]: *******************************************************. (55)
+INFO:slothy.start.split:[1136-1160]: **********************************************.......... (46)
+INFO:slothy.start.split:[1160-1184]: *********************************....................... (33)
+INFO:slothy.start.split.95_193:Perform internal binary search for minimal number of stalls...
+INFO:slothy.start.split.95_193:Attempt optimization with max 64 stalls...
+INFO:slothy.start.split.95_193:Setting timeout of 600 seconds...
+INFO:slothy.start.split.95_193:Objective: minimize cycles
+INFO:slothy.start.split.95_193:Invoking external constraint solver (OR-Tools CP-SAT v9.15.6755) ...
+INFO:slothy.start.split.95_193:[246.1860s]: Found 1 solutions so far... objective (minimize cycles): currently  (Cycles ~ 112.0, IPC ~ 0.88), bound  (Cycles ~ 49.0, IPC ~ 2.00)
+INFO:slothy.start.split.95_193:[246.2467s]: Found 2 solutions so far... objective (minimize cycles): currently  (Cycles ~ 110.0, IPC ~ 0.89), bound  (Cycles ~ 49.0, IPC ~ 2.00)
+INFO:slothy.start.split.95_193:[246.3007s]: Found 3 solutions so far... objective (minimize cycles): currently  (Cycles ~ 109.0, IPC ~ 0.90), bound  (Cycles ~ 49.0, IPC ~ 2.00)
+INFO:slothy.start.split.95_193:[247.0888s]: Found 4 solutions so far... objective (minimize cycles): currently  (Cycles ~ 108.0, IPC ~ 0.91), bound  (Cycles ~ 49.0, IPC ~ 2.00)
+INFO:slothy.start.split.95_193:[247.1440s]: Found 5 solutions so far... objective (minimize cycles): currently  (Cycles ~ 107.0, IPC ~ 0.92), bound  (Cycles ~ 49.0, IPC ~ 2.00)
+INFO:slothy.start.split.95_193:[247.2022s]: Found 6 solutions so far... objective (minimize cycles): currently  (Cycles ~ 106.0, IPC ~ 0.92), bound  (Cycles ~ 49.0, IPC ~ 2.00)
+INFO:slothy.start.split.95_193:[247.3504s]: Found 7 solutions so far... objective (minimize cycles): currently  (Cycles ~ 104.0, IPC ~ 0.94), bound  (Cycles ~ 49.0, IPC ~ 2.00)
+INFO:slothy.start.split.95_193:[247.4409s]: Found 8 solutions so far... objective (minimize cycles): currently  (Cycles ~ 103.0, IPC ~ 0.95), bound  (Cycles ~ 49.0, IPC ~ 2.00)
+INFO:slothy.start.split.95_193:[247.4989s]: Found 9 solutions so far... objective (minimize cycles): currently  (Cycles ~ 102.0, IPC ~ 0.96), bound  (Cycles ~ 49.0, IPC ~ 2.00)
+INFO:slothy.start.split.95_193:[247.5501s]: Found 10 solutions so far... objective (minimize cycles): currently  (Cycles ~ 101.0, IPC ~ 0.97), bound  (Cycles ~ 49.0, IPC ~ 2.00)
+INFO:slothy.start.split.95_193:[247.6442s]: Found 11 solutions so far... objective (minimize cycles): currently  (Cycles ~ 53.0, IPC ~ 1.85), bound  (Cycles ~ 49.0, IPC ~ 2.00)
+INFO:slothy.start.split.95_193:[248.3464s]: Found 12 solutions so far... objective (minimize cycles): currently  (Cycles ~ 52.0, IPC ~ 1.88), bound  (Cycles ~ 49.0, IPC ~ 2.00)
+INFO:slothy.start.split.95_193:[253.5295s]: Found 13 solutions so far... objective (minimize cycles): currently  (Cycles ~ 51.0, IPC ~ 1.92), bound  (Cycles ~ 49.0, IPC ~ 2.00)
+INFO:slothy.start.split.95_193:[254.5679s]: Found 14 solutions so far... objective (minimize cycles): currently  (Cycles ~ 50.0, IPC ~ 1.96), bound  (Cycles ~ 49.0, IPC ~ 2.00)
+INFO:slothy.start.split.95_193:[588.8409s]: Found 15 solutions so far... objective (minimize cycles): currently  (Cycles ~ 49.0, IPC ~ 2.00), bound  (Cycles ~ 49.0, IPC ~ 2.00)
+INFO:slothy.start.split.95_193:Closer than 0 stalls to theoretical optimum... stop
+INFO:slothy.start.split.95_193:OPTIMAL, wall time: 588.904707 s
+INFO:slothy.start.split.95_193:Booleans in result: 14898
+INFO:slothy.start.split.95_193.selfcheck:OK!
+WARNING:slothy-config:LLVM (llvm-mc, llvm-nm, llvm-readobj) not found, disabling selftest. Consider installing LLVM.
+INFO:slothy.start.split.95_193:Minimum number of stalls: 0
+INFO:slothy.start.split:[  0- 23]: ........................................................ (0)
+INFO:slothy.start.split:[ 23- 47]: *....................................................... (1)
+INFO:slothy.start.split:[ 47- 71]: *....................................................... (1)
+INFO:slothy.start.split:[ 71- 94]: *....................................................... (1)
+INFO:slothy.start.split:[ 94-118]: *....................................................... (1)
+INFO:slothy.start.split:[118-142]: ........................................................ (0)
+INFO:slothy.start.split:[142-165]: **...................................................... (2)
+INFO:slothy.start.split:[165-189]: *******................................................. (7)
+INFO:slothy.start.split:[189-213]: **********.............................................. (10)
+INFO:slothy.start.split:[213-236]: ****************........................................ (16)
+INFO:slothy.start.split:[236-260]: *******************..................................... (19)
+INFO:slothy.start.split:[260-284]: *******************..................................... (19)
+INFO:slothy.start.split:[284-307]: ************************................................ (24)
+INFO:slothy.start.split:[307-331]: ***********************................................. (23)
+INFO:slothy.start.split:[331-355]: **************************.............................. (26)
+INFO:slothy.start.split:[355-378]: **************************.............................. (26)
+INFO:slothy.start.split:[378-402]: **********************.................................. (22)
+INFO:slothy.start.split:[402-426]: ***********************................................. (23)
+INFO:slothy.start.split:[426-449]: ******************...................................... (18)
+INFO:slothy.start.split:[449-473]: ****************........................................ (16)
+INFO:slothy.start.split:[473-497]: **************.......................................... (14)
+INFO:slothy.start.split:[497-520]: **************.......................................... (14)
+INFO:slothy.start.split:[520-544]: ***************......................................... (15)
+INFO:slothy.start.split:[544-568]: ****************........................................ (16)
+INFO:slothy.start.split:[568-592]: *******************..................................... (19)
+INFO:slothy.start.split:[592-615]: ********************.................................... (20)
+INFO:slothy.start.split:[615-639]: ***********************................................. (23)
+INFO:slothy.start.split:[639-663]: **************************.............................. (26)
+INFO:slothy.start.split:[663-686]: ****************************............................ (28)
+INFO:slothy.start.split:[686-710]: *******************************......................... (31)
+INFO:slothy.start.split:[710-734]: *********************************....................... (33)
+INFO:slothy.start.split:[734-757]: **********************************...................... (34)
+INFO:slothy.start.split:[757-781]: ************************************.................... (36)
+INFO:slothy.start.split:[781-805]: ************************************.................... (36)
+INFO:slothy.start.split:[805-828]: ************************************.................... (36)
+INFO:slothy.start.split:[828-852]: ************************************.................... (36)
+INFO:slothy.start.split:[852-876]: ************************************.................... (36)
+INFO:slothy.start.split:[876-899]: ***********************************..................... (35)
+INFO:slothy.start.split:[899-923]: ***********************************..................... (35)
+INFO:slothy.start.split:[923-947]: ***************************************................. (39)
+INFO:slothy.start.split:[947-970]: *******************************************............. (43)
+INFO:slothy.start.split:[970-994]: ***********************************************......... (47)
+INFO:slothy.start.split:[994-1018]: ****************************************************.... (52)
+INFO:slothy.start.split:[1018-1041]: *****************************************************... (53)
+INFO:slothy.start.split:[1041-1065]: *******************************************************. (55)
+INFO:slothy.start.split:[1065-1089]: *******************************************************. (55)
+INFO:slothy.start.split:[1089-1112]: *******************************************************. (55)
+INFO:slothy.start.split:[1112-1136]: *******************************************************. (55)
+INFO:slothy.start.split:[1136-1160]: **********************************************.......... (46)
+INFO:slothy.start.split:[1160-1184]: *********************************....................... (33)
+INFO:slothy.start.split.189_288:Perform internal binary search for minimal number of stalls...
+INFO:slothy.start.split.189_288:Attempt optimization with max 64 stalls...
+INFO:slothy.start.split.189_288:Setting timeout of 600 seconds...
+INFO:slothy.start.split.189_288:Objective: minimize cycles
+INFO:slothy.start.split.189_288:Invoking external constraint solver (OR-Tools CP-SAT v9.15.6755) ...
+INFO:slothy.start.split.189_288:[445.4269s]: Found 1 solutions so far... objective (minimize cycles): currently  (Cycles ~ 55.0, IPC ~ 1.80), bound  (Cycles ~ 50.0, IPC ~ 1.98)
+INFO:slothy.start.split.189_288:[446.1964s]: Found 2 solutions so far... objective (minimize cycles): currently  (Cycles ~ 53.0, IPC ~ 1.87), bound  (Cycles ~ 50.0, IPC ~ 1.98)
+INFO:slothy.start.split.189_288:[467.0467s]: Found 3 solutions so far... objective (minimize cycles): currently  (Cycles ~ 52.0, IPC ~ 1.90), bound  (Cycles ~ 50.0, IPC ~ 1.98)
+INFO:slothy.start.split.189_288:[468.2140s]: Found 4 solutions so far... objective (minimize cycles): currently  (Cycles ~ 51.0, IPC ~ 1.94), bound  (Cycles ~ 50.0, IPC ~ 1.98)
+INFO:slothy.start.split.189_288:FEASIBLE, wall time: 600.022231 s
+INFO:slothy.start.split.189_288:Booleans in result: 17433
+INFO:slothy.start.split.189_288.selfcheck:OK!
+WARNING:slothy-config:LLVM (llvm-mc, llvm-nm, llvm-readobj) not found, disabling selftest. Consider installing LLVM.
+INFO:slothy.start.split.189_288:Minimum number of stalls: 1
+INFO:slothy.start.split:[  0- 23]: ........................................................ (0)
+INFO:slothy.start.split:[ 23- 47]: *....................................................... (1)
+INFO:slothy.start.split:[ 47- 71]: *....................................................... (1)
+INFO:slothy.start.split:[ 71- 94]: *....................................................... (1)
+INFO:slothy.start.split:[ 94-118]: *....................................................... (1)
+INFO:slothy.start.split:[118-142]: ........................................................ (0)
+INFO:slothy.start.split:[142-165]: ........................................................ (0)
+INFO:slothy.start.split:[165-189]: ........................................................ (0)
+INFO:slothy.start.split:[189-213]: ........................................................ (0)
+INFO:slothy.start.split:[213-236]: ........................................................ (0)
+INFO:slothy.start.split:[236-260]: ****.................................................... (4)
+INFO:slothy.start.split:[260-284]: **********.............................................. (10)
+INFO:slothy.start.split:[284-307]: ******************...................................... (18)
+INFO:slothy.start.split:[307-331]: *********************................................... (21)
+INFO:slothy.start.split:[331-355]: **************************.............................. (26)
+INFO:slothy.start.split:[355-378]: **************************.............................. (26)
+INFO:slothy.start.split:[378-402]: **********************.................................. (22)
+INFO:slothy.start.split:[402-426]: ***********************................................. (23)
+INFO:slothy.start.split:[426-449]: ******************...................................... (18)
+INFO:slothy.start.split:[449-473]: ****************........................................ (16)
+INFO:slothy.start.split:[473-497]: **************.......................................... (14)
+INFO:slothy.start.split:[497-520]: **************.......................................... (14)
+INFO:slothy.start.split:[520-544]: ***************......................................... (15)
+INFO:slothy.start.split:[544-568]: ****************........................................ (16)
+INFO:slothy.start.split:[568-592]: *******************..................................... (19)
+INFO:slothy.start.split:[592-615]: ********************.................................... (20)
+INFO:slothy.start.split:[615-639]: ***********************................................. (23)
+INFO:slothy.start.split:[639-663]: **************************.............................. (26)
+INFO:slothy.start.split:[663-686]: ****************************............................ (28)
+INFO:slothy.start.split:[686-710]: *******************************......................... (31)
+INFO:slothy.start.split:[710-734]: *********************************....................... (33)
+INFO:slothy.start.split:[734-757]: **********************************...................... (34)
+INFO:slothy.start.split:[757-781]: ************************************.................... (36)
+INFO:slothy.start.split:[781-805]: ************************************.................... (36)
+INFO:slothy.start.split:[805-828]: ************************************.................... (36)
+INFO:slothy.start.split:[828-852]: ************************************.................... (36)
+INFO:slothy.start.split:[852-876]: ************************************.................... (36)
+INFO:slothy.start.split:[876-899]: ***********************************..................... (35)
+INFO:slothy.start.split:[899-923]: ***********************************..................... (35)
+INFO:slothy.start.split:[923-947]: ***************************************................. (39)
+INFO:slothy.start.split:[947-970]: *******************************************............. (43)
+INFO:slothy.start.split:[970-994]: ***********************************************......... (47)
+INFO:slothy.start.split:[994-1018]: ****************************************************.... (52)
+INFO:slothy.start.split:[1018-1041]: *****************************************************... (53)
+INFO:slothy.start.split:[1041-1065]: *******************************************************. (55)
+INFO:slothy.start.split:[1065-1089]: *******************************************************. (55)
+INFO:slothy.start.split:[1089-1112]: *******************************************************. (55)
+INFO:slothy.start.split:[1112-1136]: *******************************************************. (55)
+INFO:slothy.start.split:[1136-1160]: **********************************************.......... (46)
+INFO:slothy.start.split:[1160-1184]: *********************************....................... (33)
+INFO:slothy.start.split.284_383:Perform internal binary search for minimal number of stalls...
+INFO:slothy.start.split.284_383:Attempt optimization with max 64 stalls...
+INFO:slothy.start.split.284_383:Setting timeout of 600 seconds...
+INFO:slothy.start.split.284_383:Objective: minimize cycles
+INFO:slothy.start.split.284_383:Invoking external constraint solver (OR-Tools CP-SAT v9.15.6755) ...
+INFO:slothy.start.split.284_383:UNKNOWN, wall time: 600.061956 s
+INFO:slothy.start.split.284_383:Attempt optimization with max 128 stalls...
+INFO:slothy.start.split.284_383:Setting timeout of 600 seconds...
+INFO:slothy.start.split.284_383:Objective: minimize cycles
+INFO:slothy.start.split.284_383:Invoking external constraint solver (OR-Tools CP-SAT v9.15.6755) ...
+INFO:slothy.start.split.284_383:[326.7379s]: Found 1 solutions so far... objective (minimize cycles): currently  (Cycles ~ 178.0, IPC ~ 0.56), bound  (Cycles ~ 50.0, IPC ~ 1.98)
+INFO:slothy.start.split.284_383:[329.7545s]: Found 2 solutions so far... objective (minimize cycles): currently  (Cycles ~ 55.0, IPC ~ 1.80), bound  (Cycles ~ 50.0, IPC ~ 1.98)
+INFO:slothy.start.split.284_383:[331.0024s]: Found 3 solutions so far... objective (minimize cycles): currently  (Cycles ~ 54.0, IPC ~ 1.83), bound  (Cycles ~ 50.0, IPC ~ 1.98)
+INFO:slothy.start.split.284_383:[338.5924s]: Found 4 solutions so far... objective (minimize cycles): currently  (Cycles ~ 53.0, IPC ~ 1.87), bound  (Cycles ~ 50.0, IPC ~ 1.98)
+INFO:slothy.start.split.284_383:[343.1184s]: Found 5 solutions so far... objective (minimize cycles): currently  (Cycles ~ 52.0, IPC ~ 1.90), bound  (Cycles ~ 50.0, IPC ~ 1.98)
+INFO:slothy.start.split.284_383:[385.2337s]: Found 6 solutions so far... objective (minimize cycles): currently  (Cycles ~ 51.0, IPC ~ 1.94), bound  (Cycles ~ 50.0, IPC ~ 1.98)
+INFO:slothy.start.split.284_383:FEASIBLE, wall time: 599.472660 s
+INFO:slothy.start.split.284_383:Booleans in result: 12307
+INFO:slothy.start.split.284_383.selfcheck:OK!
+WARNING:slothy-config:LLVM (llvm-mc, llvm-nm, llvm-readobj) not found, disabling selftest. Consider installing LLVM.
+INFO:slothy.start.split.284_383:Minimum number of stalls: 1
+INFO:slothy.start.split:[  0- 23]: ........................................................ (0)
+INFO:slothy.start.split:[ 23- 47]: *....................................................... (1)
+INFO:slothy.start.split:[ 47- 71]: *....................................................... (1)
+INFO:slothy.start.split:[ 71- 94]: *....................................................... (1)
+INFO:slothy.start.split:[ 94-118]: *....................................................... (1)
+INFO:slothy.start.split:[118-142]: ........................................................ (0)
+INFO:slothy.start.split:[142-165]: ........................................................ (0)
+INFO:slothy.start.split:[165-189]: ........................................................ (0)
+INFO:slothy.start.split:[189-213]: ........................................................ (0)
+INFO:slothy.start.split:[213-236]: ........................................................ (0)
+INFO:slothy.start.split:[236-260]: **...................................................... (2)
+INFO:slothy.start.split:[260-284]: **...................................................... (2)
+INFO:slothy.start.split:[284-307]: ****.................................................... (4)
+INFO:slothy.start.split:[307-331]: ***..................................................... (3)
+INFO:slothy.start.split:[331-355]: ******.................................................. (6)
+INFO:slothy.start.split:[355-378]: ***********............................................. (11)
+INFO:slothy.start.split:[378-402]: *************........................................... (13)
+INFO:slothy.start.split:[402-426]: ******************...................................... (18)
+INFO:slothy.start.split:[426-449]: ******************...................................... (18)
+INFO:slothy.start.split:[449-473]: ****************........................................ (16)
+INFO:slothy.start.split:[473-497]: **************.......................................... (14)
+INFO:slothy.start.split:[497-520]: **************.......................................... (14)
+INFO:slothy.start.split:[520-544]: ***************......................................... (15)
+INFO:slothy.start.split:[544-568]: ****************........................................ (16)
+INFO:slothy.start.split:[568-592]: *******************..................................... (19)
+INFO:slothy.start.split:[592-615]: ********************.................................... (20)
+INFO:slothy.start.split:[615-639]: ***********************................................. (23)
+INFO:slothy.start.split:[639-663]: **************************.............................. (26)
+INFO:slothy.start.split:[663-686]: ****************************............................ (28)
+INFO:slothy.start.split:[686-710]: *******************************......................... (31)
+INFO:slothy.start.split:[710-734]: *********************************....................... (33)
+INFO:slothy.start.split:[734-757]: **********************************...................... (34)
+INFO:slothy.start.split:[757-781]: ************************************.................... (36)
+INFO:slothy.start.split:[781-805]: ************************************.................... (36)
+INFO:slothy.start.split:[805-828]: ************************************.................... (36)
+INFO:slothy.start.split:[828-852]: ************************************.................... (36)
+INFO:slothy.start.split:[852-876]: ************************************.................... (36)
+INFO:slothy.start.split:[876-899]: ***********************************..................... (35)
+INFO:slothy.start.split:[899-923]: ***********************************..................... (35)
+INFO:slothy.start.split:[923-947]: ***************************************................. (39)
+INFO:slothy.start.split:[947-970]: *******************************************............. (43)
+INFO:slothy.start.split:[970-994]: ***********************************************......... (47)
+INFO:slothy.start.split:[994-1018]: ****************************************************.... (52)
+INFO:slothy.start.split:[1018-1041]: *****************************************************... (53)
+INFO:slothy.start.split:[1041-1065]: *******************************************************. (55)
+INFO:slothy.start.split:[1065-1089]: *******************************************************. (55)
+INFO:slothy.start.split:[1089-1112]: *******************************************************. (55)
+INFO:slothy.start.split:[1112-1136]: *******************************************************. (55)
+INFO:slothy.start.split:[1136-1160]: **********************************************.......... (46)
+INFO:slothy.start.split:[1160-1184]: *********************************....................... (33)
+INFO:slothy.start.split.379_478:Perform internal binary search for minimal number of stalls...
+INFO:slothy.start.split.379_478:Attempt optimization with max 64 stalls...
+INFO:slothy.start.split.379_478:Setting timeout of 600 seconds...
+INFO:slothy.start.split.379_478:Objective: minimize cycles
+INFO:slothy.start.split.379_478:Invoking external constraint solver (OR-Tools CP-SAT v9.15.6755) ...
+INFO:slothy.start.split.379_478:[60.7320s]: Found 1 solutions so far... objective (minimize cycles): currently  (Cycles ~ 114.0, IPC ~ 0.87), bound  (Cycles ~ 50.0, IPC ~ 1.98)
+INFO:slothy.start.split.379_478:[60.7854s]: Found 2 solutions so far... objective (minimize cycles): currently  (Cycles ~ 113.0, IPC ~ 0.88), bound  (Cycles ~ 50.0, IPC ~ 1.98)
+INFO:slothy.start.split.379_478:[62.2818s]: Found 3 solutions so far... objective (minimize cycles): currently  (Cycles ~ 75.0, IPC ~ 1.32), bound  (Cycles ~ 50.0, IPC ~ 1.98)
+INFO:slothy.start.split.379_478:[63.0150s]: Found 4 solutions so far... objective (minimize cycles): currently  (Cycles ~ 58.0, IPC ~ 1.71), bound  (Cycles ~ 50.0, IPC ~ 1.98)
+INFO:slothy.start.split.379_478:[65.7177s]: Found 5 solutions so far... objective (minimize cycles): currently  (Cycles ~ 56.0, IPC ~ 1.77), bound  (Cycles ~ 50.0, IPC ~ 1.98)
+INFO:slothy.start.split.379_478:[67.7967s]: Found 6 solutions so far... objective (minimize cycles): currently  (Cycles ~ 55.0, IPC ~ 1.80), bound  (Cycles ~ 50.0, IPC ~ 1.98)
+INFO:slothy.start.split.379_478:[77.0609s]: Found 7 solutions so far... objective (minimize cycles): currently  (Cycles ~ 54.0, IPC ~ 1.83), bound  (Cycles ~ 50.0, IPC ~ 1.98)
+INFO:slothy.start.split.379_478:[92.6802s]: Found 8 solutions so far... objective (minimize cycles): currently  (Cycles ~ 53.0, IPC ~ 1.87), bound  (Cycles ~ 50.0, IPC ~ 1.98)
+INFO:slothy.start.split.379_478:[94.8219s]: Found 9 solutions so far... objective (minimize cycles): currently  (Cycles ~ 52.0, IPC ~ 1.90), bound  (Cycles ~ 50.0, IPC ~ 1.98)
+INFO:slothy.start.split.379_478:[95.0168s]: Found 10 solutions so far... objective (minimize cycles): currently  (Cycles ~ 51.0, IPC ~ 1.94), bound  (Cycles ~ 50.0, IPC ~ 1.98)
+INFO:slothy.start.split.379_478:[95.7695s]: Found 11 solutions so far... objective (minimize cycles): currently  (Cycles ~ 50.0, IPC ~ 1.98), bound  (Cycles ~ 50.0, IPC ~ 1.98)
+INFO:slothy.start.split.379_478:Closer than 0 stalls to theoretical optimum... stop
+INFO:slothy.start.split.379_478:OPTIMAL, wall time: 95.806852 s
+INFO:slothy.start.split.379_478:Booleans in result: 1774
+INFO:slothy.start.split.379_478.selfcheck:OK!
+WARNING:slothy-config:LLVM (llvm-mc, llvm-nm, llvm-readobj) not found, disabling selftest. Consider installing LLVM.
+INFO:slothy.start.split.379_478:Minimum number of stalls: 0
+INFO:slothy.start.split:[  0- 23]: ........................................................ (0)
+INFO:slothy.start.split:[ 23- 47]: *....................................................... (1)
+INFO:slothy.start.split:[ 47- 71]: *....................................................... (1)
+INFO:slothy.start.split:[ 71- 94]: *....................................................... (1)
+INFO:slothy.start.split:[ 94-118]: *....................................................... (1)
+INFO:slothy.start.split:[118-142]: ........................................................ (0)
+INFO:slothy.start.split:[142-165]: ........................................................ (0)
+INFO:slothy.start.split:[165-189]: ........................................................ (0)
+INFO:slothy.start.split:[189-213]: ........................................................ (0)
+INFO:slothy.start.split:[213-236]: ........................................................ (0)
+INFO:slothy.start.split:[236-260]: **...................................................... (2)
+INFO:slothy.start.split:[260-284]: **...................................................... (2)
+INFO:slothy.start.split:[284-307]: ****.................................................... (4)
+INFO:slothy.start.split:[307-331]: ***..................................................... (3)
+INFO:slothy.start.split:[331-355]: ***..................................................... (3)
+INFO:slothy.start.split:[355-378]: ***..................................................... (3)
+INFO:slothy.start.split:[378-402]: **...................................................... (2)
+INFO:slothy.start.split:[402-426]: **...................................................... (2)
+INFO:slothy.start.split:[426-449]: ***..................................................... (3)
+INFO:slothy.start.split:[449-473]: *****................................................... (5)
+INFO:slothy.start.split:[473-497]: ********................................................ (8)
+INFO:slothy.start.split:[497-520]: ************............................................ (12)
+INFO:slothy.start.split:[520-544]: ***************......................................... (15)
+INFO:slothy.start.split:[544-568]: ****************........................................ (16)
+INFO:slothy.start.split:[568-592]: *******************..................................... (19)
+INFO:slothy.start.split:[592-615]: ********************.................................... (20)
+INFO:slothy.start.split:[615-639]: ***********************................................. (23)
+INFO:slothy.start.split:[639-663]: **************************.............................. (26)
+INFO:slothy.start.split:[663-686]: ****************************............................ (28)
+INFO:slothy.start.split:[686-710]: *******************************......................... (31)
+INFO:slothy.start.split:[710-734]: *********************************....................... (33)
+INFO:slothy.start.split:[734-757]: **********************************...................... (34)
+INFO:slothy.start.split:[757-781]: ************************************.................... (36)
+INFO:slothy.start.split:[781-805]: ************************************.................... (36)
+INFO:slothy.start.split:[805-828]: ************************************.................... (36)
+INFO:slothy.start.split:[828-852]: ************************************.................... (36)
+INFO:slothy.start.split:[852-876]: ************************************.................... (36)
+INFO:slothy.start.split:[876-899]: ***********************************..................... (35)
+INFO:slothy.start.split:[899-923]: ***********************************..................... (35)
+INFO:slothy.start.split:[923-947]: ***************************************................. (39)
+INFO:slothy.start.split:[947-970]: *******************************************............. (43)
+INFO:slothy.start.split:[970-994]: ***********************************************......... (47)
+INFO:slothy.start.split:[994-1018]: ****************************************************.... (52)
+INFO:slothy.start.split:[1018-1041]: *****************************************************... (53)
+INFO:slothy.start.split:[1041-1065]: *******************************************************. (55)
+INFO:slothy.start.split:[1065-1089]: *******************************************************. (55)
+INFO:slothy.start.split:[1089-1112]: *******************************************************. (55)
+INFO:slothy.start.split:[1112-1136]: *******************************************************. (55)
+INFO:slothy.start.split:[1136-1160]: **********************************************.......... (46)
+INFO:slothy.start.split:[1160-1184]: *********************************....................... (33)
+INFO:slothy.start.split.474_572:Perform internal binary search for minimal number of stalls...
+INFO:slothy.start.split.474_572:Attempt optimization with max 64 stalls...
+INFO:slothy.start.split.474_572:Setting timeout of 600 seconds...
+INFO:slothy.start.split.474_572:Objective: minimize cycles
+INFO:slothy.start.split.474_572:Invoking external constraint solver (OR-Tools CP-SAT v9.15.6755) ...
+INFO:slothy.start.split.474_572:[0.7355s]: Found 1 solutions so far... objective (minimize cycles): currently  (Cycles ~ 50.0, IPC ~ 1.96), bound  (Cycles ~ 49.0, IPC ~ 2.00)
+INFO:slothy.start.split.474_572:[1.1324s]: Found 2 solutions so far... objective (minimize cycles): currently  (Cycles ~ 49.0, IPC ~ 2.00), bound  (Cycles ~ 49.0, IPC ~ 2.00)
+INFO:slothy.start.split.474_572:Closer than 0 stalls to theoretical optimum... stop
+INFO:slothy.start.split.474_572:OPTIMAL, wall time: 1.136372 s
+INFO:slothy.start.split.474_572:Booleans in result: 941
+INFO:slothy.start.split.474_572.selfcheck:OK!
+WARNING:slothy-config:LLVM (llvm-mc, llvm-nm, llvm-readobj) not found, disabling selftest. Consider installing LLVM.
+INFO:slothy.start.split.474_572:Minimum number of stalls: 0
+INFO:slothy.start.split:[  0- 23]: ........................................................ (0)
+INFO:slothy.start.split:[ 23- 47]: *....................................................... (1)
+INFO:slothy.start.split:[ 47- 71]: *....................................................... (1)
+INFO:slothy.start.split:[ 71- 94]: *....................................................... (1)
+INFO:slothy.start.split:[ 94-118]: *....................................................... (1)
+INFO:slothy.start.split:[118-142]: ........................................................ (0)
+INFO:slothy.start.split:[142-165]: ........................................................ (0)
+INFO:slothy.start.split:[165-189]: ........................................................ (0)
+INFO:slothy.start.split:[189-213]: ........................................................ (0)
+INFO:slothy.start.split:[213-236]: ........................................................ (0)
+INFO:slothy.start.split:[236-260]: **...................................................... (2)
+INFO:slothy.start.split:[260-284]: **...................................................... (2)
+INFO:slothy.start.split:[284-307]: ****.................................................... (4)
+INFO:slothy.start.split:[307-331]: ***..................................................... (3)
+INFO:slothy.start.split:[331-355]: ***..................................................... (3)
+INFO:slothy.start.split:[355-378]: ***..................................................... (3)
+INFO:slothy.start.split:[378-402]: **...................................................... (2)
+INFO:slothy.start.split:[402-426]: **...................................................... (2)
+INFO:slothy.start.split:[426-449]: ........................................................ (0)
+INFO:slothy.start.split:[449-473]: ........................................................ (0)
+INFO:slothy.start.split:[473-497]: ........................................................ (0)
+INFO:slothy.start.split:[497-520]: ........................................................ (0)
+INFO:slothy.start.split:[520-544]: **...................................................... (2)
+INFO:slothy.start.split:[544-568]: ******.................................................. (6)
+INFO:slothy.start.split:[568-592]: ***********............................................. (11)
+INFO:slothy.start.split:[592-615]: *****************....................................... (17)
+INFO:slothy.start.split:[615-639]: ***********************................................. (23)
+INFO:slothy.start.split:[639-663]: **************************.............................. (26)
+INFO:slothy.start.split:[663-686]: ****************************............................ (28)
+INFO:slothy.start.split:[686-710]: *******************************......................... (31)
+INFO:slothy.start.split:[710-734]: *********************************....................... (33)
+INFO:slothy.start.split:[734-757]: **********************************...................... (34)
+INFO:slothy.start.split:[757-781]: ************************************.................... (36)
+INFO:slothy.start.split:[781-805]: ************************************.................... (36)
+INFO:slothy.start.split:[805-828]: ************************************.................... (36)
+INFO:slothy.start.split:[828-852]: ************************************.................... (36)
+INFO:slothy.start.split:[852-876]: ************************************.................... (36)
+INFO:slothy.start.split:[876-899]: ***********************************..................... (35)
+INFO:slothy.start.split:[899-923]: ***********************************..................... (35)
+INFO:slothy.start.split:[923-947]: ***************************************................. (39)
+INFO:slothy.start.split:[947-970]: *******************************************............. (43)
+INFO:slothy.start.split:[970-994]: ***********************************************......... (47)
+INFO:slothy.start.split:[994-1018]: ****************************************************.... (52)
+INFO:slothy.start.split:[1018-1041]: *****************************************************... (53)
+INFO:slothy.start.split:[1041-1065]: *******************************************************. (55)
+INFO:slothy.start.split:[1065-1089]: *******************************************************. (55)
+INFO:slothy.start.split:[1089-1112]: *******************************************************. (55)
+INFO:slothy.start.split:[1112-1136]: *******************************************************. (55)
+INFO:slothy.start.split:[1136-1160]: **********************************************.......... (46)
+INFO:slothy.start.split:[1160-1184]: *********************************....................... (33)
+INFO:slothy.start.split.568_667:Perform internal binary search for minimal number of stalls...
+INFO:slothy.start.split.568_667:Attempt optimization with max 64 stalls...
+INFO:slothy.start.split.568_667:Setting timeout of 600 seconds...
+INFO:slothy.start.split.568_667:Objective: minimize cycles
+INFO:slothy.start.split.568_667:Invoking external constraint solver (OR-Tools CP-SAT v9.15.6755) ...
+INFO:slothy.start.split.568_667:[1.3588s]: Found 1 solutions so far... objective (minimize cycles): currently  (Cycles ~ 51.0, IPC ~ 1.94), bound  (Cycles ~ 50.0, IPC ~ 1.98)
+INFO:slothy.start.split.568_667:[1.4092s]: Found 2 solutions so far... objective (minimize cycles): currently  (Cycles ~ 50.0, IPC ~ 1.98), bound  (Cycles ~ 50.0, IPC ~ 1.98)
+INFO:slothy.start.split.568_667:Closer than 0 stalls to theoretical optimum... stop
+INFO:slothy.start.split.568_667:OPTIMAL, wall time: 1.415144 s
+INFO:slothy.start.split.568_667:Booleans in result: 517
+INFO:slothy.start.split.568_667.selfcheck:OK!
+WARNING:slothy-config:LLVM (llvm-mc, llvm-nm, llvm-readobj) not found, disabling selftest. Consider installing LLVM.
+INFO:slothy.start.split.568_667:Minimum number of stalls: 0
+INFO:slothy.start.split:[  0- 23]: ........................................................ (0)
+INFO:slothy.start.split:[ 23- 47]: *....................................................... (1)
+INFO:slothy.start.split:[ 47- 71]: *....................................................... (1)
+INFO:slothy.start.split:[ 71- 94]: *....................................................... (1)
+INFO:slothy.start.split:[ 94-118]: *....................................................... (1)
+INFO:slothy.start.split:[118-142]: ........................................................ (0)
+INFO:slothy.start.split:[142-165]: ........................................................ (0)
+INFO:slothy.start.split:[165-189]: ........................................................ (0)
+INFO:slothy.start.split:[189-213]: ........................................................ (0)
+INFO:slothy.start.split:[213-236]: ........................................................ (0)
+INFO:slothy.start.split:[236-260]: **...................................................... (2)
+INFO:slothy.start.split:[260-284]: **...................................................... (2)
+INFO:slothy.start.split:[284-307]: ****.................................................... (4)
+INFO:slothy.start.split:[307-331]: ***..................................................... (3)
+INFO:slothy.start.split:[331-355]: ***..................................................... (3)
+INFO:slothy.start.split:[355-378]: ***..................................................... (3)
+INFO:slothy.start.split:[378-402]: **...................................................... (2)
+INFO:slothy.start.split:[402-426]: **...................................................... (2)
+INFO:slothy.start.split:[426-449]: ........................................................ (0)
+INFO:slothy.start.split:[449-473]: ........................................................ (0)
+INFO:slothy.start.split:[473-497]: ........................................................ (0)
+INFO:slothy.start.split:[497-520]: ........................................................ (0)
+INFO:slothy.start.split:[520-544]: ........................................................ (0)
+INFO:slothy.start.split:[544-568]: ........................................................ (0)
+INFO:slothy.start.split:[568-592]: ........................................................ (0)
+INFO:slothy.start.split:[592-615]: ........................................................ (0)
+INFO:slothy.start.split:[615-639]: ****.................................................... (4)
+INFO:slothy.start.split:[639-663]: ************............................................ (12)
+INFO:slothy.start.split:[663-686]: *******************..................................... (19)
+INFO:slothy.start.split:[686-710]: ***************************............................. (27)
+INFO:slothy.start.split:[710-734]: *********************************....................... (33)
+INFO:slothy.start.split:[734-757]: **********************************...................... (34)
+INFO:slothy.start.split:[757-781]: ************************************.................... (36)
+INFO:slothy.start.split:[781-805]: ************************************.................... (36)
+INFO:slothy.start.split:[805-828]: ************************************.................... (36)
+INFO:slothy.start.split:[828-852]: ************************************.................... (36)
+INFO:slothy.start.split:[852-876]: ************************************.................... (36)
+INFO:slothy.start.split:[876-899]: ***********************************..................... (35)
+INFO:slothy.start.split:[899-923]: ***********************************..................... (35)
+INFO:slothy.start.split:[923-947]: ***************************************................. (39)
+INFO:slothy.start.split:[947-970]: *******************************************............. (43)
+INFO:slothy.start.split:[970-994]: ***********************************************......... (47)
+INFO:slothy.start.split:[994-1018]: ****************************************************.... (52)
+INFO:slothy.start.split:[1018-1041]: *****************************************************... (53)
+INFO:slothy.start.split:[1041-1065]: *******************************************************. (55)
+INFO:slothy.start.split:[1065-1089]: *******************************************************. (55)
+INFO:slothy.start.split:[1089-1112]: *******************************************************. (55)
+INFO:slothy.start.split:[1112-1136]: *******************************************************. (55)
+INFO:slothy.start.split:[1136-1160]: **********************************************.......... (46)
+INFO:slothy.start.split:[1160-1184]: *********************************....................... (33)
+INFO:slothy.start.split.663_762:Perform internal binary search for minimal number of stalls...
+INFO:slothy.start.split.663_762:Attempt optimization with max 64 stalls...
+INFO:slothy.start.split.663_762:Setting timeout of 600 seconds...
+INFO:slothy.start.split.663_762:Objective: minimize cycles
+INFO:slothy.start.split.663_762:Invoking external constraint solver (OR-Tools CP-SAT v9.15.6755) ...
+INFO:slothy.start.split.663_762:[6.1763s]: Found 1 solutions so far... objective (minimize cycles): currently  (Cycles ~ 56.0, IPC ~ 1.77), bound  (Cycles ~ 50.0, IPC ~ 1.98)
+INFO:slothy.start.split.663_762:[6.9571s]: Found 2 solutions so far... objective (minimize cycles): currently  (Cycles ~ 54.0, IPC ~ 1.83), bound  (Cycles ~ 50.0, IPC ~ 1.98)
+INFO:slothy.start.split.663_762:[7.5007s]: Found 3 solutions so far... objective (minimize cycles): currently  (Cycles ~ 53.0, IPC ~ 1.87), bound  (Cycles ~ 50.0, IPC ~ 1.98)
+INFO:slothy.start.split.663_762:[8.4949s]: Found 4 solutions so far... objective (minimize cycles): currently  (Cycles ~ 52.0, IPC ~ 1.90), bound  (Cycles ~ 50.0, IPC ~ 1.98)
+INFO:slothy.start.split.663_762:[11.5544s]: Found 5 solutions so far... objective (minimize cycles): currently  (Cycles ~ 51.0, IPC ~ 1.94), bound  (Cycles ~ 50.0, IPC ~ 1.98)
+INFO:slothy.start.split.663_762:OPTIMAL, wall time: 181.340644 s
+INFO:slothy.start.split.663_762:Booleans in result: 2556
+INFO:slothy.start.split.663_762.selfcheck:OK!
+WARNING:slothy-config:LLVM (llvm-mc, llvm-nm, llvm-readobj) not found, disabling selftest. Consider installing LLVM.
+INFO:slothy.start.split.663_762:Minimum number of stalls: 1
+INFO:slothy.start.split:[  0- 23]: ........................................................ (0)
+INFO:slothy.start.split:[ 23- 47]: *....................................................... (1)
+INFO:slothy.start.split:[ 47- 71]: *....................................................... (1)
+INFO:slothy.start.split:[ 71- 94]: *....................................................... (1)
+INFO:slothy.start.split:[ 94-118]: *....................................................... (1)
+INFO:slothy.start.split:[118-142]: ........................................................ (0)
+INFO:slothy.start.split:[142-165]: ........................................................ (0)
+INFO:slothy.start.split:[165-189]: ........................................................ (0)
+INFO:slothy.start.split:[189-213]: ........................................................ (0)
+INFO:slothy.start.split:[213-236]: ........................................................ (0)
+INFO:slothy.start.split:[236-260]: **...................................................... (2)
+INFO:slothy.start.split:[260-284]: **...................................................... (2)
+INFO:slothy.start.split:[284-307]: ****.................................................... (4)
+INFO:slothy.start.split:[307-331]: ***..................................................... (3)
+INFO:slothy.start.split:[331-355]: ***..................................................... (3)
+INFO:slothy.start.split:[355-378]: ***..................................................... (3)
+INFO:slothy.start.split:[378-402]: **...................................................... (2)
+INFO:slothy.start.split:[402-426]: **...................................................... (2)
+INFO:slothy.start.split:[426-449]: ........................................................ (0)
+INFO:slothy.start.split:[449-473]: ........................................................ (0)
+INFO:slothy.start.split:[473-497]: ........................................................ (0)
+INFO:slothy.start.split:[497-520]: ........................................................ (0)
+INFO:slothy.start.split:[520-544]: ........................................................ (0)
+INFO:slothy.start.split:[544-568]: ........................................................ (0)
+INFO:slothy.start.split:[568-592]: ........................................................ (0)
+INFO:slothy.start.split:[592-615]: ........................................................ (0)
+INFO:slothy.start.split:[615-639]: *....................................................... (1)
+INFO:slothy.start.split:[639-663]: *....................................................... (1)
+INFO:slothy.start.split:[663-686]: *....................................................... (1)
+INFO:slothy.start.split:[686-710]: *....................................................... (1)
+INFO:slothy.start.split:[710-734]: *****................................................... (5)
+INFO:slothy.start.split:[734-757]: **************.......................................... (14)
+INFO:slothy.start.split:[757-781]: **********************.................................. (22)
+INFO:slothy.start.split:[781-805]: *******************************......................... (31)
+INFO:slothy.start.split:[805-828]: ************************************.................... (36)
+INFO:slothy.start.split:[828-852]: ************************************.................... (36)
+INFO:slothy.start.split:[852-876]: ************************************.................... (36)
+INFO:slothy.start.split:[876-899]: ***********************************..................... (35)
+INFO:slothy.start.split:[899-923]: ***********************************..................... (35)
+INFO:slothy.start.split:[923-947]: ***************************************................. (39)
+INFO:slothy.start.split:[947-970]: *******************************************............. (43)
+INFO:slothy.start.split:[970-994]: ***********************************************......... (47)
+INFO:slothy.start.split:[994-1018]: ****************************************************.... (52)
+INFO:slothy.start.split:[1018-1041]: *****************************************************... (53)
+INFO:slothy.start.split:[1041-1065]: *******************************************************. (55)
+INFO:slothy.start.split:[1065-1089]: *******************************************************. (55)
+INFO:slothy.start.split:[1089-1112]: *******************************************************. (55)
+INFO:slothy.start.split:[1112-1136]: *******************************************************. (55)
+INFO:slothy.start.split:[1136-1160]: **********************************************.......... (46)
+INFO:slothy.start.split:[1160-1184]: *********************************....................... (33)
+INFO:slothy.start.split.758_856:Perform internal binary search for minimal number of stalls...
+INFO:slothy.start.split.758_856:Attempt optimization with max 64 stalls...
+INFO:slothy.start.split.758_856:Setting timeout of 600 seconds...
+INFO:slothy.start.split.758_856:Objective: minimize cycles
+INFO:slothy.start.split.758_856:Invoking external constraint solver (OR-Tools CP-SAT v9.15.6755) ...
+INFO:slothy.start.split.758_856:[3.0691s]: Found 1 solutions so far... objective (minimize cycles): currently  (Cycles ~ 57.0, IPC ~ 1.72), bound  (Cycles ~ 49.0, IPC ~ 2.00)
+INFO:slothy.start.split.758_856:[3.5742s]: Found 2 solutions so far... objective (minimize cycles): currently  (Cycles ~ 56.0, IPC ~ 1.75), bound  (Cycles ~ 49.0, IPC ~ 2.00)
+INFO:slothy.start.split.758_856:[3.6904s]: Found 3 solutions so far... objective (minimize cycles): currently  (Cycles ~ 55.0, IPC ~ 1.78), bound  (Cycles ~ 49.0, IPC ~ 2.00)
+INFO:slothy.start.split.758_856:[4.0201s]: Found 4 solutions so far... objective (minimize cycles): currently  (Cycles ~ 54.0, IPC ~ 1.81), bound  (Cycles ~ 49.0, IPC ~ 2.00)
+INFO:slothy.start.split.758_856:[4.4240s]: Found 5 solutions so far... objective (minimize cycles): currently  (Cycles ~ 53.0, IPC ~ 1.85), bound  (Cycles ~ 49.0, IPC ~ 2.00)
+INFO:slothy.start.split.758_856:[7.4039s]: Found 6 solutions so far... objective (minimize cycles): currently  (Cycles ~ 52.0, IPC ~ 1.88), bound  (Cycles ~ 49.0, IPC ~ 2.00)
+INFO:slothy.start.split.758_856:[15.0262s]: Found 7 solutions so far... objective (minimize cycles): currently  (Cycles ~ 51.0, IPC ~ 1.92), bound  (Cycles ~ 49.0, IPC ~ 2.00)
+INFO:slothy.start.split.758_856:[16.8691s]: Found 8 solutions so far... objective (minimize cycles): currently  (Cycles ~ 50.0, IPC ~ 1.96), bound  (Cycles ~ 49.0, IPC ~ 2.00)
+INFO:slothy.start.split.758_856:[186.5819s]: Found 9 solutions so far... objective (minimize cycles): currently  (Cycles ~ 49.0, IPC ~ 2.00), bound  (Cycles ~ 49.0, IPC ~ 2.00)
+INFO:slothy.start.split.758_856:Closer than 0 stalls to theoretical optimum... stop
+INFO:slothy.start.split.758_856:OPTIMAL, wall time: 186.613416 s
+INFO:slothy.start.split.758_856:Booleans in result: 3243
+INFO:slothy.start.split.758_856.selfcheck:OK!
+WARNING:slothy-config:LLVM (llvm-mc, llvm-nm, llvm-readobj) not found, disabling selftest. Consider installing LLVM.
+INFO:slothy.start.split.758_856:Minimum number of stalls: 0
+INFO:slothy.start.split:[  0- 23]: ........................................................ (0)
+INFO:slothy.start.split:[ 23- 47]: *....................................................... (1)
+INFO:slothy.start.split:[ 47- 71]: *....................................................... (1)
+INFO:slothy.start.split:[ 71- 94]: *....................................................... (1)
+INFO:slothy.start.split:[ 94-118]: *....................................................... (1)
+INFO:slothy.start.split:[118-142]: ........................................................ (0)
+INFO:slothy.start.split:[142-165]: ........................................................ (0)
+INFO:slothy.start.split:[165-189]: ........................................................ (0)
+INFO:slothy.start.split:[189-213]: ........................................................ (0)
+INFO:slothy.start.split:[213-236]: ........................................................ (0)
+INFO:slothy.start.split:[236-260]: **...................................................... (2)
+INFO:slothy.start.split:[260-284]: **...................................................... (2)
+INFO:slothy.start.split:[284-307]: ****.................................................... (4)
+INFO:slothy.start.split:[307-331]: ***..................................................... (3)
+INFO:slothy.start.split:[331-355]: ***..................................................... (3)
+INFO:slothy.start.split:[355-378]: ***..................................................... (3)
+INFO:slothy.start.split:[378-402]: **...................................................... (2)
+INFO:slothy.start.split:[402-426]: **...................................................... (2)
+INFO:slothy.start.split:[426-449]: ........................................................ (0)
+INFO:slothy.start.split:[449-473]: ........................................................ (0)
+INFO:slothy.start.split:[473-497]: ........................................................ (0)
+INFO:slothy.start.split:[497-520]: ........................................................ (0)
+INFO:slothy.start.split:[520-544]: ........................................................ (0)
+INFO:slothy.start.split:[544-568]: ........................................................ (0)
+INFO:slothy.start.split:[568-592]: ........................................................ (0)
+INFO:slothy.start.split:[592-615]: ........................................................ (0)
+INFO:slothy.start.split:[615-639]: *....................................................... (1)
+INFO:slothy.start.split:[639-663]: *....................................................... (1)
+INFO:slothy.start.split:[663-686]: *....................................................... (1)
+INFO:slothy.start.split:[686-710]: *....................................................... (1)
+INFO:slothy.start.split:[710-734]: *....................................................... (1)
+INFO:slothy.start.split:[734-757]: *....................................................... (1)
+INFO:slothy.start.split:[757-781]: ........................................................ (0)
+INFO:slothy.start.split:[781-805]: ........................................................ (0)
+INFO:slothy.start.split:[805-828]: ****.................................................... (4)
+INFO:slothy.start.split:[828-852]: ************............................................ (12)
+INFO:slothy.start.split:[852-876]: *********************................................... (21)
+INFO:slothy.start.split:[876-899]: *****************************........................... (29)
+INFO:slothy.start.split:[899-923]: ***********************************..................... (35)
+INFO:slothy.start.split:[923-947]: ***************************************................. (39)
+INFO:slothy.start.split:[947-970]: *******************************************............. (43)
+INFO:slothy.start.split:[970-994]: ***********************************************......... (47)
+INFO:slothy.start.split:[994-1018]: ****************************************************.... (52)
+INFO:slothy.start.split:[1018-1041]: *****************************************************... (53)
+INFO:slothy.start.split:[1041-1065]: *******************************************************. (55)
+INFO:slothy.start.split:[1065-1089]: *******************************************************. (55)
+INFO:slothy.start.split:[1089-1112]: *******************************************************. (55)
+INFO:slothy.start.split:[1112-1136]: *******************************************************. (55)
+INFO:slothy.start.split:[1136-1160]: **********************************************.......... (46)
+INFO:slothy.start.split:[1160-1184]: *********************************....................... (33)
+INFO:slothy.start.split.852_951:Perform internal binary search for minimal number of stalls...
+INFO:slothy.start.split.852_951:Attempt optimization with max 64 stalls...
+INFO:slothy.start.split.852_951:Setting timeout of 600 seconds...
+INFO:slothy.start.split.852_951:Objective: minimize cycles
+INFO:slothy.start.split.852_951:Invoking external constraint solver (OR-Tools CP-SAT v9.15.6755) ...
+INFO:slothy.start.split.852_951:[6.7567s]: Found 1 solutions so far... objective (minimize cycles): currently  (Cycles ~ 59.0, IPC ~ 1.68), bound  (Cycles ~ 50.0, IPC ~ 1.98)
+INFO:slothy.start.split.852_951:[7.4693s]: Found 2 solutions so far... objective (minimize cycles): currently  (Cycles ~ 57.0, IPC ~ 1.74), bound  (Cycles ~ 50.0, IPC ~ 1.98)
+INFO:slothy.start.split.852_951:[8.1695s]: Found 3 solutions so far... objective (minimize cycles): currently  (Cycles ~ 56.0, IPC ~ 1.77), bound  (Cycles ~ 50.0, IPC ~ 1.98)
+INFO:slothy.start.split.852_951:[10.2229s]: Found 4 solutions so far... objective (minimize cycles): currently  (Cycles ~ 55.0, IPC ~ 1.80), bound  (Cycles ~ 50.0, IPC ~ 1.98)
+INFO:slothy.start.split.852_951:[10.4898s]: Found 5 solutions so far... objective (minimize cycles): currently  (Cycles ~ 53.0, IPC ~ 1.87), bound  (Cycles ~ 50.0, IPC ~ 1.98)
+INFO:slothy.start.split.852_951:[11.0342s]: Found 6 solutions so far... objective (minimize cycles): currently  (Cycles ~ 52.0, IPC ~ 1.90), bound  (Cycles ~ 50.0, IPC ~ 1.98)
+INFO:slothy.start.split.852_951:[13.4210s]: Found 7 solutions so far... objective (minimize cycles): currently  (Cycles ~ 51.0, IPC ~ 1.94), bound  (Cycles ~ 50.0, IPC ~ 1.98)
+INFO:slothy.start.split.852_951:[14.1783s]: Found 8 solutions so far... objective (minimize cycles): currently  (Cycles ~ 50.0, IPC ~ 1.98), bound  (Cycles ~ 50.0, IPC ~ 1.98)
+INFO:slothy.start.split.852_951:Closer than 0 stalls to theoretical optimum... stop
+INFO:slothy.start.split.852_951:OPTIMAL, wall time: 14.187201 s
+INFO:slothy.start.split.852_951:Booleans in result: 2480
+INFO:slothy.start.split.852_951.selfcheck:OK!
+WARNING:slothy-config:LLVM (llvm-mc, llvm-nm, llvm-readobj) not found, disabling selftest. Consider installing LLVM.
+INFO:slothy.start.split.852_951:Minimum number of stalls: 0
+INFO:slothy.start.split:[  0- 23]: ........................................................ (0)
+INFO:slothy.start.split:[ 23- 47]: *....................................................... (1)
+INFO:slothy.start.split:[ 47- 71]: *....................................................... (1)
+INFO:slothy.start.split:[ 71- 94]: *....................................................... (1)
+INFO:slothy.start.split:[ 94-118]: *....................................................... (1)
+INFO:slothy.start.split:[118-142]: ........................................................ (0)
+INFO:slothy.start.split:[142-165]: ........................................................ (0)
+INFO:slothy.start.split:[165-189]: ........................................................ (0)
+INFO:slothy.start.split:[189-213]: ........................................................ (0)
+INFO:slothy.start.split:[213-236]: ........................................................ (0)
+INFO:slothy.start.split:[236-260]: **...................................................... (2)
+INFO:slothy.start.split:[260-284]: **...................................................... (2)
+INFO:slothy.start.split:[284-307]: ****.................................................... (4)
+INFO:slothy.start.split:[307-331]: ***..................................................... (3)
+INFO:slothy.start.split:[331-355]: ***..................................................... (3)
+INFO:slothy.start.split:[355-378]: ***..................................................... (3)
+INFO:slothy.start.split:[378-402]: **...................................................... (2)
+INFO:slothy.start.split:[402-426]: **...................................................... (2)
+INFO:slothy.start.split:[426-449]: ........................................................ (0)
+INFO:slothy.start.split:[449-473]: ........................................................ (0)
+INFO:slothy.start.split:[473-497]: ........................................................ (0)
+INFO:slothy.start.split:[497-520]: ........................................................ (0)
+INFO:slothy.start.split:[520-544]: ........................................................ (0)
+INFO:slothy.start.split:[544-568]: ........................................................ (0)
+INFO:slothy.start.split:[568-592]: ........................................................ (0)
+INFO:slothy.start.split:[592-615]: ........................................................ (0)
+INFO:slothy.start.split:[615-639]: *....................................................... (1)
+INFO:slothy.start.split:[639-663]: *....................................................... (1)
+INFO:slothy.start.split:[663-686]: *....................................................... (1)
+INFO:slothy.start.split:[686-710]: *....................................................... (1)
+INFO:slothy.start.split:[710-734]: *....................................................... (1)
+INFO:slothy.start.split:[734-757]: *....................................................... (1)
+INFO:slothy.start.split:[757-781]: ........................................................ (0)
+INFO:slothy.start.split:[781-805]: ........................................................ (0)
+INFO:slothy.start.split:[805-828]: ........................................................ (0)
+INFO:slothy.start.split:[828-852]: ........................................................ (0)
+INFO:slothy.start.split:[852-876]: ........................................................ (0)
+INFO:slothy.start.split:[876-899]: ........................................................ (0)
+INFO:slothy.start.split:[899-923]: ****.................................................... (4)
+INFO:slothy.start.split:[923-947]: ****************........................................ (16)
+INFO:slothy.start.split:[947-970]: *****************************........................... (29)
+INFO:slothy.start.split:[970-994]: ******************************************.............. (42)
+INFO:slothy.start.split:[994-1018]: ****************************************************.... (52)
+INFO:slothy.start.split:[1018-1041]: *****************************************************... (53)
+INFO:slothy.start.split:[1041-1065]: *******************************************************. (55)
+INFO:slothy.start.split:[1065-1089]: *******************************************************. (55)
+INFO:slothy.start.split:[1089-1112]: *******************************************************. (55)
+INFO:slothy.start.split:[1112-1136]: *******************************************************. (55)
+INFO:slothy.start.split:[1136-1160]: **********************************************.......... (46)
+INFO:slothy.start.split:[1160-1184]: *********************************....................... (33)
+INFO:slothy.start.split.947_1046:Perform internal binary search for minimal number of stalls...
+INFO:slothy.start.split.947_1046:Attempt optimization with max 64 stalls...
+INFO:slothy.start.split.947_1046:Setting timeout of 600 seconds...
+INFO:slothy.start.split.947_1046:Objective: minimize cycles
+INFO:slothy.start.split.947_1046:Invoking external constraint solver (OR-Tools CP-SAT v9.15.6755) ...
+INFO:slothy.start.split.947_1046:[1.5116s]: Found 1 solutions so far... objective (minimize cycles): currently  (Cycles ~ 50.0, IPC ~ 1.98), bound  (Cycles ~ 50.0, IPC ~ 1.98)
+INFO:slothy.start.split.947_1046:Closer than 0 stalls to theoretical optimum... stop
+INFO:slothy.start.split.947_1046:OPTIMAL, wall time: 1.515092 s
+INFO:slothy.start.split.947_1046:Booleans in result: 465
+INFO:slothy.start.split.947_1046.selfcheck:OK!
+WARNING:slothy-config:LLVM (llvm-mc, llvm-nm, llvm-readobj) not found, disabling selftest. Consider installing LLVM.
+INFO:slothy.start.split.947_1046:Minimum number of stalls: 0
+INFO:slothy.start.split:[  0- 23]: ......................................................... (0)
+INFO:slothy.start.split:[ 23- 47]: *........................................................ (1)
+INFO:slothy.start.split:[ 47- 71]: *........................................................ (1)
+INFO:slothy.start.split:[ 71- 94]: *........................................................ (1)
+INFO:slothy.start.split:[ 94-118]: *........................................................ (1)
+INFO:slothy.start.split:[118-142]: ......................................................... (0)
+INFO:slothy.start.split:[142-165]: ......................................................... (0)
+INFO:slothy.start.split:[165-189]: ......................................................... (0)
+INFO:slothy.start.split:[189-213]: ......................................................... (0)
+INFO:slothy.start.split:[213-236]: ......................................................... (0)
+INFO:slothy.start.split:[236-260]: **....................................................... (2)
+INFO:slothy.start.split:[260-284]: **....................................................... (2)
+INFO:slothy.start.split:[284-307]: ****..................................................... (4)
+INFO:slothy.start.split:[307-331]: ***...................................................... (3)
+INFO:slothy.start.split:[331-355]: ***...................................................... (3)
+INFO:slothy.start.split:[355-378]: ***...................................................... (3)
+INFO:slothy.start.split:[378-402]: **....................................................... (2)
+INFO:slothy.start.split:[402-426]: **....................................................... (2)
+INFO:slothy.start.split:[426-449]: ......................................................... (0)
+INFO:slothy.start.split:[449-473]: ......................................................... (0)
+INFO:slothy.start.split:[473-497]: ......................................................... (0)
+INFO:slothy.start.split:[497-520]: ......................................................... (0)
+INFO:slothy.start.split:[520-544]: ......................................................... (0)
+INFO:slothy.start.split:[544-568]: ......................................................... (0)
+INFO:slothy.start.split:[568-592]: ......................................................... (0)
+INFO:slothy.start.split:[592-615]: ......................................................... (0)
+INFO:slothy.start.split:[615-639]: *........................................................ (1)
+INFO:slothy.start.split:[639-663]: *........................................................ (1)
+INFO:slothy.start.split:[663-686]: *........................................................ (1)
+INFO:slothy.start.split:[686-710]: *........................................................ (1)
+INFO:slothy.start.split:[710-734]: *........................................................ (1)
+INFO:slothy.start.split:[734-757]: *........................................................ (1)
+INFO:slothy.start.split:[757-781]: ......................................................... (0)
+INFO:slothy.start.split:[781-805]: ......................................................... (0)
+INFO:slothy.start.split:[805-828]: ......................................................... (0)
+INFO:slothy.start.split:[828-852]: ......................................................... (0)
+INFO:slothy.start.split:[852-876]: ......................................................... (0)
+INFO:slothy.start.split:[876-899]: ......................................................... (0)
+INFO:slothy.start.split:[899-923]: ......................................................... (0)
+INFO:slothy.start.split:[923-947]: *........................................................ (1)
+INFO:slothy.start.split:[947-970]: *........................................................ (1)
+INFO:slothy.start.split:[970-994]: *........................................................ (1)
+INFO:slothy.start.split:[994-1018]: *******.................................................. (7)
+INFO:slothy.start.split:[1018-1041]: *******************...................................... (19)
+INFO:slothy.start.split:[1041-1065]: *********************************........................ (33)
+INFO:slothy.start.split:[1065-1089]: ***********************************************.......... (47)
+INFO:slothy.start.split:[1089-1112]: *******************************************************.. (55)
+INFO:slothy.start.split:[1112-1136]: *******************************************************.. (55)
+INFO:slothy.start.split:[1136-1160]: **********************************************........... (46)
+INFO:slothy.start.split:[1160-1184]: *********************************........................ (33)
+INFO:slothy.start.split.1042_1141:Perform internal binary search for minimal number of stalls...
+INFO:slothy.start.split.1042_1141:Attempt optimization with max 64 stalls...
+INFO:slothy.start.split.1042_1141:Setting timeout of 600 seconds...
+INFO:slothy.start.split.1042_1141:Objective: minimize cycles
+INFO:slothy.start.split.1042_1141:Invoking external constraint solver (OR-Tools CP-SAT v9.15.6755) ...
+INFO:slothy.start.split.1042_1141:[1.4381s]: Found 1 solutions so far... objective (minimize cycles): currently  (Cycles ~ 50.0, IPC ~ 1.98), bound  (Cycles ~ 50.0, IPC ~ 1.98)
+INFO:slothy.start.split.1042_1141:Closer than 0 stalls to theoretical optimum... stop
+INFO:slothy.start.split.1042_1141:OPTIMAL, wall time: 1.441475 s
+INFO:slothy.start.split.1042_1141:Booleans in result: 410
+INFO:slothy.start.split.1042_1141.selfcheck:OK!
+WARNING:slothy-config:LLVM (llvm-mc, llvm-nm, llvm-readobj) not found, disabling selftest. Consider installing LLVM.
+INFO:slothy.start.split.1042_1141:Minimum number of stalls: 0
+INFO:slothy.start.split:[  0- 23]: ........................ (0)
+INFO:slothy.start.split:[ 23- 47]: *....................... (1)
+INFO:slothy.start.split:[ 47- 71]: *....................... (1)
+INFO:slothy.start.split:[ 71- 94]: *....................... (1)
+INFO:slothy.start.split:[ 94-118]: *....................... (1)
+INFO:slothy.start.split:[118-142]: ........................ (0)
+INFO:slothy.start.split:[142-165]: ........................ (0)
+INFO:slothy.start.split:[165-189]: ........................ (0)
+INFO:slothy.start.split:[189-213]: ........................ (0)
+INFO:slothy.start.split:[213-236]: ........................ (0)
+INFO:slothy.start.split:[236-260]: **...................... (2)
+INFO:slothy.start.split:[260-284]: **...................... (2)
+INFO:slothy.start.split:[284-307]: ****.................... (4)
+INFO:slothy.start.split:[307-331]: ***..................... (3)
+INFO:slothy.start.split:[331-355]: ***..................... (3)
+INFO:slothy.start.split:[355-378]: ***..................... (3)
+INFO:slothy.start.split:[378-402]: **...................... (2)
+INFO:slothy.start.split:[402-426]: **...................... (2)
+INFO:slothy.start.split:[426-449]: ........................ (0)
+INFO:slothy.start.split:[449-473]: ........................ (0)
+INFO:slothy.start.split:[473-497]: ........................ (0)
+INFO:slothy.start.split:[497-520]: ........................ (0)
+INFO:slothy.start.split:[520-544]: ........................ (0)
+INFO:slothy.start.split:[544-568]: ........................ (0)
+INFO:slothy.start.split:[568-592]: ........................ (0)
+INFO:slothy.start.split:[592-615]: ........................ (0)
+INFO:slothy.start.split:[615-639]: *....................... (1)
+INFO:slothy.start.split:[639-663]: *....................... (1)
+INFO:slothy.start.split:[663-686]: *....................... (1)
+INFO:slothy.start.split:[686-710]: *....................... (1)
+INFO:slothy.start.split:[710-734]: *....................... (1)
+INFO:slothy.start.split:[734-757]: *....................... (1)
+INFO:slothy.start.split:[757-781]: ........................ (0)
+INFO:slothy.start.split:[781-805]: ........................ (0)
+INFO:slothy.start.split:[805-828]: ........................ (0)
+INFO:slothy.start.split:[828-852]: ........................ (0)
+INFO:slothy.start.split:[852-876]: ........................ (0)
+INFO:slothy.start.split:[876-899]: ........................ (0)
+INFO:slothy.start.split:[899-923]: ........................ (0)
+INFO:slothy.start.split:[923-947]: *....................... (1)
+INFO:slothy.start.split:[947-970]: *....................... (1)
+INFO:slothy.start.split:[970-994]: *....................... (1)
+INFO:slothy.start.split:[994-1018]: ........................ (0)
+INFO:slothy.start.split:[1018-1041]: ........................ (0)
+INFO:slothy.start.split:[1041-1065]: ........................ (0)
+INFO:slothy.start.split:[1065-1089]: ........................ (0)
+INFO:slothy.start.split:[1089-1112]: *****................... (5)
+INFO:slothy.start.split:[1112-1136]: *****************....... (17)
+INFO:slothy.start.split:[1136-1160]: ************************ (24)
+INFO:slothy.start.split:[1160-1184]: ************************ (24)
+INFO:slothy.start.split.1137_1184:Perform internal binary search for minimal number of stalls...
+INFO:slothy.start.split.1137_1184:Attempt optimization with max 64 stalls...
+INFO:slothy.start.split.1137_1184:Setting timeout of 600 seconds...
+INFO:slothy.start.split.1137_1184:Objective: minimize cycles
+INFO:slothy.start.split.1137_1184:Invoking external constraint solver (OR-Tools CP-SAT v9.15.6755) ...
+INFO:slothy.start.split.1137_1184:[0.3301s]: Found 1 solutions so far... objective (minimize cycles): currently  (Cycles ~ 25.0, IPC ~ 1.88), bound  (Cycles ~ 24.0, IPC ~ 1.96)
+INFO:slothy.start.split.1137_1184:[0.4734s]: Found 2 solutions so far... objective (minimize cycles): currently  (Cycles ~ 24.0, IPC ~ 1.96), bound  (Cycles ~ 24.0, IPC ~ 1.96)
+INFO:slothy.start.split.1137_1184:Closer than 0 stalls to theoretical optimum... stop
+INFO:slothy.start.split.1137_1184:OPTIMAL, wall time: 0.475861 s
+INFO:slothy.start.split.1137_1184:Booleans in result: 195
+INFO:slothy.start.split.1137_1184.selfcheck:OK!
+WARNING:slothy-config:LLVM (llvm-mc, llvm-nm, llvm-readobj) not found, disabling selftest. Consider installing LLVM.
+INFO:slothy.start.split.1137_1184:Minimum number of stalls: 0
+INFO:slothy.start.split:[  0- 23]: .......... (0)
+INFO:slothy.start.split:[ 23- 47]: *......... (1)
+INFO:slothy.start.split:[ 47- 71]: *......... (1)
+INFO:slothy.start.split:[ 71- 94]: *......... (1)
+INFO:slothy.start.split:[ 94-118]: *......... (1)
+INFO:slothy.start.split:[118-142]: .......... (0)
+INFO:slothy.start.split:[142-165]: .......... (0)
+INFO:slothy.start.split:[165-189]: .......... (0)
+INFO:slothy.start.split:[189-213]: .......... (0)
+INFO:slothy.start.split:[213-236]: .......... (0)
+INFO:slothy.start.split:[236-260]: **........ (2)
+INFO:slothy.start.split:[260-284]: **........ (2)
+INFO:slothy.start.split:[284-307]: ****...... (4)
+INFO:slothy.start.split:[307-331]: ***....... (3)
+INFO:slothy.start.split:[331-355]: ***....... (3)
+INFO:slothy.start.split:[355-378]: ***....... (3)
+INFO:slothy.start.split:[378-402]: **........ (2)
+INFO:slothy.start.split:[402-426]: **........ (2)
+INFO:slothy.start.split:[426-449]: .......... (0)
+INFO:slothy.start.split:[449-473]: .......... (0)
+INFO:slothy.start.split:[473-497]: .......... (0)
+INFO:slothy.start.split:[497-520]: .......... (0)
+INFO:slothy.start.split:[520-544]: .......... (0)
+INFO:slothy.start.split:[544-568]: .......... (0)
+INFO:slothy.start.split:[568-592]: .......... (0)
+INFO:slothy.start.split:[592-615]: .......... (0)
+INFO:slothy.start.split:[615-639]: *......... (1)
+INFO:slothy.start.split:[639-663]: *......... (1)
+INFO:slothy.start.split:[663-686]: *......... (1)
+INFO:slothy.start.split:[686-710]: *......... (1)
+INFO:slothy.start.split:[710-734]: *......... (1)
+INFO:slothy.start.split:[734-757]: *......... (1)
+INFO:slothy.start.split:[757-781]: .......... (0)
+INFO:slothy.start.split:[781-805]: .......... (0)
+INFO:slothy.start.split:[805-828]: .......... (0)
+INFO:slothy.start.split:[828-852]: .......... (0)
+INFO:slothy.start.split:[852-876]: .......... (0)
+INFO:slothy.start.split:[876-899]: .......... (0)
+INFO:slothy.start.split:[899-923]: .......... (0)
+INFO:slothy.start.split:[923-947]: *......... (1)
+INFO:slothy.start.split:[947-970]: *......... (1)
+INFO:slothy.start.split:[970-994]: *......... (1)
+INFO:slothy.start.split:[994-1018]: .......... (0)
+INFO:slothy.start.split:[1018-1041]: .......... (0)
+INFO:slothy.start.split:[1041-1065]: .......... (0)
+INFO:slothy.start.split:[1065-1089]: .......... (0)
+INFO:slothy.start.split:[1089-1112]: .......... (0)
+INFO:slothy.start.split:[1112-1136]: .......... (0)
+INFO:slothy.start.split:[1136-1160]: **........ (2)
+INFO:slothy.start.split:[1160-1184]: **........ (2)
+INFO:slothy.start.split.split_heuristic_full:OK!
+INFO:slothy.start.split_estimate_perf:Perform internal binary search for minimal number of stalls...
+INFO:slothy.start.split_estimate_perf:Attempt optimization with max 64 stalls...
+INFO:slothy.start.split_estimate_perf:Objective: minimize cycles
+INFO:slothy.start.split_estimate_perf:Invoking external constraint solver (OR-Tools CP-SAT v9.15.6755) ...
+INFO:slothy.start.split_estimate_perf:[151.6904s]: Found 1 solutions so far... objective (minimize cycles): currently  (Cycles ~ 599.0, IPC ~ 1.98), bound  (Cycles ~ 599.0, IPC ~ 1.98)
+INFO:slothy.start.split_estimate_perf:Closer than 0 stalls to theoretical optimum... stop
+INFO:slothy.start.split_estimate_perf:OPTIMAL, wall time: 151.747604 s
+INFO:slothy.start.split_estimate_perf:Booleans in result: 2061
+INFO:slothy.start.split_estimate_perf.selfcheck:OK!
+WARNING:slothy-config:LLVM (llvm-mc, llvm-nm, llvm-readobj) not found, disabling selftest. Consider installing LLVM.
+INFO:slothy.start.split_estimate_perf:Minimum number of stalls: 7
+INFO:slothy.start.split.split_heuristic_full_with_stalls:OK!
+EXP_B_DONE

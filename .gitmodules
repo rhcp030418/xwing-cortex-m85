@@ -1,0 +1,8 @@
+[submodule "pqmx-mve-ntts"]
+	path = pqmx-mve-ntts
+	url = https://github.com/slothy-optimizer/pqmx.git
+	branch = mve-ntts
+[submodule "pqmx-upstream"]
+	path = pqmx-upstream
+	url = https://github.com/slothy-optimizer/pqmx.git
+	branch = main

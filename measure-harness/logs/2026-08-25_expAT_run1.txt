@@ -1,0 +1,151 @@
+﻿python.exe : CPU is running at low speed (8293 kHz).
+At line:8 char:3
++   & $Python (Join-Path $H 'harvest_ra8m1_expAT.py') 2>&1 | Tee-Object ...
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (CPU is running at low speed (8293 kHz).:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+CPU is running at low speed (8293 kHz).
+measurement ELF SHA-256: 482E310C50098EDBE00853C79F6F72668AFD68BB5B66E9B3E498B7D2486B4A58
+measurement SREC SHA-256: 44CF15E508DE6AE6CD946627A43872FFE208F5E0FEB4B852DD7E058F63DEBBC3
+connected: Cortex-M85
+flash code readback PASS: bytes=731140 segments=2 sha256=CB8E5ABF401E425971892244364400FE22B7DE9189F5973BCB77FFDD353C31B2
+=== EK-RA8M1 harness: KAT + DWT/PMU (ITCM/DTCM) ===
+
+== KAT: X25519 (RFC 7748 s6.1) ==
+alice_pk: OK
+bob_pk  : OK
+K(a,B)  : OK
+K(b,A)  : OK
+== KAT: SHA3-256 via asm Keccak-f1600 ==
+sha3("")   : OK
+sha3("abc"): OK
+
+KAT ALL PASS -- streams A+B verified on board
+
+DAUTHCTRL readback: 15
+
+[calib-empty] x1
+  dwt_cyc/op   : 151
+  pmu_cyc/op   : 196
+  insts        : 0
+  stall_op     : 0
+  stall_op_fe  : 0
+  stall_op_be  : 0
+  IPC x100     : 0
+  slot-waste % : 0
+
+[keccak-f1600] x1000
+  dwt_cyc/op   : 5504
+  pmu_cyc/op   : 5504
+  insts        : 0
+  stall_op     : 0
+  stall_op_fe  : 0
+  stall_op_be  : 0
+  IPC x100     : 0
+  slot-waste % : 0
+
+[x25519-scalarmult] x10
+  dwt_cyc/op   : 461502
+  pmu_cyc/op   : 461505
+  insts        : 0
+  stall_op     : 0
+  stall_op_fe  : 0
+  stall_op_be  : 0
+  IPC x100     : 0
+  slot-waste % : 0
+
+== K3: ML-KEM-768 (pqm4 m4fspeed) ==
+roundtrip+reject: OK
+keccak perms/op: keygen 43  encaps 44  decaps 44  combiner 1
+expX bytes-mm: 0 smoke-fails=0 align-base-bits=257 align-candidate-bits=257
+expX timing-mm: 0 stack-fails=0 stack-used=7664
+expY bytes-mm: 0 smoke-fails=0 oracle-mm=0 oracle-canary=0 align-base-bits=257 align-candidate-bits=257 input-min=-1664 input-max=1664 output-min=-14304 output-max=24656
+expY timing-mm: 0 stack-fails=0 stack-used=7664
+expZ bytes-mm: 0 smoke-fails=0 fwd-align-base=257 fwd-align-candidate=257 inv-align-base=257 inv-align-candidate=257
+expZ timing-mm: 0 stack-fails=0 stack-used=7664
+expAA bytes-mm: 0 smoke-fails=0 fwd-align-base=257 fwd-align-candidate=257
+expAA timing-mm: 0 stack-fails=0 stack-used=7664
+expAB bytes-mm: 0 smoke-fails=0
+expAB timing-mm: 0 stack-fails=0 stack-used=7856
+expAE x4-kat-fails: 0 u-kat-fails=0
+expAE bytes-mm: 0 smoke-fails=0
+expAE timing-mm: 0 stack-fails=0 stack-used=9028
+expAF path counts (u4-rounds/u8-rounds/real/dummy):
+  op0: 0/0/0/0
+  op1: 0/0/0/0
+  op2: 0/0/0/0
+expAF mismatch: 0
+expAI mismatch: 0 stack-fails=0 stack-used=9020
+bfull_slothy diag: prod-mm=0 lane-mm=0 first-bad-prod= first-bad-lane=
+mul256 full-vs-budget mismatch: 0  /  stitched(product+theta) mismatch: 0  /  bmid(theta x3) mismatch: 0  /  bfull mismatch: 0  /  expc mismatch: 0  /  expd mismatch: 0  /  expe mismatch: 0  /  mve4 mismatch: 0  /  coissue mismatch: 0  /  cosol mismatch: 0  /  expg mismatch: 0  /  exph mismatch: 0  /  expi mismatch: 0  /  v04 mismatch: 0  /  expj mismatch: 0  /  expk mismatch: 0  /  expl mismatch: 0  /  expm mismatch: 0  /  expt mismatch: 0  /  expu mismatch: 0  /  expv mismatch: 0  /  expw mismatch: 0 m55-unavailable=1 m85-inv-mm=0 m85-roundtrip-mm=0
+expAJ kat-mm: 0
+expAJ bytes-mm: 0 smoke-fails=0
+expAJ xw-bytes-mm: 0 xw-smoke-fails=0
+expAJ timing-mm: 0 stack-fails=0 stack-used=7856
+expAK timing-mm: 0 stack-fails=0 stack-used=7856
+expAL xw-bytes-mm: 0 xw-smoke-fails=0
+expAL timing-mm: 0 stack-fails=0 stack-used=7872
+expAM correctness: oracle-mm=0 lenn-mm=0 boundary-mm=0 alias-mm=0 align-mm=0 checks=1025 stack-fails=0 stack-used=1084
+expAM ct-delta: 0 batch=64 stack-fails=0 stack-used=348
+expAMb correctness: opt-mm=0 sqr-mm=0 sqrlenn-mm=0 conv-mm=0 sem-mm=0 checks=1000 stack-fails=0 stack-used=804
+expAMb bench done stack-fails=0 stack-used=404
+expAN equiv: bytes-mm=0 smoke-fails=0 checks=48
+expAN bench: stack-fails=0 stack-used=7888
+expAO equiv: bytes-mm=0 checks=40
+expAO bench: stack-fails=0 stack-used=7856
+expAP equiv: bytes-mm=0 checks=40
+expAP bench: stack-fails=0 stack-used=7880
+expAQ equiv: bytes-mm=0 checks=40
+expAQ bench: stack-fails=0 stack-used=7880
+expAR equiv: bytes-mm=0 checks=40
+expAR bench: stack-fails=0 stack-used=7848
+expAS equiv: bytes-mm=0 checks=40
+expAS bench: stack-fails=0 stack-used=7848
+expAT correctness: scalar-mm=0 mve-mm=0 checks=240
+expAT bench: stack-fails=0 stack-used=176
+rep arrays ready x100 (489 slots)
+HARNESS DONE
+
+
+=== expAT-0 — constant-time 표 조회 단가 실측 ===
+정확성: PASS (harness_fails=0, scalar-mm=0, mve-mm=0, checks=240, KAT=True)
+배치 루프 null 오버헤드: 14.92 cyc/select (아래는 전부 차감 후)
+
+  N   w  win   scalar/select   MVE/select  MVE배속 | scalar cyc/word  MVE cyc/word
+   2  2  128       1166.1        512.2    2.28x |     24.29          10.67
+   4  3   85       1982.1        956.2    2.07x |     20.65           9.96
+   8  4   64       3614.1       1844.2    1.96x |     18.82           9.61
+  16  5   51       6878.1       3620.2    1.90x |     17.91           9.43
+
+  N   RAM상주:  scalar/select   MVE/select | flash 페널티 S / V
+   2                1254.1        504.2 |     -88.0       +8.0
+   4                2150.1        948.2 |    -168.0       +8.0
+   8                3942.1       1836.2 |    -328.0       +8.0
+  16                7526.1       3612.2 |    -648.0       +8.0
+
+scalarmult 1회 투영 (산술=사전등록 §4 투영 + 조회=이번 실측):
+  w  산술      조회(S)     합(S)     절감(S) | 조회(V)    합(V)     절감(V)
+  2   129929    149262    279191    +22.0% |    65568   195497    +45.4%
+  3    86281    168479    254760    +28.8% |    81281   167562    +53.2%
+  4    64964    231303    296267    +17.2% |   118032   182996    +48.9%
+  5    51769    350784    402553    -12.5% |   184633   236402    +33.9%
+
+  같은 표를 RAM 에 두면:
+  w  산술      조회(S)     합(S)     절감(S) | 조회(V)    합(V)     절감(V)
+  2   129929    160526    290455    +18.8% |    64544   194473    +45.7%
+  3    86281    182759    269040    +24.8% |    80601   166882    +53.4%
+  4    64964    252295    317259    +11.3% |   117520   182484    +49.0%
+  5    51769    383832    435601    -21.7% |   184225   235994    +34.1%
+
+  개선 커널 (MVE+vpsel / scalar chunked):
+  w   N   MVE2/sel  cyc/word  절감(V2) | S2/sel  cyc/word  절감(S2)
+  2   2      504.2    10.51   +45.7% |   516.2   10.75   +45.2%
+  3   4      940.2     9.79   +53.6% |   948.2    9.88   +53.4%
+  4   8     1812.2     9.44   +49.4% |  1812.2    9.44   +49.4%
+  5  16     3556.2     9.26   +34.8% |  3540.2    9.22   +35.1%
+
+상수시간: scalar idx0=3614.1 idx7=3614.1 (차 +0.00) | MVE idx0=1844.2 idx7=1844.2 (차 +0.00)
+최선: N=4 saving_mve2_pct -> +53.6%
+사전등록 gate (>=30% 절감 투영): PASS
+EXPAT_JSON {"best_config": {"N": 4, "variant": "saving_mve2_pct"}, "best_saving_pct": 53.55390273279324, "checks": 240, "code_flash_readback_bytes": 731140, "code_flash_readback_sha256": "CB8E5ABF401E425971892244364400FE22B7DE9189F5973BCB77FFDD353C31B2", "constant_time": {"mve_delta": 0.0, "mve_idx0": 1844.25, "mve_idx7": 1844.25, "scalar_delta": 0.0, "scalar_idx0": 3614.109375, "scalar_idx7": 3614.109375}, "correctness_pass": true, "elf_sha256": "482E310C50098EDBE00853C79F6F72668AFD68BB5B66E9B3E498B7D2486B4A58", "experiment": "AT-0", "gate_pass": true, "harness_fails": 0, "kat_all_pass": true, "mm_mve": 0, "mm_scalar": 0, "null_overhead_per_select": 14.921875, "per_n": {"2": {"arith": 129929, "flash_penalty_mve": 8.0, "flash_penalty_scalar": -88.0, "lookup_total_mve": 65568.0, "lookup_total_mve2": 64544.0, "lookup_total_mve_ram": 64544.0, "lookup_total_scalar": 149262.0, "lookup_total_scalar2": 66070.0, "lookup_total_scalar_ram": 160526.0, "mve2_cyc_per_select": 504.25, "mve2_cyc_per_word": 10.505208333333334, "mve_cyc_per_select": 512.25, "mve_cyc_per_word": 10.671875, "mve_ram_cyc_per_select": 504.25, "mve_speedup": 2.2764458272327963, "saving_mve2_pct": 45.65349221297846, "saving_mve_pct": 45.36733000036329, "saving_mve_ram_pct": 45.65349221297846, "saving_scalar2_pct": 45.22704344691328, "saving_scalar_pct": 21.97859931421673, "saving_scalar_ram_pct": 18.830814975449854, "scalar2_cyc_per_select": 516.171875, "scalar2_cyc_per_word": 10.753580729166666, "scalar_cyc_per_select": 1166.109375, "scalar_cyc_per_word": 24.2939453125, "scalar_ram_cyc_per_select": 1254.109375, "total_mve": 195497.0, "total_mve2": 194473.0, "total_mve_ram": 194473.0, "total_scalar": 279191.0, "total_scalar2": 195999.0, "total_scalar_ram": 290455.0, "w": 2, "windows": 128}, "4": {"arith": 86281, "flash_penalty_mve": 8.0, "flash_penalty_scalar": -168.0, "lookup_total_mve": 81281.25, "lookup_total_mve2": 79921.25, "lookup_total_mve_ram": 80601.25, "lookup_total_scalar": 168479.296875, "lookup_total_scalar2": 80594.609375, "lookup_total_scalar_ram": 182759.296875, "mve2_cyc_per_select": 940.25, "mve2_cyc_per_word": 9.794270833333334, "mve_cyc_per_select": 956.25, "mve_cyc_per_word": 9.9609375, "mve_ram_cyc_per_select": 948.25, "mve_speedup": 2.072794117647059, "saving_mve2_pct": 53.55390273279324, "saving_mve_pct": 53.17384354416372, "saving_mve_ram_pct": 53.363873138478475, "saving_scalar2_pct": 53.36572889623546, "saving_scalar_pct": 28.805888437258098, "saving_scalar_ram_pct": 24.815266956648102, "scalar2_cyc_per_select": 948.171875, "scalar2_cyc_per_word": 9.876790364583334, "scalar_cyc_per_select": 1982.109375, "scalar_cyc_per_word": 20.64697265625, "scalar_ram_cyc_per_select": 2150.109375, "total_mve": 167562.25, "total_mve2": 166202.25, "total_mve_ram": 166882.25, "total_scalar": 254760.296875, "total_scalar2": 166875.609375, "total_scalar_ram": 269040.296875, "w": 3, "windows": 85}, "8": {"arith": 64964, "flash_penalty_mve": 8.0, "flash_penalty_scalar": -328.0, "lookup_total_mve": 118032.0, "lookup_total_mve2": 115984.0, "lookup_total_mve_ram": 117520.0, "lookup_total_scalar": 231303.0, "lookup_total_scalar2": 115979.0, "lookup_total_scalar_ram": 252295.0, "mve2_cyc_per_select": 1812.25, "mve2_cyc_per_word": 9.438802083333334, "mve_cyc_per_select": 1844.25, "mve_cyc_per_word": 9.60546875, "mve_ram_cyc_per_select": 1836.25, "mve_speedup": 1.9596634810898739, "saving_mve2_pct": 49.43312495284192, "saving_mve_pct": 48.86080052761158, "saving_mve_ram_pct": 49.003881633919164, "saving_scalar2_pct": 49.434522229270705, "saving_scalar_pct": 17.206620854630156, "saving_scalar_ram_pct": 11.34029549601916, "scalar2_cyc_per_select": 1812.171875, "scalar2_cyc_per_word": 9.438395182291666, "scalar_cyc_per_select": 3614.109375, "scalar_cyc_per_word": 18.823486328125, "scalar_ram_cyc_per_select": 3942.109375, "total_mve": 182996.0, "total_mve2": 180948.0, "total_mve_ram": 182484.0, "total_scalar": 296267.0, "total_scalar2": 180943.0, "total_scalar_ram": 317259.0, "w": 4, "windows": 64}, "16": {"arith": 51769, "flash_penalty_mve": 8.0, "flash_penalty_scalar": -648.0, "lookup_total_mve": 184632.75, "lookup_total_mve2": 181368.75, "lookup_total_mve_ram": 184224.75, "lookup_total_scalar": 350783.578125, "lookup_total_scalar2": 180548.765625, "lookup_total_scalar_ram": 383831.578125, "mve2_cyc_per_select": 3556.25, "mve2_cyc_per_word": 9.261067708333334, "mve_cyc_per_select": 3620.25, "mve_cyc_per_word": 9.427734375, "mve_ram_cyc_per_select": 3612.25, "mve_speedup": 1.8998990055935363, "saving_mve2_pct": 34.8484234530054, "saving_mve_pct": 33.93628140029455, "saving_mve_ram_pct": 34.050299156883405, "saving_scalar2_pct": 35.077572420837306, "saving_scalar_pct": -12.49544575213993, "saving_scalar_ram_pct": -21.730884035837345, "scalar2_cyc_per_select": 3540.171875, "scalar2_cyc_per_word": 9.219197591145834, "scalar_cyc_per_select": 6878.109375, "scalar_cyc_per_word": 17.9117431640625, "scalar_ram_cyc_per_select": 7526.109375, "total_mve": 236401.75, "total_mve2": 233137.75, "total_mve_ram": 235993.75, "total_scalar": 402552.578125, "total_scalar2": 232317.765625, "total_scalar_ram": 435600.578125, "w": 5, "windows": 51}}, "prereg_gate_30pct": true, "srec_sha256": "44CF15E508DE6AE6CD946627A43872FFE208F5E0FEB4B852DD7E058F63DEBBC3"}

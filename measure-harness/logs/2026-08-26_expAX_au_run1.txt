@@ -1,0 +1,125 @@
+﻿python.exe : CPU is running at low speed (8289 kHz).
+At line:11 char:3
++   & $Python (Join-Path $H 'harvest_ra8m1_expAU514.py') 2>&1 | Tee-Obj ...
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (CPU is running at low speed (8289 kHz).:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+CPU is running at low speed (8292 kHz).
+measurement ELF SHA-256: A319CC5C3B903B4B0EA2FE4014B5FD7C2153179F8D9244A3DE10354A2694FE3D
+measurement SREC SHA-256: 9F8FA47078279C01646EDDEAB8E7AF9F407F2A7AC352416822BBF2CD70A93F80
+connected: Cortex-M85
+flash code readback PASS: bytes=757892 segments=2 sha256=6028ED0B9539C9F81B7C52F41DE876662F6CA847DF4CEF7119CA10ADDE16D059
+=== EK-RA8M1 harness: KAT + DWT/PMU (ITCM/DTCM) ===
+
+== KAT: X25519 (RFC 7748 s6.1) ==
+alice_pk: OK
+bob_pk  : OK
+K(a,B)  : OK
+K(b,A)  : OK
+== KAT: SHA3-256 via asm Keccak-f1600 ==
+sha3("")   : OK
+sha3("abc"): OK
+
+KAT ALL PASS -- streams A+B verified on board
+
+DAUTHCTRL readback: 15
+
+[calib-empty] x1
+  dwt_cyc/op   : 150
+  pmu_cyc/op   : 177
+  insts        : 0
+  stall_op     : 0
+  stall_op_fe  : 0
+  stall_op_be  : 0
+  IPC x100     : 0
+  slot-waste % : 0
+
+[keccak-f1600] x1000
+  dwt_cyc/op   : 5504
+  pmu_cyc/op   : 5504
+  insts        : 0
+  stall_op     : 0
+  stall_op_fe  : 0
+  stall_op_be  : 0
+  IPC x100     : 0
+  slot-waste % : 0
+
+[x25519-scalarmult] x10
+  dwt_cyc/op   : 357510
+  pmu_cyc/op   : 357512
+  insts        : 0
+  stall_op     : 0
+  stall_op_fe  : 0
+  stall_op_be  : 0
+  IPC x100     : 0
+  slot-waste % : 0
+
+== K3: ML-KEM-768 (pqm4 m4fspeed) ==
+roundtrip+reject: OK
+keccak perms/op: keygen 43  encaps 44  decaps 44  combiner 1
+expX bytes-mm: 0 smoke-fails=0 align-base-bits=257 align-candidate-bits=257
+expX timing-mm: 0 stack-fails=0 stack-used=7640
+expY bytes-mm: 0 smoke-fails=0 oracle-mm=0 oracle-canary=0 align-base-bits=257 align-candidate-bits=257 input-min=-1664 input-max=1664 output-min=-14304 output-max=24656
+expY timing-mm: 0 stack-fails=0 stack-used=7640
+expZ bytes-mm: 0 smoke-fails=0 fwd-align-base=257 fwd-align-candidate=257 inv-align-base=257 inv-align-candidate=257
+expZ timing-mm: 0 stack-fails=0 stack-used=7640
+expAA bytes-mm: 0 smoke-fails=0 fwd-align-base=257 fwd-align-candidate=257
+expAA timing-mm: 0 stack-fails=0 stack-used=7640
+expAB bytes-mm: 0 smoke-fails=0
+expAB timing-mm: 0 stack-fails=0 stack-used=7824
+expAE x4-kat-fails: 0 u-kat-fails=0
+expAE bytes-mm: 0 smoke-fails=0
+expAE timing-mm: 0 stack-fails=0 stack-used=9028
+expAF path counts (u4-rounds/u8-rounds/real/dummy):
+  op0: 0/0/0/0
+  op1: 0/0/0/0
+  op2: 0/0/0/0
+expAF mismatch: 0
+expAI mismatch: 0 stack-fails=0 stack-used=9020
+bfull_slothy diag: prod-mm=0 lane-mm=0 first-bad-prod= first-bad-lane=
+mul256 full-vs-budget mismatch: 0  /  stitched(product+theta) mismatch: 0  /  bmid(theta x3) mismatch: 0  /  bfull mismatch: 0  /  expc mismatch: 0  /  expd mismatch: 0  /  expe mismatch: 0  /  mve4 mismatch: 0  /  coissue mismatch: 0  /  cosol mismatch: 0  /  expg mismatch: 0  /  exph mismatch: 0  /  expi mismatch: 0  /  v04 mismatch: 0  /  expj mismatch: 0  /  expk mismatch: 0  /  expl mismatch: 0  /  expm mismatch: 0  /  expt mismatch: 0  /  expu mismatch: 0  /  expv mismatch: 0  /  expw mismatch: 0 m55-unavailable=1 m85-inv-mm=0 m85-roundtrip-mm=0
+expAJ kat-mm: 0
+expAJ bytes-mm: 0 smoke-fails=0
+expAJ xw-bytes-mm: 0 xw-smoke-fails=0
+expAJ timing-mm: 0 stack-fails=0 stack-used=7824
+expAK timing-mm: 0 stack-fails=0 stack-used=7824
+expAL xw-bytes-mm: 0 xw-smoke-fails=0
+expAL timing-mm: 0 stack-fails=0 stack-used=7840
+expAM correctness: oracle-mm=0 lenn-mm=0 boundary-mm=0 alias-mm=0 align-mm=0 checks=1025 stack-fails=0 stack-used=1084
+expAM ct-delta: 0 batch=64 stack-fails=0 stack-used=348
+expAMb correctness: opt-mm=0 sqr-mm=0 sqrlenn-mm=0 conv-mm=0 sem-mm=0 checks=1000 stack-fails=0 stack-used=804
+expAMb bench done stack-fails=0 stack-used=404
+expAN equiv: bytes-mm=0 smoke-fails=0 checks=48
+expAN bench: stack-fails=0 stack-used=7864
+expAT correctness: scalar-mm=0 mve-mm=0 checks=240
+expAT bench: stack-fails=0 stack-used=176
+expAU correctness: kat-fails=0 diff-mm=0 checks=70
+expAU bench: stack-fails=0 stack-used=1096
+expAW equiv: bytes-mm=0 smoke-fails=0 reject-mm=0 checks=48
+expAW bench: stack-fails=0 stack-used=7832
+rep arrays ready x100 (514 slots)
+HARNESS DONE
+
+
+=== expAU (AT-2) — fixed-base X25519 보드 A/B ===
+정확성: PASS (harness_fails=0, RFC7748-kat-fails=0, base-vs-ladder-mm=0, checks=70, KAT=True)
+
+  A 현행 ladder      AB   357448   BA   357448   (median 357448.0)
+  B fixed-base comb  AB   233919   BA   233919   (median 233919.0)
+
+  절감  pair1 +34.56%   pair2 +34.56%   -> conservative +34.56%
+  사전등록 AT-2 gate (>=25%): PASS
+
+  B 단계별 귀속 (prof 빌드, total 246775):
+    recode              1278 cyc    0.5%
+    select             97559 cyc   39.5%
+    madd              105108 cyc   42.6%
+    inv                28376 cyc   11.5%
+    unattributed       14454 cyc    5.9%
+
+  상수시간  A low=357441 high=357441 (차 +0) | B low=233753 high=233753 (차 +0) -> PASS
+    B 분포  low  min/med/max = 233753/233753/233980
+    B 분포  high min/med/max = 233747/233753/233943
+    두 분포 겹침: 예 (중앙값 차는 잡음)
+EXPAU_JSON {"A_current": {"AB": {"max": 357639, "median": 357448, "min": 357448}, "BA": {"max": 357608, "median": 357448, "min": 357448}}, "A_median": 357448.0, "B_fixedbase": {"AB": {"max": 233955, "median": 233919, "min": 233915}, "BA": {"max": 233921, "median": 233919, "min": 233913}}, "B_median": 233919.0, "attribution": {"inv": 28375.92, "madd": 105108.08, "recode": 1278.0, "select": 97558.68, "total_prof": 246775, "unattributed": 14454.320000000007}, "base_vs_ladder_mismatch": 0, "checks": 70, "code_flash_readback_bytes": 757892, "code_flash_readback_sha256": "6028ED0B9539C9F81B7C52F41DE876662F6CA847DF4CEF7119CA10ADDE16D059", "constant_time": {"A_delta": 0, "A_high": 357441, "A_high_max": 357443, "A_high_min": 357441, "A_low": 357441, "A_low_max": 357513, "A_low_min": 357441, "B_delta": 0, "B_high": 233753, "B_high_max": 233943, "B_high_min": 233747, "B_low": 233753, "B_low_max": 233980, "B_low_min": 233753, "B_overlap": true}, "correctness_pass": true, "ct_pass": true, "elf_sha256": "A319CC5C3B903B4B0EA2FE4014B5FD7C2153179F8D9244A3DE10354A2694FE3D", "experiment": "AU (AT-2)", "gate_25pct": true, "gate_pass": true, "harness_fails": 0, "kat_all_pass": true, "rfc7748_kat_fails": 0, "saving_pct_conservative": 34.55859313802287, "saving_pct_pair1": 34.55859313802287, "saving_pct_pair2": 34.55859313802287, "srec_sha256": "9F8FA47078279C01646EDDEAB8E7AF9F407F2A7AC352416822BBF2CD70A93F80", "vs_expAN_clean": 357839}
