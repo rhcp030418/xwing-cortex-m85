@@ -1,11 +1,11 @@
-# Cortex-M85 X-Wing 명령 수준 스티칭 연구
+# X-Wing on Cortex-M85: Architecture-Aware Integration and End-to-End Evaluation
 
 > 저자: 박도윤 (GitHub: [@rhcp030418](https://github.com/rhcp030418))  
 > 상태 기준: 2026-08-31, 한국어 LNCS 원고 v32  
 > 성격: 연구 노트, 생성기, 실보드 측정 하네스, 원시 로그, 동결 아티팩트와 논문 원고를 함께 보관한 연구 코퍼스  
 > 주 실측 장치: Renesas EK-RA8M1의 Cortex-M85, 480 MHz
 
-이 폴더는 하이브리드 키 교환 X-Wing의 X25519와 ML-KEM-768 내부 작업을 Cortex-M85에서 더 효율적으로 실행하는 방법을 연구한다. 핵심 질문은 서로 독립인 명령을 한 명령열로 교차 배치하는 function stitching과 2-stream SLOTHY 스케줄링으로 인오더 듀얼이슈 코어의 빈 발행 슬롯을 실제로 회수할 수 있는가이다.
+이 폴더는 하이브리드 KEM X-Wing의 ML-KEM-768과 X25519를 Cortex-M85의 MVE, 제한된 듀얼이슈 폭, 레지스터와 LSU 제약에 맞춰 공동 최적화하고, 각 함수의 개선이 전체 X-Wing API에서도 유지되는지를 동일 ELF 실보드 비교로 검증한 연구 코퍼스다. 명령 수준 스티칭은 검토한 최적화 후보 중 하나이며 연구 전체를 대표하지 않는다.
 
 단일 명령으로 빌드되는 제품용 X-Wing 라이브러리는 아니다. 실험 세대마다 펌웨어, 메모리 배치, ELF와 측정 목적이 다르므로 결과 문서와 동결 아티팩트를 함께 읽어야 한다.
 
