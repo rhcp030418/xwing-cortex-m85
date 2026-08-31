@@ -1,0 +1,7 @@
+func=fiat_mul_u4_p1
+prologue=19
+orig=593
+safe=607
+frame=232
+ldrd=9
+strd=5

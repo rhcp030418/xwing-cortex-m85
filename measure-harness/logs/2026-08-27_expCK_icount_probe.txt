@@ -1,0 +1,8 @@
+CPU is running at low speed (8289 kHz).
+CPU is running at low speed (8290 kHz).
+connected=Cortex-M85 target=x25519_u_bench_seq4 entry=0x020a4da4
+halted entry=0x020a4da4 return=0x0209baf0
+completed=False instructions=1000 elapsed=5.437s
+classes=branch_loop:110,mve_alu_shift:165,mve_load_store:1,scalar_alu_shift:310,scalar_load_store:414
+top_mnemonics=ldr.w:202,str.w:200,ldc:114,adds:105,le:100,veor:86,stc:56,vshl.s32:38,vsri.32:38,add.w:15,movs:5,ldr:4,mov.w:4,dls:4,subs:4,cmp:4,bne.n:4,strd:4,vorr:3,stmdb:2,mov:2,bl:2,push:1,pop:1,vpush:1,addw:1
+missing=

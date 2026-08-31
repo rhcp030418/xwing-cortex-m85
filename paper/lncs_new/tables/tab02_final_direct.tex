@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering
+\caption{Direct same-ELF comparison of the Reference and Integrated implementations. Each cell is the median of 100 measurements. Ranges cover ten adjacent Reference/Integrated or Integrated/Reference pairs from five independent reflashes; the last column is the conservative headline.}
+\label{tab:final-direct}
+\scriptsize
+\setlength{\tabcolsep}{2.0pt}
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Operation & Reference cycles & Integrated cycles & Reduction range & Reported \\
+\midrule
+KeyGen & 870,869--870,970 & 700,834--700,865 & 19.521--19.534\% & \textbf{19.52\%} \\
+Encaps & 1,326,924--1,326,931 & 1,064,853--1,064,862 & 19.750--19.751\% & \textbf{19.75\%} \\
+Decaps (warm) & 934,803--934,837 & 825,746--825,793 & 11.661--11.670\% & \textbf{11.66\%} \\
+Decaps (cold) & 1,802,626--1,802,655 & 1,523,463--1,523,502 & 15.484--15.488\% & \textbf{15.48\%} \\
+\bottomrule
+\end{tabular}
+\end{table}

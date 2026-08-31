@@ -1,0 +1,21 @@
+CPU is running at low speed (8292 kHz).
+CPU is running at low speed (8289 kHz).
+measurement ELF SHA-256: 6077C29DBE40B9A5836835A5CF8CD48EF8AD2EC082498A44C6F6627A5BBEC9DE
+connected: Cortex-M85
+flash code readback PASS: bytes=44788 segments=1 sha256=BBC409971158430827759B53A66C9DA0CB54BBBD024419A04A0BA5422C7CEBD3
+=== EK-RA8M1 harness: KAT + DWT/PMU (ITCM/DTCM) ===
+
+expDB mul-mm t=0/0/0/0 s=0/0/0/0
+expDB vec-mm t=0/0/0/0 s=0/0/0/0
+HARNESS DONE
+
+Traceback (most recent call last):
+  File "C:\Users\cnscj\Dropbox\�ڵ������ΰ���\A����\measure-harness\harvest_ra8m1_expDB.py", line 357, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "C:\Users\cnscj\Dropbox\�ڵ������ΰ���\A����\measure-harness\harvest_ra8m1_expDB.py", line 350, in main
+    payload = summarize(log, fails, reps, args.elf, args.srec, rb, rbn)
+  File "C:\Users\cnscj\Dropbox\�ڵ������ΰ���\A����\measure-harness\harvest_ra8m1_expDB.py", line 290, in summarize
+    "solver_gain_pct_of_F": 100.0 * gain / f,
+                            ~~~~~~~~~~~~~^~~
+ZeroDivisionError: division by zero

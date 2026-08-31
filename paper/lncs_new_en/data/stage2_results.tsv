@@ -1,0 +1,6 @@
+candidate	path	baseline_min	baseline_max	candidate_min	candidate_max	improvement_min_pct	improvement_max_pct
+MVE_cswap	encapsulation	1128441	1128448	1114176	1114177	1.264	1.265
+paired_inversion	encapsulation	1128441	1128448	1095069	1095076	2.957	2.957
+both	encapsulation	1128441	1128448	1080740	1080749	4.226	4.228
+MVE_cswap	decapsulation_warm	839319	839328	824987	824991	1.707	1.709
+MVE_cswap	decapsulation_cold	1553257	1553270	1538838	1538852	0.928	0.928

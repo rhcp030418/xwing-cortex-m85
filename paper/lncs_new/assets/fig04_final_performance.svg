@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="345.827pt" height="198.425pt" viewBox="0 0 345.827 198.425">
+<title>fig04_final_performance</title>
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<text x="172.913" y="18.425" font-family="Arial, Helvetica, sans-serif" font-size="9.000" font-weight="700" fill="#1F2933" text-anchor="middle">Final same-ELF Reference-Integrated comparison</text>
+<text x="172.913" y="28.346" font-family="Arial, Helvetica, sans-serif" font-size="5.700" font-weight="400" fill="#4B5563" text-anchor="middle">Reference is normalized to 100%; blue bars show the cycle cost remaining in Integrated</text>
+<line x1="93.543" y1="42.520" x2="93.543" y2="164.409" stroke="#E4E7EB" stroke-width="0.500"/>
+<text x="93.543" y="175.748" font-family="Arial, Helvetica, sans-serif" font-size="5.400" font-weight="400" fill="#4B5563" text-anchor="middle">0</text>
+<line x1="140.031" y1="42.520" x2="140.031" y2="164.409" stroke="#E4E7EB" stroke-width="0.500"/>
+<text x="140.031" y="175.748" font-family="Arial, Helvetica, sans-serif" font-size="5.400" font-weight="400" fill="#4B5563" text-anchor="middle">20</text>
+<line x1="186.520" y1="42.520" x2="186.520" y2="164.409" stroke="#E4E7EB" stroke-width="0.500"/>
+<text x="186.520" y="175.748" font-family="Arial, Helvetica, sans-serif" font-size="5.400" font-weight="400" fill="#4B5563" text-anchor="middle">40</text>
+<line x1="233.008" y1="42.520" x2="233.008" y2="164.409" stroke="#E4E7EB" stroke-width="0.500"/>
+<text x="233.008" y="175.748" font-family="Arial, Helvetica, sans-serif" font-size="5.400" font-weight="400" fill="#4B5563" text-anchor="middle">60</text>
+<line x1="279.496" y1="42.520" x2="279.496" y2="164.409" stroke="#E4E7EB" stroke-width="0.500"/>
+<text x="279.496" y="175.748" font-family="Arial, Helvetica, sans-serif" font-size="5.400" font-weight="400" fill="#4B5563" text-anchor="middle">80</text>
+<line x1="325.984" y1="42.520" x2="325.984" y2="164.409" stroke="#E4E7EB" stroke-width="0.500"/>
+<text x="325.984" y="175.748" font-family="Arial, Helvetica, sans-serif" font-size="5.400" font-weight="400" fill="#4B5563" text-anchor="middle">100</text>
+<text x="209.764" y="189.921" font-family="Arial, Helvetica, sans-serif" font-size="5.800" font-weight="400" fill="#4B5563" text-anchor="middle">Normalized cycle cost (%)</text>
+<text x="87.874" y="64.346" font-family="Arial, Helvetica, sans-serif" font-size="6.000" font-weight="400" fill="#1F2933" text-anchor="end">Key generation</text>
+<rect x="93.543" y="53.858" width="232.441" height="15.591" rx="3.000" fill="#F5F7FA" stroke="#CBD2D9" stroke-width="0.700"/>
+<rect x="93.543" y="53.858" width="187.068" height="15.591" rx="3.000" fill="#1769AA" stroke="#1769AA" stroke-width="0.000"/>
+<text x="99.213" y="64.346" font-family="Arial, Helvetica, sans-serif" font-size="5.600" font-weight="700" fill="#FFFFFF" text-anchor="start">Integrated 80.48%</text>
+<text x="303.298" y="64.346" font-family="Arial, Helvetica, sans-serif" font-size="5.500" font-weight="700" fill="#4B5563" text-anchor="middle">-19.52%</text>
+<text x="87.874" y="94.110" font-family="Arial, Helvetica, sans-serif" font-size="6.000" font-weight="400" fill="#1F2933" text-anchor="end">Encapsulation</text>
+<rect x="93.543" y="83.622" width="232.441" height="15.591" rx="3.000" fill="#F5F7FA" stroke="#CBD2D9" stroke-width="0.700"/>
+<rect x="93.543" y="83.622" width="186.534" height="15.591" rx="3.000" fill="#1769AA" stroke="#1769AA" stroke-width="0.000"/>
+<text x="99.213" y="94.110" font-family="Arial, Helvetica, sans-serif" font-size="5.600" font-weight="700" fill="#FFFFFF" text-anchor="start">Integrated 80.25%</text>
+<text x="303.031" y="94.110" font-family="Arial, Helvetica, sans-serif" font-size="5.500" font-weight="700" fill="#4B5563" text-anchor="middle">-19.75%</text>
+<text x="87.874" y="123.874" font-family="Arial, Helvetica, sans-serif" font-size="6.000" font-weight="400" fill="#1F2933" text-anchor="end">Decapsulation (warm)</text>
+<rect x="93.543" y="113.386" width="232.441" height="15.591" rx="3.000" fill="#F5F7FA" stroke="#CBD2D9" stroke-width="0.700"/>
+<rect x="93.543" y="113.386" width="205.338" height="15.591" rx="3.000" fill="#1769AA" stroke="#1769AA" stroke-width="0.000"/>
+<text x="99.213" y="123.874" font-family="Arial, Helvetica, sans-serif" font-size="5.600" font-weight="700" fill="#FFFFFF" text-anchor="start">Integrated 88.34%</text>
+<text x="312.433" y="123.874" font-family="Arial, Helvetica, sans-serif" font-size="5.500" font-weight="700" fill="#4B5563" text-anchor="middle">-11.66%</text>
+<text x="87.874" y="153.638" font-family="Arial, Helvetica, sans-serif" font-size="6.000" font-weight="400" fill="#1F2933" text-anchor="end">Decapsulation (cold)</text>
+<rect x="93.543" y="143.150" width="232.441" height="15.591" rx="3.000" fill="#F5F7FA" stroke="#CBD2D9" stroke-width="0.700"/>
+<rect x="93.543" y="143.150" width="196.459" height="15.591" rx="3.000" fill="#1769AA" stroke="#1769AA" stroke-width="0.000"/>
+<text x="99.213" y="153.638" font-family="Arial, Helvetica, sans-serif" font-size="5.600" font-weight="700" fill="#FFFFFF" text-anchor="start">Integrated 84.52%</text>
+<text x="307.993" y="153.638" font-family="Arial, Helvetica, sans-serif" font-size="5.500" font-weight="700" fill="#4B5563" text-anchor="middle">-15.48%</text>
+</svg>

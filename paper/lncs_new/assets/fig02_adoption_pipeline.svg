@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="345.827pt" height="155.906pt" viewBox="0 0 345.827 155.906">
+<title>fig02_adoption_pipeline</title>
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<text x="172.913" y="18.425" font-family="Arial, Helvetica, sans-serif" font-size="9.000" font-weight="700" fill="#1F2933" text-anchor="middle">A candidate becomes a result only after end-to-end gates</text>
+<text x="172.913" y="28.346" font-family="Arial, Helvetica, sans-serif" font-size="5.700" font-weight="400" fill="#4B5563" text-anchor="middle">Intermediate percentages remain diagnostic; the headline comes from one Reference-Integrated comparison</text>
+<rect x="11.339" y="51.024" width="51.024" height="36.850" rx="4.000" fill="#F5F7FA" stroke="#7B8794" stroke-width="0.800"/>
+<text x="36.850" y="67.912" font-family="Arial, Helvetica, sans-serif" font-size="6.100" font-weight="700" fill="#1F2933" text-anchor="middle">Candidate</text>
+<text x="36.850" y="75.012" font-family="Arial, Helvetica, sans-serif" font-size="5.300" font-weight="400" fill="#4B5563" text-anchor="middle">one change</text>
+<line x1="62.362" y1="69.449" x2="76.535" y2="69.449" stroke="#4B5563" stroke-width="0.900"/>
+<polygon points="76.535,69.449 72.314,72.128 72.314,66.770" fill="#4B5563"/>
+<rect x="76.535" y="51.024" width="53.858" height="36.850" rx="4.000" fill="#E8F2FA" stroke="#1769AA" stroke-width="0.800"/>
+<text x="103.465" y="67.912" font-family="Arial, Helvetica, sans-serif" font-size="6.100" font-weight="700" fill="#1F2933" text-anchor="middle">Micro gate</text>
+<text x="103.465" y="75.012" font-family="Arial, Helvetica, sans-serif" font-size="5.300" font-weight="400" fill="#4B5563" text-anchor="middle">KAT + local cycles</text>
+<line x1="130.394" y1="69.449" x2="144.567" y2="69.449" stroke="#4B5563" stroke-width="0.900"/>
+<polygon points="144.567,69.449 140.345,72.128 140.345,66.770" fill="#4B5563"/>
+<rect x="144.567" y="51.024" width="56.693" height="36.850" rx="4.000" fill="#FFF3E0" stroke="#D97706" stroke-width="0.800"/>
+<text x="172.913" y="67.912" font-family="Arial, Helvetica, sans-serif" font-size="6.100" font-weight="700" fill="#1F2933" text-anchor="middle">Real consumer</text>
+<text x="172.913" y="75.012" font-family="Arial, Helvetica, sans-serif" font-size="5.300" font-weight="400" fill="#4B5563" text-anchor="middle">full API path</text>
+<line x1="201.260" y1="69.449" x2="215.433" y2="69.449" stroke="#4B5563" stroke-width="0.900"/>
+<polygon points="215.433,69.449 211.211,72.128 211.211,66.770" fill="#4B5563"/>
+<rect x="215.433" y="51.024" width="56.693" height="36.850" rx="4.000" fill="#F0EBF8" stroke="#6B4FA1" stroke-width="0.800"/>
+<text x="243.780" y="67.912" font-family="Arial, Helvetica, sans-serif" font-size="6.100" font-weight="700" fill="#1F2933" text-anchor="middle">Cumulative ELF</text>
+<text x="243.780" y="75.012" font-family="Arial, Helvetica, sans-serif" font-size="5.300" font-weight="400" fill="#4B5563" text-anchor="middle">interaction check</text>
+<line x1="272.126" y1="69.449" x2="286.299" y2="69.449" stroke="#4B5563" stroke-width="0.900"/>
+<polygon points="286.299,69.449 282.078,72.128 282.078,66.770" fill="#4B5563"/>
+<rect x="286.299" y="51.024" width="48.189" height="36.850" rx="4.000" fill="#EAF5EA" stroke="#2E7D32" stroke-width="0.800"/>
+<text x="310.394" y="64.362" font-family="Arial, Helvetica, sans-serif" font-size="6.100" font-weight="700" fill="#1F2933" text-anchor="middle">Reference /</text>
+<text x="310.394" y="71.462" font-family="Arial, Helvetica, sans-serif" font-size="6.100" font-weight="700" fill="#1F2933" text-anchor="middle">Integrated</text>
+<text x="310.394" y="78.562" font-family="Arial, Helvetica, sans-serif" font-size="5.300" font-weight="400" fill="#4B5563" text-anchor="middle">final headline</text>
+<line x1="103.465" y1="87.874" x2="103.465" y2="107.717" stroke="#B42318" stroke-width="0.800"/>
+<line x1="103.465" y1="107.717" x2="103.465" y2="116.220" stroke="#B42318" stroke-width="0.800"/>
+<polygon points="103.465,116.220 101.321,112.843 105.608,112.843" fill="#B42318"/>
+<line x1="172.913" y1="87.874" x2="172.913" y2="107.717" stroke="#B42318" stroke-width="0.800"/>
+<line x1="172.913" y1="107.717" x2="172.913" y2="116.220" stroke="#B42318" stroke-width="0.800"/>
+<polygon points="172.913,116.220 170.770,112.843 175.057,112.843" fill="#B42318"/>
+<line x1="243.780" y1="87.874" x2="243.780" y2="107.717" stroke="#B42318" stroke-width="0.800"/>
+<line x1="243.780" y1="107.717" x2="243.780" y2="116.220" stroke="#B42318" stroke-width="0.800"/>
+<polygon points="243.780,116.220 241.636,112.843 245.923,112.843" fill="#B42318"/>
+<rect x="102.047" y="116.220" width="144.567" height="19.843" rx="4.000" fill="#FCEBE9" stroke="#B42318" stroke-width="0.800"/>
+<text x="174.331" y="128.023" font-family="Arial, Helvetica, sans-serif" font-size="5.700" font-weight="400" fill="#1F2933" text-anchor="middle">Reject, preserve logs, and never add its cycles</text>
+</svg>

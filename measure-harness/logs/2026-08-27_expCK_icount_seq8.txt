@@ -1,0 +1,27 @@
+connected=Cortex-M85 target=x25519_u_bench_seq8 entry=0x020a4e94
+CPU is running at low speed (8293 kHz).
+CPU is running at low speed (8288 kHz).
+halted entry=0x020a4e94 return=0x0209bb3e
+progress=10000 rate=152.2 instr/s
+progress=20000 rate=154.4 instr/s
+progress=30000 rate=151.8 instr/s
+progress=40000 rate=151.4 instr/s
+progress=50000 rate=150.7 instr/s
+progress=60000 rate=150.5 instr/s
+progress=70000 rate=150.2 instr/s
+progress=80000 rate=149.8 instr/s
+progress=90000 rate=149.5 instr/s
+progress=100000 rate=149.2 instr/s
+progress=110000 rate=149.3 instr/s
+progress=120000 rate=149.2 instr/s
+progress=130000 rate=149.3 instr/s
+progress=140000 rate=149.4 instr/s
+progress=150000 rate=149.7 instr/s
+progress=160000 rate=150.5 instr/s
+progress=170000 rate=151.4 instr/s
+progress=180000 rate=152.0 instr/s
+progress=190000 rate=152.6 instr/s
+completed=True terminal=0x0209bb3e instructions=195900 elapsed=1281.020s
+classes=branch_loop:6862,mve_alu_shift:7416,mve_load_store:7392,scalar_alu_shift:55814,scalar_load_store:86884,scalar_multiply_mac:31532
+top_mnemonics=ldr:43602,umlal:21990,str:14560,ldr.w:10804,str.w:10400,mov:8262,adc.w:7608,add.w:7227,adds:6540,umull:6170,bic.w:4632,ldc:4416,veor:3648,orr.w:3372,mov.w:3180,stc:2928,subs:2654,ldrd:2554,adds.w:2520,and.w:2320,orrs.w:2304,lsls:1980,strd:1956,mla:1944,add:1558,mul.w:1428,lsrs:1282,vshl.s32:1248,vsri.32:1248,vbic:1200
+missing=

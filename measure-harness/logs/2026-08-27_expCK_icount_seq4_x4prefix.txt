@@ -1,0 +1,9 @@
+connected=Cortex-M85 target=x25519_u_bench_seq4 entry=0x020a4da4
+CPU is running at low speed (8294 kHz).
+CPU is running at low speed (8293 kHz).
+halted entry=0x020a4da4 return=0x0209baf0
+progress=10000 rate=152.0 instr/s
+completed=True terminal=0x020a4de0 instructions=16445 elapsed=107.808s
+classes=branch_loop:266,mve_alu_shift:7416,mve_load_store:7392,scalar_alu_shift:369,scalar_load_store:1002
+top_mnemonics=ldc:4416,veor:3648,stc:2928,vshl.s32:1248,vsri.32:1248,vbic:1200,ldr.w:448,str.w:400,adds:210,le:200,strd:96,vorr:72,add.w:51,cmp:32,bne.n:32,mov:26,bl:26,stmdb:25,vpush:24,addw:24,vpop:24,ldmia.w:24,movs:10,mov.w:8,dls:8,subs:8,ldr:5,push:2,pop:2
+missing=

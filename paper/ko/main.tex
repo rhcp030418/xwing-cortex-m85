@@ -1,735 +1,683 @@
-% 한국어 LNCS 초안 — 빌드: xelatex -> bibtex -> xelatex x2
-% 영문판 main.tex 는 투고 직전 이 파일에서 일괄 변환. 구조·그림·표·수치는 양쪽 동일.
-% v2 (2026-08-19): 확정된 5단계 골격(5단계_논문_골격.md v0.1)에 맞춰 재작성.
-% 정직한 측정 연구 + 자동화 + 정량화된 부정적 결과. 데이터: 논문_데이터_표.md.
-\documentclass[runningheads]{llncs}
+% !TeX program = xelatex
+% 한국어 LNCS 정본 -- 빌드: xelatex -> bibtex -> xelatex x2
+% 영문판 main.tex 는 투고 직전 이 파일에서 일괄 변환하며, 현재 판과는 동기화되지 않았다.
+% 구조: 서론 -> 배경 -> 주 최적화 설계 -> 평가 방법 -> 주 결과 -> 논의 -> 한계/재현성.
+% 수치 정본: 논문_데이터_표.md. 미측정 항목은 결과처럼 쓰지 않는다.
+% v32 (2026-08-31): expDJ 최초 A0--최종 B8 직접 동일-ELF 결과, 선행연구·Pareto·자원 상계·가독성 보강.
+\documentclass[runningheads,orivec]{llncs}
 \usepackage{kotex}
-\usepackage{microtype,amsmath,amssymb,booktabs,xcolor,enumitem,graphicx,hyperref}
+\setmainhangulfont{UnBatang}[ItalicFont=UnBatang,ItalicFeatures={FakeSlant=0.2}]
+\usepackage{amsmath,amssymb,booktabs,xcolor,enumitem,graphicx,hyperref,tabularx,placeins,array,float}
 \usepackage{tikz}
 \usetikzlibrary{positioning,calc,patterns,arrows.meta,decorations.pathreplacing}
 \usepackage[nameinlink,noabbrev]{cleveref}
 \crefname{section}{절}{절}\Crefname{section}{절}{절}
+\crefname{subsection}{절}{절}\Crefname{subsection}{절}{절}
+\crefname{subsubsection}{절}{절}\Crefname{subsubsection}{절}{절}
 \crefname{table}{표}{표}\Crefname{table}{표}{표}
 \crefname{figure}{그림}{그림}\Crefname{figure}{그림}{그림}
 \crefname{equation}{식}{식}\Crefname{equation}{식}{식}
-\hypersetup{colorlinks=true,allcolors=blue}
-\newcommand{\todo}[1]{\textcolor{red}{[TODO: #1]}}
-\newcommand{\xwing}{X-Wing}\newcommand{\slothy}{SLOTHY}\newcommand{\keccak}{Keccak-f1600}
-\title{Cortex-M85에서의 draft-10 \xwing{} 종단간 최적화: 동일 ELF 누적 측정과 함수 스티칭의 한계}
-\titlerunning{Cortex-M85에서의 draft-10 X-Wing 종단간 최적화}
+\hypersetup{hidelinks}
+\setlength{\emergencystretch}{1.5em}
+\newcommand{\xwing}{X-Wing}\newcommand{\slothy}{SLOTHY}\newcommand{\keccak}{Keccak-f[1600]}
+\title{\texorpdfstring{Cortex-M85 X-Wing의 아키텍처 특화 공동 최적화:\\단계별 동일 ELF 검증과 스티칭의 한계}{Cortex-M85 X-Wing의 아키텍처 특화 공동 최적화: 단계별 동일 ELF 검증과 스티칭의 한계}}
+\titlerunning{Cortex-M85 X-Wing의 아키텍처 특화 공동 최적화}
 \author{익명 저자}
 \authorrunning{익명 저자}
 \institute{익명 기관\\\email{anonymous@example.com}}
 \begin{document}
+\raggedbottom
 \maketitle
 
 \begin{abstract}
-본 논문은 Arm Cortex-M85에서 draft-10 \xwing{} 하이브리드 KEM을 종단간 최적화하고,
-채택된 모든 변경의 누적 효과를 하나의 ELF에서 직접 측정한다. 최종 스택은 ML-KEM의
-forward/inverse NTT와 current-order store, MVE packing/CBD/message 변환, X25519
-fixed-base comb, X25519 곱셈과 제곱의 재스케줄, 그리고 정렬 인식 워드 단위
-\texttt{memcpy}/\texttt{memset}으로 구성된다. draft-10 프로토콜과 입력을 양쪽에 고정한
-A-B-B-A 실험을 독립 플래시 두 번, 셀당 100회 수행하고 네 paired 효과 중 최솟값을
-취한 결과, 기준형 대비 키생성 \textbf{25.967\%}, 캡슐화 \textbf{20.249\%}, 확장키
-warm 역캡슐화 \textbf{11.224\%}, packed-key cold 역캡슐화 \textbf{18.298\%}의
-사이클 감소를 얻었다. 디스패처를 제거한 최종형의 절대 성능은 각각 627,069, 988,456,
-780,020, 1,406,887 사이클이다. 모든 KAT, 8-seed A/B 전 출력, 암묵적 거부, stack
-게이트가 통과했고 독립 실행 간 효과 차이는 최대 0.00116\%p였다.
-한편 함수 스티칭(function stitching)은 국소적으로는 성립했다. 스칼라 명령과 MVE 명령의
-동시 발행을 실리콘에서 100\% 확인하고 제약 해결기 기반 2-스트림 스케줄러도 구축했지만,
-실제 X25519 제곱과 NTT를 합친 커널은 순차 실행보다 느렸다. 이 양성·음성 결과를 함께
-보면, 순차 실행 코어에서는 빈 발행 슬롯의 존재만으로 종단간 이득을 예측할 수 없으며
-레지스터 수명, 재물질화, 저장 차단, API 경계를 포함한 동일 ELF 측정이 최종 판정에
-필수적이다.
-\keywords{PQ/T 하이브리드 \and \xwing{} \and ML-KEM \and X25519 \and Cortex-M85
-\and MVE \and 동일 ELF 측정 \and 함수 스티칭 \and \slothy{}}
+본 연구는 Cortex-M85의 MVE, 제한된 듀얼이슈와 레지스터·LSU 제약에 맞춰
+ML-KEM-768과 X25519 구현을 함께 조정하는 X-Wing 아키텍처 특화 구현 연구다.
+X-Wing draft-10 \cite{XWingDraft10}의 최초 all-off A0와 최종 B8을 하나의 ELF에서
+직접 비교한 별도 재플래시 5회의 보수적 개선률은 키생성 19.52\%, 캡슐화 19.75\%,
+역캡슐화 warm 11.66\%, cold 15.48\%였다. B8은 NTT·저장 융합, MVE 데이터 변환,
+fixed-base comb, X25519 체 연산 재스케줄링, 정렬 인식 메모리 함수, MVE 조건부 교환과
+두 X25519 출력의 zero-safe paired inversion을 결합한다. 단계별 동일 ELF 진단은
+여섯 1단계 축의 11.22--25.96\% 개선과, 그 승자 위에서 MVE 조건부 교환·paired
+inversion이 만드는 캡슐화 4.226--4.228\%의 추가 국소 효과를 분리하지만 서로 다른
+하네스의 개선률은 합산하지 않는다. 반면 ML-KEM--X25519 명령 스티칭은 평균 1.6개의
+빈 스칼라 레지스터와 숨길 수 없는 재물질화 때문에 순차 실행보다 느렸다. 동일 퇴직
+명령 수의 조건부 교환 재배치는 단독 커널에서 12.883\% 빨라 dual-beat 중첩 가설과
+일치했지만 전체 cold 경로의 채택 문턱을 넘지 못했다. 결과적으로 기여는 새 primitive가
+아니라 기존 기법의 프로토콜 적용 위치, M85 자원 제약과 동일 ELF 종단 간 판정을 결합한
+공동 최적화 및 적용 한계의 실증이다.
+\keywords{PQ/T 하이브리드 \and \xwing{} \and Cortex-M85 \and 아키텍처 특화 구현
+\and 공동 최적화 \and MVE \and 동일 ELF 실보드 측정}
 \end{abstract}
 
 \section{서론}\label{sec:intro}
 
-양자 능력을 갖춘 공격자에 대한 과도기적 해답은 하이브리드 키 확립이다. draft-10
-\xwing{} \cite{XWingDraft10}은 X25519와 ML-KEM-768을 함께 실행하고 두 비밀을
-SHA3-256으로 결합한다. 둘 중 한 구성요소가 깨지더라도 다른 구성요소가 안전하면 결합
-비밀은 보호되지만, 구현은 두 알고리즘의 비용을 모두 부담한다. 데스크톱급 코어에서는 이
-하이브리드 세금이 작을 수 있지만, 임베디드 TLS 스택을 떠받치는 마이크로컨트롤러에서는
-배포 여부를 좌우한다. 기존 완화책은 각 프리미티브를 따로 빠르게 만들거나 실리콘을 더
-쓰는 것이다---두 번째 코어를 붙이는 식이다 \cite{DualCore25,ParHyb26}. 우리는 단일
-Cortex-M85에서 ML-KEM, X25519, 메모리 접착 코드, 그리고 두 알고리즘 사이의 스케줄까지
-한 실험 계보 안에서 최적화하고, 마지막에 모든 채택 변경을 같은 ELF에서 함께 판정한다.
+포스트양자 전환기에 고전 방식과 포스트양자 방식을 함께 사용하는 하이브리드
+키 확립이 제안되어 왔다. \xwing{}은 X25519와 ML-KEM-768을 독립적으로 실행하고
+두 공유 비밀을 SHA3-256으로 결합한다 \cite{XWing24,XWingDraft10}. 두 구성요소는
+서로 다른 연산 자원을 사용하므로 각각의 구현을 최적화할 기회가 크다. 그러나 커널
+감소율, 정적 명령 수와 미점유 발행 용량은 API 전체의 실제 이득을 보장하지 않는다.
 
-기회는 마이크로아키텍처에 있다. Cortex-M85는 순차 실행 듀얼이슈 Armv8.1-M 코어다.
-X25519의 체(field) 연산은 \texttt{umaal} 곱셈-누산과 \texttt{adds}/\texttt{adcs}
-캐리로 이어지는 긴 의존 사슬이다. 측정 결과 IPC는 1.03, 즉 2-이슈 용량의 48.7\%가
-놀고 있다(\cref{sec:bounds}). ML-KEM의 대칭 연산 비용을 지배하는 \keccak{} 순열은
-조밀하고 서로 독립적인 비트 연산(IPC 1.66)이며, 곱셈기가 아니라 ALU/시프트 자원을
-사용한다. 두 계산은 Intel의 함수 스티칭 백서 \cite{Intel10}가 AES$\times$SHA-1에
-대해 활용했던 바로 그 의미에서 상보적이다---다만 그 작업은 비순차 x86을 대상으로 했고,
-명령어를 소스 수준에서 손으로 배치했으며, 자신이 채운다고 주장한 유휴 용량을 한 번도
-측정하지 않았고, 대칭 프리미티브끼리만 짝지었다.
+본 연구의 목표는 draft-10의 구성요소 최적화를 Cortex-M85 \xwing{}에 통합하고,
+같은 ELF에서 직접 비교해 실현된 누적 이득과 채택 한계를 밝히는 것이다. 분류상 본
+연구는 새 X25519·ML-KEM primitive 설계와 기존 코드의 단순 포팅 사이에 놓이는
+\emph{아키텍처 특화 구현 연구}다. 중심 질문은 \emph{기존 구현 기법을 M85의 MVE,
+발행 구조와 레지스터 제약에 맞춰 공동 최적화했을 때 실제 \xwing{} API 전체가 얼마나
+빨라지고, 어느 후보가 통합 경계에서 실패하는가?}이다. 판정은 외부 표의 cycle을 빼는
+방식이 아니라 동일 코드·데이터 배치의 실보드 비교로 내린다.
 
-구체적인 기여는 다음과 같다.
+1단계 통합 대상은 NTT·저장 경로, MVE 데이터 변환, fixed-base X25519, 체 곱셈·제곱과
+메모리 함수다. 2단계는 남은 X25519 병목에 MVE 조건부 교환과 두 출력의 paired
+inversion을 적용한다. 별도 2024/039 래퍼의 함수 스티칭과 dual-beat 재스케줄링은
+아키텍처 경계를 확인하는 후보로 평가한다. 정적 발행 여유나 국소 커널 이득이 보여도
+동일 ELF 종단 간 성능이 회귀하거나 사전 문턱을 넘지 못하면 최종 묶음에 넣지 않는다.
 
-\begin{enumerate}[leftmargin=*]
-\item \textbf{draft-10 준거 최종 스택의 동일 ELF 누적 실측}
-      (\cref{sec:cumulative}). 기준형과 최종형이 같은 프로토콜, 입력, 측정 함수,
-      메모리 배치를 공유하게 하고 일곱 전환 축을 한 번에 토글했다. 보수적인 최종
-      감소율은 키생성 25.967\%, 캡슐화 20.249\%, warm 역캡슐화 11.224\%, cold
-      역캡슐화 18.298\%다. 따라서 모든 경로가 빨라졌고 키생성과 캡슐화는 20\%
-      목표를 넘었다.
-\item \textbf{프로토콜 버전과 API 프로파일의 분리}. 2024/039 정의 \cite{XWing24}의
-      legacy wrapper를 draft-10의 combiner 순서, 32-byte packed secret key,
-      encapsulation-key 검사로 이동했다. warm과 cold 역캡슐화를 별도 워크로드로
-      보고하고, 디스패처가 없는 최종형의 절대 cycle을 따로 동결했다.
-\item \textbf{자동화: \slothy{}의 2-스트림 확장}
-      (\cref{sec:auto}). 제약 해결 초최적화기 \cite{Slothy22}에 빠져 있던 스칼라
-      명령어 클래스, 솔버 의존성으로서의 APSR(캐리 플래그) 수명, 스칼라 듀얼이슈
-      실행 모델, MAC 누산기 포워딩 규칙을 추가하고---17, 156, 1,184 명령어
-      규모에서 실리콘 검증했다. 독립적인 두 스트림을 단순히 이어 붙인 것 외에
-      아무 힌트도 주지 않았는데도, 솔버는 인터리빙을 스스로 찾아내고 스트림
-      \emph{사이}로 레지스터를 재할당하여 모든 규모에서 최고의 수작업 스티치를
-      이기고, 손으로 최적화된 부품들로 조립한 강한 직렬 기준선까지 이긴다.
-\item \textbf{매크로 이득이 실제 통합에서 사라지는 이유에 대한 정량적 해명}
-      (\cref{sec:causes}). 사전 등록된 연산당 상한은 21--26\%이고 선택 U의
-      매크로커널은 7.82--10.32\%(평균 8.89\%)를 투영했다. 그러나 같은 Fiat 구현끼리
-      비교한 실제 U는---처음에는 3.99--19.81\% 느렸고, 캡슐화의 큰 손실이 U8 코드의
-      플래시 배치 오류였음을 단일 변수 통제로 밝혀 ITCM으로 교정한 뒤에도---여전히
-      1.88--3.72\% 느렸다. 우리는 이 반전을 분리 실험과 직접 통합으로
-      추적한다: 스필
-      자기잠식(완전 비율 커널은 3.3\%만 낸다), 구조적 레지스터 양보 세금(레지스터를
-      아무리 적게 내놓아도 +12--14\%), LSU 경합(순수 MAC 사슬은 58\% 은닉, 스필
-      트래픽이 있으면 27\%), 곱셈기 독점(스칼라$\times$스칼라 NTT형 짝짓기는 $-1$\%
-      은닉). 이어지는 짝짓기 스펙트럼 실험은 \texttt{vstrw}가 스칼라 발행을 막는다는
-사실을 확인한다. 다만 실제 혼합 커널에서의 단일 변수 대조는 노출 223 사이클 중
-      110 사이클만 이 명령어에 귀속하며, 나머지 113 사이클은 미규명으로 남긴다.
-      마지막으로 실제 ladder 제어, 상태 유지와 코루틴/API 경계의 비용을 포함한
-      종단간 대조가 매크로커널 투영의 충실도 한계를 확정한다.
-\item \textbf{4-way MVE 배치 \keccak{}과 MVE packing/CBD} (\cref{sec:planb}):
-      벡터 레지스터에 네 개의 순열 상태를 얹어, 상태·라운드당 188.5 사이클로 pqm4
-      스칼라 기준 230.3 사이클 대비 $-18$\%를 스칼라 데이터 레지스터 0개로 달성한다.
-      또한 ML-KEM의 packing/압축/CBD/메시지 변환 11개 함수의 MVE 구현(C9)은 실제
-      \xwing{} 종단간에서 1.46--4.66\%를 추가로 절감하며, 상수 시간 성질을
-      보존한다(고정 루프와 술어 실행만 사용). 두 결과 모두 모든 Armv8.1-M ML-KEM에
-      독립적으로 유용하다.
-\item \textbf{사전 등록 방법론} (\cref{sec:bounds}). 이 프로젝트의 모든 진행/중단
-      판정은 측정 전에 문서화되었다: 상한 측정 직후의 킬 게이트, 종단간 단계의 20\%
-      기준선, 그리고 명시된 대체 서사. 우리는 그 약속들에 비추어 결과를 보고하며,
-      약속을 지키지 못한 부분도 함께 보고한다.
+본 연구의 기여는 다음 네 가지다.
+\begin{enumerate}[leftmargin=*,itemsep=2pt]
+\item \textbf{Cortex-M85 공동 최적화의 통합.} 공개 pqm4/Lenngren 계보의 알고리즘을
+      바꾸지 않고 ML-KEM의 NTT·데이터 변환, X25519의 fixed-base·체 연산·조건부 교환,
+      두 X25519 출력의 affine 변환과 공통 메모리 경로를 하나의 draft-10 구현에서
+      단계적으로 결합한다.
+\item \textbf{프로토콜 위치를 이용한 잔여 병목 제거.} 16-word 조건부 교환을 MVE의
+      128-bit 네 묶음으로 처리하고, 캡슐화에 동시에 존재하는 fixed/variable-base
+      projective 끝점의 역원 두 개를 zero-safe paired inversion 하나로 줄인다. 두 기법
+      자체의 발명보다 \xwing{} 적용 위치와 전체 경로에서의 합성 효과를 기여 경계로 삼는다.
+\item \textbf{M85 적용 가능성과 실패 경계의 규명.} 실제 X25519--NTT 병합에서 빈
+      레지스터 부족과 재물질화 비용이 스티칭 이득을 없애는 기전을 측정한다. 또한 같은
+      명령 수의 dual-beat 조건부 교환 스케줄이 단독 커널에서는 이득이지만 전체 경로
+      채택 문턱에는 못 미치는 지점을 분리한다.
+\item \textbf{종단 간 채택과 검증 방법.} 후보를 micro-gate, 개별 전체 경로, 누적
+      동일 ELF 순서로 평가하고, 최초 A0와 최종 B8도 별도 동일 ELF 5회로 직접 비교한다.
+      KAT·8-input·reject·low-order·stack·flash 검증과 leave-one-out 귀속을 결합하며,
+      단계가 다른 절대 cycle은 섞지 않고 실패 후보까지 원시 로그와 동결 산출물로 보존한다.
 \end{enumerate}
 
-이 논문은 성공한 최적화만 나열하지 않는다. 채택된 일곱 축이 만든 종단간 이득과,
-성공하지 못한 스티칭 계열에서 드러난 병목을 같은 측정 규율로 보고한다. 이 구분이 있어야
-국소 커널의 개선률을 종단간 결과처럼 더하는 오류를 피할 수 있다.
+\FloatBarrier
+\section{배경과 관련 연구}\label{sec:background}
 
-\section{배경}\label{sec:background}
+\subsection{X-Wing과 종단 간 최적화 경계}
 
-\subsection{함수 스티칭과 그 약속}
-Intel 백서 \cite{Intel10}는 독립적인 두 계산을 엮어 한쪽의 스톨을 다른 쪽이 메우게
-하며, 이상적으로는 $T_{\text{stitch}} \approx \max(T_A, T_B)$, 즉 짧은 쪽 계산이
-공짜가 된다. 그 보고서는 소스 수준의 수작업 스케줄이고, 채워지는 유휴 용량에 대한
-측정을 전혀 제시하지 않으며, 스케줄링의 불완전함을 흡수해 주는 비순차 하드웨어에
-의존한다. 우리가 그대로 채택하는 원칙이 하나 있다: 이득은 사용 가능한 \emph{가장 강한}
-직렬 기준선---작업 도중 발견한 기준선 자체의 최적화까지 포함하여---에 대해 보고해야
-한다.
+\xwing{}은 X25519와 ML-KEM-768을 독립적으로 실행하고 두 공유 비밀을
+SHA3-256으로 결합하는 하이브리드 KEM이다 \cite{XWing24,XWingDraft10}.
+Cortex-M85 구현의 전체 시간은 X25519 체 연산과 fixed-base 연산, ML-KEM의
+NTT·데이터 변환·Keccak, 메모리 이동과 결합 코드가 함께 결정한다. 따라서 한 커널의
+명령 수 감소나 처리율만으로 API 전체 개선률을 계산할 수 없다.
 
-\subsection{Cortex-M85: 천장의 산술}
-순차 실행 듀얼이슈 코어에서 슬롯 회수의 상한은 50\%다(Intel의 4-이슈 Westmere는 최대
-75\%까지 낭비했다). 하드웨어 재정렬이 없으므로 정적 스케줄의 품질이 곧 성능\emph{이다}.
-이는 양날이다: 스티칭이 효과를 보려면 완벽하게 스케줄링되어야 하고, 따라서 수작업 배치가
-아니라 제약 해결기가 자연스러운 도구가 된다. 우리는 메모리 계층에 의한 변동을 제거하기
-위해 코드를 ITCM에, 데이터를 DTCM에(둘 다 0-wait) 고정한다.
+기준 A는 pqm4 ML-KEM/Keccak \cite{pqm4}, Lenngren X25519 \cite{Lenngren},
+스칼라 C 데이터 변환과 newlib-nano를 Cortex-M85에서 재빌드한 경로다. B는 암호
+규격과 API를 바꾸지 않고 여섯 구현 축만 교체한다. A를 공개된 모든 M85 구현 중
+최고라고 주장하지 않으며, A$\to$B는 동일 계보 안에서 최적화 토글의 인과적 효과로만
+해석한다.
 
-\subsection{\xwing{}과 그 안의 Keccak 지분}
-draft-10 \xwing{} \cite{XWingDraft10} = X25519 + ML-KEM-768 + SHA3-256 결합기다.
-키 생성은 X25519
-스칼라 곱셈을 한 번, 캡슐화는 두 번, 역캡슐화는 한 번 수행하며, ML-KEM 쪽은 \keccak{}을
-각각 43, 44, 44회 호출한다(실측). 여기에 결합기 순열 하나가 더해진다. 따라서 자연스러운
-스트림 쌍은 X25519(MAC 바운드 스트림 A) $\times$ Keccak(ALU 바운드 스트림 B)이다.
+\subsection{Cortex-M85 구현 자원과 선행 연구}
 
-\subsection{\slothy{}}
-\slothy{} \cite{Slothy22,SlothyM7_25}는 명령어 스케줄링과 레지스터 할당을 CP-SAT로
-동시에 푼다---단, \emph{단일} 입력 스트림에 대해서다. 이 도구의 Armv8.1-M 모델은
-MVE 중심이어서 X25519가 필요로 하는 스칼라 클래스(\texttt{umull}/\texttt{umaal},
-캐리 산술)가 없었고, 스칼라 듀얼이슈가 모델링되지 않았으며(발행률 1), 플래그 수명도
-제약이 아니었다. 바로 이것들이 \cref{sec:auto}의 확장 항목이다.
+Cortex-M85는 Armv8.1-M 기반 순차 실행 코어로 MVE 벡터 명령과 제한된 듀얼이슈
+조합을 제공한다 \cite{ArmM85Opt}. MVE는 ML-KEM 데이터 병렬성에, 스칼라
+MAC·캐리 명령은 X25519 체 연산에 사용된다. 그러나 레지스터 수명, APSR, LSU,
+곱셈기와 MVE 저장 차단 때문에 커널 이득이 통합 경계에서 그대로 유지된다고 가정할
+수 없다.
 
-\section{사전 등록된 상한: 얻을 것이 얼마나 있는가?}\label{sec:bounds}
+M-profile X25519 최적화는 Fujii--Aranha \cite{FujiiAranha17}와 Lenngren 계보가
+제공한다. Cortex-M55
+MVE 격자 연산 \cite{HeliumNTT22}과 pqmx \cite{pqmx}는 ML-KEM 벡터화의 비교점이다.
+본 연구는 새 X25519, ML-KEM 또는 NTT 알고리즘을 제안하지 않는다. RFC 7748의
+상수시간 xor-mask 조건부 교환 \cite{RFC7748}과 마이크로컨트롤러 Curve25519 구현
+\cite{DullEtAl15}, 여러 역원을 한 번의 역원으로 처리하는 Montgomery batch inversion
+\cite{GuideECC04}이 직접 선행기법이다. 본 연구의 MVE 조건부 교환과 paired inversion은
+이 일반 기법의 범주에 둔다. 기여는 이
+계보의 구현 변환을 Cortex-M85 \xwing{}에 통합하고, M85 발행·레지스터 제약과 프로토콜의
+두 X25519 출력 구조에 맞춰 적용 위치를 정한 뒤 동일 ELF API 경계에서 누적 효과와
+실패 조건을 함께 확인한 데 있다. 따라서 외부 최신 구현과의 단순 속도 경쟁이나 새
+암호 primitive의 신규성을 주장하지 않는다.
 
-\paragraph{방법.} 모든 측정 조건: EK-RA8M1(Cortex-M85, 480\,MHz), GCC 13.2.1
-\texttt{-O2}, 코드는 ITCM, 데이터/스택은 DTCM, DWT \texttt{CYCCNT}, $N{=}100$의
-중앙값, 25 사이클의 하네스 보정치를 차감. 명령어 수는 Unicorn 에뮬레이션에서 얻었고
-서로 무관한 두 입력에서 교차 확인했다(두 입력의 명령어 수가 같다는 것 자체가 상수 시간
-점검을 겸한다, \cref{sec:ct}). 에뮬레이션은 오직 \emph{분자}에만 쓰인다. 두 커널 모두
-비밀 독립적인 직선 코드이므로 명령어 수는 추정치가 아니라 결정적 상수이며, 모든 사이클
-수치는 실리콘에서 측정한 값이다. 남는 불확실성은 정의상의 문제다---에뮬레이터가 IT 블록
-본문을 개별적으로 계산하므로 \texttt{INST\_RETIRED}와 몇 퍼센트 차이가 날 수 있다---따라서
-슬롯 낭비 수치에는 대략 $\pm1$\,\%p의 오차가 붙는다. 기능 게이트: RFC~7748
-KAT \cite{RFC7748}, SHA3-256 KAT, pqm4 \cite{pqm4} 위의 ML-KEM-768 왕복
-\cite{FIPS203}, 그리고 Lenngren X25519 \cite{Lenngren}---모두 보드에서 통과했다.
-측정에 앞서 우리는 판정 규칙을 등록했다: 상한 ${<}15\%$면 프로젝트 중단,
-$15\%\leq b<30\%$면 축소된 2주 파일럿, ${\geq}30\%$면 진행.
+가장 가까운 공개 비교점은 세 층위다. pqm4·Lenngren과 M-profile X25519 계보
+\cite{pqm4,Lenngren,FujiiAranha17}는 A와 X01/X02의 구성요소를,
+Helium NTT·pqmx \cite{HeliumNTT22,pqmx}는 X/Y/C8·C9의 MVE 격자 경로를,
+\slothy{} 계보 \cite{Slothy22,SlothyM7_25}는 재스케줄링 방법을 제공한다. 그러나 이들은
+장치·API·프로토콜 판본·컴파일러·메모리 배치가 달라 M85 draft-10 전체 API의 직접
+경쟁 cycle이 아니다. 따라서 외부 값은 위치 설명에만 사용하고, 성능 효과와 순위는
+동일 ELF의 A--B 안에서만 판정한다.
 
-\begin{table}[t]\centering
-\caption{단독 실행 측정치와 슬롯 낭비(사이클 중앙값).}
-\label{tab:base}
-\begin{tabular}{lrrrr}\toprule
-커널 & 사이클 & 명령어 수 & IPC & 슬롯 낭비\\\midrule
-X25519 스칼라 곱셈 (Lenngren) & 357,474 & 366,934 & 1.03 & \textbf{48.7\%}\\
-\keccak{} (pqm4) & 5,526 & 9,162 & 1.66 & 17.1\%\\
-ML-KEM-768 키생성/캡슐화/역캡슐화 & 437k/453k/504k & \multicolumn{3}{c}{(순열 43/44/44회)}\\
-SHA3-256 결합기 (134\,B) & 7,648 & --- & --- & ---\\\bottomrule
-\end{tabular}\end{table}
-
-\Cref{tab:base}은 Intel이 한 번도 측정하지 않았던 것, 즉 유휴 용량을 정량화한다.
-X25519의 의존 사슬은 스칼라 곱셈 한 번당
-$2{\cdot}357{,}474-366{,}934 = 348{,}014$개의 빈 발행 슬롯을 남긴다. Keccak의 명령어를
-그 슬롯에 대고 (스트림 길이로 상한을 씌워) 계산하면 \cref{tab:bound}이 나온다:
-\xwing{} 연산당 21--26\%, 평균 23.9\%다. 슬롯 항은 모든 유휴 슬롯이 파트너 스트림으로
-채워질 수 있다고 가정하는데---순차 실행 코어에서는 낙관적인 가정이지만---\cref{sec:auto}에서
-1:1 인터리브가 IPC 1.99, 즉 2-이슈 하한에서 0.5\% 이내를 기록하므로 사후적으로 정당화된다.
-구조적으로 두 가지가 눈에 띈다: (i) 캡슐화는 스트림 길이에 의해 제한된다---스칼라 곱셈 두
-번이 만드는 유휴 슬롯이 Keccak의 명령어 수보다 많다. (ii) M85에서는 Keccak 스트림이
-\emph{짧은} 쪽이므로, 상한을 정하는 것은 슬롯 용량이 아니라 커버리지 희석이다. 이는 우리의
-사전 등록이 예상했던 바다. 계획서는 M4 기준 회계 \cite{Sim26}로부터 X25519가 더 긴
-스트림이 되고 커버리지가 희석될 것이라고 예측했으며, M85 측정은 그 방향을 확인해 준다.
-게이트 판정을 기계적으로 적용하면: $23.9\% \in [15\%,30\%) \Rightarrow$ 파일럿.
-
-\begin{table}[t]\centering
-\caption{\xwing{} 연산별 사전 등록된 중첩 상한. 분모는 \xwing{} 연산 1회의 전체
-사이클(794,198 / 1,175,479 / 868,772)이며 ML-KEM의 비-Keccak 구간을 포함한다.}
-\label{tab:bound}
-\begin{tabular}{lrrr}\toprule
-연산 & 전체 사이클 & 중첩 가능 사이클 & 상한\\\midrule
-키 생성 & 794,198 & 209,905 & 26.4\%\\
-캡슐화 & 1,175,479 & 248,670 & 21.2\%\\
-역캡슐화 & 868,772 & 209,905 & 24.2\%\\\bottomrule
-\end{tabular}\end{table}
-
-\paragraph{분모, 그리고 사전 등록으로부터의 이탈 한 건.} 본 논문의 모든 종단간 백분율은
-분모가 하나다: \textbf{\xwing{} 연산 1회를 순차 하이브리드로 끝까지 실행한 전체 사이클.}
-여기에는 스티칭의 대상이 아닌 ML-KEM의 비-Keccak 구간(NTT, CBD, 인코딩, 접착 코드)이
-포함되며, 그 구간은 연산에 따라 전체의 17.8--30.0\%를 차지한다. 우리의 사전 등록 문서는
-상한을 $\text{overlap} / (\text{cyc}_A + \text{cyc}_B)$로 적었고 스트림 $B$를 ``ML-KEM
-내부의 Keccak''으로 정의했다. 그 두 문장을 문자 그대로 결합하면 분모에서 비-Keccak 구간이
-빠지고 상한은 25.8--35.3\%, 평균 31.9\%가 되어 사전 등록된 결정표의 \emph{다른} 칸
-(``직진'', $\geq 30\%$)에 떨어진다. 우리는 더 넓은---그리고 우리에게 불리한---분모를
-채택했고, 그 결과가 ``파일럿'' 판정이다. 이것을 이탈로 신고한다. 근거는 종단간 이득을
-주장하는 논문의 분모는 종단간 연산이어야 한다는 것이다. 좁은 분모는 스티칭이 도달할 수
-없는 작업을 감추어 이득을 부풀린다. 이 선택은 게이트 판정 시점부터 계산에 반영돼 있었으나
-명시되지는 않았으며, 사후에 명문화했다.
-
-\begin{figure}[t]\centering
-\begin{tikzpicture}[x=0.62cm,y=0.62cm,font=\scriptsize]
-  \tikzset{
-    slot/.style={draw=black!55,minimum width=0.58cm,minimum height=0.5cm,
-                 inner sep=0pt,anchor=south west},
-    used/.style={slot,fill=orange!35},
-    idle/.style={slot,fill=black!5,draw=black!25},
-    keca/.style={slot,fill=teal!30},
-  }
-  % ---- (a) X25519 단독 ----
-  \node[anchor=south west,font=\small\bfseries] at (0,3.05) {(a) X25519 단독 --- IPC 1.03};
-  \node[left=3pt,anchor=east] at (0,2.3) {슬롯 0};
-  \node[left=3pt,anchor=east] at (0,1.7) {슬롯 1};
-  \foreach \i in {0,...,9} {
-    \node[used] at (\i,2.05) {};
-    \node[idle] at (\i,1.45) {};
-  }
-  \node[right=4pt,anchor=west,align=left] at (10,1.9)
-       {발행 용량의 \textbf{48.7\%}가\\놀고 있다};
-  \draw[decorate,decoration={brace,amplitude=3pt},black!55]
-       (10,1.42) -- (10,1.95);
-  % ---- (b) 인터리브 ----
-  \node[anchor=south west,font=\small\bfseries] at (0,0.55) {(b) \keccak{}과 인터리브 --- IPC 1.99};
-  \node[left=3pt,anchor=east] at (0,-0.2) {슬롯 0};
-  \node[left=3pt,anchor=east] at (0,-0.8) {슬롯 1};
-  \foreach \i in {0,...,9} {
-    \node[used] at (\i,-0.45) {};
-    \node[keca] at (\i,-1.05) {};
-  }
-  \node[right=4pt,anchor=west,align=left] at (10,-0.6)
-       {두 번째 스트림이\\유휴 슬롯에 올라탄다};
-  % ---- 범례 ----
-  \node[used,minimum width=0.4cm,minimum height=0.35cm] at (0,-2.3) {};
-  \node[anchor=west] at (0.5,-2.12) {X25519 (UMAAL 사슬)};
-  \node[keca,minimum width=0.4cm,minimum height=0.35cm] at (4.2,-2.3) {};
-  \node[anchor=west] at (4.7,-2.12) {\keccak{} (EOR/로테이트)};
-  \node[idle,minimum width=0.4cm,minimum height=0.35cm] at (8.4,-2.3) {};
-  \node[anchor=west] at (8.9,-2.12) {유휴};
-\end{tikzpicture}
-\caption{순차 실행 듀얼이슈 코어에서 스티칭이 이득이 되어야 하는 이유. 몽고메리 사다리
-한 단계의 곱셈-누산 사슬은 자기 자신의 캐리 의존성 때문에 직렬화되고, 그 결과 전체
-사이클의 48.7\%에서 두 발행 슬롯 중 하나가 비어 있다(실측, \cref{tab:base}). 레지스터가
-겹치지 않는 두 번째 명령어 스트림은 첫 번째를 밀어내지 않고 그 슬롯을 차지할 수 있으며,
-\cref{sec:auto}의 마이크로벤치마크는 2-이슈 하한인 IPC 1.99에 도달한다. 이 그림과 실제로
-U 매크로커널 투영 7.82--10.32\%와 실제 직접 통합의 음의 결과 사이의 간극이 본 논문의
-주제다.}
-\label{fig:slots}
-\end{figure}
-
-\section{자동화: 2-스트림 \slothy{}}\label{sec:auto}
-
-\subsection{먼저 손으로 확인한 실현 가능성}
-마이크로벤치마크는 하드웨어가 인터리빙을 소화한다는 것을 보여 준다. UMAAL 사슬과
-플래그를 세우지 않는 \texttt{eor}/로테이트 사슬을 1:1로 섞으면 IPC 1.99(2-이슈 하한에서
-0.5\% 이내)로 돌아가며, 짧은 쪽 스트림의 80\%를 숨긴다. 두 번째 스트림을 메모리 상주로
-바꾸어도 절감량은 4,000 사이클 중 2 사이클만 달라진다. LSU 트래픽이 MAC 스트림과 짝을
-이루므로 \emph{스티칭 고유의 스필 페널티는 0}이다. 스트림 B를 위해 레지스터 4개(심지어
-8개)를 예약해도 컴파일된 스트림 A에는 측정 가능한 비용이 발생하지 않는다---다만 이는
-컴파일러에 아직 스필 여유가 있는 경우에만 성립한다. 손으로 튜닝한 fiat 곱셈은 대신
-12--14\%의 양보 세금을 문다(아래에서 정량화). 그래서 이 마이크로벤치마크 결과를 일반적인
-결론으로 읽어서는 안 된다. 이어서 스크립트로 만든 ``지퍼(zipper)'' 스티처가 KAT로
-검증된 실제 커널을 생산한다. 그 최고 수작업 결과인 256비트 곱셈 하나 + 완전한 Keccak
-라운드 하나에 681 사이클은, 여전히 627 사이클짜리 최강 직렬 기준선의 $1.09\times$이며
-수작업 스윕은 거기서 정체되었다. 그 격차는 레지스터 할당과 스케줄링의 동시 최적화
-문제---즉 솔버의 직무 기술서다.
-
-\subsection{솔버에 필요했던 것}
-우리 패치(공개; 상류 모델은 \texttt{241093fa5ddc})는 발견 순서대로 다음을 기여하며,
-각 항목은 실측된 실패가 강제한 것이다:
-\begin{itemize}[leftmargin=*]
-\item \textbf{Armv8.1-M 모델에 없던 스칼라 명령어 클래스 19종}
-      (\texttt{umull}, \texttt{umaal}, 즉시값 형태를 포함한 캐리 산술,
-      \texttt{umlal}, 시프트/플래그 변종 등).
-\item \textbf{의존성으로서의 APSR 수명}
-      (\texttt{modifiesFlags}/\texttt{dependsOnFlags}): X25519 캐리 사슬이 어떤
-      합법적 스케줄에서도 구성상 살아남게 하여, Intel의 대칭 전용 짝짓기가 무시하고
-      넘어갈 수 있었던 유일한 해저드를 기계화한다.
-\item \textbf{스칼라 듀얼이슈}: 발행률 $1\to2$ 및 두 번째 스칼라 ALU 슬롯 추가
-      (MAC와 LSU는 그대로).
-\item \textbf{MAC 누산기 포워딩}(모델 v0.3): 실리콘은 의존적인 \texttt{umaal}
-      사슬을 누산기 오퍼랜드를 통해 명령어당 1 사이클로 실행한다. 기본값인 2 사이클
-      지연은 스트림 A의 가격을 $2\times$로 잘못 매겨, 수정 전까지 솔버가 지퍼에게
-      \emph{졌다}(1,319 대 1,018 사이클). 수정 후에는 이긴다(996). 모델 정확도는
-      부차적인 미덕이 아니라, 순차 실행 코어에서는 승패를 가르는 요소다.
-\item \textbf{컴파일러 출력을 솔버에 먹이기 위한 안전 변환 규칙 3가지}. 각각은 우리가
-      0까지 디버깅한 실제 손상 사례로 검증되었다: 더블워드 접근을 분할할 것(모델은
-      \texttt{ldrd}/\texttt{strd}를 4바이트로 취급한다), 스필 슬롯을 절대 재사용하지
-      말 것(WAR/WAW 메모리 반의존성이 보존되지 않는다), 베이스를 파괴하는 로드 쌍을
-      마지막에 배치할 것. 세 건의 이슈로 상류에 보고했다.
-\end{itemize}
-입력에는 아무 주석도 필요 없다. 두 스트림을 이어 붙이면(또는 아래처럼 미리 지퍼로
-엮으면) 의존성 분석이 그들의 독립성을 스스로 발견한다.
-
-\subsection{검증 사다리}
-\begin{table}[t]\centering\small
-\caption{직렬 대 최고 수작업 스티치 대 솔버, 보드 실측
-(반복당 사이클, C 레퍼런스 대비 정확성 검증 완료).}
-\label{tab:solver}
-\begin{tabular}{lrrrr}\toprule
-규모 & 직렬 & 수작업 & \slothy{} & 솔버 대 수작업\\\midrule
-17 명령어 (개념 검증) & 13.06 & --- & 11.07 & (직렬 대비 $-15\%$)\\
-156 명령어 & 110.06 & 88.07 & 85.06 & $-3.4\%$\\
-1,184 명령어 (완전 커널, 역사 세대) & 727.0 & 681 & 657.0 & $-3.5\%$\\
-1,184 명령어 (완전 커널, 현재 동일 빌드) & 727.0 & 662.4 & \textbf{654.0} & $-1.3\%$\\
-1,130 명령어 (fiat carry-mul) & 702.0 & --- & 630.0 & (직렬 대비 $-10.3\%$)\\
-1,110 명령어 (비트 인터리브) & 636.0 & --- & \textbf{579.0} & (직렬 대비 $-9.0\%$)\\
-동시 발행 1,222 명령어 (스칼라$\times$MVE) & 1,365 & 1,013 & \textbf{996} & $-1.7\%$\\\bottomrule
-\end{tabular}\end{table}
-
-\Cref{tab:solver}은 이 도구의 성적표다. 세 가지를 짚는다. 첫째, 솔버는 수작업 스티치가
-존재하는 모든 지점에서 그 최고 기록을 이기며, 완전 규모에서는 수작업 기법을
-\emph{아예 구성할 수조차 없다}. 지퍼의 전제---스트림 사이의 정적 레지스터 분할---는
-스트림 A가 모든 레지스터를 자유롭게 쓰는 순간 무너지고(우리는 그 결과로 생기는 라이브
-값 손상을 하드 폴트로 재현해 보였다), 스트림을 가로질러 전역적으로 할당하는 솔버에는
-그런 전제가 없다. 둘째, 충실도 사다리는 실제 재료에서 끝난다. fiat-crypto 체 곱셈
-(BoringSSL의 carry-mul)과 pqm4 표현(비트 인터리브) Keccak 라운드의 조합은 579 사이클에
-도달한다---직렬 대비 9\% 아래이고, \textbf{손으로 최적화된 부품들로 조립한 626 사이클
-최강 직렬 기준선보다 7.5\% 아래}인데, 스트림 A가 컴파일러 출력임에도 그렇다. 수작업
-시절의 격차는 자동화가 메웠다. 셋째, 모델 충실도: 예측 오차는 소규모에서 ${<}1\%$,
-완전 규모에서 5--7\%(분할 윈도 경계 스톨), v0.4 스토어 수정 이후 스칼라$\times$MVE에서
-12\%다(\cref{sec:causes}). 작업 단위 하나(곱셈 하나 + 라운드 하나)의 변천사가 이
-프로젝트를 요약한다: $875 \to 799 \to 681 \to 657 \to 630 \to \mathbf{579}$ 사이클,
-최초 지퍼 대비 $-34\%$(같은 세대 안의 계보). 마지막으로 완전 커널의 재대결이 도구의
-현재 상태를 확정한다. 커널 재생성 이후의 현재 빌드에서 같은 입력을 새로 풀자 솔버는
-새 스케줄을 찾아 순차 727.0, 수작업 지퍼 662.4에 대해 654.0 사이클을 두 독립 실행에서
-정확히 재현했다---수작업 대비 $-1.3$\%로, 사전 등록한 성공 조건을 현재 세대에서도
-충족한다.
-
-여기서 도출된 실용 파이프라인은 이렇다: \emph{실제 산술은 C로 작성하고, 스트림 B의
-레지스터는 \texttt{-ffixed}로 예약하고(컴파일러가 올바른 스필을 삽입해 준다), 스케줄링은
-솔버에 맡긴다}. 14개 레지스터를 모두 포화시키는 손수 작성 어셈블리는 스필을 추가하지
-않고서는 \emph{어떤} 스케줄러로도 스티칭할 수 없는데, 스케줄러는 스필을 추가할 권한이
-없다.
-
-\section{회수량이 얇은 이유: 분해}\label{sec:causes}
-
-상한은 21--26\%라고 말했고 U 선택 경로의 완전 비율 매크로커널은 \xwing{} 전체
-분모에서 7.82--10.32\%를 투영했다. 그러나 실제 U 직접 통합은 세 연산 모두 음수였다
-(\cref{sec:planb}). 이 절이 본 논문의 핵심이다. 각 실험은 한 원인을 드러내도록
-설계했으며, 끝내 분해되지 않은 잔차도 그대로 남긴다.
-
-\begin{table}[t]\centering\small
-\caption{상한과 실측 사이 격차의 원인들, 각각 실리콘에서 분리 측정.}
-\label{tab:causes}
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{llr}\toprule
-원인 & 분리 실험 & 결과\\\midrule
-(a) 스필 자기잠식 & 완전 비율 fiat 커널 (2,526 명령어) & 상한 21\%+ $\to$ \textbf{3.3\%}\\
-(b) 레지스터 양보 세금 & \texttt{-ffixed} 2개 대 3개 & \textbf{+12.1--13.5\%}, 개수 무관\\
-(c) LSU 경합 & 실제 곱셈(스필 있음) 대 순수 MAC 사슬 & 은닉 27\% 대 58\%\\
-(d) 곱셈기 독점 & 스칼라$\times$스칼라 NTT형 & 은닉 \textbf{$-1$\%}\\
-(e) 파이프 분리 (대조군) & 스칼라$\times$MVE NTT형 & 은닉 \textbf{62\%}\\\bottomrule
-\end{tabular}%
-}\end{table}
-
-\paragraph{(a) 스칼라 계획은 스스로를 잡아먹는다.} 실제 \xwing{} 비율(라운드당 곱셈
-네 번, 2,526 명령어)로 스티칭하면 1,573$\,\to\,$1,521 사이클, 즉 \textbf{3.3\%}로
-상한보다 한 자릿수 아래다. 메커니즘은 이렇다. 스트림 B에 레지스터를 내주기 위해
-(\texttt{-ffixed}로 컴파일된) 스트림 A가 스필하고, 그 스필 로드/스토어가 하필 스트림 B의
-메모리 상주 상태가 필요로 하는 바로 그 LSU 슬롯을 차지한다. 유휴 용량은 실재하지만,
-그것을 채우는 행위가 그것을 소비한다.
-
-\paragraph{(b) 양보 세금은 구조적이다.} 레지스터 3개를 내주면 fiat 곱셈이
-$+13.5\%$를 문다(287.6$\,\to\,$326.5). 2개만 내주어도 $+12.1\%$다. 이 근사적 동일성이
-바로 발견이다. 세금이 사는 것은 두 번째 라이브 레지스터 집합의 \emph{존재} 자체이며
----컴파일러가 라이브 레인지를 재구성한다---개수에 대해서는 거의 평평하다.
-(\cref{sec:auto}의 마이크로벤치마크에서 예약이 공짜였던 것과 대조된다. 그 스트림에는
-여유가 있었지만, 캐리로 포화된 실제 코드에는 없다.)
-
-\paragraph{(c) 정량화된 LSU 경합.} 순수 \texttt{umaal} 사슬은 MVE Keccak 스트림의
-58\%를 숨기고, 스필 트래픽을 동반한 실제 곱셈은 27\%를 숨긴다. 이 차이는 A의 스필과
-B의 상태 접근 사이의 로드/스토어 유닛 경쟁이다.
-
-\paragraph{(d--e) 짝짓기 규칙.} 스칼라$\times$스칼라 NTT형 짝짓기(두 스트림 모두 곱셈기
-바운드)는 $-1$\%를 숨긴다. MAC 파이프는 독점 자원이며, 이 음성 대조군은 다른 곳에서 얻은
-이득이 측정 기법의 산물이 아니라 상보성에서 왔음을 검증한다. 스트림 B를 MVE의 별도
-곱셈기로 옮기면 같은 실험이 62\% 은닉으로 뒤집힌다---혼합 레지스터 파일 쌍이 쉬운
-경우라는 Intel의 정성적 주장을, 임베디드 순차 실행 환경에서 실측한 판본이다.
-
-\paragraph{동시 발행 천장과 남은 잔차.} 스칼라$\times$MVE 계획에서 은닉률은 60\% 부근에서
-포화된다. 짝짓기 스펙트럼 실험(\texttt{umaal} 사슬에 대해 MVE 클래스를 하나씩 붙여
-보는 실험)은 중요한 차단 클래스를 지목한다. \texttt{veor}, \texttt{vldrw},
-\texttt{vshl}/\texttt{vsri}는 모두 99\%로 짝을 이루고---\texttt{vldrw}는 2 사이클
-명령어이면서도 두 사이클 내내 사이클당 스칼라 하나를 허용한다---반면 \texttt{vstrw}는
-두 사이클 어느 쪽에서도 하나도 허용하지 않는다($-1$\% 은닉). 그러나 이 합성 단가를
-실제 혼합 커널에 그대로 곱한 $121\times2=242$ 사이클 모델은 후속 단일 변수 실험 Q에서
-반증됐다. 명령 수와 B의 단독 비용을 고정한 채 121개 \texttt{vstrw}만 값 보존
-\texttt{vorr}로 바꾸자 노출은 223$\,\to\,$113 사이클이 되었다. 따라서 실제 기여는
-110 사이클(스토어당 0.91 사이클)이고, 잔여 113 사이클은 아직 귀속되지 않았다.
-이 차단 규칙을 모델에 인코딩하자(스토어가 STORE+SCALAR를 점유; v0.4) 예측 오차는
-27\%에서 12\%로 줄었다. 다만 정직하게 덧붙이면, v0.4로 재스케줄된 커널은
-실리콘에서 v0.3 스케줄을 이기지 못했다(1,018 대 996). 853 사이클의 하위 천장(B 스톨
-제거)은 이제 측정된 하한이 아니라 폐기된 모델의 추정치다.
-
-\begin{figure}[t]\centering
-\resizebox{\textwidth}{!}{%
-\begin{tikzpicture}[x=0.115cm,y=1cm,font=\small]
-  % x: 0--100 (%) → 11.5cm
-  \draw[->,gray!70] (0,-0.5) -- (105,-0.5);
-  \foreach \p in {0,20,40,60,80,100}
-    \draw[gray!70] (\p,-0.45) -- (\p,-0.55) node[below,font=\scriptsize,black] {\p\%};
-  \node[below=9pt,font=\scriptsize] at (50,-0.55) {은닉률: 짧은 쪽 스트림이 유휴 슬롯에 흡수된 비율};
-  \tikzset{hb/.style={draw=black!55,rounded corners=1pt,minimum height=0.5cm,
-                      inner sep=0pt,anchor=west}}
-  % rows: value, y, colour, label, note
-  \fill[hb,fill=red!30]    (0,3.2)  rectangle (1,3.7);
-  \fill[hb,fill=orange!35] (0,2.4)  rectangle (27,2.9);
-  \fill[hb,fill=teal!30]   (0,1.6)  rectangle (58,2.1);
-  \fill[hb,fill=teal!45]   (0,0.8)  rectangle (60,1.3);
-  \fill[hb,fill=blue!35]   (0,0.0)  rectangle (62,0.5);
-  \node[left=4pt,anchor=east,font=\scriptsize,align=right] at (0,3.45) {스칼라 NTT\\(같은 곱셈기)};
-  \node[left=4pt,anchor=east,font=\scriptsize,align=right] at (0,2.65) {실제 X25519\\(fiat, 스필 과다)};
-  \node[left=4pt,anchor=east,font=\scriptsize,align=right] at (0,1.85) {스칼라 $\times$ MVE\\\keccak{} (단순 지퍼)};
-  \node[left=4pt,anchor=east,font=\scriptsize,align=right] at (0,1.05) {\quad$+$ 솔버\\(모델 v0.3)};
-  \node[left=4pt,anchor=east,font=\scriptsize,align=right] at (0,0.25) {스칼라 $\times$ MVE\\NTT형};
-  \node[right=3pt,anchor=west,font=\scriptsize] at (1,3.45)  {$-1\%$ \;\textit{은닉이 아니라 경합}};
-  \node[right=3pt,anchor=west,font=\scriptsize] at (27,2.65) {$27\%$ \;\textit{LSU 경합}};
-  \node[right=3pt,anchor=west,font=\scriptsize] at (58,1.85) {$58\%$};
-  \node[right=3pt,anchor=west,font=\scriptsize] at (60,1.05) {$60\%$ \;\textit{관측 포화점}};
-  \node[right=3pt,anchor=west,font=\scriptsize] at (62,0.25) {$62\%$};
-  % 천장 주석
-  \draw[dashed,black!45] (60,-0.4) -- (60,4.05)
-     node[above,font=\scriptsize,align=center,black!60] {관측된 포화점\\$\approx 60\%$};
-\end{tikzpicture}%
-}
-\caption{짝짓기와 파이프에 따른 은닉률. 실행 자원을 공유하는 두 스트림은 아예 스티칭되지
-않는다(UMAAL 사슬에 맞선 스칼라 NTT: $-1\%$, 곱셈기를 둘러싼 줄다리기). 실제의 스필
-과다 X25519는 그 스필 트래픽이 로드/스토어 유닛에서 파트너와 경합하기 때문에 짝이 잘
-맞지 않는다($27\%$). 파트너를 다른 파이프(MVE)로 옮기면 슬롯의 대부분을 되찾는다
-($58$--$62\%$). 벡터 스토어가 스칼라 발행 슬롯을 점유하는 것은 확인됐지만, 실제 혼합
-커널의 노출 223 사이클 중 직접 귀속된 몫은 110 사이클이고 나머지 113 사이클은
-미규명이다(\cref{sec:causes}).}
-\label{fig:hiding}
-\end{figure}
-
-\section[플랜 B 결과: 스칼라-MVE, X-Wing 투영]{플랜 B 결과: 스칼라 $\times$ MVE, X-Wing 투영}\label{sec:planb}
-
-(a)--(c)를 감안하면 레지스터 파일이 분리된 계획이 배포 가능한 쪽이다. X25519는 14개
-범용 레지스터를 모두 쓰는 스칼라로 남고, \keccak{}은 MVE로 옮긴다.
-
-\paragraph{4-way 배치 MVE \keccak{}.} Armv8.1-M MVE에는 128비트 벡터 레지스터가 여덟
-개 있다---레인 위치당 정확히 네 개의 32비트 인터리브 Keccak 상태다. 우리 생성기는
-레인 전반에 걸쳐 회전량을 균일화하고 상태 주소 지정을 고정하는 방식으로 순열을 배치하여,
-베이스 레지스터 개수를 5$\,\to\,$3$\,\to\,$2로 비용 없이 줄인다(\texttt{vldrw}의
-$\pm$508 오프셋 활용). 결과는 \textbf{상태·라운드당 188.5 사이클로 pqm4 스칼라의 229
-사이클 대비 $-18$\%}이며, 스칼라 \emph{데이터} 레지스터는 0개다---범용 레지스터 파일
-전체가 X25519에 남는다. 레인 전치(transposition) 접착 코드는 2.5\%를 쓴다(실측).
-ML-KEM-768의 연산당 43--44회 순열은 4-way 큐를 자연스럽게 채우고, \xwing{} 결합기의
-SHA3-256 순열 하나는 45번째 항목으로 같은 큐에 올라탄다. 별도의 기전이 필요 없고 비용은
-배치 라운드 하나 이하다.
-
-\paragraph{매크로커널 투영.} 우리는 참 연산 조합(fiat 곱셈 : 배치 라운드 = 캡슐화
-8:1, 키생성/역캡슐화 4:1; 실제 명령어 스트림, 플래시 상주, 정확성 검증 완료)에서
-매크로 단위를 측정했다. 실험 U는 범용 레지스터 양보를 하나로 줄인
-\texttt{yield1+b1}을 선택했다. 이 단위의 절감량과 호출 수를 \xwing{} 전체 분모에
-넣으면 keygen 8.54\%, encaps 10.32\%, decaps 7.82\%(평균 8.89\%)를 투영한다.
-독립 MVE Keccak까지 산술적으로 더한 평균 13.65\% 역시 당시의 미통합 공학적
-투영이다. 아래 직접 통합 결과가 있으므로 두 수치는 최종 성능 주장이 아니라
-\emph{투영 충실도를 진단하는 과거 예측값}으로만 사용한다.
-
-\begin{table}[t]\centering
-\caption{매크로 투영과 실제 종단간 통합의 비교. 행마다 기준선이 다르므로 행 사이의
-크기를 직접 비교하지 않는다. F는 후보와 같은 Fiat X25519 및 x4 경로의 순차 기준선이고,
-X/Y/C8은 실제 ML-KEM 최적화의 누적 통합 경로다.}
-\label{tab:final}
-\begin{tabular}{@{}lrrrl@{}}\toprule
-결과 & 키 생성 & 캡슐화 & 역캡슐화 & 판정\\\midrule
-U 매크로 투영 & $+8.54\%$ & $+10.32\%$ & $+7.82\%$ & 과거 투영\\
-실제 U, 플래시 배치 오류 포함 & $-4.14\%$ & $-19.78/{-19.81}\%$ & $-3.99\%$ & 진단값\\
-실제 U, ITCM 교정 후 (F 대비) & $-1.98\%$ & $-3.72\%$ & $-1.88\%$ & 기각\\
-실제 X/Y/C8 (NTT 경로) & $+2.85\%$ & $+1.54\%$ & $+3.25\%$ & 채택 (구성)\\
-실제 C9 (packing/CBD MVE) & $+1.46\%$ & $+2.67\%$ & $+4.66\%$ & 채택 (구성)\\
-\textbf{X/Y/C8 $+$ C9, 동일 펌웨어 $2\times2$} & $\mathbf{+4.29\%}$ & $\mathbf{+4.16\%}$ & $\mathbf{+7.71\%}$ & \textbf{중간 채택}\\\bottomrule
-\end{tabular}\end{table}
-
-\paragraph{선택 U의 실제 직접 통합.} AC가 b0였다는 코드 감사 뒤, 선택 U의
-r11 고정·하위 연속 b1을 Fiat 10$\times$25/26 X25519 Montgomery
-ladder의 임의 피연산자 경로에 새로 넣었다. 주 비교 F$\to$U는 같은 Fiat X25519와
-같은 x4 Keccak을 사용하므로 스티칭 자체의 차분이다. 첫 측정은 keygen $-4.14\%$,
-encaps $-19.78$--$-19.81\%$, decaps $-3.99\%$였다. 캡슐화 손실이 키생성의 8배라는
-불균형을 추적한 사후 감사는 U 어셈블리(13.3\,KiB의 U8 명령 워킹셋)가 핫 커널과 달리
-일반 코드 플래시에 놓여 있었음을 발견했다. 명령열을 바꾸지 않고 배치만 바꾼 단일 변수
-통제에서 동일 작업의 2-job 고유 손실 $P8-2P4$는 플래시 114.3--114.8k에서 ITCM
-약 6k 사이클로 95\% 줄었고, U8만 ITCM으로 옮긴 추가 통제에서는 음수가 되어 U8의
-구조적 추가 비용 가설이 기각되었다. ITCM으로 교정한 대표 결과는 독립 ABBA($N=100$)
-두 run에서 keygen $-26{,}291$/$-26{,}362$ 사이클($-1.98\%$), encaps
-$-83{,}434$/$-83{,}462$ 사이클($-3.72\%$), decaps $-26{,}298$/$-26{,}302$
-사이클($-1.88\%$)이다. 음수 절감은 악화다. RFC~7748
-KAT 네 개, SHA3 KAT, x4/U primitive KAT, 8-seed \xwing{} full-output/reject,
-timing, stack/canary가 모두 통과했고 두 run 모두 \texttt{harness\_fails=0}이었다.
-별도의 체크포인트 계측은 남은 캡슐화 손실이 잔여 사다리의 직렬화가 아니라, 두 번째
-job을 더 비싼 U8 융합 구간으로 옮긴 순효과(약 $+55.6$k 사이클)임을 귀속했다.
-
-최초 파일럿에서는 스티칭 뒤 잔여 ladder 곱셈에도 후보에만 queue search/modulo
-dispatcher가 남아 있었다. 이를 판정에서 제외하고 측정 전 보정 기록 뒤 direct finish로
-제거했다. 그 결과 파일럿의 손실은 크게 줄었지만 최종 부호는 세 연산 모두 음수였다.
-실제 ladder 제어, 상태 전이와 코루틴/API 경계를 보존하는 비용이 매크로커널에서 숨긴
-슬롯보다 컸으며, X25519 job이 둘인 encaps에서 손실이 가장 컸다.
-
-\paragraph{대조군과 채택 경로.} 굵은 함수 단위 교대는 3:3 단위에서 아무것도 회수하지
-못했지만($-0.7\%$), 같은 재료의 명령어 수준 스티치는 $-8.6\%$였다. 따라서 국소
-교차 발행 자체는 실재한다. 다만 이 국소 결과를 종단간 결과로 외삽할 수는 없다.
-별도로 실제 ML-KEM에 순차 통합한 X/Y/C8(NTT 경로)은 keygen 2.85\%, encaps 1.54\%,
-decaps 3.25\%를, packing/CBD/메시지 변환의 MVE 구현(C9)은 그 위에서 1.46--4.66\%를
-절감했고 각각 정확성 게이트를 통과했다. 두 경로를 같은 펌웨어에서 $2\times2$
-완전요인으로 측정하면(8셀 대칭 순서, 두 독립 실행) 누적 절감은 키생성 4.29\%,
-캡슐화 4.16\%, 역캡슐화 7.71\%이고 요인 간 상호작용은 $-249$--$+170$ 사이클로 0에
-수렴한다---두 최적화는 독립적으로 합산된다. 이는 최종 스택에 들어간 중간 채택
-결과이며, \cref{sec:cumulative}의 누적 실험이 이를 대체한다. 후속 음성 결과 둘도
-기록한다: C9의 바이트 끼워넣기까지
-전부 gather/scatter로 벡터화한 변형은 오히려 1.0--1.3k 사이클 느려 기각했고(벡터
-로드/스토어의 발행 비용이 스칼라 끼워넣기를 이긴다), MVE C9 코드의 ITCM 재배치는
-$\pm$0.5k 사이클 이내로 효과가 없었다---U8의 114k대 플래시 손실과 달리 C9의 작은
-워킹셋은 명령 캐시로 충분하다. AC의 b0+x4 복합 후보도 정확성은 통과했지만 X/Y/C8보다
-세 연산 모두 느려 기각했으며, 선택 U의 직접 측정과 구분한다.
-
-\paragraph{스티칭 계열의 판정.} 선택 U 자체는 같은 Fiat 기준에서 성능 실패다.
-사전 등록된 대체안에 따라 2-스트림 자동화 도구, 원인 분해, 투영 충실도 반전의 직접
-측정은 음성 결과로 보존한다. 그러나 프로젝트 전체의 20\% 목표 판정은 이 중간 단계가
-아니라, 모든 채택 축을 draft-10에서 함께 켠 \cref{sec:cumulative}의 실험으로 내린다.
-
-\section{draft-10 최종 누적 결과}\label{sec:cumulative}
-
-\subsection{준거 이동과 API 프로파일}
-
-초기 wrapper는 2024/039 논문 \cite{XWing24}의 정의를 구현했다. 이후 IETF draft-10
-\cite{XWingDraft10}으로 준거를 옮기면서 세 경계를 동시에 바꿨다. 첫째, combiner 입력은
-$ss_M\mathbin\|ss_X\mathbin\|ct_X\mathbin\|pk_X\mathbin\|\mathrm{XWingLabel}$ 순서다.
-둘째, decapsulation key는 32-byte seed를 SHAKE256으로 96바이트 확장해 ML-KEM과
-X25519 재료를 만든다. 셋째, 캡슐화 전에 FIPS~203의 ML-KEM encapsulation-key 검사를
-수행한다. 이 이동은 부분 적용할 수 없다. 일부만 바꾸면 어느 정의에도 속하지 않는
-제3의 프로토콜이 된다.
-
-역캡슐화는 두 프로파일로 분리했다. \emph{warm}은 미리 확장한 비밀키 객체를 재사용하고,
-\emph{cold}는 매 호출마다 packed 32-byte seed에서 키를 확장한다. 두 수치는 다른 API
-워크로드이므로 하나의 ``decapsulation latency''로 평균하지 않는다. draft-10 공식
-test vector 1에 대해 shared secret 32바이트와 되짚기 decapsulation은 완전 일치했고,
-확보한 public key 앞 128바이트와 ciphertext 앞 62바이트도 일치했다. 공식 문서에서
-확보하지 못한 public key와 ciphertext의 나머지 바이트에 대한 외부 oracle 대조는
-수행하지 못했으며, 이 한계를 결과에 포함한다.
-
-\subsection{한 번에 토글한 채택 스택}
-
-\Cref{tab:stack}의 일곱 전환 축을 하나의 \texttt{d10\_set\_optimizations(mode)}에
-묶었다. A와 B는 프로토콜, 난수 스트림, 측정 함수, 스택, 코드 배치를 공유하고 오직
-이 모드만 다르다. 각 축의 과거 개별 개선률은 서로 다른 분모에서 얻었으므로 여기서
-더하지 않는다.
-
-\begin{table}[t]\centering\small
-\caption{동일 ELF 누적 실험의 일곱 전환 축.}
-\label{tab:stack}
-\begin{tabular}{@{}lp{4.7cm}p{5.7cm}@{}}\toprule
-축 & A: 기준형 & B: 최종형\\\midrule
-X/Y/C8 & 기존 NTT/invNTT와 store 순서 & M85 NTT/invNTT, current-order store fusion\\
-C9 & scalar packing/CBD/message & MVE packing/CBD/message 변환\\
-X06 & basepoint 9에도 일반 ladder & precomputed fixed-base comb\\
-X01 & 원본 \texttt{fe25519\_mul} & 평탄화·재스케줄한 곱셈\\
-X02 & 원본 \texttt{fe25519\_sqr} & 명령 수 불변 재스케줄 제곱\\
-K31-copy & newlib-nano \texttt{memcpy} & 정렬 인식 워드 복사\\
-K31-zero & newlib-nano \texttt{memset} & 정렬 인식 워드 영점화\\\bottomrule
-\end{tabular}
+\begin{table}[t]\centering\footnotesize
+\caption{가장 가까운 공개 비교점과 본 연구의 차이. ``직접 비교 불가''는 장치·API·판본·
+배치가 달라 cycle 순위를 만들지 않았다는 뜻이다.}
+\label{tab:prior-art-boundary}
+\renewcommand{\arraystretch}{1.12}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{2.5cm}>{\raggedright\arraybackslash}p{4.0cm}>{\raggedright\arraybackslash}X@{}}\toprule
+비교점 & 제공 범위 & 본 연구와의 관계\\\midrule
+pqm4·Lenngren & Cortex-M4 ML-KEM/Keccak·X25519 구성요소 & A의 계보; M85 draft-10 전체 API 직접 비교 불가\\
+Fujii--Aranha·Düll 등 & M-profile·소형 MCU의 상수시간 Curve25519 & 체 연산·cswap 선행기법; MVE/X-Wing 통합은 다름\\
+Helium NTT·pqmx & M55/M85 계열의 MVE 격자 커널 & X/Y/C8·C9의 비교점; X25519·combiner 미포함\\
+SLOTHY 계보 & 제약 기반 어셈블리 재스케줄링 & 스케줄 방법의 비교점; 프로토콜 채택 판정은 다름\\
+본 연구 & M85에서 draft-10 A0--B8 전체 API & 조사한 공개 항목 중 완전한 M85 X-Wing 기준선은 없어 내부 동일 ELF 인과 비교\\\bottomrule
+\end{tabularx}
 \end{table}
 
-\subsection{동일 ELF A-B-B-A 측정}
+\FloatBarrier
+\section{아키텍처 특화 공동 최적화 설계}\label{sec:design}
 
-EK-RA8M1의 Cortex-M85를 480\,MHz로 고정하고 DWT \texttt{CYCCNT}로 각 셀을 100회
-측정해 중앙값을 취했다. 실행 순서는 A-B-B-A이며, 같은 ELF를 독립적으로 두 번
-플래시해 총 네 paired 효과를 얻었다. 각 pair의 사이클 감소율은
-\begin{equation}
-  g(A,B)=100\frac{A-B}{A}
-\end{equation}
-으로 계산하고, 최종값은 네 $g$ 중 최솟값으로 정했다. 이는 평균보다 불리하지만 run
-선택에 따른 낙관을 막는다.
+\subsection{1단계: 동일 규격 안의 여섯 독립 축}
 
-\begin{table}[t]\centering
-\caption{draft-10 기준형 A와 최종형 B의 동일 ELF 누적 결과. 범위는 독립 두 run의
-A-B-B-A 네 위치에서 관측한 중앙값이며, 마지막 열은 네 paired 효과의 최솟값이다.}
+all-off A와 all-on B는 draft-10의 combiner 순서, packed 32\,B secret key,
+64\,B encapsulation seed와 FIPS 203 encapsulation-key check를 공유한다. B에서 켜는
+여섯 독립 축은 표~\ref{tab:adopted}에 정리했다. X/Y/C8은 하나의 NTT·저장 토글이고,
+K31은 memcpy와 memset을 함께 전환하는 하나의 토글이다.
+
+\begin{table}[t]\centering\footnotesize
+\caption{all-on B의 여섯 최적화 축과 적용 경계.\protect\\ 직접 기여는
+표~\ref{tab:attribution}에서 같은 실행의 분모로 비교한다.}
+\label{tab:adopted}
+\renewcommand{\arraystretch}{1.25}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{1.55cm}>{\raggedright\arraybackslash}p{4.0cm}>{\raggedright\arraybackslash}X@{}}\toprule
+축 & A$\to$B 변환 & 제거한 비용과 적용 경계\\\midrule
+X/Y/C8 & 기존 NTT/invNTT/store $\to$ pqmx M85와 current-order 저장 & NTT 경로 비용과 forward 뒤 scalar \texttt{rev4}; ML-KEM 다항식 경로\\\addlinespace[2pt]
+C9 & 11개 scalar 변환 $\to$ MVE v1 & packing·CBD·message 변환의 scalar 데이터 병렬 비용; byte 삽입은 scalar 유지\\\addlinespace[2pt]
+X06 & basepoint ladder $\to$ $w=3$ signed comb & 반복 ladder, 조건부 negate와 제곱 사슬의 중간 저장·적재; fixed-base 호출만 적용\\\addlinespace[2pt]
+X01 & 원본 체 곱셈 $\to$ 고정 프레임·재스케줄 & SP 갱신 의존과 명령 대기; X25519 field multiplication\\\addlinespace[2pt]
+X02 & 원본 체 제곱 $\to$ 재스케줄 & 명령 수를 늘리지 않은 의존 간격 조정; X25519 field squaring\\\addlinespace[2pt]
+K31 & newlib-nano $\to$ 정렬 인식 워드 루프 & 고정 크기 buffer의 byte 단위 복사·초기화; 정렬·길이에만 분기\\\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{ML-KEM: NTT·저장 융합과 데이터 변환 MVE화}
+
+X/Y는 pqmx의 Cortex-M85 forward/inverse NTT를 기존 Plantard 경로의 domain 계약에
+맞춰 연결한다. inverse 입력의 centered 범위 $[-1664,1664]$를 보드에서 확인하고,
+host residue oracle와 8-seed full-byte 동치를 통과한 factor만 사용했다. C8은
+consumer마다 scalar \texttt{rev4}를 수행하지 않고 pqmx의 current-order MVE
+structure-store를 재사용해 forward가 필요한 순서를 직접 내도록 한다. basemul,
+matrix accumulation과 serialization 계약은 바꾸지 않는다.
+
+C9는 CBD, 12-bit serialization, 10/4-bit compression·decompression, 두 비교 함수와
+message 변환을 포함한 11개 scalar C 함수를 \texttt{arm\_mve.h} 기반 고정 반복
+구현으로 교체한다. 양자화는 MVE로 처리하되 v1에서 byte 삽입은 scalar로 남긴다.
+탐색 단계의 단일축 ELF는 채택 방향을 정하는 데만 사용했다. 서로 다른 ELF의 비율을
+더하지 않고, 최종 효과와 직접 기여는 각각 표~\ref{tab:cumulative}과
+표~\ref{tab:attribution}의 동결 ELF에서 같은 분모로 다시 잰다.
+
+\subsection{X25519와 공통 메모리 경로}
+
+X06은 keygen의 $pk_X$와 encaps의 $ct_X$ 두 fixed-base 호출에서 basepoint 9를 일반
+Montgomery ladder로 처리하는 대신 $w=3$ signed comb와 33,024\,B flash 표를 사용한다.
+선택 부호는 field negate 대신 $z_3/t_3$ 포인터를 상수시간으로 맞바꾸고, 254회 제곱
+사슬은 중간 값을 레지스터에 유지해 매 호출의 store/load를 제거한다. variable-base
+호출과 warm 역캡슐화에는 적용 지점이 없으며, 표~\ref{tab:attribution}의 warm 16 cycle은
+검출 가능한 기여가 아니라 측정잡음 규모로 해석한다.
+
+X01은 \texttt{fe25519\_mul}의 push/pop 기반 프레임을 고정 SP 오프셋으로 평탄화한 뒤
+명령을 재배치하고, X02는 \texttt{fe25519\_sqr}의 채택 심볼을 94명령 그대로 재배치한다.
+K31은 주소 정렬과 길이에만 분기하는 word \texttt{memcpy}/\texttt{memset}을 사용한다.
+후보 심볼은 두 함수 합계 264\,B이며, 컴파일러가 인라인한 복사는 교체·계수 범위 밖이다.
+
+\FloatBarrier
+\subsection{2단계: MVE 조건부 교환과 두 출력의 paired inversion}
+
+1단계 누적 구현 뒤 남은 X25519 비용에는 두 변환을 적용했다. 첫째, variable-base
+Montgomery ladder의 16개 32-bit word 조건부 교환을 scalar xor-mask 루프에서 네 개의
+128-bit MVE load/xor/and/xor/store 묶음으로 바꿨다. 마스크가 0 또는
+\texttt{0xffffffff}인 고정 명령 경로를 유지하며, 다른 알고리즘의 상태를 동시에
+살려 두지 않으므로 스티칭과 달리 추가 스칼라 레지스터 분할이 필요하지 않다.
+
+둘째, 캡슐화에는 같은 ephemeral scalar로 만드는 fixed-base ciphertext와
+variable-base 공유 비밀의 projective 끝점 두 개가 동시에 존재한다. 각 분모를 따로
+역원화하는 대신, 0이 아닌 분모 $d_1,d_2$에 대해
+$t=(d_1d_2)^{-1}$를 한 번 계산하고 $d_1^{-1}=d_2t$,
+$d_2^{-1}=d_1t$로 복원한다. 0 분모는 상수시간 canonical zero test 뒤 1로 대체하고
+마지막 출력을 마스킹해 기존 low-order/all-zero 동작을 보존한다. 역캡슐화에는 X25519
+출력이 하나뿐이므로 이 변환을 적용하지 않는다. 이 두 축은 알려진 연산 기법의 새로운
+암호학적 primitive가 아니라, \xwing{}의 데이터흐름과 M85 실행 자원에 맞춘 구현 변환이다.
+
+\FloatBarrier
+\section{평가 방법}\label{sec:methods}
+
+\subsection{기준선, 장치와 반복 단위}
+
+주 비교의 A/B는 같은 draft-10 입력, API, 동결 ELF와 링크 배치를 공유한다. 런타임
+디스패처가 두 경로에 공통으로 있으므로 A$\to$B 대응효과만 성능 개선률로 사용하고,
+이 ELF의 절대 cycle을 디스패처 없는 배포형 값으로 해석하지 않는다. 판본·API·컴파일러·
+배치가 다른 외부 cycle도 분모로 쓰지 않는다.
+
+역캡슐화 warm은 2,464\,B로 확장한 decapsulation key를 재사용하는 경로이고, cold는
+packed 32\,B seed에서 \texttt{expandDecapsulationKey}를 수행한 뒤 역캡슐화한다.
+cold와 warm은 다른 workload이며 하나의 latency로 합치지 않는다. 디스패처 없는 all-on
+B의 별도 절대값은 키생성 627,069, 캡슐화 988,456, warm 780,020, cold
+1,406,887 cycle이다. 이 값은 같은-ELF 상대효과의 분모와 섞지 않는다.
+
+장치는 EK-RA8M1(Cortex-M85, 480\,MHz), 컴파일러는 GCC 13.2.1 \texttt{-O2}다.
+코드는 ITCM, 데이터와 stack은 DTCM에 두고 DWT CYCCNT에서 빈 하네스 25 cycle을
+차감한다. 각 셀은 100회 중앙값이고, 별도 재플래시가 반복 단위다. 실험별 반복과
+효과 수는 표~\ref{tab:repetitions}에 고정한다.
+
+\begin{table}[H]\centering\footnotesize
+\caption{주 결과와 귀속 실험의 독립 반복 단위. 셀 안의 $N=100$은 중앙값 계산용이다.}
+\label{tab:repetitions}
+\renewcommand{\arraystretch}{1.08}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{2.5cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{3.1cm}@{}}\toprule
+실험·용도 & 독립 반복과 순서 & 본문 역할\\\midrule
+DJ 최종 A0/B8 & 재플래시 5회; A0--B8--B8--A0; 연산별 10 대응효과 & 최초 대 최종 headline\\
+CY 1단계 A/B & 재플래시 5회; ABBA; 연산별 10 대응효과 & 여섯 축의 단계 효과\\
+DH 2단계 경로 & 재플래시 2회; 후보 순서 회전; 셀당 100회 & cswap·paired inversion 귀속\\
+CU leave-one-out & 재플래시 6회; 축·모드당 네 실행 내 대비 & 축별 기여와 상호작용\\\bottomrule
+\end{tabularx}
+\end{table}
+\begin{table}[H]\centering\footnotesize
+\caption{보조 진단의 독립 반복과 사용 범위.}
+\label{tab:repetitions-diagnostic}
+\renewcommand{\arraystretch}{1.08}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{2.7cm}>{\raggedright\arraybackslash}X@{}}\toprule
+실험 & 반복과 사용 범위\\\midrule
+DF·DI·DD & 각 재플래시 2회; micro 채택 gate, dual-beat 가설, DWT-off PMU 진단\\
+CW·CX & 8-input 재플래시 6회; timing 유효 재플래시 2회, 클래스당 3,000표본·24 $t$값\\
+CV+CZ & 재플래시 7회, 연산당 14효과; 스티칭 후보 기각에만 사용\\
+DE & A/B 독립 링크 각 2회, 진단 ELF 각 1회; footprint·stack\\\bottomrule
+\end{tabularx}
+\end{table}
+\FloatBarrier
+
+CU와 CW의 네 대비는 한 재플래시 안의 두 A와 두 B 셀 중앙값의 모든 조합이며
+독립 표본이 아니다. 하드웨어 반복 단위는 표의 재플래시 수다.
+
+이 보드 개체의 ITCM \texttt{0x18}과 \texttt{0xE0}에서 각각 8-byte 쓰기 고착 단위를
+관찰했다. \texttt{itcm\_pad.c}의 256-byte 링크 패드로 모든 측정 코드를
+\texttt{0x100} 이후에 배치해 회피했고, 플래시 읽기 검증과 각 실행 전 KAT를 통과한
+경우만 채택했다. 정상 ITCM을 가진 두 번째 보드 반복은 미측정이다.
+
+\subsection{정확성, 입력과 상수 시간 검증 범위}\label{sec:ct}
+
+정확성 검사는 RFC 7748 KAT \cite{RFC7748}, SHA3-256 KAT, pqm4 위의
+ML-KEM-768 왕복·암묵적 거부 \cite{FIPS203}와 8-seed A/B 전 바이트 비교를 포함한다.
+별도 KAT ELF에서는 draft-10 Appendix C vector 1을 자동 파싱해 public key 1,216\,B,
+ciphertext 1,120\,B, shared secret 32\,B와 역캡슐화 결과 전량을 보드 출력과 대조했다.
+그 ELF는 배열 추가로 성능 ELF보다 text가 2,144\,B 커서 cycle은 폐기하고 정확성
+게이트로만 사용했다.
+
+주 B에는 고정/무작위 ciphertext 타이밍 검정을 수행했다. 두 클래스는 같은 버퍼와
+측정 전 \texttt{memcpy}를 사용한다. 클래스당 3,000표본, 별도 재플래시 2회와
+p100/p90/p75/p50 절단의 24개 Welch $t$값이 모두 $|t|<2.0$이었고, B warm/cold의
+최댓값은 1.99/1.49였다. 이는 해당 입력 분류에서 누설을 검출하지 못했다는 결과일 뿐,
+비밀키 의존 누설이나 캐시·전력 채널의 부재를 증명하지 않는다.
+
+2단계 최종형은 두 독립 플래시에서 RFC 7748/SHA3 KAT, 8개 결정적 draft-10 입력의
+pk/sk/ct/enc/warm/cold/reject 전 바이트 동치, warm/cold 일치와 low-order 입력 3개를
+통과했고 \texttt{harness\_fails=0}이었다. 이 검증은 paired inversion의 0 분모 처리와
+MVE 조건부 교환이 기존 API 출력을 바꾸지 않았는지 확인하는 2단계 채택 게이트다.
+최초 A0와 최종 B8을 직접 비교한 DJ도 같은 검사를 별도 재플래시 5회 반복했고,
+모든 실행에서 저차점·거부·stack guard mismatch와 \texttt{harness\_fails}가 0이었다.
+
+\FloatBarrier
+\section{종단 간 성능 결과}\label{sec:results}
+
+\subsection{최초 A0 대 최종 B8의 직접 동일 ELF 결과}\label{sec:final-direct}
+
+표~\ref{tab:final-direct}이 본 연구의 주 성능 결과다. A0는 여섯 1단계 축과 두 2단계
+변환을 모두 끄고, B8은 최종 채택한 여덟 변환을 사용한다. 하나의 ELF에서
+A0--B8--B8--A0 순서를 재플래시 5회 반복해 인접한 AB/BA의 10개 대응효과를 얻었다.
+
+\begin{table}[H]\centering\small
+\caption{draft-10 최초 A0 대 최종 B8의 직접 동일 ELF 결과. 각 셀은 100회 중앙값이며
+개선률 범위는 5회 재플래시의 인접 AB/BA 10개 대응효과다.}
+\label{tab:final-direct}
+\setlength{\tabcolsep}{2.2pt}
+\begin{tabular}{lrrrr}\toprule
+연산 & A0 범위 (cycle) & B8 범위 (cycle) & 개선률 범위 & 보수적 값\\\midrule
+키생성 & 870,869--870,970 & 700,834--700,865 & 19.521--19.534\% & \textbf{19.52\%}\\
+캡슐화 & 1,326,924--1,326,931 & 1,064,853--1,064,862 & 19.750--19.751\% & \textbf{19.75\%}\\
+역캡슐화 warm & 934,803--934,837 & 825,746--825,793 & 11.661--11.670\% & \textbf{11.66\%}\\
+역캡슐화 cold & 1,802,626--1,802,655 & 1,523,463--1,523,502 & 15.484--15.488\% & \textbf{15.48\%}\\\bottomrule
+\end{tabular}
+\end{table}
+\FloatBarrier
+
+다섯 실행은 동일 ELF/SREC와 flash readback을 사용했고 정확성 gate를 모두 통과했다.
+이 결과에는 양쪽에 공통인 실험용 mode 조회와 두 경로 코드 배치가 포함되므로 절대
+cycle을 dispatcher-free 배포값으로 해석하지 않는다. 대신 같은 조건의 A0--B8 차이는
+최초에서 최종까지의 직접 효과다. 뒤의 단계별 표는 변환 귀속을 위한 별도 진단이며 이
+주 결과에 더하거나 곱하지 않는다.
+
+\subsection{1단계 여섯 축의 동일 ELF 귀속}\label{sec:cumulative}
+
+표~\ref{tab:cumulative}은 최종 결과를 여섯 1단계 축에서 분해하기 위한 단계 진단이다. A와 B는 같은 draft-10
+입력, API, 동결 ELF와 링크 배치를 공유하고 여섯 최적화 토글만 다르다. 별도
+재플래시 5회의 AB/BA 두 대응효과, 즉 모드별 10개 값의 전체 범위와 최솟값의
+두 자리 반올림을 보고한다.
+
+\begin{table}[H]\centering\small
+\caption{draft-10 동일 동결 ELF의 누적 all-off A$\to$all-on B 효과. 범위는 별도
+재플래시 5회, ABBA, 셀당 $N=100$ 중앙값에서 얻은 모드별 10개 대응값이다.}
 \label{tab:cumulative}
+\setlength{\tabcolsep}{2.2pt}
+\begin{tabular}{lrrrr}\toprule
+모드 & A 범위 (cycle) & B 범위 (cycle) & 개선률 범위 & 최솟값\\\midrule
+키생성 & 870,370--870,444 & 644,356--644,390 & 25.964--25.972\% & \textbf{25.96\%}\\
+캡슐화 & 1,321,221--1,321,241 & 1,053,681--1,053,699 & 20.248--20.250\% & \textbf{20.25\%}\\
+역캡슐화 warm & 934,139--934,155 & 829,299--829,315 & 11.222--11.224\% & \textbf{11.22\%}\\
+역캡슐화 cold & 1,801,432--1,801,449 & 1,471,797--1,471,828 & 18.297--18.299\% & \textbf{18.30\%}\\\bottomrule
+\end{tabular}
+\end{table}
+\FloatBarrier
+
+다섯 실행 모두 KAT, \texttt{harness\_fails=0}, 8개 종잣값의 pk/sk/ct/ss와
+암묵적 거부 바이트 동치, stack canary와 동일 flash readback을 통과했다. 개선률
+범위 폭은 0.002--0.009\%p로 사전등록한 0.05\%p보다 작았다. 네 모드의 단순평균은
+18.93\%지만 warm과 cold는 다른 workload이므로 평균을 대표 성능으로 사용하지 않고
+연산별 값과 11.22--25.96\%의 최솟값 범위를 보고한다.
+
+\subsection{2단계 잔여 병목의 전체 경로 효과}\label{sec:residual}
+
+표~\ref{tab:residual}은 1단계 누적 승자를 새 동일 ELF의 기준 A로 두고 MVE 조건부
+교환(C), paired inversion(B), 둘의 결합(D)을 비교한 결과다. 각 값은 별도 플래시 한
+번에서 100회 측정한 중앙값이며 표에는 두 플래시의 범위를 보인다.
+
+\begin{table}[H]\centering\footnotesize
+\caption{2단계 동일 ELF 캡슐화 결과. 개선률은 각 행 A에 대한 두 독립 플래시의
+대응값 범위이며, 1단계 절대 cycle과 섞지 않는다.}
+\label{tab:residual}
+\setlength{\tabcolsep}{2.5pt}
 \begin{tabular}{lrrr}\toprule
-연산 & A 범위 (cycle) & B 범위 (cycle) & 보수적 감소율\\\midrule
-키생성 & 870,398--870,412 & 644,346--644,390 & \textbf{25.967\%}\\
-캡슐화 & 1,321,225--1,321,235 & 1,053,684--1,053,691 & \textbf{20.249\%}\\
-역캡슐화 (warm) & 934,141--934,160 & 829,297--829,306 & \textbf{11.224\%}\\
-역캡슐화 (cold) & 1,801,440--1,801,455 & 1,471,808--1,471,818 & \textbf{18.298\%}\\\bottomrule
+모드 & A 범위 (cycle) & 후보 범위 (cycle) & A 대비 개선\\\midrule
+MVE cswap & 1,128,441--1,128,448 & 1,114,176--1,114,177 & 1.264--1.265\%\\
+paired inversion & 1,128,441--1,128,448 & 1,095,069--1,095,076 & 2.957\%\\
+둘 다 & 1,128,441--1,128,448 & \textbf{1,080,740--1,080,749} & \textbf{4.226--4.228\%}\\\bottomrule
+\end{tabular}
+\end{table}
+\begin{table}[H]\centering\footnotesize
+\caption{2단계 MVE cswap의 역캡슐화 결과.}
+\label{tab:residual-decaps}
+\setlength{\tabcolsep}{3.0pt}
+\begin{tabular}{lrrr}\toprule
+모드 & A 범위 (cycle) & MVE 범위 (cycle) & A 대비 개선\\\midrule
+warm & 839,319--839,328 & \textbf{824,987--824,991} & \textbf{1.707--1.709\%}\\
+cold & 1,553,257--1,553,270 & \textbf{1,538,838--1,538,852} & \textbf{0.928\%}\\\bottomrule
+\end{tabular}
+\end{table}
+\FloatBarrier
+
+결합 D는 paired inversion 단독보다도 1.308--1.309\% 빨라 두 변경이 같은 병목을
+단순 대체하지 않고 합성됨을 보였다. keygen은 두 변환의 적용 지점이 없어 변하지 않는다.
+2단계 ELF에는 모든 모드에 공통인 실험용 scalar/MVE 조회가 추가되어 1단계와 절대
+cycle이 다르다. 따라서 두 단계의 개선률을 곱한 수치는 설명용 추정이 될 수는 있어도,
+본 논문의 단일 동일 ELF 실측 결과로 주장하지 않는다.
+
+\subsection{PMU 퇴직 명령 수 보조 진단}\label{sec:pmu}
+
+DWT cycle counter가 PMU 이벤트 계수와 충돌하는 구성을 분리하기 위해 DWT를 끈 별도
+ELF를 두 번 독립 플래시했다. software increment 100회와 100,000 NOP의 16-bit
+연결 계수기를 먼저 검증하고, A--B--B--A의 cycle과 \texttt{INST\_RETIRED}를 쌍으로
+계수했다. 두 실행의 모드당 네 값에서 instruction은 셀 간 동일했다.
+
+\begin{table}[H]\centering\small
+\caption{DWT-off PMU 보조 진단. cycle은 모드당 네 값의 중앙값이며 instruction은
+동일한 네 값이다. 이 cycle은 표~\ref{tab:cumulative}의 DWT 결과와 합치지 않는다.}
+\label{tab:pmu}
+\begin{tabular}{lrrrr}\toprule
+연산 & A cycle & B cycle & A instruction & B instruction (감소)\\\midrule
+키생성 & 865,820 & 659,932 & 990,042 & 721,891 (27.08\%)\\
+캡슐화 & 1,317,054 & 1,069,764 & 1,408,965 & 1,132,096 (19.65\%)\\
+역캡슐화 warm & 929,823 & 828,913 & 1,045,841 & 949,308 (9.23\%)\\
+역캡슐화 cold & 1,792,330 & 1,487,465 & 2,030,943 & 1,670,099 (17.77\%)\\\bottomrule
+\end{tabular}
+\end{table}
+\FloatBarrier
+
+따라서 주 DWT 결과의 방향은 PMU cycle에서도 유지됐고, 개선은 네 연산 모두에서 퇴직
+명령 감소를 동반했다. 반면 \texttt{STALL\_OP}과 front/back-end 세 이벤트는 모든
+셀에서 0이어서 stall이 없다는 뜻으로 해석하지 않고 지원·구성 미확인으로 남긴다.
+
+\subsection{개별 기여와 상호작용}\label{sec:attribution}
+
+leave-one-out은 B에서 축 $i$만 끈 $B_{-i}$를 같은 ELF에서 비교한다. 축별
+$B_{-i}-B$는 여섯 실행에 있고, 같은 실행의 A--B 셀은 run 2--6에 있다.
+표~\ref{tab:attribution}은 셀·합·잔차의 항등식을 보존하기 위해 A--B를 포함한 첫 완전
+실행인 run 2를 한 예로 보인다. 유리한 축별 셀을 실행 사이에서 골라 합한 값이 아니며,
+전 실행 범위는 표 뒤에 별도로 보고한다.
+
+\begin{table}[H]\centering\footnotesize
+\caption{leave-one-out의 첫 완전 실행(run 2)에서 계산한 $B_{-i}-B$ 직접 기여와
+같은 실행의 가법 분해. 단위는 cycle이며 열 순서는 keygen/encaps/warm/cold다.}
+\label{tab:attribution}
+\renewcommand{\arraystretch}{1.05}
+\begin{tabular}{lrrrr}\toprule
+축 & keygen & encaps & warm & cold\\\midrule
+X06 fixed-base & 152,860 & 152,710 & 16 & 152,732\\
+X/Y/C8 NTT/store & 22,556 & 18,002 & 28,180 & 50,808\\
+C9 MVE 변환 & 11,120 & 33,300 & 39,386 & 50,552\\
+K31 memcpy/memset & 12,660 & 10,042 & 9,906 & 21,380\\
+X02 체 제곱 & 3,488 & 22,770 & 19,296 & 22,794\\
+X01 체 곱셈 & 4,182 & 11,950 & 7,632 & 11,898\\\midrule
+합 & 206,866 & 248,774 & 104,416 & 310,164\\
+같은 ELF A--B & 226,096 & 268,196 & 104,717 & 329,445\\
+상호작용 잔차 & 19,230 (8.5\%) & 19,422 (7.2\%) & 301 (0.3\%) & 19,281 (5.9\%)\\\bottomrule
+\end{tabular}
+\end{table}
+\FloatBarrier
+
+축별 기여의 여섯 재플래시 간 최대 폭은 X06 keygen의 1,058 cycle이다. 실행 간 범위는
+표~\ref{tab:attribution-ranges}와 같다.
+
+\begin{table}[H]\centering\footnotesize
+\caption{keygen·encaps leave-one-out 실행 간 범위.\protect\\ 기여 합은 run 1--6,
+A--B·잔차·설명 비율은 A--B 셀을 함께 가진 run 2--6의 범위다.}
+\label{tab:attribution-ranges}
+\renewcommand{\arraystretch}{1.05}
+\begin{tabular}{lrr}\toprule
+항목 & keygen & encaps\\\midrule
+기여 합 (cycle) & 205,927--207,076 & 248,549--249,616\\
+A--B (cycle) & 225,299--226,330 & 267,996--268,465\\
+잔차 (cycle) & 19,230--19,410 & 18,849--19,508\\
+설명 비율 (\%) & 91.39--91.49 & 92.72--92.98\\\bottomrule
 \end{tabular}
 \end{table}
 
-네 경로 모두 양의 효과다. 키생성과 캡슐화는 사전 등록한 20\% 목표를 넘었고, warm과
-cold 역캡슐화는 개선됐지만 20\%에는 못 미쳤다. 연산마다 호출 구성과 분모가 다르므로
-네 백분율의 단순 평균을 ``전체 개선률''로 보고하지 않는다.
-
-\paragraph{정확성과 재현성.} 두 run 모두 RFC~7748, FIPS~203, SHA3/SHAKE KAT와
-전체 하네스가 통과했고 \texttt{harness\_fails=0}이었다. A/B 8-seed의 public key,
-secret key, ciphertext, encapsulated secret, warm/cold decapsulated secret, 훼손
-ciphertext의 암묵적 거부 출력은 모두 바이트 단위 mismatch 0이었다. timed 셀의 마지막
-출력과 stack canary도 mismatch/failure 0이었다. 같은 run 안의 동일 모드 drift는 최대
-0.00683\%, 독립 run의 같은 위치 효과 차이는 최대 0.00116\%p로, 사전 등록한 0.3\%
-한계를 크게 밑돌았다. 두 플래시의 code-flash readback 853,584바이트는 같은 SHA-256
-\texttt{386A7ACD...BBCF5}를 냈다.
-
-\subsection{배포형 절대 성능과 해석 경계}
-
-동일 ELF A/B에는 런타임 디스패처가 양쪽에 존재한다. 따라서 \cref{tab:cumulative}의
-절대 cycle은 상대효과 산출에만 쓰고, 최종형 절대값은 디스패처를 제거한 별도 빌드에서
-측정했다(\cref{tab:absolute}).
-
-\begin{table}[t]\centering
-\caption{디스패처 없는 draft-10 최종형의 절대 성능.}
-\label{tab:absolute}
-\begin{tabular}{lrl}\toprule
-연산 & cycle & 프로파일\\\midrule
-키생성 & \textbf{627,069} & packed 32-byte seed 입력\\
-캡슐화 & \textbf{988,456} & 64-byte encapsulation seed\\
-역캡슐화 & \textbf{780,020} & warm, 확장키 캐시\\
-역캡슐화 & \textbf{1,406,887} & cold, packed 32-byte seed\\\bottomrule
+\begin{table}[H]\centering\footnotesize
+\caption{warm·cold leave-one-out 실행 간 범위. 반복 범위의 정의는
+표~\ref{tab:attribution-ranges}와 같다.}
+\label{tab:attribution-ranges-decaps}
+\renewcommand{\arraystretch}{1.05}
+\begin{tabular}{lrr}\toprule
+항목 & warm & cold\\\midrule
+기여 합 (cycle) & 104,344--105,098 & 309,992--311,334\\
+A--B (cycle) & 104,717--105,190 & 329,268--330,231\\
+잔차 (cycle) & 1--301 & 18,853--19,281\\
+설명 비율 (\%) & 99.71--99.999 & 94.15--94.29\\\bottomrule
 \end{tabular}
 \end{table}
 
-cold는 warm의 1.804배이며 차이 626,867 cycle은 키생성 627,069 cycle과 0.03\% 안에서
-일치한다. 즉 cold 추가 비용은 사실상 \texttt{expandDecapsulationKey}가 수행하는
-키생성 한 번이다. 측정 ELF의 SHA-256은
-\texttt{E9D32784...E334}이고, 전체 소스, ELF/SREC/map, 두 원시 로그와
-해시 manifest를 함께 동결했다. 이 결과는 한 EK-RA8M1 개체와 현재 코드·데이터 배치에
-대한 cycle 결과다. 다른 Cortex-M85 구현, 에너지, Cortex-M55에 대해서는 미측정이다.
+fixed-base가 관여하는 세 모드의 잔차는 약 19k cycle로 유사하지만 2축 동시 off를
+재지 않았으므로 어느 상호작용 쌍에도 인과적으로 배분하지 않는다. 같은 실행의 A--B를
+분모로 한 X06 비중은 keygen 67.37--67.61\%, encaps 56.58--56.94\%, cold
+46.11--46.36\%다. X06은 세 모드에서 가장 큰 단일 축이지만 일괄적으로 ``3분의 2''는
+아니다. 적용 지점이 없는 warm의 X06은 $-56$--$+16$ cycle로 잡음 규모였고, 나머지
+다섯 축은 통합 후 모든 실행에서 양의 기여를 유지했다.
 
-\section{상수 시간}\label{sec:ct}
+\subsection{입력 강건성과 자원비용}\label{sec:resources}
 
-스티칭은 구성상으로도 측정상으로도 타이밍 채널을 추가하지 않는다. \emph{구조적으로}:
-이 변환은 컴파일 시점에만 일어난다---명령어를 재정렬하고, 레지스터를 이름 바꾸고,
-(\texttt{-ffixed} 컴파일을 통해) 고정된 스택/DTCM 오프셋으로의 스필을 삽입한다.
-분기는 하나도 넣지 않고 비밀 의존 주소 지정도 없다. 두 입력 스트림 모두 애초에 상수
-시간이다(fiat-crypto의 생성 보장, Lenngren의 마스킹된 cswap 사다리, Keccak은 고정
-순열, 4-way 큐 길이는 연산당 상수 43--45). M85에서 정수와 MVE 지연은 오퍼랜드
-독립적이고 ITCM/DTCM은 0-wait이므로, 고정된 명령어 시퀀스는 고정된 사이클을 함의한다.
-\emph{경험적으로}: 스티치된 fiat$\times$MVE 커널을 서로 무관한 두 입력 집합에서 측정하면
-중앙값 $\Delta = 0$ 사이클이고($\times$1000 루프 해상도에서 979,065 대 979,065),
-Unicorn 명령어 수도 모든 커널에서 두 입력에 대해 일치한다. dudect 스타일 통계는 돌리지
-않았다. 이 구성에서 값 의존적 타이밍이 발생할 물리적 경로가 없으므로, 두 입력 점검은
-1차 증거가 아니라 확인에 해당한다. 전력 부채널은 범위 밖이다.
+8개 $(sk,ct)$를 반복마다 바꾼 별도 재플래시 6회의 모드당 24개 실행 내 셀 대비에서 warm은
+12.97--13.02\%, cold는 18.58--18.62\% 개선됐다. 표~\ref{tab:cumulative}과 부호와
+크기는 일치하지만 buffer와 cache가 RAM에 있고 배치도 달라 수치를 합치거나 차이를
+특정 원인에 귀속하지 않는다.
 
-\section{관련 연구}\label{sec:related}
+\begin{table}[H]\centering\footnotesize
+\caption{누적 최적화의 확인 자원비용. expCJ 결합 ELF와 dispatcher-free 최소 배포
+프록시를 구분한다.}
+\label{tab:cumulative-resources}
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.12}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{2.55cm}>{\raggedright\arraybackslash}X@{}}\toprule
+계보·대상 & 확인값과 해석 경계\\\midrule
+expCJ 결합 ELF & text/data/bss 846,028/7,572/393,740\,B, stack 11,560\,B; A/B별 증분이 아님\\
+A 최소 프록시 & text/data/bss 30,756/4/1,470\,B; 비휘발 30,760\,B, 정적 RAM 1,474\,B\\
+B 최소 프록시 & text/data/bss 63,028/2,040/1,474\,B; 비휘발 65,068\,B, 정적 RAM 3,514\,B\\
+최소 B$-$A & 비휘발 $+34,308$\,B ($+111.53\%$), 정적 RAM $+2,040$\,B ($+138.40\%$)\\
+X06 & flash 표 33,024\,B; 최소 비휘발 증가의 96.25\%; 표의 ITCM 증분 0\\
+K31 & 계측을 제외한 후보 wrapper 두 심볼 $132\times2=264$\,B\\
+1단계 연산별 stack & A와 B 모두 keygen/encaps/warm/cold 9,176/6,664/6,600/10,264\,B; 64\,B guard 훼손 0\\
+최종 직접 비교 stack & A0와 B8 모두 10,360/7,848/7,784/11,448\,B; guard 훼손 0. 공통 비교 wrapper 포함\\
+2단계 연결 심볼 상계 & X25519 본체 증가와 retained helper 합계 922\,B, 모드 상태 4\,B; 배포형 순증가의 정확한 값은 아님\\\bottomrule
+\end{tabularx}
+\end{table}
+\FloatBarrier
 
-Intel의 스티칭 \cite{Intel10}이 기원이다. 그것은 수작업 배치이고, 낭비 쪽을 측정하지
-않았으며, 대칭 프리미티브 전용이고, 비순차 x86 전용이다.
-\slothy{} \cite{Slothy22,SlothyM7_25}는 단일 스트림을 초최적화한다. 우리의 확장은
-2-스트림 문제를---어떤 고정 분할 수작업 기법으로도 표현할 수 없는 스트림 간 레지스터
-재할당까지 포함하여---솔버 문제로 만든다. Becker--Kannwischer의 스칼라/벡터 Keccak
-\cite{BK22}은 Cortex-A에서 혼합 레지스터 파일 실행을 개척했고, 우리의 짝짓기 스펙트럼
-실험은 그것이 순차 실행 M 계열에서 언제 통하는지를 정확히 정량화한다(로드는 짝을 이루고
-스토어는 막는다). 멀티코어 하이브리드 병렬화 \cite{DualCore25,ParHyb26}는 직교적이다.
-그쪽은 중첩을 실리콘으로 사고, 우리는 발행 슬롯에서 회수한다. M4에서의 하이브리드 비용
-회계 \cite{Sim26}는 우리 기준선을 고정해 주었고 우리가 사전 등록한 스트림 균형 추정치를
-제공했다. M85 측정은 그 방향을 확인해 주며, X25519가 더 긴 스트림이고 상한을 정하는
-것은 슬롯 용량이 아니라 커버리지 희석임을 보인다. ML-KEM 구현 기준선: pqm4 \cite{pqm4},
-FIPS~203 \cite{FIPS203}.
+따라서 11.22--25.96\%는 명확한 시간--공간 교환을 포함한다. B의 비휘발 증가는
+34,308\,B이며 그중 33,024\,B가 fixed-base 표다. 두 독립 링크는 런타임 디스패처와
+반대 경로 핵심 심볼을 제거했고 모드별 2회 ELF 해시가 일치했다. 다만 이 절대값은
+동일 BSP와 결정적 시험 RNG를 포함한 배포 프록시이지 순수 라이브러리 크기가 아니므로,
+다른 플랫폼의 수치와 정규화한 Pareto 순위는 주장하지 않는다.
 
+X06의 시간--공간 교환을 분리하면 표~\ref{tab:x06-pareto}와 같다. X06을 끄면
+33,024\,B 표를 제거할 수 있지만 warm을 제외한 세 모드에서 약 152k cycle을 다시 낸다.
+이는 1단계 B와 $B_{-X06}$의 비교이며, paired inversion은 fixed-base가 만든 두 점의
+동시 변환을 사용하므로 X06을 뺀 최종 B8 대안의 성능으로 해석하지 않는다.
+
+\begin{table}[H]\centering\footnotesize
+\caption{1단계 X06 fixed-base의 flash--cycle 선택지. cycle은 X06을 끌 때의 증가 범위이며
+warm의 범위는 측정 잡음과 같은 크기다.}
+\label{tab:x06-pareto}
+\renewcommand{\arraystretch}{1.08}
+\begin{tabular}{lrr}\toprule
+선택 & flash 변화 & B 대비 cycle 변화\\\midrule
+X06 유지 & 기준 & 0\\
+X06 제거: keygen & $-33,024$\,B & $+151,802$--$+152,860$\\
+X06 제거: encaps & $-33,024$\,B & $+151,676$--$+152,710$\\
+X06 제거: warm & $-33,024$\,B & $-56$--$+16$\\
+X06 제거: cold & $-33,024$\,B & $+151,838$--$+152,732$\\\bottomrule
+\end{tabular}
+\end{table}
+\FloatBarrier
+
+\FloatBarrier
+\section{최적화 채택 원칙과 보조 후보}\label{sec:lessons}
+
+\subsection{통합 뒤 다시 재는 채택 규칙}
+
+효과는 자기 분모 안에서만 정의하며 프로토콜·구현·배치가 다른 절대값은 직접 효과로
+쓰지 않는다. 구성요소 이득은 통합 뒤 같은 ELF에서 다시 재고, 개별 축이 양수여도
+전체 효과와의 상호작용 잔차를 보고한다. KAT·byte 동치에 실패한 후보의 cycle은
+폐기하며, 입력·공간·보드의 미측정 범위까지 일반화하지 않는다.
+
+표~\ref{tab:architecture-gates}는 같은 규칙이 최신 M85 후보를 어떻게 걸러냈는지 보인다.
+micro 결과만으로는 최종 채택하지 않으며, 전체 경로에서 적용되는 모드가 모두 개선될
+때만 유지한다.
+
+\begin{table}[H]\centering\footnotesize
+\caption{아키텍처 특화 후보의 micro 결과와 최종 판정. 각 micro 값은 별도 플래시
+2회에서 동일했다.}
+\label{tab:architecture-gates}
+\renewcommand{\arraystretch}{1.12}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{2.65cm}>{\raggedright\arraybackslash}p{3.05cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{1.3cm}@{}}\toprule
+후보 & micro A$\to$B & 전체 경로 관측 & 판정\\\midrule
+MVE cswap & 26,742$\to$14,213; 46.851\% 감소 & 캡슐화 1.264--1.265\%, warm 1.707--1.709\%, cold 0.928\% 감소 & 채택\\
+paired inversion & 63,845$\to$33,527; 47.487\% 감소 & 캡슐화 2.957\%; cswap과 결합 4.226--4.228\% 감소 & 채택\\
+direct-64 Keccak & 6,402$\to$29,228; 356.545\% 증가 & 1,332\,B 전개와 spill로 micro gate 실패 & 제외\\
+MVE rejection/MAC & 719$\to$1,089; 51.460\% 증가 & predicate·두 128-bit spill·scalar compaction 비용 & 제외\\
+dual-beat cswap 스케줄 & 63,555$\to$55,367; 12.883\% 감소 & 캡슐화/warm/cold 0.235/0.309/0.162--0.163\% 감소 & 제외\\\bottomrule
+\end{tabularx}
+\end{table}
+\FloatBarrier
+
+\subsection{스티칭과 dual-beat 스케줄의 적용 한계}\label{sec:auto}
+
+별도 2024/039 래퍼의 순차 실행 F와 교차 배치 U를 비교했다
+\cite{XWing24,Slothy22,SlothyM7_25}. 같은 F 작업량의 재플래시 7회·연산별 14개
+대응효과에서 U는 세 연산 모두 1.878--3.719\% 느렸다. 배칭 범위를 실제 Keccak 순열의
+33/43(76.7\%)까지 넓힌 후보도 F보다 10.969--10.975\% 느렸고, 옮긴 작업은 융합 구간에서
+24.50--24.54\% 더 비쌌다. 따라서 낮은 coverage 하나만으로 실패를 설명할 수 없다.
+
+기전 분리는 실제 X25519 제곱 커널에 NTT layer를 삽입해 수행했다. 두 커널의 순차 합은
+280.25 cycle이었지만 정확하게 동작하는 병합본은 318.12 cycle이었다. 호스트에서 동시에
+빈 스칼라 레지스터는 평균 1.6개뿐인데 게스트는 3--4개 값을 요구하여 55--75개의
+재물질화가 필요했다. \texttt{movw}/\texttt{movt}는 발행 슬롯을 통째로 쓰고, 대체
+\texttt{ldr}는 MVE 메모리 연산과 겹치지 않아 숨긴 작업보다 비용이 커졌다. 이는
+``레지스터가 부족하다''를 병합 실패의 측정 가능한 조건으로 구체화한다.
+
+반대로 조건부 교환 내부에서는 같은 명령 33개를 유지하면서 sequential VPSEL의 호출당
+62 cycle을 M85 overlap 순서의 54 cycle로 줄였다. 동일 명령 수에서 8 cycle이 줄어든
+결과는 issue group·dual-beat 중첩 가설과 일치하지만, 사용할 수 있는 stall 이벤트가
+없으므로 그 원인을 유일하게 입증하지는 않는다. 1,024-call 측정에서는 12.883\%의
+이득이지만 전체 캡슐화/warm/cold 감소는 0.235/0.309/0.162--0.163\%였다. 사전 규칙상
+cold의 0.20\% 문턱을 넘지 못했으므로 이 스케줄은 최종형에 넣지 않았다. 두 음성 결과는
+주 개선과 합산하지 않으며, 다른 레지스터 표현이나 다른 스티칭 쌍까지 기각하지 않는다.
+
+\FloatBarrier
+\section{한계와 재현성}\label{sec:limitations}
+
+\subsection{한계}
+
+\begin{itemize}[leftmargin=*,itemsep=1pt]
+\item \textbf{판본과 기준선.} 주 A$\to$B는 draft-10의 내부 기준선이다. A는 공개
+      pqm4/Lenngren 계보를 같은 M85에서 재빌드했다. 표~\ref{tab:prior-art-boundary}의
+      공개 자료 조사에서 완결된 M85 X-Wing 종단 간 기준선은 찾지 못했지만, 이는 부재의
+      증명이 아니다. 공개된 모든 M85 구현 중 최고라는 증거도 없으므로 외부 최신 구현
+      대비 우월성을 주장하지 않는다.
+\item \textbf{자원비용.} A/B 독립 최소 배포 프록시와 stack은 측정했으나 절대값에
+      EK-RA8M1 BSP, 1,024\,B main stack과 결정적 시험 RNG가 공통 포함된다. 순수
+      라이브러리 크기, 다른 링커·RNG·메모리 배치의 footprint는 직접 측정하지 않았다.
+      최종 직접 비교에서 경로별 stack과 2단계 retained 심볼 922\,B·상태 4\,B는 확인했지만,
+      공통 비교 wrapper를 제거한 B8의 정확한 dispatcher-free footprint와 stack은 별도로
+      다시 측정하지 않았다.
+\item \textbf{기여 귀속.} leave-one-out 합과 전체 효과 사이 0.001--8.6\% 잔차는 직접
+      측정했지만 2축 동시 off를 재지 않아 개별 축에 배분하지 않는다.
+\item \textbf{반복과 보드.} 표~\ref{tab:repetitions}의 수치는 ITCM 고착 단위를 패드로
+      회피한 한 EK-RA8M1에서 얻었다. 최종 A0--B8은 다섯 독립 재플래시를 거쳤지만,
+      2단계 분리 실험은 두 번이다. 물리 전원 cycle, 정상 두 번째 보드, 다른 M85 SoC,
+      Cortex-M55/M52와 전력·에너지는 미측정이다.
+\item \textbf{상수 시간.} 고정/무작위 ciphertext 검정은 클래스당 3,000표본에서
+      누설을 검출하지 못했지만 비밀키 의존 누설, cache·전력·전자기 채널은 미측정이다.
+\item \textbf{PMU와 보조 후보.} 퇴직 명령 수는 측정했지만 PMU 발행 class별 stall
+      이벤트는 0이어서 지원·구성이 미확인이다. 동일 명령 수의 cycle 차이는 dual-beat
+      중첩 가설과 일치할 뿐 인과 증명은 아니다. alias-safe 전 조각 solver는 미측정이며,
+      스티칭 기각은 평가한 field 표현·batch·통합 방식에만 적용된다.
+\item \textbf{단계 간 비교.} 1단계와 2단계는 각각 내부적으로 동일 ELF지만 서로의
+      하네스·디스패치가 다르다. expDJ가 초기 A0와 최종 B8의 직접 효과를 제공하므로 이를
+      주 총계로 사용한다. 1·2단계의 별도 개선률은 귀속 진단이며 서로 곱하거나 다른 절대
+      cycle의 차이를 총효과로 사용하지 않는다.
+\end{itemize}
+
+\subsection{재현 아티팩트}
+
+재현 자료는 단계별 동결 디렉터리에 보존한다. 1단계 누적·귀속 자료는
+\texttt{artifacts/2026-08-27\_expCJ}와 CU--DE 계보에, 2단계 micro·전체 경로 자료는
+\texttt{artifacts/2026-08-31\_expDF\_DH}에, dual-beat 스케줄 자료는
+\texttt{artifacts/2026-08-31\_expDI}에, 최종 A0--B8 직접 비교는
+\texttt{artifacts/2026-08-31\_expDJ}에 각각 사전등록, 원시 로그, 소스, ELF/SREC 해시와
+결과 문서를 보존한다. \texttt{artifact/README.md}는 ITCM 결함과
+\texttt{itcm\_pad.c} 회피를 기록하며, 제출 패키지는 이 동결 자료와 정본 PDF의 해시를
+함께 검증해야 한다.
+
+\FloatBarrier
 \section{결론}\label{sec:conclusion}
 
-본 연구는 Cortex-M85 위의 draft-10 \xwing{}에서 채택된 모든 최적화를 하나의 ELF로
-통합하고, 기준형 대비 키생성 25.967\%, 캡슐화 20.249\%, warm 역캡슐화 11.224\%,
-cold 역캡슐화 18.298\%의 사이클 감소를 실측했다. 네 경로 모두 빨라졌으며 키생성과
-캡슐화는 사전 등록한 20\% 목표를 넘었다. 디스패처를 제거한 최종형은 각각 627,069,
-988,456, 780,020, 1,406,887 cycle이다. 이 결론은 draft-10 공식 shared-secret vector,
-8-seed A/B 전 출력, 암묵적 거부, 두 독립 플래시의 A-B-B-A 재현성으로 지지된다.
+본 연구는 새 암호 primitive의 제안도 기존 코드의 단순 포팅도 아닌, Cortex-M85
+\xwing{}의 아키텍처 특화 구현 연구다. 초기 A0와 최종 B8을 하나의 ELF에서 직접 비교한
+다섯 독립 재플래시에서 키생성·캡슐화·역캡슐화 warm/cold cycle을 각각 최소
+19.52/19.75/11.66/15.48\% 줄였다. 이것이 본 논문의 주 종단 간 결과다.
 
-동시에 모든 그럴듯한 최적화가 살아남지는 않았다. 함수 스티칭은 국소 커널에서 자동화할
-수 있었고 스칼라와 MVE의 완전한 동시 발행도 확인됐지만, 실제 상태 수명과 레지스터
-재물질화를 보존한 X25519 제곱$\times$NTT 병합은 순차 기준보다 느렸다. 더 이른 U 통합도
-코드 배치 오류를 교정한 뒤 세 연산 모두 1.88--3.72\% 회귀했다. 따라서 빈 발행 슬롯은
-필요조건이지 충분조건이 아니다.
+귀속 진단인 1단계 동일 ELF에서는 여섯 기존 구현 축을 공동 최적화하여 같은 네 연산을
+25.96/20.25/11.22/18.30\% 줄였다. leave-one-out 합은 전체 효과의
+91.4--99.999\%를 설명했고, X06 fixed-base가 관련 세 연산 감소의 46.1--67.6\%로
+가장 큰 단일 축이었다. 그 대가의 대부분은 33,024\,B 표였으며, 표 제거 시 세 관련
+모드에서 약 152k cycle이 되돌아오는 시간--공간 선택지를 정량화했다.
 
-실무자를 위한 요약은 세 가지다. (i) 프로토콜 버전과 cold/warm API 프로파일을 먼저
-고정하라. (ii) 개별 커널의 개선률을 더하지 말고, 모든 채택 변경을 같은 ELF와 같은
-입력으로 다시 측정하라. (iii) MVE는 packing/CBD처럼 데이터 병렬성이 명확한 경로에
-우선 적용하고, 교차 스케줄은 레지스터 수명과 저장 차단까지 포함한 실물 커널에서
-판정하라.
+2단계에서는 MVE cswap과 zero-safe paired inversion만 종단 간 게이트를 통과했다.
+첫 단계 누적 구현을 기준으로 둘의 결합은 캡슐화를 4.226--4.228\% 더 줄였고, MVE
+cswap은 warm/cold를 1.707--1.709\%/0.928\% 더 줄였다. 이 기여는 기법 자체의 발명보다
+\xwing{}의 두 X25519 출력과 M85 실행 자원에 맞춘 적용, 합성 및 검증에 있다. 두 단계의
+하네스가 달라 별도 개선률을 합치지 않고, 위 A0--B8 직접 비교만 총계로 사용한다.
 
-\paragraph{한계.} 누적률은 한 EK-RA8M1 개체와 현재 code/data placement에서의
-same-ELF 상대효과다. 다른 M85 SoC, Cortex-M55/M52, 에너지, 전력·전자기 부채널은
-미측정이다. 공식 test vector의 shared secret은 완전 대조했지만 public key와
-ciphertext는 확보한 prefix만 외부 대조했다. 스티칭의 음성 결과는 본 연구가 사용한
-필드 표현과 통합 방식에 한정하며, 다른 표현의 부호로 일반화하지 않는다.
+실제 ML-KEM--X25519 스티칭은 평균 1.6개의 빈 레지스터와 숨길 수 없는 재물질화 때문에
+순차 실행보다 느렸다. dual-beat 인식 cswap은 단독 커널에서 12.883\% 빨랐지만 전체 cold
+경로의 사전 문턱을 넘지 못했으며, 그 원인은 가설과 일치할 뿐 인과적으로 확정하지 않았다.
+이 성공·실패 경계와 micro에서 전체 API까지 이어지는
+채택 절차가 통합 이외의 핵심 기여다. 결론은 평가한 구현과 한 EK-RA8M1 개체에 한정하며,
+외부 최신 구현 대비 우월성, 새 암호 알고리즘의 신규성, 에너지 효율 또는 보편적
+시간--공간 우월성을 주장하지 않는다.
 
+\begin{credits}
+\subsubsection{\discintname}
+저자들은 본 논문의 내용과 관련하여 공개할 경쟁적 이해관계가 없음을 선언한다.
+\end{credits}
+
+\enlargethispage{5\baselineskip}
 {\sloppy
 \bibliographystyle{splncs04}
 \bibliography{../references}}
-
-\appendix
-\section{측정 세부사항}
-EK-RA8M1, 480\,MHz, FSP BSP 클록; DWT \texttt{CYCCNT}, $N{=}100$ 중앙값.
-최종 종단간 값은 원시 cycle 중앙값이고, 25-cycle 하네스 보정은 짧은 microbenchmark에만
-적용했다. 스티칭 microbenchmark는 코드 ITCM·데이터 DTCM에 고정했다. 최종 full
-\xwing{}은 실제 배포 배치와 같은 hot ITCM section + code flash/I-cache 구성을 사용하고
-스택과 주요 작업 버퍼를 DTCM에 두었다. 우리 보드 개체에서는 PMU 이벤트 카운터가
-동작하지 않아, 프런트엔드/백엔드 스톨 귀속은 cycle과 별도 microbenchmark의 명령어
-회계로 대체했다. Unicorn 명령어 수는 IT 블록을 개별 계산하므로
-\texttt{INST\_RETIRED}와 몇 퍼센트 차이가 날 수 있으며 최종 성능 분자에는 사용하지 않았다.
-버전 고정: pqm4 \texttt{cc2c1b992b60}, 상류 \slothy{}
-\texttt{241093fa5ddc}(+ 우리 패치 v0.1--v0.4), Lenngren X25519는 라이선스와 함께
-벤더링. 하네스는 타이밍 전에 KAT와 reference 일치를 검사한다.
-
-최종 누적 실험의 SHA-256 식별자는 ELF \texttt{E9D32784},
-SREC \texttt{AC0F88F}이다(전문은 동결 manifest에 수록). 측정 ELF는
-\texttt{.text}=846,028\,B, \texttt{.data}=7,572\,B,
-\texttt{.bss}=393,740\,B였다. 전체 소스, map/link 인자, harvester, 사전 등록 문서,
-두 원시 로그와 SHA-256 manifest는 expCJ 동결 아티팩트에 보존했다.
-
-\section{재현 시 주의사항}
-루프 본문에는 \texttt{.balign 16}이 필요하다(없으면 반복당 $\pm$1 사이클). 큰 ITCM
-함수는 리터럴 풀 대신 \texttt{movw}/\texttt{movt}를 써야 한다. DTCM 스택 전환 시
-\texttt{MSPLIM}도 함께 옮겨야 한다. PMU가 비활성화된 상태에서는 \texttt{CYCCNT} 쓰기가
-무시된다. 벤더 IDE가 TrustZone 플래시 파티션을 펌웨어 크기보다 작게 조용히 줄여 놓을 수
-있다(파티션 CLI로 수정). 컴파일러 출력을 솔버에 먹일 때는 더블워드 접근을 분할하고 스필
-슬롯을 절대 재사용하지 말아야 한다(\cref{sec:auto}).
 
 \end{document}

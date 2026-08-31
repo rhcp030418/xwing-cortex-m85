@@ -1,0 +1,254 @@
+﻿py : CPU is running at low speed (8297 kHz).
+At line:2 char:1
++ py harvest_ra8m1_expCP.py 2>&1 | Tee-Object -FilePath "logs\2026-08-2 ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (CPU is running at low speed (8297 kHz).:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+CPU is running at low speed (8298 kHz).
+connected: Cortex-M85
+=== EK-RA8M1 harness: KAT + DWT/PMU (ITCM/DTCM) ===
+
+== KAT: X25519 (RFC 7748 s6.1) ==
+alice_pk: OK
+bob_pk  : OK
+K(a,B)  : OK
+K(b,A)  : OK
+== KAT: SHA3-256 via asm Keccak-f1600 ==
+sha3("")   : OK
+sha3("abc"): OK
+
+KAT ALL PASS -- streams A+B verified on board
+
+DAUTHCTRL readback: 15
+
+[calib-empty] x1
+  dwt_cyc/op   : 129
+  pmu_cyc/op   : 166
+  insts        : 0
+  stall_op     : 0
+  stall_op_fe  : 0
+  stall_op_be  : 0
+  IPC x100     : 0
+  slot-waste % : 0
+
+[keccak-f1600] x1000
+  dwt_cyc/op   : 5504
+  pmu_cyc/op   : 5504
+  insts        : 0
+  stall_op     : 0
+  stall_op_fe  : 0
+  stall_op_be  : 0
+  IPC x100     : 0
+  slot-waste % : 0
+
+[x25519-scalarmult] x10
+  dwt_cyc/op   : 418118
+  pmu_cyc/op   : 418122
+  insts        : 0
+  stall_op     : 0
+  stall_op_fe  : 0
+  stall_op_be  : 0
+  IPC x100     : 0
+  slot-waste % : 0
+
+== K3: ML-KEM-768 (pqm4 m4fspeed) ==
+roundtrip+reject: OK
+keccak perms/op: keygen 43  encaps 44  decaps 44  combiner 1
+expX bytes-mm: 0 smoke-fails=0 align-base-bits=257 align-candidate-bits=257
+expX timing-mm: 0 stack-fails=0 stack-used=7672
+expY bytes-mm: 0 smoke-fails=0 oracle-mm=0 oracle-canary=0 align-base-bits=257 align-candidate-bits=257 input-min=-1664 input-max=1664 output-min=-14304 output-max=24656
+expY timing-mm: 0 stack-fails=0 stack-used=7672
+expZ bytes-mm: 0 smoke-fails=0 fwd-align-base=257 fwd-align-candidate=257 inv-align-base=257 inv-align-candidate=257
+expZ timing-mm: 0 stack-fails=0 stack-used=7672
+expAA bytes-mm: 0 smoke-fails=0 fwd-align-base=257 fwd-align-candidate=257
+expAA timing-mm: 0 stack-fails=0 stack-used=7672
+expAB bytes-mm: 0 smoke-fails=0
+expAB timing-mm: 0 stack-fails=0 stack-used=7864
+expAE x4-kat-fails: 0 u-kat-fails=0
+expAE bytes-mm: 0 smoke-fails=0
+expAE timing-mm: 0 stack-fails=0 stack-used=9044
+expAF path counts (u4-rounds/u8-rounds/real/dummy):
+  op0: 0/0/0/0
+  op1: 0/0/0/0
+  op2: 0/0/0/0
+expAF mismatch: 0
+expAI mismatch: 0 stack-fails=0 stack-used=9036
+bfull_slothy diag: prod-mm=0 lane-mm=0 first-bad-prod= first-bad-lane=
+mul256 full-vs-budget mismatch: 0  /  stitched(product+theta) mismatch: 0  /  bmid(theta x3) mismatch: 0  /  bfull mismatch: 0  /  expc mismatch: 0  /  expd mismatch: 0  /  expe mismatch: 0  /  mve4 mismatch: 0  /  coissue mismatch: 0  /  cosol mismatch: 0  /  expg mismatch: 0  /  exph mismatch: 0  /  expi mismatch: 0  /  v04 mismatch: 0  /  expj mismatch: 0  /  expk mismatch: 0  /  expl mismatch: 0  /  expm mismatch: 0  /  expt mismatch: 0  /  expu mismatch: 0  /  expv mismatch: 0  /  expw mismatch: 0 m55-unavailable=1 m85-inv-mm=0 m85-roundtrip-mm=0
+expAJ kat-mm: 0
+expAJ bytes-mm: 0 smoke-fails=0
+expAJ xw-bytes-mm: 0 xw-smoke-fails=0
+expAJ timing-mm: 0 stack-fails=0 stack-used=7864
+expAK timing-mm: 0 stack-fails=0 stack-used=7864
+expAL xw-bytes-mm: 0 xw-smoke-fails=0
+expAL timing-mm: 0 stack-fails=0 stack-used=7880
+expAM correctness: oracle-mm=0 lenn-mm=0 boundary-mm=0 alias-mm=0 align-mm=0 checks=1025 stack-fails=0 stack-used=1084
+expAM ct-delta: 0 batch=64 stack-fails=0 stack-used=348
+expAMb correctness: opt-mm=0 sqr-mm=0 sqrlenn-mm=0 conv-mm=0 sem-mm=0 checks=1000 stack-fails=0 stack-used=804
+expAMb bench done stack-fails=0 stack-used=404
+expAN equiv: bytes-mm=0 smoke-fails=0 checks=48
+expAN bench: stack-fails=0 stack-used=7896
+expAT correctness: scalar-mm=0 mve-mm=0 checks=240
+expAT bench: stack-fails=0 stack-used=176
+expAU correctness: kat-fails=0 diff-mm=0 checks=70
+expAU bench: stack-fails=0 stack-used=1096
+expAW equiv: bytes-mm=0 smoke-fails=0 reject-mm=0 checks=48
+expAW bench: stack-fails=0 stack-used=7872
+expBA done (128 instr/kernel, batch 64)
+expBB correctness: mm=0 mul-mm=0 checks=2014
+expBC equiv: bytes-mm=0 smoke-fails=0 reject-mm=0 checks=48
+expBC bench: stack-fails=0 stack-used=7872
+expBF state-mm=0 checks=3201
+expBF xw: bytes-mm=0 smoke=0 reject-mm=0
+expBF bench: stack-fails=0
+expBH cnt keygen memcpy-calls=1 memcpy-bytes=1184 memset-calls=17 memset-bytes=3400
+expBH cnt encaps memcpy-calls=0 memcpy-bytes=0 memset-calls=19 memset-bytes=3800
+expBH cnt decaps memcpy-calls=0 memcpy-bytes=0 memset-calls=19 memset-bytes=3800
+expBH xw: bytes-mm=0 smoke=0 reject-mm=0
+expBH bench done
+expBI smoke=0
+expBI bench done
+expBJ done
+expBK extract-mm=0 checks=400
+expBK xw: bytes-mm=0 smoke=0 reject-mm=0
+expBK bench done
+expBL done
+expBM flat-mm=0 sched-mm=0 checks=1049
+expBM bench done
+expBN xw: bytes-mm=0 smoke=0 reject-mm=0
+expBN bench done
+expBO done
+expBS xw: bytes-mm=0 smoke=0 reject-mm=0
+expBS bench done
+expBU d10: smoke=0 reject-fail=0 ekchk-fail=0 coldwarm-mm=0
+expBU bench done
+expBW d10kat: ss-mm=0 dec-mm=0 pk1216-mm=0 ct1120-mm=0
+expBV done
+expBX done
+expBZ done
+expCA correct: ntt-mm=0 kec-mm=0
+expCA bench done
+expCB done
+expCC done
+expCD selftest: SRAMvsDTCM=0 DTCMvsSRAM-again=0
+  expCD n=1 ntt-mm=0 kec-mm=0
+  expCD n=2 ntt-mm=0 kec-mm=0
+  expCD n=3 ntt-mm=0 kec-mm=0
+  expCD n=4 ntt-mm=0 kec-mm=0
+  expCD n=5 ntt-mm=0 kec-mm=0
+  expCD n=6 ntt-mm=0 kec-mm=0
+  expCD n=7 ntt-mm=0 kec-mm=0
+  expCD n=8 ntt-mm=0 kec-mm=0
+expCD correct: ntt-mm=0 kec-mm=0
+expCD bench done
+expCE correct: ntt-mm=0
+expCE bench done
+expCG host-mm=0 guest-mm=0 shl-mm=0 checks=1007
+expCG bench done
+expCJ equiv: bytes-mm=0 smoke=0 reject-mm=0 coldwarm-mm=0
+expCJ timing-mm=0 stack-fails=0 stack-used=11560
+expCO mismatch=0 timing-mm=0 stack-fails=0 stack-used=9036
+expCP equiv-mm=0 batches U3=3 U5=5
+expCP mismatch=0 timing-mm=0 stack-fails=0 stack-used=7852
+rep arrays ready x100 (775 slots)
+HARNESS DONE
+
+calib(median) = 25
+harness_fails = 0
+
+cell                     span         median      IQR        min        max
+keygen F  a              total       1351696      619    1350414    1359349
+keygen F  a              fused        468362      571     467044     476038
+keygen F  a              residual     883272       72     883081     885580
+keygen U  b              total       1400942     1337    1399036    1408628
+keygen U  b              fused        688074     1340     686172     695732
+keygen U  b              residual     712857      136     712507     713381
+keygen U  b              total       1400834     1211    1399042    1409009
+keygen U  b              fused        687870     1158     686058     695992
+keygen U  b              residual     712835      174     712615     713165
+keygen F  a              total       1351721      766    1350382    1371986
+keygen F  a              fused        468332      673     467070     475827
+keygen F  a              residual     883261      103     883119     903703
+decaps F  a              total       1425949      352    1425469    1526541
+decaps F  a              fused        534774      236     534363     535298
+decaps F  a              residual     882936      148     882726     983490
+decaps U  b              total       1476320      873    1475018    1480481
+decaps U  b              fused        754886      832     753796     758839
+decaps U  b              residual     713068      180     712772     713378
+decaps U  b              total       1476409     1075    1474676    1479070
+decaps U  b              fused        755034      966     753242     757308
+decaps U  b              residual     713116      176     712836     713374
+decaps F  a              total       1425956      341    1425538    1522938
+decaps F  a              fused        534786      196     534412     536308
+decaps F  a              residual     882918      126     882677     979720
+encaps F  a              total       2256799      356    2256372    2354091
+encaps F  a              fused        483611      270     483177     484101
+encaps F  a              residual    1764873      226    1764589    1862093
+encaps U  b              total       2684802     4710    2678536    2693786
+encaps U  b              fused       1252437     4796    1246047    1261695
+encaps U  b              residual    1423793      294    1423373    1424417
+encaps U  b              total       2684524     4987    2677403    2692752
+encaps U  b              fused       1252297     4746    1245209    1260111
+encaps U  b              residual    1423797      258    1423537    1424449
+encaps F  a              total       2256877      425    2256329    2354217
+encaps F  a              fused        483649      244     483247     485097
+encaps F  a              residual    1764861      388    1764579    1862185
+encaps F  a              total       2256866      365    2256277    2354453
+encaps F  a              fused        483663      250     483235     484039
+encaps F  a              residual    1764849      322    1764547    1862265
+encaps U1 b              total       2306428      766    2304998    2312023
+encaps U1 b              fused        703361      804     702019     708359
+encaps U1 b              residual    1594597      212    1594363    1595275
+encaps U1 b              total       2306434      813    2305176    2307990
+encaps U1 b              fused        703401      746     702117     704849
+encaps U1 b              residual    1594599      136    1594315    1594863
+encaps F  a              total       2256861      294    2256275    2354301
+encaps F  a              fused        483649      238     483097     485397
+encaps F  a              residual    1764841      202    1764565    1862411
+keygen F  IRQ-masked     total       1351602      871    1350774    1396893
+keygen F  IRQ-masked     fused        468278      836     467322     475805
+keygen F  IRQ-masked     residual     883257       79     883123     929507
+encaps F  IRQ-masked     total       2256877      421    2256291    2354348
+encaps F  IRQ-masked     fused        483645      248     483217     484281
+encaps F  IRQ-masked     residual    1764875      302    1764565    1862329
+decaps F  IRQ-masked     total       1425980      383    1425542    1523847
+decaps F  IRQ-masked     fused        534818      208     534436     535495
+decaps F  IRQ-masked     residual     882916      202     882698     980081
+CP keygen F3             total       1351515      566    1350481    1372657
+CP keygen F3             fused        468260      556     467292     476010
+CP keygen F3             residual     883150       92     883005     903610
+CP keygen U3             total       1401016     1343    1398845    1408823
+CP keygen U3             fused        688019     1376     686199     695907
+CP keygen U3             residual     712807      136     712559     713001
+CP keygen U3             total       1400990     1094    1399080    1408349
+CP keygen U3             fused        688005     1156     686331     695551
+CP keygen U3             residual     712791      128     712575     713043
+CP keygen F3             total       1351491      670    1350497    1373277
+CP keygen F3             fused        468264      636     467092     475712
+CP keygen F3             residual     883150      103     882974     902940
+CP keygen F5             total       1368081    95766    1366487    1468587
+CP keygen F5             fused        483882      640     482774     491372
+CP keygen F5             residual     883812    96513     883167     984022
+CP keygen U5             total       1441800     1183    1439922    1449531
+CP keygen U5             fused        841791     1248     839723     849745
+CP keygen U5             residual     599937      166     599713     600297
+CP keygen U5             total       1441832     1083    1440048    1449684
+CP keygen U5             fused        841793     1110     840051     849793
+CP keygen U5             residual     599913      140     599643     600323
+CP keygen F5             total       1367993    44882    1366669    1471375
+CP keygen F5             fused        483932      768     482782     491138
+CP keygen F5             residual     883852    44776     883147     984072
+
+# 같은 ELF의 격리 배치 벤치 (expAF 229..236)
+cell                     span         median      IQR        min        max
+u4 seq   ab              batch         85604      256      85398      86190
+u4 fused ab              batch         91360      156      91148      95782
+u4 fused ba              batch         91366      166      91130      91808
+u4 seq   ba              batch         85434        0      85434      86948
+u8 seq   ab              batch        153822      210     153676     153902
+u8 fused ab              batch        277166     2838     272790     283490
+u8 fused ba              batch        276744     2928     273036     282448
+u8 seq   ba              batch        153820      168     153676     155700
+
+# 해석은 결과 문서에서. 여기서는 원시 중앙값·IQR만 낸다.

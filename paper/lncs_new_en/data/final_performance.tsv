@@ -1,0 +1,5 @@
+operation	reference_min	reference_max	integrated_min	integrated_max	improvement_min_pct	improvement_max_pct	conservative_improvement_pct
+keygen	870869	870970	700834	700865	19.521	19.534	19.52
+encapsulation	1326924	1326931	1064853	1064862	19.750	19.751	19.75
+decapsulation_warm	934803	934837	825746	825793	11.661	11.670	11.66
+decapsulation_cold	1802626	1802655	1523463	1523502	15.484	15.488	15.48

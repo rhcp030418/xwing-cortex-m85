@@ -1,0 +1,9 @@
+connected=Cortex-M85 round=0x0208a1b0 enqueue=0x020a5038
+CPU is running at low speed (8292 kHz).
+CPU is running at low speed (8293 kHz).
+operation=keygen entry=0x0209aaa4 return=0x0209b03e mode=1
+operation=keygen x4_round_calls=0 batches=0 enqueues=1
+operation=encaps entry=0x0209a9a0 return=0x0209b054 mode=1
+operation=encaps x4_round_calls=0 batches=0 enqueues=2
+operation=decaps entry=0x0209a8ec return=0x0209b06a mode=1
+operation=decaps x4_round_calls=0 batches=0 enqueues=1

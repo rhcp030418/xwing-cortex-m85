@@ -1,0 +1,9 @@
+connected=Cortex-M85 permute4=0x020a4b1c enqueue=0x020a5038
+CPU is running at low speed (8290 kHz).
+CPU is running at low speed (8289 kHz).
+operation=keygen entry=0x0209aaa4 return=0x0209b03e mode=1
+operation=keygen x4_24round_permutations=3 enqueues=1
+operation=encaps entry=0x0209a9a0 return=0x0209b054 mode=1
+operation=encaps x4_24round_permutations=3 enqueues=2
+operation=decaps entry=0x0209a8ec return=0x0209b06a mode=1
+operation=decaps x4_24round_permutations=3 enqueues=1

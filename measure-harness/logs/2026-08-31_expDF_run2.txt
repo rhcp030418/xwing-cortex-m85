@@ -1,0 +1,29 @@
+CPU is running at low speed (8294 kHz).
+CPU is running at low speed (8293 kHz).
+connected: Cortex-M85
+flash code readback PASS: bytes=27156 segments=1 sha256=0C7F39BF93FF8B9E2420318CF5A8E3F4E85B6E57492255EFA9406372AA1F75A0
+measurement ELF SHA-256: 7AB4168E0BBD79CA0648D82549B862412DFD20649FE11ACB7F9AF0689D5C179A
+measurement SREC SHA-256: 4C82E33D97D3CB7C374C9E1FCC25F710BC360BCFCCBB92E8D0E43297721DE54A
+=== EK-RA8M1 harness: KAT + DWT/PMU (ITCM/DTCM) ===
+
+== KAT: X25519 (RFC 7748 s6.1) ==
+alice_pk: OK
+bob_pk  : OK
+K(a,B)  : OK
+K(b,A)  : OK
+== KAT: SHA3-256 via asm Keccak-f1600 ==
+sha3("")   : OK
+sha3("abc"): OK
+
+KAT ALL PASS -- streams A+B verified on board
+
+expDF correctness cswap=0 batch=0 keccak=0 matacc=0
+expDF DF1-cswap A=26742 B=14213 scale=256
+expDF DF2-batch A=63845 B=33527 scale=1
+expDF DF3-keccak A=6402 B=29228 scale=1
+expDF DF4-matacc A=719 B=1089 scale=1
+expDF CORRECTNESS GATE PASS
+HARNESS DONE
+
+harness_fails=0
+expDE gate FAIL: harness_fails=0 missing=['expDE KAT mm=0 smoke=0 reject-mm=0', 'expDE GATE PASS'] modes=[] cells=0

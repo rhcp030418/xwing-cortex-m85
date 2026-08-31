@@ -1,0 +1,175 @@
+CPU is running at low speed (8294 kHz).
+CPU is running at low speed (8295 kHz).
+measurement ELF SHA-256: E9090FC67012F4A06EE506D9C79BFF103441A2CC2D849BD23BFD9486E1403320
+connected: Cortex-M85
+flash code readback PASS: bytes=865944 segments=2 sha256=325F3CB11A498677AA0DA00810D594AB51164BB0F27FF56BECF403D2527D61E7
+=== EK-RA8M1 harness: KAT + DWT/PMU (ITCM/DTCM) ===
+
+== KAT: X25519 (RFC 7748 s6.1) ==
+alice_pk: OK
+bob_pk  : OK
+K(a,B)  : OK
+K(b,A)  : OK
+== KAT: SHA3-256 via asm Keccak-f1600 ==
+sha3("")   : OK
+sha3("abc"): OK
+
+KAT ALL PASS -- streams A+B verified on board
+
+DAUTHCTRL readback: 15
+
+[calib-empty] x1
+  dwt_cyc/op   : 145
+  pmu_cyc/op   : 180
+  insts        : 0
+  stall_op     : 0
+  stall_op_fe  : 0
+  stall_op_be  : 0
+  IPC x100     : 0
+  slot-waste % : 0
+
+[keccak-f1600] x1000
+  dwt_cyc/op   : 5504
+  pmu_cyc/op   : 5504
+  insts        : 0
+  stall_op     : 0
+  stall_op_fe  : 0
+  stall_op_be  : 0
+  IPC x100     : 0
+  slot-waste % : 0
+
+[x25519-scalarmult] x10
+  dwt_cyc/op   : 418140
+  pmu_cyc/op   : 418142
+  insts        : 0
+  stall_op     : 0
+  stall_op_fe  : 0
+  stall_op_be  : 0
+  IPC x100     : 0
+  slot-waste % : 0
+
+== K3: ML-KEM-768 (pqm4 m4fspeed) ==
+roundtrip+reject: OK
+keccak perms/op: keygen 43  encaps 44  decaps 44  combiner 1
+expX bytes-mm: 0 smoke-fails=0 align-base-bits=257 align-candidate-bits=257
+expX timing-mm: 0 stack-fails=0 stack-used=7672
+expY bytes-mm: 0 smoke-fails=0 oracle-mm=0 oracle-canary=0 align-base-bits=257 align-candidate-bits=257 input-min=-1664 input-max=1664 output-min=-14304 output-max=24656
+expY timing-mm: 0 stack-fails=0 stack-used=7672
+expZ bytes-mm: 0 smoke-fails=0 fwd-align-base=257 fwd-align-candidate=257 inv-align-base=257 inv-align-candidate=257
+expZ timing-mm: 0 stack-fails=0 stack-used=7672
+expAA bytes-mm: 0 smoke-fails=0 fwd-align-base=257 fwd-align-candidate=257
+expAA timing-mm: 0 stack-fails=0 stack-used=7672
+expAB bytes-mm: 0 smoke-fails=0
+expAB timing-mm: 0 stack-fails=0 stack-used=7864
+expAE x4-kat-fails: 0 u-kat-fails=0
+expAE bytes-mm: 0 smoke-fails=0
+expAE timing-mm: 0 stack-fails=0 stack-used=9044
+expAF path counts (u4-rounds/u8-rounds/real/dummy):
+  op0: 0/0/0/0
+  op1: 0/0/0/0
+  op2: 0/0/0/0
+expAF mismatch: 0
+expAI mismatch: 0 stack-fails=0 stack-used=9036
+bfull_slothy diag: prod-mm=0 lane-mm=0 first-bad-prod= first-bad-lane=
+mul256 full-vs-budget mismatch: 0  /  stitched(product+theta) mismatch: 0  /  bmid(theta x3) mismatch: 0  /  bfull mismatch: 0  /  expc mismatch: 0  /  expd mismatch: 0  /  expe mismatch: 0  /  mve4 mismatch: 0  /  coissue mismatch: 0  /  cosol mismatch: 0  /  expg mismatch: 0  /  exph mismatch: 0  /  expi mismatch: 0  /  v04 mismatch: 0  /  expj mismatch: 0  /  expk mismatch: 0  /  expl mismatch: 0  /  expm mismatch: 0  /  expt mismatch: 0  /  expu mismatch: 0  /  expv mismatch: 0  /  expw mismatch: 0 m55-unavailable=1 m85-inv-mm=0 m85-roundtrip-mm=0
+expAJ kat-mm: 0
+expAJ bytes-mm: 0 smoke-fails=0
+expAJ xw-bytes-mm: 0 xw-smoke-fails=0
+expAJ timing-mm: 0 stack-fails=0 stack-used=7864
+expAK timing-mm: 0 stack-fails=0 stack-used=7864
+expAL xw-bytes-mm: 0 xw-smoke-fails=0
+expAL timing-mm: 0 stack-fails=0 stack-used=7880
+expAM correctness: oracle-mm=0 lenn-mm=0 boundary-mm=0 alias-mm=0 align-mm=0 checks=1025 stack-fails=0 stack-used=1084
+expAM ct-delta: 0 batch=64 stack-fails=0 stack-used=348
+expAMb correctness: opt-mm=0 sqr-mm=0 sqrlenn-mm=0 conv-mm=0 sem-mm=0 checks=1000 stack-fails=0 stack-used=804
+expAMb bench done stack-fails=0 stack-used=404
+expAN equiv: bytes-mm=0 smoke-fails=0 checks=48
+expAN bench: stack-fails=0 stack-used=7896
+expAT correctness: scalar-mm=0 mve-mm=0 checks=240
+expAT bench: stack-fails=0 stack-used=176
+expAU correctness: kat-fails=0 diff-mm=0 checks=70
+expAU bench: stack-fails=0 stack-used=1096
+expAW equiv: bytes-mm=0 smoke-fails=0 reject-mm=0 checks=48
+expAW bench: stack-fails=0 stack-used=7872
+expBA done (128 instr/kernel, batch 64)
+expBB correctness: mm=0 mul-mm=0 checks=2014
+expBC equiv: bytes-mm=0 smoke-fails=0 reject-mm=0 checks=48
+expBC bench: stack-fails=0 stack-used=7872
+expBF state-mm=0 checks=3201
+expBF xw: bytes-mm=0 smoke=0 reject-mm=0
+expBF bench: stack-fails=0
+expBH cnt keygen memcpy-calls=1 memcpy-bytes=1184 memset-calls=17 memset-bytes=3400
+expBH cnt encaps memcpy-calls=0 memcpy-bytes=0 memset-calls=19 memset-bytes=3800
+expBH cnt decaps memcpy-calls=0 memcpy-bytes=0 memset-calls=19 memset-bytes=3800
+expBH xw: bytes-mm=0 smoke=0 reject-mm=0
+expBH bench done
+expBI smoke=0
+expBI bench done
+expBJ done
+expBK extract-mm=0 checks=400
+expBK xw: bytes-mm=0 smoke=0 reject-mm=0
+expBK bench done
+expBL done
+expBM flat-mm=0 sched-mm=0 checks=1049
+expBM bench done
+expBN xw: bytes-mm=0 smoke=0 reject-mm=0
+expBN bench done
+expBO done
+expBS xw: bytes-mm=0 smoke=0 reject-mm=0
+expBS bench done
+expBU d10: smoke=0 reject-fail=0 ekchk-fail=0 coldwarm-mm=0
+expBU bench done
+expBW d10kat: ss-mm=0 dec-mm=0 pk1216-mm=0 ct1120-mm=0
+expBV done
+expBX done
+expBZ done
+expCA correct: ntt-mm=0 kec-mm=0
+expCA bench done
+expCB done
+expCC done
+expCD selftest: SRAMvsDTCM=0 DTCMvsSRAM-again=0
+  expCD n=1 ntt-mm=0 kec-mm=0
+  expCD n=2 ntt-mm=0 kec-mm=0
+  expCD n=3 ntt-mm=0 kec-mm=0
+  expCD n=4 ntt-mm=0 kec-mm=0
+  expCD n=5 ntt-mm=0 kec-mm=0
+  expCD n=6 ntt-mm=0 kec-mm=0
+  expCD n=7 ntt-mm=0 kec-mm=0
+  expCD n=8 ntt-mm=0 kec-mm=0
+expCD correct: ntt-mm=0 kec-mm=0
+expCD bench done
+expCE correct: ntt-mm=0
+expCE bench done
+expCG host-mm=0 guest-mm=0 shl-mm=0 checks=1007
+expCG bench done
+expCJ equiv: bytes-mm=0 smoke=0 reject-mm=0 coldwarm-mm=0
+expCJ timing-mm=0 stack-fails=0 stack-used=11560
+expCO mismatch=0 timing-mm=0 stack-fails=0 stack-used=9036
+expCP equiv-mm=0 batches U3=3 U5=5
+expCP mismatch=0 timing-mm=0 stack-fails=0 stack-used=7852
+expCR correctness: mm=0 checks=1049
+expCR done
+expCS mismatch=6400
+rep arrays ready x100 (775 slots)
+HARNESS DONE
+
+
+=== expCS — phase-0 솔버 재스케줄 (F / U 지퍼 / U_s 솔버) ===
+정확성: FAIL (harness_fails=6400, mismatch=6400, KAT=True)
+  F  순차     86075.0 /   86207.0
+  U  지퍼     92973.0 /   93343.0   (U-F +6898 / +7136)
+  Us 솔버     93747.0 /   93789.0   (Us-F +7672 / +7582)
+  U - Us = -774 / -446  -> 평균 -610.0 cyc (-0.708% of F, 조각 1회당 -25.42)
+  Ut 변환대조   94923.0 /   95053.0   (Ut-U +1950 / +1710)
+  Us - Ut (순수 스케줄 효과) -1176 / -1264
+  솔버 > 지퍼: False   솔버 > 순차: False
+  --- 셀별 (median [p25..p75] min/max)
+   862 F       86075 [    86007..    86209]     85951/    86401
+   863 U       92973 [    92803..    93121]     92377/    98391
+   864 Ut      94923 [    94641..    95259]     94171/    97549
+   865 Us      93747 [    93629..    93883]     93405/    95265
+   866 Us      93789 [    93669..    93909]     93455/    94355
+   867 Ut      95053 [    94677..    95523]     94223/    99323
+   868 U       93343 [    93173..    93525]     92757/    94127
+   869 F       86207 [    86207..    86269]     85903/    87891
+EXPCS_JSON {"F_seq4": {"first": 86075, "last": 86207, "median": 86141.0}, "U_minus_F": [6898, 7136], "U_minus_Us": [-774, -446], "U_zip": {"first": 92973, "last": 93343}, "Us_minus_F": [7672, 7582], "Us_minus_Ut": [-1176, -1264], "Us_solver": {"first": 93747, "last": 93789}, "Ut_minus_U": [1950, 1710], "Ut_transform": {"first": 94923, "last": 95053}, "cells": [{"label": "F", "max": 86401, "median": 86075, "min": 85951, "p25": 86007, "p75": 86209, "slot": 862}, {"label": "U", "max": 98391, "median": 92973, "min": 92377, "p25": 92803, "p75": 93121, "slot": 863}, {"label": "Ut", "max": 97549, "median": 94923, "min": 94171, "p25": 94641, "p75": 95259, "slot": 864}, {"label": "Us", "max": 95265, "median": 93747, "min": 93405, "p25": 93629, "p75": 93883, "slot": 865}, {"label": "Us", "max": 94355, "median": 93789, "min": 93455, "p25": 93669, "p75": 93909, "slot": 866}, {"label": "Ut", "max": 99323, "median": 95053, "min": 94223, "p25": 94677, "p75": 95523, "slot": 867}, {"label": "U", "max": 94127, "median": 93343, "min": 92757, "p25": 93173, "p75": 93525, "slot": 868}, {"label": "F", "max": 87891, "median": 86207, "min": 85903, "p25": 86207, "p75": 86269, "slot": 869}], "code_flash_readback_bytes": 865944, "code_flash_readback_sha256": "325F3CB11A498677AA0DA00810D594AB51164BB0F27FF56BECF403D2527D61E7", "correctness_pass": false, "elf_sha256": "E9090FC67012F4A06EE506D9C79BFF103441A2CC2D849BD23BFD9486E1403320", "experiment": "CS", "gate_pass": false, "harness_fails": 6400, "kat_all_pass": true, "mismatch": 6400, "solver_beats_sequential": false, "solver_beats_zipper": false, "solver_gain_cycles": -610.0, "solver_gain_pct_of_F": -0.7081413032121754, "solver_gain_per_call": -25.416666666666668, "srec_sha256": "AB22488C99489D8721CD14E248B1E44D3683700C2F7D482B6B4ECA85F4B1FE0F"}

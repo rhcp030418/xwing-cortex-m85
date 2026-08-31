@@ -1,0 +1,14 @@
+connected=Cortex-M85 entry=0x020a4da4 stop=0x020a4da8
+CPU is running at low speed (8293 kHz).
+CPU is running at low speed (8296 kHz).
+sample=1 cycles=112
+sample=2 cycles=76
+sample=3 cycles=76
+sample=4 cycles=76
+sample=5 cycles=76
+sample=6 cycles=76
+sample=7 cycles=76
+sample=8 cycles=76
+sample=9 cycles=76
+sample=10 cycles=76
+n=10 median=76 min=76 max=112 values=[112, 76, 76, 76, 76, 76, 76, 76, 76, 76]

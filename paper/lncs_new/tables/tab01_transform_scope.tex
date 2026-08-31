@@ -1,0 +1,21 @@
+\begin{table}[t]
+\centering
+\caption{The eight retained implementation transformations and their X-Wing scope. None changes the X-Wing, ML-KEM, or X25519 specification.}
+\label{tab:transform-scope}
+\footnotesize
+\renewcommand{\arraystretch}{1.12}
+\begin{tabularx}{\textwidth}{@{}cl>{\raggedright\arraybackslash}Xl@{}}
+\toprule
+\# & Component & Transformation & Active paths \\
+\midrule
+1 & ML-KEM & MVE NTT with consumer-order structure stores & KG/E/W/C \\
+2 & ML-KEM & Eleven MVE data-conversion functions & KG/E/W/C \\
+3 & X25519 & $w=3$ signed comb for basepoint 9 & KG/E/C \\
+4 & X25519 & Fixed-frame field-multiplication schedule & KG/E/W/C \\
+5 & X25519 & Equal-instruction field-squaring schedule & KG/E/W/C \\
+6 & Common & Alignment-aware word \texttt{memcpy}/\texttt{memset} & KG/E/W/C \\
+7 & X25519 & Four-chunk 128-bit MVE xor-mask \texttt{cswap} & E/W/C \\
+8 & X-Wing & Zero-safe paired inversion of two X25519 endpoints & E only \\
+\bottomrule
+\end{tabularx}
+\end{table}

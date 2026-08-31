@@ -1,0 +1,29 @@
+# Local scratch and archival copies
+tmp/
+output/
+_보관/
+**/__pycache__/
+*.py[cod]
+*.bak
+*.bak-*
+
+# LaTeX build intermediates (keep manuscript PDFs)
+paper/**/*.aux
+paper/**/*.bbl
+paper/**/*.bcf
+paper/**/*.blg
+paper/**/*.fdb_latexmk
+paper/**/*.fls
+paper/**/*.log
+paper/**/*.out
+paper/**/*.run.xml
+paper/**/*.synctex.gz
+
+# Generated upload bundles and flattened copies
+paper/all-data-upload.zip
+paper/artifact-upload.zip
+paper/overleaf-upload.zip
+paper/A주제_overleaf/
+paper/overleaf/
+paper/overleaf-upload/
+paper/lncs_new/assets.zip

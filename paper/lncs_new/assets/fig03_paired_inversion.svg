@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="345.827pt" height="181.417pt" viewBox="0 0 345.827 181.417">
+<title>fig03_paired_inversion</title>
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<text x="172.913" y="18.425" font-family="Arial, Helvetica, sans-serif" font-size="9.000" font-weight="700" fill="#1F2933" text-anchor="middle">Two X25519 endpoints make paired inversion possible</text>
+<text x="172.913" y="28.346" font-family="Arial, Helvetica, sans-serif" font-size="5.700" font-weight="400" fill="#4B5563" text-anchor="middle">The retained encapsulation path replaces two expensive inversions with one zero-safe inversion</text>
+<text x="85.039" y="45.354" font-family="Arial, Helvetica, sans-serif" font-size="6.800" font-weight="700" fill="#B42318" text-anchor="middle">Baseline: independent conversions</text>
+<rect x="11.339" y="59.528" width="39.685" height="22.677" rx="4.000" fill="#F5F7FA" stroke="#7B8794" stroke-width="0.800"/>
+<text x="31.181" y="72.945" font-family="Arial, Helvetica, sans-serif" font-size="6.300" font-weight="700" fill="#1F2933" text-anchor="middle">d1</text>
+<rect x="11.339" y="99.213" width="39.685" height="22.677" rx="4.000" fill="#F5F7FA" stroke="#7B8794" stroke-width="0.800"/>
+<text x="31.181" y="112.630" font-family="Arial, Helvetica, sans-serif" font-size="6.300" font-weight="700" fill="#1F2933" text-anchor="middle">d2</text>
+<rect x="65.197" y="59.528" width="48.189" height="22.677" rx="4.000" fill="#FCEBE9" stroke="#B42318" stroke-width="0.800"/>
+<text x="89.291" y="72.846" font-family="Arial, Helvetica, sans-serif" font-size="6.000" font-weight="700" fill="#1F2933" text-anchor="middle">invert</text>
+<rect x="65.197" y="99.213" width="48.189" height="22.677" rx="4.000" fill="#FCEBE9" stroke="#B42318" stroke-width="0.800"/>
+<text x="89.291" y="112.531" font-family="Arial, Helvetica, sans-serif" font-size="6.000" font-weight="700" fill="#1F2933" text-anchor="middle">invert</text>
+<rect x="127.559" y="59.528" width="34.016" height="22.677" rx="4.000" fill="#F5F7FA" stroke="#7B8794" stroke-width="0.800"/>
+<text x="144.567" y="72.813" font-family="Arial, Helvetica, sans-serif" font-size="5.900" font-weight="400" fill="#1F2933" text-anchor="middle">d1^-1</text>
+<rect x="127.559" y="99.213" width="34.016" height="22.677" rx="4.000" fill="#F5F7FA" stroke="#7B8794" stroke-width="0.800"/>
+<text x="144.567" y="112.498" font-family="Arial, Helvetica, sans-serif" font-size="5.900" font-weight="400" fill="#1F2933" text-anchor="middle">d2^-1</text>
+<line x1="51.024" y1="70.866" x2="65.197" y2="70.866" stroke="#B42318" stroke-width="0.900"/>
+<polygon points="65.197,70.866 60.975,73.545 60.975,68.187" fill="#B42318"/>
+<line x1="51.024" y1="110.551" x2="65.197" y2="110.551" stroke="#B42318" stroke-width="0.900"/>
+<polygon points="65.197,110.551 60.975,113.230 60.975,107.872" fill="#B42318"/>
+<line x1="113.386" y1="70.866" x2="127.559" y2="70.866" stroke="#B42318" stroke-width="0.900"/>
+<polygon points="127.559,70.866 123.337,73.545 123.337,68.187" fill="#B42318"/>
+<line x1="113.386" y1="110.551" x2="127.559" y2="110.551" stroke="#B42318" stroke-width="0.900"/>
+<polygon points="127.559,110.551 123.337,113.230 123.337,107.872" fill="#B42318"/>
+<rect x="36.850" y="138.898" width="99.213" height="22.677" rx="4.000" fill="#FCEBE9" stroke="#B42318" stroke-width="0.800"/>
+<text x="86.457" y="152.249" font-family="Arial, Helvetica, sans-serif" font-size="6.100" font-weight="700" fill="#1F2933" text-anchor="middle">Cost: 2 inversions</text>
+<line x1="172.913" y1="36.850" x2="172.913" y2="161.575" stroke="#CBD2D9" stroke-width="0.800"/>
+<text x="260.787" y="45.354" font-family="Arial, Helvetica, sans-serif" font-size="6.800" font-weight="700" fill="#2E7D32" text-anchor="middle">Retained: zero-safe paired inversion</text>
+<rect x="184.252" y="59.528" width="36.850" height="22.677" rx="4.000" fill="#F5F7FA" stroke="#7B8794" stroke-width="0.800"/>
+<text x="202.677" y="72.945" font-family="Arial, Helvetica, sans-serif" font-size="6.300" font-weight="700" fill="#1F2933" text-anchor="middle">d1</text>
+<rect x="184.252" y="99.213" width="36.850" height="22.677" rx="4.000" fill="#F5F7FA" stroke="#7B8794" stroke-width="0.800"/>
+<text x="202.677" y="112.630" font-family="Arial, Helvetica, sans-serif" font-size="6.300" font-weight="700" fill="#1F2933" text-anchor="middle">d2</text>
+<rect x="232.441" y="70.866" width="45.354" height="39.685" rx="4.000" fill="#F0EBF8" stroke="#6B4FA1" stroke-width="0.800"/>
+<text x="255.118" y="86.158" font-family="Arial, Helvetica, sans-serif" font-size="5.300" font-weight="400" fill="#1F2933" text-anchor="middle">zero test +</text>
+<text x="255.118" y="92.458" font-family="Arial, Helvetica, sans-serif" font-size="5.300" font-weight="400" fill="#1F2933" text-anchor="middle">replace 0 by</text>
+<text x="255.118" y="98.758" font-family="Arial, Helvetica, sans-serif" font-size="5.300" font-weight="400" fill="#1F2933" text-anchor="middle">1</text>
+<rect x="289.134" y="70.866" width="45.354" height="39.685" rx="4.000" fill="#EAF5EA" stroke="#2E7D32" stroke-width="0.800"/>
+<text x="311.811" y="92.524" font-family="Arial, Helvetica, sans-serif" font-size="5.500" font-weight="700" fill="#1F2933" text-anchor="middle">t = (d1*d2)^-1</text>
+<line x1="221.102" y1="70.866" x2="232.441" y2="82.205" stroke="#6B4FA1" stroke-width="0.900"/>
+<polygon points="232.441,82.205 227.561,81.114 231.350,77.325" fill="#6B4FA1"/>
+<line x1="221.102" y1="110.551" x2="232.441" y2="99.213" stroke="#6B4FA1" stroke-width="0.900"/>
+<polygon points="232.441,99.213 231.350,104.092 227.561,100.303" fill="#6B4FA1"/>
+<line x1="277.795" y1="90.709" x2="289.134" y2="90.709" stroke="#2E7D32" stroke-width="0.900"/>
+<polygon points="289.134,90.709 284.912,93.388 284.912,88.030" fill="#2E7D32"/>
+<rect x="195.591" y="138.898" width="127.559" height="22.677" rx="4.000" fill="#EAF5EA" stroke="#2E7D32" stroke-width="0.800"/>
+<text x="259.370" y="152.084" font-family="Arial, Helvetica, sans-serif" font-size="5.600" font-weight="700" fill="#1F2933" text-anchor="middle">Recover both inverses; restore zero masks</text>
+<line x1="311.811" y1="110.551" x2="311.811" y2="138.898" stroke="#2E7D32" stroke-width="0.900"/>
+<polygon points="311.811,138.898 309.132,134.676 314.490,134.676" fill="#2E7D32"/>
+</svg>

@@ -1,0 +1,132 @@
+    8510:	b504      	push	{r2, lr}
+    8512:	b089      	sub	sp, #36	@ 0x24
+    8514:	ca3c      	ldmia	r2, {r2, r3, r4, r5}
+    8516:	f851 0b04 	ldr.w	r0, [r1], #4
+    851a:	f851 eb04 	ldr.w	lr, [r1], #4
+    851e:	fba2 6a00 	umull	r6, sl, r2, r0
+    8522:	fba3 7c00 	umull	r7, ip, r3, r0
+    8526:	fbe2 7a6e 	umaal	r7, sl, r2, lr
+    852a:	b4c0      	push	{r6, r7}
+    852c:	fba4 8600 	umull	r8, r6, r4, r0
+    8530:	fbe3 8a6e 	umaal	r8, sl, r3, lr
+    8534:	fba5 9700 	umull	r9, r7, r5, r0
+    8538:	f851 0b04 	ldr.w	r0, [r1], #4
+    853c:	fbe4 9a6e 	umaal	r9, sl, r4, lr
+    8540:	fbe5 a76e 	umaal	sl, r7, r5, lr
+    8544:	fbe2 8c60 	umaal	r8, ip, r2, r0
+    8548:	fbe3 9c60 	umaal	r9, ip, r3, r0
+    854c:	fbe4 ac60 	umaal	sl, ip, r4, r0
+    8550:	fbe5 c760 	umaal	ip, r7, r5, r0
+    8554:	f851 0b04 	ldr.w	r0, [r1], #4
+    8558:	f851 eb04 	ldr.w	lr, [r1], #4
+    855c:	fbe2 9660 	umaal	r9, r6, r2, r0
+    8560:	fbe3 a660 	umaal	sl, r6, r3, r0
+    8564:	fbe4 c660 	umaal	ip, r6, r4, r0
+    8568:	fbe5 6760 	umaal	r6, r7, r5, r0
+    856c:	e9cd 8902 	strd	r8, r9, [sp, #8]
+    8570:	f851 0b04 	ldr.w	r0, [r1], #4
+    8574:	f04f 0900 	mov.w	r9, #0
+    8578:	fbe2 a96e 	umaal	sl, r9, r2, lr
+    857c:	fbe3 c96e 	umaal	ip, r9, r3, lr
+    8580:	fbe4 696e 	umaal	r6, r9, r4, lr
+    8584:	fbe5 796e 	umaal	r7, r9, r5, lr
+    8588:	f8cd a024 	str.w	sl, [sp, #36]	@ 0x24
+    858c:	f04f 0a00 	mov.w	sl, #0
+    8590:	fbe2 ca60 	umaal	ip, sl, r2, r0
+    8594:	fbe3 6a60 	umaal	r6, sl, r3, r0
+    8598:	fbe4 7a60 	umaal	r7, sl, r4, r0
+    859c:	fbe5 9a60 	umaal	r9, sl, r5, r0
+    85a0:	f851 8b04 	ldr.w	r8, [r1], #4
+    85a4:	f04f 0e00 	mov.w	lr, #0
+    85a8:	fbe2 e668 	umaal	lr, r6, r2, r8
+    85ac:	fbe3 7668 	umaal	r7, r6, r3, r8
+    85b0:	fbe4 9668 	umaal	r9, r6, r4, r8
+    85b4:	fbe5 a668 	umaal	sl, r6, r5, r8
+    85b8:	f851 891c 	ldr.w	r8, [r1], #-28
+    85bc:	f04f 0000 	mov.w	r0, #0
+    85c0:	fbe2 7068 	umaal	r7, r0, r2, r8
+    85c4:	fbe3 9068 	umaal	r9, r0, r3, r8
+    85c8:	fbe4 a068 	umaal	sl, r0, r4, r8
+    85cc:	fbe5 6068 	umaal	r6, r0, r5, r8
+    85d0:	b401      	push	{r0}
+    85d2:	960b      	str	r6, [sp, #44]	@ 0x2c
+    85d4:	9a0c      	ldr	r2, [sp, #48]	@ 0x30
+    85d6:	3210      	adds	r2, #16
+    85d8:	ca3c      	ldmia	r2, {r2, r3, r4, r5}
+    85da:	f851 8b04 	ldr.w	r8, [r1], #4
+    85de:	9e0a      	ldr	r6, [sp, #40]	@ 0x28
+    85e0:	f04f 0000 	mov.w	r0, #0
+    85e4:	fbe2 6068 	umaal	r6, r0, r2, r8
+    85e8:	9605      	str	r6, [sp, #20]
+    85ea:	fbe3 c068 	umaal	ip, r0, r3, r8
+    85ee:	fbe4 e068 	umaal	lr, r0, r4, r8
+    85f2:	fbe5 0768 	umaal	r0, r7, r5, r8
+    85f6:	f851 8b04 	ldr.w	r8, [r1], #4
+    85fa:	f04f 0600 	mov.w	r6, #0
+    85fe:	fbe2 c668 	umaal	ip, r6, r2, r8
+    8602:	f8cd c018 	str.w	ip, [sp, #24]
+    8606:	fbe3 e668 	umaal	lr, r6, r3, r8
+    860a:	fbe4 0668 	umaal	r0, r6, r4, r8
+    860e:	fbe5 6768 	umaal	r6, r7, r5, r8
+    8612:	f851 8b04 	ldr.w	r8, [r1], #4
+    8616:	f04f 0c00 	mov.w	ip, #0
+    861a:	fbe2 ec68 	umaal	lr, ip, r2, r8
+    861e:	f8cd e01c 	str.w	lr, [sp, #28]
+    8622:	fbe3 0c68 	umaal	r0, ip, r3, r8
+    8626:	fbe4 6c68 	umaal	r6, ip, r4, r8
+    862a:	fbe5 ac68 	umaal	sl, ip, r5, r8
+    862e:	f851 8b04 	ldr.w	r8, [r1], #4
+    8632:	f04f 0e00 	mov.w	lr, #0
+    8636:	fbe2 0e68 	umaal	r0, lr, r2, r8
+    863a:	9008      	str	r0, [sp, #32]
+    863c:	980b      	ldr	r0, [sp, #44]	@ 0x2c
+    863e:	fbe3 6e68 	umaal	r6, lr, r3, r8
+    8642:	fbe4 ae68 	umaal	sl, lr, r4, r8
+    8646:	fbe5 0e68 	umaal	r0, lr, r5, r8
+    864a:	f851 8b04 	ldr.w	r8, [r1], #4
+    864e:	fbe2 6968 	umaal	r6, r9, r2, r8
+    8652:	9609      	str	r6, [sp, #36]	@ 0x24
+    8654:	fbe3 9a68 	umaal	r9, sl, r3, r8
+    8658:	fbe4 a068 	umaal	sl, r0, r4, r8
+    865c:	bc40      	pop	{r6}
+    865e:	fbe5 6068 	umaal	r6, r0, r5, r8
+    8662:	f851 8b04 	ldr.w	r8, [r1], #4
+    8666:	fbe2 9768 	umaal	r9, r7, r2, r8
+    866a:	fbe3 a768 	umaal	sl, r7, r3, r8
+    866e:	fbe4 6768 	umaal	r6, r7, r4, r8
+    8672:	fbe5 0768 	umaal	r0, r7, r5, r8
+    8676:	f851 8b04 	ldr.w	r8, [r1], #4
+    867a:	fbe2 ac68 	umaal	sl, ip, r2, r8
+    867e:	fbe3 6c68 	umaal	r6, ip, r3, r8
+    8682:	fbe4 0c68 	umaal	r0, ip, r4, r8
+    8686:	fbe5 7c68 	umaal	r7, ip, r5, r8
+    868a:	f851 8b04 	ldr.w	r8, [r1], #4
+    868e:	fbe2 6e68 	umaal	r6, lr, r2, r8
+    8692:	fbe3 0e68 	umaal	r0, lr, r3, r8
+    8696:	fbe4 e768 	umaal	lr, r7, r4, r8
+    869a:	fbe5 7c68 	umaal	r7, ip, r5, r8
+    869e:	e9dd 4507 	ldrd	r4, r5, [sp, #28]
+    86a2:	2326      	movs	r3, #38	@ 0x26
+    86a4:	f04f 0800 	mov.w	r8, #0
+    86a8:	fbe3 486c 	umaal	r4, r8, r3, ip
+    86ac:	ea4f 0848 	mov.w	r8, r8, lsl #1
+    86b0:	ea48 78d4 	orr.w	r8, r8, r4, lsr #31
+    86b4:	f024 4c00 	bic.w	ip, r4, #2147483648	@ 0x80000000
+    86b8:	2413      	movs	r4, #19
+    86ba:	fb08 f804 	mul.w	r8, r8, r4
+    86be:	4604      	mov	r4, r0
+    86c0:	bc07      	pop	{r0, r1, r2}
+    86c2:	fbe3 0865 	umaal	r0, r8, r3, r5
+    86c6:	fbe3 1869 	umaal	r1, r8, r3, r9
+    86ca:	fbe3 286a 	umaal	r2, r8, r3, sl
+    86ce:	f04f 0926 	mov.w	r9, #38	@ 0x26
+    86d2:	4625      	mov	r5, r4
+    86d4:	bc18      	pop	{r3, r4}
+    86d6:	fbe9 3866 	umaal	r3, r8, r9, r6
+    86da:	fbe9 4865 	umaal	r4, r8, r9, r5
+    86de:	bc60      	pop	{r5, r6}
+    86e0:	fbe9 586e 	umaal	r5, r8, r9, lr
+    86e4:	fbe9 6867 	umaal	r6, r8, r9, r7
+    86e8:	eb08 070c 	add.w	r7, r8, ip
+    86ec:	b005      	add	sp, #20
+    86ee:	bd00      	pop	{pc}

@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering
+\caption{Microarchitectural candidates and their end-to-end adoption decisions. A local win is retained only when it survives its specified complete-path gates.}
+\label{tab:candidate-gates}
+\footnotesize
+\renewcommand{\arraystretch}{1.12}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{2.4cm}>{\raggedright\arraybackslash}p{2.9cm}>{\raggedright\arraybackslash}Xl@{}}
+\toprule
+Candidate & Micro result & Complete-path observation & Decision \\
+\midrule
+MVE \texttt{cswap} & 46.851\% faster & Encaps 1.264--1.265\%; warm 1.707--1.709\%; cold 0.928\% faster & Retain \\
+Paired inversion & 47.487\% faster & Encaps 2.957\%; 4.226--4.228\% with \texttt{cswap} & Retain \\
+Direct-64 Keccak & 356.545\% slower & Code expansion and spills fail the micro gate & Reject \\
+MVE rejection/MAC & 51.460\% slower & Predicate, spills, and scalar compaction dominate & Reject \\
+Dual-beat \texttt{cswap} schedule & 12.883\% faster & Cold improves only 0.162--0.163\%, below the 0.20\% gate & Reject \\
+\bottomrule
+\end{tabularx}
+\end{table}

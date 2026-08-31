@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering
+\caption{Measured time--space trade-off of the separate six-transform implementation. The dispatcher-free Integrated footprint remains outside the measured scope.}
+\label{tab:resource-tradeoff}
+\footnotesize
+\renewcommand{\arraystretch}{1.10}
+\begin{tabularx}{\textwidth}{@{}l>{\raggedright\arraybackslash}X@{}}
+\toprule
+Item & Measured cost or interpretation \\
+\midrule
+Six transforms: nonvolatile-memory increase & $+34{,}308$ B \\
+Six transforms: static-RAM increase & $+2{,}040$ B \\
+Fixed-base table & $33{,}024$ B; 96.25\% of the measured nonvolatile increase \\
+Removing the fixed-base table & Approximately $+152$k cycles in key generation, encapsulation, and cold decapsulation \\
+Six-transform comparison stack & Disabled and enabled configurations are equal per path; no 64-B guard corruption \\
+Final comparison stack & Reference and Integrated are equal per path with the common comparison wrapper \\
+\bottomrule
+\end{tabularx}
+\end{table}

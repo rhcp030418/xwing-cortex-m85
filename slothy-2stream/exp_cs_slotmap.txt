@@ -1,0 +1,4 @@
+frame_bytes=232
+prologue=19
+orig=592
+norm=606

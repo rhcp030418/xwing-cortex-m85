@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="345.827pt" height="221.102pt" viewBox="0 0 345.827 221.102">
+<title>fig01_xwing_optimization_map</title>
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<text x="172.913" y="18.425" font-family="Arial, Helvetica, sans-serif" font-size="9.000" font-weight="700" fill="#1F2933" text-anchor="middle">Where the eight retained transformations act</text>
+<text x="172.913" y="28.346" font-family="Arial, Helvetica, sans-serif" font-size="5.700" font-weight="400" fill="#4B5563" text-anchor="middle">KG = key generation; E = encapsulation; W/C = warm/cold decapsulation</text>
+<text x="31.181" y="45.354" font-family="Arial, Helvetica, sans-serif" font-size="7.000" font-weight="700" fill="#1F2933" text-anchor="middle">X-Wing API</text>
+<rect x="11.339" y="56.693" width="39.685" height="25.512" rx="4.000" fill="#F5F7FA" stroke="#7B8794" stroke-width="0.800"/>
+<text x="31.181" y="67.980" font-family="Arial, Helvetica, sans-serif" font-size="5.700" font-weight="700" fill="#1F2933" text-anchor="middle">KG / E / W /</text>
+<text x="31.181" y="74.680" font-family="Arial, Helvetica, sans-serif" font-size="5.700" font-weight="700" fill="#1F2933" text-anchor="middle">C</text>
+<text x="62.362" y="45.354" font-family="Arial, Helvetica, sans-serif" font-size="6.200" font-weight="700" fill="#1769AA" text-anchor="start">ML-KEM lane</text>
+<rect x="62.362" y="56.693" width="45.354" height="25.512" rx="4.000" fill="#E8F2FA" stroke="#1769AA" stroke-width="0.800"/>
+<text x="85.039" y="71.495" font-family="Arial, Helvetica, sans-serif" font-size="6.200" font-weight="700" fill="#1F2933" text-anchor="middle">ML-KEM-768</text>
+<rect x="116.220" y="56.693" width="65.197" height="25.512" rx="4.000" fill="#E8F2FA" stroke="#1769AA" stroke-width="0.800"/>
+<text x="148.819" y="64.764" font-family="Arial, Helvetica, sans-serif" font-size="5.500" font-weight="400" fill="#1F2933" text-anchor="middle">[1] MVE NTT +</text>
+<text x="148.819" y="71.264" font-family="Arial, Helvetica, sans-serif" font-size="5.500" font-weight="400" fill="#1F2933" text-anchor="middle">current-order</text>
+<text x="148.819" y="77.764" font-family="Arial, Helvetica, sans-serif" font-size="5.500" font-weight="400" fill="#1F2933" text-anchor="middle">store</text>
+<rect x="189.921" y="56.693" width="65.197" height="25.512" rx="4.000" fill="#E8F2FA" stroke="#1769AA" stroke-width="0.800"/>
+<text x="222.520" y="67.997" font-family="Arial, Helvetica, sans-serif" font-size="5.600" font-weight="400" fill="#1F2933" text-anchor="middle">[2] 11 MVE data</text>
+<text x="222.520" y="74.597" font-family="Arial, Helvetica, sans-serif" font-size="5.600" font-weight="400" fill="#1F2933" text-anchor="middle">transforms</text>
+<line x1="51.024" y1="69.449" x2="62.362" y2="69.449" stroke="#1769AA" stroke-width="0.900"/>
+<polygon points="62.362,69.449 58.141,72.128 58.141,66.770" fill="#1769AA"/>
+<line x1="107.717" y1="69.449" x2="116.220" y2="69.449" stroke="#1769AA" stroke-width="0.900"/>
+<polygon points="116.220,69.449 111.999,72.128 111.999,66.770" fill="#1769AA"/>
+<line x1="181.417" y1="69.449" x2="189.921" y2="69.449" stroke="#1769AA" stroke-width="0.900"/>
+<polygon points="189.921,69.449 185.700,72.128 185.700,66.770" fill="#1769AA"/>
+<text x="62.362" y="104.882" font-family="Arial, Helvetica, sans-serif" font-size="6.200" font-weight="700" fill="#D97706" text-anchor="start">X25519 lane</text>
+<rect x="62.362" y="116.220" width="45.354" height="34.016" rx="4.000" fill="#FFF3E0" stroke="#D97706" stroke-width="0.800"/>
+<text x="85.039" y="135.307" font-family="Arial, Helvetica, sans-serif" font-size="6.300" font-weight="700" fill="#1F2933" text-anchor="middle">X25519</text>
+<rect x="116.220" y="110.551" width="62.362" height="22.677" rx="4.000" fill="#FFF3E0" stroke="#D97706" stroke-width="0.800"/>
+<text x="147.402" y="120.438" font-family="Arial, Helvetica, sans-serif" font-size="5.600" font-weight="400" fill="#1F2933" text-anchor="middle">[3] Fixed-base comb</text>
+<text x="147.402" y="127.038" font-family="Arial, Helvetica, sans-serif" font-size="4.800" font-weight="400" fill="#4B5563" text-anchor="middle">KG / E / C</text>
+<rect x="116.220" y="138.898" width="62.362" height="22.677" rx="4.000" fill="#FFF3E0" stroke="#D97706" stroke-width="0.800"/>
+<text x="147.402" y="148.750" font-family="Arial, Helvetica, sans-serif" font-size="5.800" font-weight="400" fill="#1F2933" text-anchor="middle">[7] MVE cswap</text>
+<text x="147.402" y="155.550" font-family="Arial, Helvetica, sans-serif" font-size="5.000" font-weight="400" fill="#4B5563" text-anchor="middle">E / W / C</text>
+<rect x="187.087" y="110.551" width="68.031" height="22.677" rx="4.000" fill="#FFF3E0" stroke="#D97706" stroke-width="0.800"/>
+<text x="221.102" y="117.339" font-family="Arial, Helvetica, sans-serif" font-size="5.300" font-weight="400" fill="#1F2933" text-anchor="middle">[4,5] Field mul/sqr</text>
+<text x="221.102" y="123.639" font-family="Arial, Helvetica, sans-serif" font-size="5.300" font-weight="400" fill="#1F2933" text-anchor="middle">schedule</text>
+<text x="221.102" y="129.939" font-family="Arial, Helvetica, sans-serif" font-size="4.500" font-weight="400" fill="#4B5563" text-anchor="middle">all X25519</text>
+<rect x="187.087" y="138.898" width="68.031" height="22.677" rx="4.000" fill="#F0EBF8" stroke="#6B4FA1" stroke-width="0.800"/>
+<text x="221.102" y="148.767" font-family="Arial, Helvetica, sans-serif" font-size="5.700" font-weight="400" fill="#1F2933" text-anchor="middle">[8] Paired inversion</text>
+<text x="221.102" y="155.467" font-family="Arial, Helvetica, sans-serif" font-size="4.900" font-weight="400" fill="#4B5563" text-anchor="middle">E only</text>
+<line x1="51.024" y1="69.449" x2="51.024" y2="133.228" stroke="#4B5563" stroke-width="0.800"/>
+<line x1="51.024" y1="133.228" x2="62.362" y2="133.228" stroke="#D97706" stroke-width="0.900"/>
+<polygon points="62.362,133.228 58.141,135.907 58.141,130.549" fill="#D97706"/>
+<line x1="107.717" y1="127.559" x2="116.220" y2="121.890" stroke="#D97706" stroke-width="0.900"/>
+<polygon points="116.220,121.890 114.194,126.461 111.222,122.002" fill="#D97706"/>
+<line x1="107.717" y1="138.898" x2="116.220" y2="150.236" stroke="#D97706" stroke-width="0.900"/>
+<polygon points="116.220,150.236 111.544,148.466 115.831,145.251" fill="#D97706"/>
+<line x1="178.583" y1="121.890" x2="187.087" y2="121.890" stroke="#D97706" stroke-width="0.900"/>
+<polygon points="187.087,121.890 182.865,124.569 182.865,119.211" fill="#D97706"/>
+<line x1="178.583" y1="150.236" x2="187.087" y2="150.236" stroke="#6B4FA1" stroke-width="0.900"/>
+<polygon points="187.087,150.236 182.865,152.915 182.865,147.557" fill="#6B4FA1"/>
+<line x1="221.102" y1="133.228" x2="221.102" y2="138.898" stroke="#6B4FA1" stroke-width="0.800"/>
+<polygon points="221.102,138.898 218.959,135.520 223.246,135.520" fill="#6B4FA1"/>
+<rect x="62.362" y="175.748" width="192.756" height="22.677" rx="4.000" fill="#EAF5EA" stroke="#2E7D32" stroke-width="0.800"/>
+<text x="158.740" y="185.601" font-family="Arial, Helvetica, sans-serif" font-size="5.800" font-weight="400" fill="#1F2933" text-anchor="middle">[6] Alignment-aware memcpy / memset across common</text>
+<text x="158.740" y="192.401" font-family="Arial, Helvetica, sans-serif" font-size="5.800" font-weight="400" fill="#1F2933" text-anchor="middle">glue</text>
+<rect x="269.291" y="82.205" width="62.362" height="36.850" rx="4.000" fill="#F5F7FA" stroke="#4B5563" stroke-width="0.800"/>
+<text x="300.472" y="102.610" font-family="Arial, Helvetica, sans-serif" font-size="6.000" font-weight="700" fill="#1F2933" text-anchor="middle">SHA3-256 combiner</text>
+<rect x="269.291" y="136.063" width="62.362" height="25.512" rx="4.000" fill="#EAF5EA" stroke="#2E7D32" stroke-width="0.800"/>
+<text x="300.472" y="150.733" font-family="Arial, Helvetica, sans-serif" font-size="5.800" font-weight="700" fill="#1F2933" text-anchor="middle">32-byte shared secret</text>
+<line x1="255.118" y1="69.449" x2="269.291" y2="93.543" stroke="#1769AA" stroke-width="0.900"/>
+<polygon points="269.291,93.543 264.842,91.263 269.460,88.546" fill="#1769AA"/>
+<line x1="255.118" y1="133.228" x2="269.291" y2="107.717" stroke="#D97706" stroke-width="0.900"/>
+<polygon points="269.291,107.717 269.583,112.708 264.899,110.106" fill="#D97706"/>
+<line x1="255.118" y1="150.236" x2="269.291" y2="116.220" stroke="#6B4FA1" stroke-width="0.900"/>
+<polygon points="269.291,116.220 270.141,121.148 265.195,119.087" fill="#6B4FA1"/>
+<line x1="300.472" y1="119.055" x2="300.472" y2="136.063" stroke="#2E7D32" stroke-width="0.900"/>
+<polygon points="300.472,136.063 297.793,131.841 303.152,131.841" fill="#2E7D32"/>
+</svg>

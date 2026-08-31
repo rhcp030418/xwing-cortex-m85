@@ -1,0 +1,8 @@
+seed=42 rc=0 status=OPTIMAL final=[Cycles ~ 82.0, IPC ~ 1.90] out_sha16=fc05a73bd3f6e3dc wall=80s
+seed=1 rc=0 status=OPTIMAL final=[Cycles ~ 82.0, IPC ~ 1.90] out_sha16=17b29bce60db3d3f wall=379s
+seed=2 rc=0 status=OPTIMAL final=[Cycles ~ 83.0, IPC ~ 1.88] out_sha16=08f8b698b90df22d wall=973s
+seed=3 rc=0 status=OPTIMAL final=[Cycles ~ 82.0, IPC ~ 1.90] out_sha16=ad46d97f645fa675 wall=382s
+seed=7 rc=0 status=OPTIMAL final=[Cycles ~ 82.0, IPC ~ 1.90] out_sha16=bc4980886a62803c wall=75s
+seed=11 rc=0 status=OPTIMAL final=[Cycles ~ 83.0, IPC ~ 1.88] out_sha16=6639ac6190c53ce2 wall=676s
+seed=23 rc=0 status=OPTIMAL final=[Cycles ~ 83.0, IPC ~ 1.88] out_sha16=b5f778fcf36d4fef wall=681s
+seed=101 rc=0 status=OPTIMAL final=[Cycles ~ 84.0, IPC ~ 1.86] out_sha16=c2e8ad0ebb161e70 wall=383s

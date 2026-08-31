@@ -1,0 +1,594 @@
+0200e240 00000008 t __asm_barrett_reduce_veneer
+0200e250 00000008 t __basemul_asm_acc_opt_32_16_veneer
+0200e248 00000008 t __basemul_asm_acc_opt_32_32_veneer
+0200e2b0 00000008 t __basemul_asm_opt_16_32_veneer
+0200e2d8 00000008 t __cmov_int16_veneer
+0200e278 00000008 t __curve25519_scalarmult_veneer
+27000000 R __data_flash_noinit$$Base
+27000000 R __data_flash_noinit$$Limit
+27000000 R __data_flash_readonly$$Base
+27000000 R __data_flash_readonly$$Limit
+27000000 R __ddsc_DATA_FLASH_END
+27000000 R __ddsc_DATA_FLASH_START
+20001000 B __ddsc_DTCM_END
+20000000 R __ddsc_DTCM_START
+0200f000 R __ddsc_FLASH_END
+0200f000 R __ddsc_FLASH_NSC
+02000000 R __ddsc_FLASH_START
+00004a00 T __ddsc_ITCM_END
+00000000 R __ddsc_ITCM_START
+1300a190 R __ddsc_OPTION_SETTING_BANKSEL_END
+0300a210 R __ddsc_OPTION_SETTING_BANKSEL_SEC_END
+0300a210 R __ddsc_OPTION_SETTING_BANKSEL_SEC_START
+0300a290 R __ddsc_OPTION_SETTING_BANKSEL_SEL_END
+0300a290 R __ddsc_OPTION_SETTING_BANKSEL_SEL_START
+1300a190 R __ddsc_OPTION_SETTING_BANKSEL_START
+1300a1c0 R __ddsc_OPTION_SETTING_BPS_END
+0300a240 R __ddsc_OPTION_SETTING_BPS_SEC_END
+0300a240 R __ddsc_OPTION_SETTING_BPS_SEC_START
+0300a2c0 R __ddsc_OPTION_SETTING_BPS_SEL_END
+0300a2c0 R __ddsc_OPTION_SETTING_BPS_SEL_START
+1300a1c0 R __ddsc_OPTION_SETTING_BPS_START
+27030080 R __ddsc_OPTION_SETTING_DATA_FLASH_FSBLCTRL0_END
+27030080 R __ddsc_OPTION_SETTING_DATA_FLASH_FSBLCTRL0_START
+27030084 R __ddsc_OPTION_SETTING_DATA_FLASH_FSBLCTRL1_END
+27030084 R __ddsc_OPTION_SETTING_DATA_FLASH_FSBLCTRL1_START
+27030088 R __ddsc_OPTION_SETTING_DATA_FLASH_FSBLCTRL2_END
+27030088 R __ddsc_OPTION_SETTING_DATA_FLASH_FSBLCTRL2_START
+2703008c R __ddsc_OPTION_SETTING_DATA_FLASH_SACC0_END
+2703008c R __ddsc_OPTION_SETTING_DATA_FLASH_SACC0_START
+27030090 R __ddsc_OPTION_SETTING_DATA_FLASH_SACC1_END
+27030090 R __ddsc_OPTION_SETTING_DATA_FLASH_SACC1_START
+27030094 R __ddsc_OPTION_SETTING_DATA_FLASH_SAMR_END
+27030094 R __ddsc_OPTION_SETTING_DATA_FLASH_SAMR_START
+0300a110 R __ddsc_OPTION_SETTING_DUALSEL_END
+0300a110 R __ddsc_OPTION_SETTING_DUALSEL_START
+0300a104 R __ddsc_OPTION_SETTING_OFS0_END
+0300a100 R __ddsc_OPTION_SETTING_OFS0_START
+1300a180 R __ddsc_OPTION_SETTING_OFS1_END
+0300a204 R __ddsc_OPTION_SETTING_OFS1_SEC_END
+0300a200 R __ddsc_OPTION_SETTING_OFS1_SEC_START
+0300a284 R __ddsc_OPTION_SETTING_OFS1_SEL_END
+0300a280 R __ddsc_OPTION_SETTING_OFS1_SEL_START
+1300a180 R __ddsc_OPTION_SETTING_OFS1_START
+0300a108 R __ddsc_OPTION_SETTING_OFS2_END
+0300a104 R __ddsc_OPTION_SETTING_OFS2_START
+1300a1e0 R __ddsc_OPTION_SETTING_PBPS_END
+0300a260 R __ddsc_OPTION_SETTING_PBPS_SEC_END
+0300a260 R __ddsc_OPTION_SETTING_PBPS_SEC_START
+1300a1e0 R __ddsc_OPTION_SETTING_PBPS_START
+80000000 ? __ddsc_OSPI0_CS0_END
+80000000 R __ddsc_OSPI0_CS0_START
+90000000 R __ddsc_OSPI0_CS1_END
+90000000 R __ddsc_OSPI0_CS1_START
+22000600 B __ddsc_RAM_END
+22000600 B __ddsc_RAM_NSC
+22000000 R __ddsc_RAM_START
+68000000 ? __ddsc_SDRAM_END
+68000000 R __ddsc_SDRAM_START
+02004a44 t __do_global_dtors_aux
+0200ef20 r __do_global_dtors_aux_fini_array_entry
+20000000 R __dtcm_from_data_flash$$Base
+20000000 R __dtcm_from_data_flash$$Limit
+27000000 A __dtcm_from_data_flash$$Load
+20000000 T __dtcm_from_flash$$Base
+20000000 T __dtcm_from_flash$$Limit
+020049f0 A __dtcm_from_flash$$Load
+20000000 R __dtcm_from_ospi0_cs1$$Base
+20000000 R __dtcm_from_ospi0_cs1$$Limit
+90000000 A __dtcm_from_ospi0_cs1$$Load
+20000000 T __dtcm_noinit$$Base
+20000000 T __dtcm_noinit$$Limit
+20000000 B __dtcm_zero$$Base
+20000e50 B __dtcm_zero$$Limit
+0200ef24 R __exidx_end
+0200ef24 R __exidx_start
+0200ef24 R __fini_array_end
+0200ef20 R __fini_array_start
+02000040 R __flash_noinit$$Base
+02000040 R __flash_noinit$$Limit
+02004a00 T __flash_readonly$$Base
+0200ef14 T __flash_readonly$$Limit
+02000000 R __flash_vectors$$Base
+02000040 R __flash_vectors$$Limit
+0200ef1c r __frame_dummy_init_array_entry
+0200e2c0 00000008 t __frombytes_mul_asm_16_32_veneer
+0200e2c8 00000008 t __frombytes_mul_asm_acc_32_16_veneer
+0200e238 00000008 t __frombytes_mul_asm_acc_32_32_veneer
+0200ef20 R __init_array_end
+0200ef1c R __init_array_start
+0200e2d0 00000008 t __invntt_fast_veneer
+00000000 R __itcm_from_data_flash$$Base
+00000000 R __itcm_from_data_flash$$Limit
+27000000 A __itcm_from_data_flash$$Load
+00000000 T __itcm_from_flash$$Base
+000049b0 T __itcm_from_flash$$Limit
+02000040 A __itcm_from_flash$$Load
+00000000 R __itcm_from_ospi0_cs1$$Base
+00000000 R __itcm_from_ospi0_cs1$$Limit
+90000000 A __itcm_from_ospi0_cs1$$Load
+000049b0 T __itcm_noinit$$Base
+000049b0 T __itcm_noinit$$Limit
+000049b0 T __itcm_zero$$Base
+000049b0 T __itcm_zero$$Limit
+0200e258 00000008 t __KeccakF1600_StateExtractBytes_veneer
+00003000 t __KeccakF1600_StateExtractBytesInLane
+00003086 t __KeccakF1600_StateExtractBytesInLane_Loop
+00002f00 t __KeccakF1600_StateExtractLanes
+00002f00 t __KeccakF1600_StateExtractLanes_LoopAligned
+0200e288 00000008 t __KeccakF1600_StatePermute_veneer
+0200e298 00000008 t __KeccakF1600_StateXORBytes_veneer
+00002d00 t __KeccakF1600_StateXORBytesInLane
+00002d08 t __KeccakF1600_StateXORBytesInLane_Loop
+00002c00 t __KeccakF1600_StateXORLanes
+00002c00 t __KeccakF1600_StateXORLanes_LoopAligned
+0200e2b8 00000008 t __matacc_asm_cache_16_32_veneer
+0200e290 00000008 t __matacc_asm_cache_32_16_veneer
+0200e280 00000008 t __matacc_asm_cache_32_32_veneer
+0200e2a8 00000008 t __matacc_asm_opt_16_32_veneer
+0200e268 00000008 t __matacc_asm_opt_32_16_veneer
+0200e2e0 00000008 t __matacc_asm_opt_32_32_veneer
+0200e2a0 00000008 t __ntt_fast_veneer
+1300a190 R __option_setting_banksel_reg$$Base
+1300a190 R __option_setting_banksel_reg$$Limit
+0300a210 R __option_setting_banksel_sec_reg$$Base
+0300a210 R __option_setting_banksel_sec_reg$$Limit
+0300a290 R __option_setting_banksel_sel_reg$$Base
+0300a290 R __option_setting_banksel_sel_reg$$Limit
+1300a1c0 R __option_setting_bps_reg$$Base
+1300a1c0 R __option_setting_bps_reg$$Limit
+0300a240 R __option_setting_bps_sec_reg$$Base
+0300a240 R __option_setting_bps_sec_reg$$Limit
+0300a2c0 R __option_setting_bps_sel_reg$$Base
+0300a2c0 R __option_setting_bps_sel_reg$$Limit
+27030080 R __option_setting_data_flash_fsblctrl0_reg$$Base
+27030080 R __option_setting_data_flash_fsblctrl0_reg$$Limit
+27030084 R __option_setting_data_flash_fsblctrl1_reg$$Base
+27030084 R __option_setting_data_flash_fsblctrl1_reg$$Limit
+27030088 R __option_setting_data_flash_fsblctrl2_reg$$Base
+27030088 R __option_setting_data_flash_fsblctrl2_reg$$Limit
+2703008c R __option_setting_data_flash_sacc0_reg$$Base
+2703008c R __option_setting_data_flash_sacc0_reg$$Limit
+27030090 R __option_setting_data_flash_sacc1_reg$$Base
+27030090 R __option_setting_data_flash_sacc1_reg$$Limit
+27030094 R __option_setting_data_flash_samr_reg$$Base
+27030094 R __option_setting_data_flash_samr_reg$$Limit
+0300a110 R __option_setting_dualsel_reg$$Base
+0300a110 R __option_setting_dualsel_reg$$Limit
+0300a100 R __option_setting_ofs0_reg$$Base
+0300a104 R __option_setting_ofs0_reg$$Limit
+1300a180 R __option_setting_ofs1_reg$$Base
+1300a180 R __option_setting_ofs1_reg$$Limit
+0300a200 R __option_setting_ofs1_sec_reg$$Base
+0300a204 R __option_setting_ofs1_sec_reg$$Limit
+0300a280 R __option_setting_ofs1_sel_reg$$Base
+0300a284 R __option_setting_ofs1_sel_reg$$Limit
+0300a104 R __option_setting_ofs2_reg$$Base
+0300a108 R __option_setting_ofs2_reg$$Limit
+1300a1e0 R __option_setting_pbps_reg$$Base
+1300a1e0 R __option_setting_pbps_reg$$Limit
+0300a260 R __option_setting_pbps_sec_reg$$Base
+0300a260 R __option_setting_pbps_sec_reg$$Limit
+80000000 R __ospi0_cs0_from_data_flash$$Base
+80000000 R __ospi0_cs0_from_data_flash$$Limit
+27000000 A __ospi0_cs0_from_data_flash$$Load
+80000000 ? __ospi0_cs0_from_flash$$Base
+80000000 ? __ospi0_cs0_from_flash$$Limit
+02000040 A __ospi0_cs0_from_flash$$Load
+80000000 R __ospi0_cs0_from_ospi0_cs1$$Base
+80000000 R __ospi0_cs0_from_ospi0_cs1$$Limit
+90000000 A __ospi0_cs0_from_ospi0_cs1$$Load
+80000000 ? __ospi0_cs0_noinit$$Base
+80000000 ? __ospi0_cs0_noinit$$Limit
+80000000 ? __ospi0_cs0_noinit_nocache$$Base
+80000000 ? __ospi0_cs0_noinit_nocache$$Limit
+80000000 ? __ospi0_cs0_zero$$Base
+80000000 ? __ospi0_cs0_zero$$Limit
+80000000 ? __ospi0_cs0_zero_nocache$$Base
+80000000 ? __ospi0_cs0_zero_nocache$$Limit
+90000000 R __ospi0_cs1_noinit$$Base
+90000000 R __ospi0_cs1_noinit$$Limit
+90000000 R __ospi0_cs1_readonly$$Base
+90000000 R __ospi0_cs1_readonly$$Limit
+0200e260 00000008 t __pointwise_add_veneer
+0200e270 00000008 t __pointwise_sub_veneer
+0200ef1c R __preinit_array_end
+0200ef1c R __preinit_array_start
+22000000 R __ram_dtc_vector$$Base
+22000000 R __ram_dtc_vector$$Limit
+22000000 R __ram_from_data_flash$$Base
+22000000 R __ram_from_data_flash$$Limit
+27000000 A __ram_from_data_flash$$Load
+22000000 D __ram_from_flash$$Base
+22000004 D __ram_from_flash$$Limit
+020049f0 A __ram_from_flash$$Load
+22000000 R __ram_from_ospi0_cs1$$Base
+22000000 R __ram_from_ospi0_cs1$$Limit
+90000000 A __ram_from_ospi0_cs1$$Load
+22000020 B __ram_noinit$$Base
+2200044c B __ram_noinit$$Limit
+22000020 D __ram_noinit_nocache$$Base
+22000020 D __ram_noinit_nocache$$Limit
+220005e0 B __ram_thread_stack$$Base
+220005e0 B __ram_thread_stack$$Limit
+22000450 B __ram_zero$$Base
+220005dc B __ram_zero$$Limit
+22000004 B __ram_zero_nocache$$Base
+22000020 B __ram_zero_nocache$$Limit
+68000000 R __sdram_from_data_flash$$Base
+68000000 R __sdram_from_data_flash$$Limit
+27000000 A __sdram_from_data_flash$$Load
+68000000 R __sdram_from_flash$$Base
+68000000 R __sdram_from_flash$$Limit
+02000040 A __sdram_from_flash$$Load
+68000000 R __sdram_from_ospi0_cs1$$Base
+68000000 R __sdram_from_ospi0_cs1$$Limit
+90000000 A __sdram_from_ospi0_cs1$$Load
+68000000 ? __sdram_noinit$$Base
+68000000 ? __sdram_noinit$$Limit
+68000000 R __sdram_noinit_nocache$$Base
+68000000 R __sdram_noinit_nocache$$Limit
+68000000 ? __sdram_zero$$Base
+68000000 ? __sdram_zero$$Limit
+68000000 ? __sdram_zero_nocache$$Base
+68000000 ? __sdram_zero_nocache$$Limit
+000049a8 00000008 t __shake128_squeezeblocks_veneer
+22000004 D __TMC_END__
+02000000 00000040 R __Vectors
+0200ef18 T _fini
+0200ef14 T _init
+02000000 R _VECTORS
+00000000 a Aba0
+00000004 a Aba1
+00000008 a Abe0
+0000000c a Abe1
+00000010 a Abi0
+00000014 a Abi1
+00000018 a Abo0
+0000001c a Abo1
+0200d87c 000000d2 t absorb4
+00000020 a Abu0
+00000024 a Abu1
+00000028 a Aga0
+0000002c a Aga1
+00000030 a Age0
+00000034 a Age1
+00000038 a Agi0
+0000003c a Agi1
+00000040 a Ago0
+00000044 a Ago1
+00000048 a Agu0
+0000004c a Agu1
+00000050 a Aka0
+00000054 a Aka1
+00000058 a Ake0
+0000005c a Ake1
+00000060 a Aki0
+00000064 a Aki1
+00000068 a Ako0
+0000006c a Ako1
+00000070 a Aku0
+00000074 a Aku1
+00000078 a Ama0
+0000007c a Ama1
+00000080 a Ame0
+00000084 a Ame1
+00000088 a Ami0
+0000008c a Ami1
+00000090 a Amo0
+00000094 a Amo1
+00000098 a Amu0
+0000009c a Amu1
+00000100 00000058 T apx_real_fe25519_add
+000001ba 000001c0 T apx_real_fe25519_mul
+0000037a 00000158 T apx_real_fe25519_sqr
+00000158 00000062 T apx_real_fe25519_sub
+000000a0 a Asa0
+000000a4 a Asa1
+000000a8 a Ase0
+000000ac a Ase1
+000000b0 a Asi0
+000000b4 a Asi1
+00002798 T asm_barrett_reduce
+000028bc T asm_fromplant
+000000b8 a Aso0
+000000bc a Aso1
+000000c0 a Asu0
+000000c4 a Asu1
+000009a8 T basemul_asm_acc_opt_32_16
+0000094c T basemul_asm_acc_opt_32_32
+00000900 T basemul_asm_opt_16_32
+0200ea30 00000020 t basepoint
+0200dc10 00000150 T bsp_clock_init
+0200e1e4 00000002 T bsp_init
+0200dee8 00000018 T bsp_irq_cfg
+0200de10 0000000a T bsp_prv_software_delay_loop
+0200d9d0 000000ec t bsp_vbatt_init
+0200dfb4 00000004 W BusFault_Handler
+02004a90 00000060 T cbd
+02005d14 00000030 T cmov
+00000864 T cmov_int16
+02005794 000000ba T cmp_poly_compress
+02005850 000000e8 T cmp_poly_packcompress
+22000450 b completed.1
+0200ed54 000000f0 t copy_list
+02005088 0000007a T crypto_kem_dec
+02005014 00000074 T crypto_kem_enc_derand
+02004fb8 0000005c T crypto_kem_keypair_derand
+00000506 00000358 T curve25519_scalarmult
+00003000 A DATA_FLASH_LENGTH
+27000000 A DATA_FLASH_START
+0200dfb4 00000004 W DebugMon_Handler
+0200dfb4 00000004 T Default_Handler
+02004a00 t deregister_tm_clones
+00000010 a distance
+00000100 a distance
+00010000 A DTCM_LENGTH
+20000000 A DTCM_START
+0200e9e8 00000028 t dummy_one
+20000000 00000028 b dummy_out
+0200ea18 00000014 T expde_api
+22000568 00000004 B expde_api_anchor
+0200d458 000000b4 t expde_combine
+0200d620 00000022 T expde_decaps_cold
+0200d5a4 0000007c T expde_decaps_warm
+0200d420 00000036 t expde_ek_check
+0200d50c 00000098 T expde_encaps
+0200d31c 000000a8 T expde_expand
+0200d3c4 0000005a T expde_keypair
+0200c8b4 000001a0 t fe_cswap
+00000100 00000058 T fe25519_add
+000049a0 00000004 T fe25519_mul
+000049a4 00000004 T fe25519_sqr
+000004d2 00000022 T fe25519_sqr_many
+00000158 00000062 T fe25519_sub
+0200c444 0000046e t fiat_25519_carry_square
+02006660 000007b4 T fiat_mul_u4_p0
+02006e20 000007b8 T fiat_mul_u4_p1
+020075e0 000007b8 T fiat_mul_u4_p2
+02007da0 000007b8 T fiat_mul_u4_p3
+02008560 00000680 T fiat_mul_u8_p0
+02008be0 00000684 T fiat_mul_u8_p1
+02009270 00000684 T fiat_mul_u8_p2
+02009900 00000684 T fiat_mul_u8_p3
+02009f90 00000684 T fiat_mul_u8_p4
+0200a620 00000684 T fiat_mul_u8_p5
+0200acb0 00000684 T fiat_mul_u8_p6
+0200b340 00000684 T fiat_mul_u8_p7
+02006150 0000050e T fiat_mul_y11_scalar
+0200b9d6 T fiat_u_qrestore
+0200b9c4 T fiat_u_qsave
+0200d20c 00000030 T fiat_x25519_queue_pending
+0200d188 00000084 T fiat_x25519_step
+001f8000 A FLASH_LENGTH
+02000000 A FLASH_START
+02004a6c t frame_dummy
+00002574 0000009c T frombytes_mul_asm_16_32
+000026b4 000000e4 T frombytes_mul_asm_acc_32_16
+00002610 000000a4 T frombytes_mul_asm_acc_32_32
+0200d730 00000058 t fused_round8
+0300a100 00000004 r g_bsp_cfg_option_setting_ofs0
+0300a200 00000004 r g_bsp_cfg_option_setting_ofs1_sec
+0300a280 00000004 r g_bsp_cfg_option_setting_ofs1_sel
+0300a104 00000004 r g_bsp_cfg_option_setting_ofs2
+22000588 00000040 B g_bsp_group_irq_sources
+0200eeb4 00000008 T g_bsp_leds
+0200eb10 0000000c T g_bsp_pin_cfg
+0200eb1c 00000200 T g_bsp_pin_cfg_data
+0200eebc 00000006 t g_bsp_prv_leds
+22000420 0000002c b g_clock_freq
+0200ef10 00000004 t g_fsp_version
+0200eec4 00000044 t g_fsp_version_build_string
+0200ef08 00000006 t g_fsp_version_string
+0200ed24 00000018 T g_init_info
+0200eea4 00000002 V g_interrupt_event_link_select
+22000580 00000008 B g_ioport_ctrl
+00000000 00000100 T g_itcm_bad_granule_pad
+2200055c 00000004 B g_keccak_perm_calls
+22000020 00000400 B g_main_stack
+0200eea8 0000000a t g_prcr_masks
+220005cc 0000000a B g_protect_counters
+220005c8 00000004 B g_protect_pfswe_counter
+22000578 00000004 B g_u_mve_block
+0200ed1c 00000006 t g_vbatt_pins_input
+0200d23c 000000c8 T hal_entry
+0200dfb4 00000004 W HardFault_Handler
+22000574 00000004 B harness_done
+22000570 00000004 B harness_fails
+0200d644 0000005c T harness_main
+02004f24 00000092 T indcpa_dec
+02004c3c 00000162 T indcpa_enc
+02004da0 00000184 T indcpa_enc_cmp
+02004af0 0000014a T indcpa_keypair_derand
+020054ec 0000000c T invntt
+00000a38 T invntt_fast
+00010000 A ITCM_LENGTH
+00000000 A ITCM_START
+22000564 00000004 b job_count
+22000560 00000004 b job_cursor
+0200ca54 00000734 t job_step
+20000028 000005f8 b jobs
+22000490 000000c8 b k22_cache
+22000470 00000020 b k22_cache_seed
+2200046c 00000004 b k22_cache_valid
+2200056c 00000004 B k32_mode
+02005e28 00000090 t keccak_absorb
+02005da0 00000088 t keccak_inc_absorb
+02005d44 0000005c t keccak_inc_finalize
+02005eb8 000000a0 t keccak_inc_squeeze
+0200ba90 T keccak4_round_b2_rc
+00002a00 T KeccakF1600_Initialize
+00002e00 T KeccakF1600_StateExtractBytes
+00002e38 t KeccakF1600_StateExtractBytes_Bytes
+00002e1e t KeccakF1600_StateExtractBytes_BytesAlign
+00002e2a t KeccakF1600_StateExtractBytes_CheckLanes
+00002e40 t KeccakF1600_StateExtractBytes_Exit
+00002e44 t KeccakF1600_StateExtractBytes_Exit1
+0200b9f0 00000092 T KeccakF1600_StateExtractLanes_bk
+00003200 T KeccakF1600_StatePermute
+00003100 t KeccakF1600_StatePermute_RoundConstantsWithTerminator
+0000320c t KeccakF1600_StatePermute_RoundLoop
+00002b00 T KeccakF1600_StateXORBytes
+00002b38 t KeccakF1600_StateXORBytes_Bytes
+00002b1e t KeccakF1600_StateXORBytes_BytesAlign
+00002b2a t KeccakF1600_StateXORBytes_CheckLanes
+00002b40 t KeccakF1600_StateXORBytes_Exit
+00002b44 t KeccakF1600_StateXORBytes_Exit1
+02005b6c 00000120 T kyber_shake128_absorb
+02005c8c 00000046 T kyber_shake256_prf
+02005cd4 00000040 T kyber_shake256_rkprf
+000004f4 00000012 t loadm
+0200d9c4 0000000a T main
+00001954 000001fa T matacc_asm_cache_16_32
+00001d64 0000027a T matacc_asm_cache_32_16
+00001b50 00000212 T matacc_asm_cache_32_32
+00001fe0 000001a6 T matacc_asm_opt_16_32
+0000234c 00000226 T matacc_asm_opt_32_16
+00002188 000001c2 T matacc_asm_opt_32_32
+020051e4 00000190 T matacc_cache32
+02005374 0000016c T matacc_opt32
+00000000 a mDa0
+00000004 a mDa1
+00000010 a mDi0
+00000008 a mDo0
+0000000c a mDo1
+0200e1e8 00000020 T memcmp
+0200e218 0000001a T memcpy
+0200dfb4 00000004 W MemManage_Handler
+0200e208 00000010 T memset
+0200e198 t memset_64_loop_end_528
+0200e1b8 t memset_64_loop_end_555
+0200e190 t memset_64_loop_start_528
+0200e1b0 t memset_64_loop_start_555
+22000558 00000004 B mlkem_k22_mode
+2200057c 00000004 B mlkem_keccakx4_mode
+00000014 a mRC
+00000018 a mSize
+20000660 000007f0 b mve_block
+0200dea4 00000044 T NMI_Handler
+0200ed3c 00000018 t nocache_list
+020054e0 0000000c T ntt
+000012b8 T ntt_fast
+22000454 b object.0
+00000020 a offset
+00000020 a offset
+00000004 A OPTION_SETTING_BANKSEL_LENGTH
+00000004 A OPTION_SETTING_BANKSEL_SEC_LENGTH
+0300a210 A OPTION_SETTING_BANKSEL_SEC_START
+00000004 A OPTION_SETTING_BANKSEL_SEL_LENGTH
+0300a290 A OPTION_SETTING_BANKSEL_SEL_START
+1300a190 A OPTION_SETTING_BANKSEL_START
+00000010 A OPTION_SETTING_BPS_LENGTH
+00000010 A OPTION_SETTING_BPS_SEC_LENGTH
+0300a240 A OPTION_SETTING_BPS_SEC_START
+00000010 A OPTION_SETTING_BPS_SEL_LENGTH
+0300a2c0 A OPTION_SETTING_BPS_SEL_START
+1300a1c0 A OPTION_SETTING_BPS_START
+00000004 A OPTION_SETTING_DATA_FLASH_FSBLCTRL0_LENGTH
+27030080 A OPTION_SETTING_DATA_FLASH_FSBLCTRL0_START
+00000004 A OPTION_SETTING_DATA_FLASH_FSBLCTRL1_LENGTH
+27030084 A OPTION_SETTING_DATA_FLASH_FSBLCTRL1_START
+00000004 A OPTION_SETTING_DATA_FLASH_FSBLCTRL2_LENGTH
+27030088 A OPTION_SETTING_DATA_FLASH_FSBLCTRL2_START
+00000004 A OPTION_SETTING_DATA_FLASH_SACC0_LENGTH
+2703008c A OPTION_SETTING_DATA_FLASH_SACC0_START
+00000004 A OPTION_SETTING_DATA_FLASH_SACC1_LENGTH
+27030090 A OPTION_SETTING_DATA_FLASH_SACC1_START
+00000004 A OPTION_SETTING_DATA_FLASH_SAMR_LENGTH
+27030094 A OPTION_SETTING_DATA_FLASH_SAMR_START
+00000004 A OPTION_SETTING_DUALSEL_LENGTH
+0300a110 A OPTION_SETTING_DUALSEL_START
+00000004 A OPTION_SETTING_OFS0_LENGTH
+0300a100 A OPTION_SETTING_OFS0_START
+00000004 A OPTION_SETTING_OFS1_LENGTH
+00000004 A OPTION_SETTING_OFS1_SEC_LENGTH
+0300a200 A OPTION_SETTING_OFS1_SEC_START
+00000004 A OPTION_SETTING_OFS1_SEL_LENGTH
+0300a280 A OPTION_SETTING_OFS1_SEL_START
+1300a180 A OPTION_SETTING_OFS1_START
+00000004 A OPTION_SETTING_OFS2_LENGTH
+0300a104 A OPTION_SETTING_OFS2_START
+00000010 A OPTION_SETTING_PBPS_LENGTH
+00000010 A OPTION_SETTING_PBPS_SEC_LENGTH
+0300a260 A OPTION_SETTING_PBPS_SEC_START
+1300a1e0 A OPTION_SETTING_PBPS_START
+10000000 A OSPI0_CS0_LENGTH
+80000000 A OSPI0_CS0_START
+10000000 A OSPI0_CS1_LENGTH
+90000000 A OSPI0_CS1_START
+0200d6a0 00000048 t pack4
+0200dfb4 00000004 W PendSV_Handler
+0200d788 000000f4 t permute4
+000008bc T pointwise_add
+00000878 T pointwise_sub
+02005a2c 00000004 T poly_add
+02005a1c 00000004 T poly_basemul_acc_opt_32_16
+02005a18 00000004 T poly_basemul_acc_opt_32_32
+02005a14 00000004 T poly_basemul_opt_16_32
+020054f8 0000009c T poly_compress
+02005594 000000b4 T poly_decompress
+02005980 0000003c T poly_frombytes
+020059bc 0000000c T poly_frombytes_mul_16_32
+020059d4 00000018 T poly_frombytes_mul_32_16
+020059c8 0000000c T poly_frombytes_mul_32_32
+02005a34 00000044 T poly_frommsg
+02005a24 00000004 T poly_invntt
+020059ec 00000026 T poly_noise
+02005a20 00000004 T poly_ntt
+02005648 000000b4 T poly_packcompress
+02005a28 00000004 T poly_reduce
+02005a30 00000004 T poly_sub
+02005938 00000048 T poly_tobytes
+02005a78 00000054 T poly_tomsg
+020056fc 00000098 T poly_unpackdecompress
+02005af4 00000026 T polyvec_frombytes
+02005b1c 0000001c T polyvec_ntt
+02005acc 00000026 T polyvec_tobytes
+02005b38 00000034 T PQCLEAN_randombytes
+20000620 00000040 b qsave
+0200dd60 000000b0 T R_BSP_Init_RTC
+0200df60 00000054 T R_BSP_RegisterProtectDisable
+0200df00 00000060 T R_BSP_RegisterProtectEnable
+0200de1c 00000088 T R_BSP_SoftwareDelay
+0200dc08 00000002 W R_BSP_SubClockStabilizeWaitAfterReset
+0200d304 00000018 T R_BSP_WarmStart
+0200db68 00000014 T R_IOPORT_Open
+0200dabc 000000ac t r_ioport_pins_config
+000e0000 A RAM_LENGTH
+22000000 A RAM_START
+0200eab0 00000060 t rc_even
+0200ea50 00000060 t rc_odd
+02004a1c t register_tm_clones
+0200dfb8 0000000c T Reset_Handler
+08000000 A SDRAM_LENGTH
+68000000 A SDRAM_START
+0200dfb4 00000004 W SecureFault_Handler
+020060ac 0000004a T sha3_256
+020060f8 0000004a T sha3_512
+02005fe4 00000026 T shake128_absorb
+0200600c 0000005c T shake128_squeezeblocks
+0200d950 00000022 T shake128x4_absorb
+0200d974 0000004e T shake128x4_squeezeblocks
+02006068 00000044 T shake256
+02005f70 0000000c T shake256_inc_absorb
+02005fe0 00000002 T shake256_inc_ctx_release
+02005f7c 0000005a T shake256_inc_finalize
+02005f58 00000016 T shake256_inc_init
+02005fd8 00000006 T shake256_inc_squeeze
+22000000 00000004 d state
+00000004 a strincr
+00000020 a strincr
+0200dfb4 00000004 W SVC_Handler
+0200de10 t sw_delay_loop
+220005d8 00000004 B SystemCoreClock
+0200db7c 0000008c T SystemCoreClockUpdate
+0200e028 000001bc T SystemInit
+0200dfc4 00000064 t SystemRuntimeInit
+0200dfb4 00000004 W SysTick_Handler
+0200d6e8 00000048 t unpack4
+0200dfb4 00000004 W UsageFault_Handler
+02005104 000000de t xof_batch3
+0200ee44 00000060 t zero_list
+0200e8e8 00000100 T zetas
+0200e6e8 00000200 T zetas_asm
+0200e2e8 00000400 T zetas_inv_CT_asm

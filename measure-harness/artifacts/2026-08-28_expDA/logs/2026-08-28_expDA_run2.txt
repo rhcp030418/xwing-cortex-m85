@@ -1,0 +1,196 @@
+CPU is running at low speed (8294 kHz).
+CPU is running at low speed (8294 kHz).
+connected: Cortex-M85
+ELF SHA-256: 79E8861F7734DFF9870813ED80EB8B929D786689A0D94B79B3EB8A4741410B51
+SREC SHA-256: 97295A69D61454645F7397771858492E20C25F39205C111C8C762FD15354BF0A
+flash code readback PASS: bytes=873960 sha256=2C51FB65364C7F7D75A82495F581C8E9F0DA2278726CDD50A5A27F563BB96534
+=== EK-RA8M1 harness: KAT + DWT/PMU (ITCM/DTCM) ===
+
+== KAT: X25519 (RFC 7748 s6.1) ==
+alice_pk: OK
+bob_pk  : OK
+K(a,B)  : OK
+K(b,A)  : OK
+== KAT: SHA3-256 via asm Keccak-f1600 ==
+sha3("")   : OK
+sha3("abc"): OK
+
+KAT ALL PASS -- streams A+B verified on board
+
+DAUTHCTRL readback: 15
+
+[calib-empty] x1
+  dwt_cyc/op   : 131
+  pmu_cyc/op   : 156
+  insts        : 0
+  stall_op     : 0
+  stall_op_fe  : 0
+  stall_op_be  : 0
+  IPC x100     : 0
+  slot-waste % : 0
+
+[keccak-f1600] x1000
+  dwt_cyc/op   : 5504
+  pmu_cyc/op   : 5504
+  insts        : 0
+  stall_op     : 0
+  stall_op_fe  : 0
+  stall_op_be  : 0
+  IPC x100     : 0
+  slot-waste % : 0
+
+[x25519-scalarmult] x10
+  dwt_cyc/op   : 418120
+  pmu_cyc/op   : 418122
+  insts        : 0
+  stall_op     : 0
+  stall_op_fe  : 0
+  stall_op_be  : 0
+  IPC x100     : 0
+  slot-waste % : 0
+
+== K3: ML-KEM-768 (pqm4 m4fspeed) ==
+roundtrip+reject: OK
+keccak perms/op: keygen 43  encaps 44  decaps 44  combiner 1
+expX bytes-mm: 0 smoke-fails=0 align-base-bits=257 align-candidate-bits=257
+expX timing-mm: 0 stack-fails=0 stack-used=9016
+expY bytes-mm: 0 smoke-fails=0 oracle-mm=0 oracle-canary=0 align-base-bits=257 align-candidate-bits=257 input-min=-1664 input-max=1664 output-min=-14304 output-max=24656
+expY timing-mm: 0 stack-fails=0 stack-used=9016
+expZ bytes-mm: 0 smoke-fails=0 fwd-align-base=257 fwd-align-candidate=257 inv-align-base=257 inv-align-candidate=257
+expZ timing-mm: 0 stack-fails=0 stack-used=9016
+expAA bytes-mm: 0 smoke-fails=0 fwd-align-base=257 fwd-align-candidate=257
+expAA timing-mm: 0 stack-fails=0 stack-used=9016
+expAB bytes-mm: 0 smoke-fails=0
+expAB timing-mm: 0 stack-fails=0 stack-used=9208
+expAE x4-kat-fails: 0 u-kat-fails=0
+expAE bytes-mm: 0 smoke-fails=0
+expAE timing-mm: 0 stack-fails=0 stack-used=10388
+expAF path counts (u4-rounds/u8-rounds/real/dummy):
+  op0: 0/0/0/0
+  op1: 0/0/0/0
+  op2: 0/0/0/0
+expAF mismatch: 0
+expAI mismatch: 0 stack-fails=0 stack-used=10380
+bfull_slothy diag: prod-mm=0 lane-mm=0 first-bad-prod= first-bad-lane=
+mul256 full-vs-budget mismatch: 0  /  stitched(product+theta) mismatch: 0  /  bmid(theta x3) mismatch: 0  /  bfull mismatch: 0  /  expc mismatch: 0  /  expd mismatch: 0  /  expe mismatch: 0  /  mve4 mismatch: 0  /  coissue mismatch: 0  /  cosol mismatch: 0  /  expg mismatch: 0  /  exph mismatch: 0  /  expi mismatch: 0  /  v04 mismatch: 0  /  expj mismatch: 0  /  expk mismatch: 0  /  expl mismatch: 0  /  expm mismatch: 0  /  expt mismatch: 0  /  expu mismatch: 0  /  expv mismatch: 0  /  expw mismatch: 0 m55-unavailable=1 m85-inv-mm=0 m85-roundtrip-mm=0
+expAJ kat-mm: 0
+expAJ bytes-mm: 0 smoke-fails=0
+expAJ xw-bytes-mm: 0 xw-smoke-fails=0
+expAJ timing-mm: 0 stack-fails=0 stack-used=9208
+expAK timing-mm: 0 stack-fails=0 stack-used=9208
+expAL xw-bytes-mm: 0 xw-smoke-fails=0
+expAL timing-mm: 0 stack-fails=0 stack-used=9224
+expAM correctness: oracle-mm=0 lenn-mm=0 boundary-mm=0 alias-mm=0 align-mm=0 checks=1025 stack-fails=0 stack-used=1084
+expAM ct-delta: 0 batch=64 stack-fails=0 stack-used=348
+expAMb correctness: opt-mm=0 sqr-mm=0 sqrlenn-mm=0 conv-mm=0 sem-mm=0 checks=1000 stack-fails=0 stack-used=804
+expAMb bench done stack-fails=0 stack-used=404
+expAN equiv: bytes-mm=0 smoke-fails=0 checks=48
+expAN bench: stack-fails=0 stack-used=9240
+expAT correctness: scalar-mm=0 mve-mm=0 checks=240
+expAT bench: stack-fails=0 stack-used=176
+expAU correctness: kat-fails=0 diff-mm=0 checks=70
+expAU bench: stack-fails=0 stack-used=1096
+expAW equiv: bytes-mm=0 smoke-fails=0 reject-mm=0 checks=48
+expAW bench: stack-fails=0 stack-used=9216
+expBA done (128 instr/kernel, batch 64)
+expBB correctness: mm=0 mul-mm=0 checks=2014
+expBC equiv: bytes-mm=0 smoke-fails=0 reject-mm=0 checks=48
+expBC bench: stack-fails=0 stack-used=9216
+expBF state-mm=0 checks=3201
+expBF xw: bytes-mm=0 smoke=0 reject-mm=0
+expBF bench: stack-fails=0
+expBH cnt keygen memcpy-calls=1 memcpy-bytes=1184 memset-calls=17 memset-bytes=3400
+expBH cnt encaps memcpy-calls=0 memcpy-bytes=0 memset-calls=19 memset-bytes=3800
+expBH cnt decaps memcpy-calls=0 memcpy-bytes=0 memset-calls=19 memset-bytes=3800
+expBH xw: bytes-mm=0 smoke=0 reject-mm=0
+expBH bench done
+expBI smoke=0
+expBI bench done
+expBJ done
+expBK extract-mm=0 checks=400
+expBK xw: bytes-mm=0 smoke=0 reject-mm=0
+expBK bench done
+expBL done
+expBM flat-mm=0 sched-mm=0 checks=1049
+expBM bench done
+expBN xw: bytes-mm=0 smoke=0 reject-mm=0
+expBN bench done
+expBO done
+expBS xw: bytes-mm=0 smoke=0 reject-mm=0
+expBS bench done
+expBU d10: smoke=0 reject-fail=0 ekchk-fail=0 coldwarm-mm=0
+expBU bench done
+expBW d10kat: ss-mm=0 dec-mm=0 pk1216-mm=0 ct1120-mm=0
+expBV done
+expBX done
+expBZ done
+expCA correct: ntt-mm=0 kec-mm=0
+expCA bench done
+expCB done
+expCC done
+expCD selftest: SRAMvsDTCM=0 DTCMvsSRAM-again=0
+  expCD n=1 ntt-mm=0 kec-mm=0
+  expCD n=2 ntt-mm=0 kec-mm=0
+  expCD n=3 ntt-mm=0 kec-mm=0
+  expCD n=4 ntt-mm=0 kec-mm=0
+  expCD n=5 ntt-mm=0 kec-mm=0
+  expCD n=6 ntt-mm=0 kec-mm=0
+  expCD n=7 ntt-mm=0 kec-mm=0
+  expCD n=8 ntt-mm=0 kec-mm=0
+expCD correct: ntt-mm=0 kec-mm=0
+expCD bench done
+expCE correct: ntt-mm=0
+expCE bench done
+expCG host-mm=0 guest-mm=0 shl-mm=0 checks=1007
+expCG bench done
+expCJ equiv: bytes-mm=0 smoke=0 reject-mm=0 coldwarm-mm=0
+expCJ timing-mm=0 stack-fails=0 stack-used=12912
+expCO mismatch=0 timing-mm=0 stack-fails=0 stack-used=10380
+expDA equiv-mm=0 batches U9=9 U11=11
+expDA mismatch=0 timing-mm=0 stack-fails=0 stack-used=9196
+expCR correctness: mm=0 checks=1049
+expCR done
+expCS mismatch=0
+expCU equiv-mm=0
+expCU timing-mm=0 stack-fails=0 stack-used=12856
+expCW prep-fail=0 mismatch=0 stack-fails=0 stack-used=12912
+expCX prep-fail=0
+expCX B-warm fixed-ok=3000
+expCX B-cold fixed-ok=3000
+expCX A-warm fixed-ok=3000
+expCX stack-fails=0 stack-used=12920
+rep arrays ready x100 (775 slots)
+HARNESS DONE
+
+calib(median) = 25
+harness_fails = 0
+cell span p05 p25 p50 p75 p95 mean
+F9-ab total 1380542 1381076 1381396 1381784 1388292 1381911.7
+F9-ab fused 497031 497463 497749 498123 504735 498267.7
+F9-ab residual 883392 883478 883578 883668 883761 883579.0
+U9-ab total 1504938 1505796 1506544 1507672 1513946 1507208.8
+U9-ab fused 1132067 1132869 1133521 1134691 1140787 1134187.2
+U9-ab residual 372762 372856 372948 373034 373176 372956.7
+U9-ba total 1504966 1505852 1506522 1507334 1513490 1507029.5
+U9-ba fused 1132057 1132893 1133473 1134299 1140351 1134007.5
+U9-ba residual 372772 372868 372934 373032 373194 372957.0
+F9-ba total 1380528 1380958 1381450 1381758 1388338 1381924.9
+F9-ba fused 496967 497415 497821 498175 504717 498292.9
+F9-ba residual 883372 883462 883564 883653 883738 883563.7
+F11-ab total 1394704 1395086 1395398 1395790 1402346 1395942.8
+F11-ab fused 511087 511499 511831 512147 518833 512327.5
+F11-ab residual 883388 883482 883554 883600 883704 883547.9
+U11-ab total 1546902 1547972 1548458 1549304 1554862 1549016.5
+U11-ab fused 1287701 1288763 1289243 1290051 1295703 1289800.3
+U11-ab residual 258914 259072 259146 259220 259370 259151.2
+U11-ba total 1546760 1548008 1548546 1549448 1554968 1549125.1
+U11-ba fused 1287475 1288717 1289251 1290147 1295793 1289870.5
+U11-ba residual 258994 259110 259178 259272 259376 259189.6
+F11-ba total 1394594 1395006 1395462 1395754 1402216 1395928.5
+F11-ba fused 510999 511435 511831 512185 518689 512313.3
+F11-ba residual 883368 883460 883530 883613 883728 883548.5
+paired total U-F
+coverage=9 order=ab F=1381396 U=1506544 U-F=125148 pct=9.059531%
+coverage=9 order=ba F=1381450 U=1506522 U-F=125072 pct=9.053675%
+coverage=11 order=ab F=1395398 U=1548458 U-F=153060 pct=10.968914%
+coverage=11 order=ba F=1395462 U=1548546 U-F=153084 pct=10.970130%

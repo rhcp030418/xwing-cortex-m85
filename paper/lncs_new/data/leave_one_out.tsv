@@ -1,0 +1,7 @@
+technique	keygen_cycles	encapsulation_cycles	warm_cycles	cold_cycles
+X06_fixed_base	152860	152710	16	152732
+XYC8_ntt_store	22556	18002	28180	50808
+C9_mve_transforms	11120	33300	39386	50552
+K31_memory	12660	10042	9906	21380
+X02_field_squaring	3488	22770	19296	22794
+X01_field_multiplication	4182	11950	7632	11898

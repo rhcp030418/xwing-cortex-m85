@@ -1,0 +1,58 @@
+﻿py : CPU is running at low speed (8296 kHz).
+At line:2 char:1
++ py harvest_ra8m1_expCQ.py --boots 5 2>&1 | Tee-Object -FilePath "logs ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (CPU is running at low speed (8296 kHz).:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+CPU is running at low speed (8296 kHz).
+connected: Cortex-M85
+flashed once; 이후 부팅은 리셋만 한다
+boot 1/5: harness_fails=0 calib=25
+boot 2/5: harness_fails=0 calib=25
+boot 3/5: harness_fails=0 calib=25
+boot 4/5: harness_fails=0 calib=25
+boot 5/5: harness_fails=0 calib=25
+
+# 부팅 간 중앙값 분산 (같은 플래시 이미지, 리셋 부팅)
+cell           span             min        max   spread   spread%
+CO keygen F    total        1351656    1351726       70   0.0052%
+CO keygen F    fused         468308     468384       76   0.0162%
+CO keygen F    residual      883252     883269       17   0.0019%
+CO keygen U    total        1400739    1400982      243   0.0173%
+CO keygen U    fused         687812     687992      180   0.0262%
+CO keygen U    residual      712841     712867       26   0.0036%
+CO decaps F    total        1425957    1426047       90   0.0063%
+CO decaps F    fused         534758     534848       90   0.0168%
+CO decaps F    residual      882902     882940       38   0.0043%
+CO decaps U    total        1476276    1476450      174   0.0118%
+CO decaps U    fused         754814     755020      206   0.0273%
+CO decaps U    residual      713072     713096       24   0.0034%
+CO encaps F    total        2256776    2256861       85   0.0038%
+CO encaps F    fused         483629     483653       24   0.0050%
+CO encaps F    residual     1764835    1764865       30   0.0017%
+CO encaps U    total        2684507    2685832     1325   0.0494%
+CO encaps U    fused        1252339    1253427     1088   0.0869%
+CO encaps U    residual     1423795    1423857       62   0.0044%
+CP keygen F3   total        1351451    1351521       70   0.0052%
+CP keygen F3   fused         468208     468296       88   0.0188%
+CP keygen F3   residual      883153     883177       24   0.0027%
+CP keygen U3   total        1400761    1400931      170   0.0121%
+CP keygen U3   fused         687873     688035      162   0.0236%
+CP keygen U3   residual      712789     712815       26   0.0036%
+CP keygen F5   total        1367939    1368335      396   0.0289%
+CP keygen F5   fused         483942     483978       36   0.0074%
+CP keygen F5   residual      883751     883870      119   0.0135%
+CP keygen U5   total        1441768    1441949      181   0.0126%
+CP keygen U5   fused         841739     841917      178   0.0211%
+CP keygen U5   residual      599937     599959       22   0.0037%
+
+# 부팅마다 다시 계산한 U-F 효과 (총 구간)
+pair              boot1      boot2      boot3      boot4      boot5   spread
+CO keygen         49294      49222      49078      49092      49023      271
+CO decaps         50460      50455      50298      50293      50257      203
+CO encaps        428523     427947     427676     427967     428981     1305
+CP 3batch         49310      49458      49248      49412      49322      210
+CP 5batch         73753      73976      73713      73972      73473      503
+
+# 한계: 전원 사이클이 아니라 시스템 리셋이다. 보드 개체는 1대.

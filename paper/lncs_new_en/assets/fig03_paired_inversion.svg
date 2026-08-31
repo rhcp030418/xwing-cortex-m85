@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="345.827pt" height="176pt" viewBox="0 0 345.827 176" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <title>fig03_paired_inversion</title>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>fig03_paired_inversion</dc:title>
+    <dc:date>2026-08-31T14:20:29.568842</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>OpenAI - publication figure redraw</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 176 
+L 345.827 176 
+L 345.827 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 7 7 
+L 155 7 
+L 155 168 
+L 7 168 
+z
+" clip-path="url(#p99cfb01c62)" style="fill: #f7f8fa; stroke: #d9e0e8; stroke-width: 0.65; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 164 7 
+L 338 7 
+L 338 168 
+L 164 168 
+z
+" clip-path="url(#p99cfb01c62)" style="fill: #fbfcfd; stroke: #d9e0e8; stroke-width: 0.65; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 16.5 43 
+L 42.5 43 
+Q 45 43 45 45.5 
+L 45 61.5 
+Q 45 64 42.5 64 
+L 16.5 64 
+Q 14 64 14 61.5 
+L 14 45.5 
+Q 14 43 16.5 43 
+z
+" clip-path="url(#p99cfb01c62)" style="fill: #f2f4f7; stroke: #8793a2; stroke-width: 0.75; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 63.5 41.5 
+L 107.5 41.5 
+Q 110 41.5 110 44 
+L 110 63 
+Q 110 65.5 107.5 65.5 
+L 63.5 65.5 
+Q 61 65.5 61 63 
+L 61 44 
+Q 61 41.5 63.5 41.5 
+z
+" clip-path="url(#p99cfb01c62)" style="fill: #fcebe9; stroke: #b42318; stroke-width: 0.85; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 128.5 43 
+L 146.5 43 
+Q 149 43 149 45.5 
+L 149 61.5 
+Q 149 64 146.5 64 
+L 128.5 64 
+Q 126 64 126 61.5 
+L 126 45.5 
+Q 126 43 128.5 43 
+z
+" clip-path="url(#p99cfb01c62)" style="fill: #ffffff; stroke: #8793a2; stroke-width: 0.75; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 16.5 83 
+L 42.5 83 
+Q 45 83 45 85.5 
+L 45 101.5 
+Q 45 104 42.5 104 
+L 16.5 104 
+Q 14 104 14 101.5 
+L 14 85.5 
+Q 14 83 16.5 83 
+z
+" clip-path="url(#p99cfb01c62)" style="fill: #f2f4f7; stroke: #8793a2; stroke-width: 0.75; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 63.5 81.5 
+L 107.5 81.5 
+Q 110 81.5 110 84 
+L 110 103 
+Q 110 105.5 107.5 105.5 
+L 63.5 105.5 
+Q 61 105.5 61 103 
+L 61 84 
+Q 61 81.5 63.5 81.5 
+z
+" clip-path="url(#p99cfb01c62)" style="fill: #fcebe9; stroke: #b42318; stroke-width: 0.85; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 128.5 83 
+L 146.5 83 
+Q 149 83 149 85.5 
+L 149 101.5 
+Q 149 104 146.5 104 
+L 128.5 104 
+Q 126 104 126 101.5 
+L 126 85.5 
+Q 126 83 128.5 83 
+z
+" clip-path="url(#p99cfb01c62)" style="fill: #ffffff; stroke: #8793a2; stroke-width: 0.75; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 32.5 126 
+L 127.5 126 
+Q 130 126 130 128.5 
+L 130 148.5 
+Q 130 151 127.5 151 
+L 32.5 151 
+Q 30 151 30 148.5 
+L 30 128.5 
+Q 30 126 32.5 126 
+z
+" clip-path="url(#p99cfb01c62)" style="fill: #fcebe9; stroke: #b42318; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 173.5 39 
+L 195.5 39 
+Q 198 39 198 41.5 
+L 198 57.5 
+Q 198 60 195.5 60 
+L 173.5 60 
+Q 171 60 171 57.5 
+L 171 41.5 
+Q 171 39 173.5 39 
+z
+" clip-path="url(#p99cfb01c62)" style="fill: #f2f4f7; stroke: #8793a2; stroke-width: 0.75; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 173.5 79 
+L 195.5 79 
+Q 198 79 198 81.5 
+L 198 97.5 
+Q 198 100 195.5 100 
+L 173.5 100 
+Q 171 100 171 97.5 
+L 171 81.5 
+Q 171 79 173.5 79 
+z
+" clip-path="url(#p99cfb01c62)" style="fill: #f2f4f7; stroke: #8793a2; stroke-width: 0.75; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 208.5 44 
+L 272.5 44 
+Q 275 44 275 46.5 
+L 275 92.5 
+Q 275 95 272.5 95 
+L 208.5 95 
+Q 206 95 206 92.5 
+L 206 46.5 
+Q 206 44 208.5 44 
+z
+" clip-path="url(#p99cfb01c62)" style="fill: #f1ecfa; stroke: #6b4fa1; stroke-width: 0.85; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 286.5 49 
+L 328.5 49 
+Q 331 49 331 51.5 
+L 331 86.5 
+Q 331 89 328.5 89 
+L 286.5 89 
+Q 284 89 284 86.5 
+L 284 51.5 
+Q 284 49 286.5 49 
+z
+" clip-path="url(#p99cfb01c62)" style="fill: #e9f5ed; stroke: #287a4b; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 183.5 109 
+L 328.5 109 
+Q 331 109 331 111.5 
+L 331 146.5 
+Q 331 149 328.5 149 
+L 183.5 149 
+Q 181 149 181 146.5 
+L 181 111.5 
+Q 181 109 183.5 109 
+z
+" clip-path="url(#p99cfb01c62)" style="fill: #e8f4f5; stroke: #1f6f78; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 204.5 153 
+L 315.5 153 
+Q 318 153 318 155.5 
+L 318 164.5 
+Q 318 167 315.5 167 
+L 204.5 167 
+Q 202 167 202 164.5 
+L 202 155.5 
+Q 202 153 204.5 153 
+z
+" clip-path="url(#p99cfb01c62)" style="fill: #e9f5ed; stroke: #287a4b; stroke-width: 0.75; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 6.4px; font-family: 'Liberation Sans'; text-anchor: start; fill: #b42318" x="12" y="19.655" transform="rotate(-0 12 19.655)">(a) Baseline: independent inversions</text>
+   </g>
+   <g id="text_2">
+    <text style="font-weight: 700; font-size: 6.4px; font-family: 'Liberation Sans'; text-anchor: start; fill: #287a4b" x="169" y="19.655" transform="rotate(-0 169 19.655)">(b) Optimized: zero-safe paired inversion</text>
+   </g>
+   <g id="text_3">
+    <!-- $d_1$ -->
+    <g style="fill: #17212b" transform="translate(26.224 55.129141)">
+     <text>
+      <tspan x="0" y="-0.65625" style="font-weight: 700; font-size: 6.3px; font-family: 'Liberation Sans'; fill: #17212b">d</tspan>
+      <tspan x="3.873257" y="0.295312" style="font-weight: 700; font-size: 4.41px; font-family: 'Liberation Sans'; fill: #17212b">1</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 5.2px; font-family: 'Liberation Sans'; fill: #17212b" transform="translate(80.155781 52.364474)">field</text>
+    <text style="font-weight: 700; font-size: 5.2px; font-family: 'Liberation Sans'; fill: #17212b" transform="translate(73.941781 57.324901)">inversion</text>
+   </g>
+   <g id="text_5">
+    <!-- $d_1^{-1}$ -->
+    <g style="fill: #17212b" transform="translate(133.3995 55.2405)">
+     <text>
+      <tspan x="0" y="-0.892188" style="font-size: 5.9px; font-family: 'Liberation Sans'; fill: #17212b">d</tspan>
+      <tspan x="3.322903" y="-3.1125" style="font-size: 4.13px; font-family: 'Liberation Sans'; fill: #17212b">−</tspan>
+      <tspan x="3.322903" y="0.69375" style="font-size: 4.13px; font-family: 'Liberation Sans'; fill: #17212b">1</tspan>
+      <tspan x="5.724539" y="-3.1125" style="font-size: 4.13px; font-family: 'Liberation Sans'; fill: #17212b">1</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_6">
+    <!-- $d_2$ -->
+    <g style="fill: #17212b" transform="translate(26.224 95.129141)">
+     <text>
+      <tspan x="0" y="-0.65625" style="font-weight: 700; font-size: 6.3px; font-family: 'Liberation Sans'; fill: #17212b">d</tspan>
+      <tspan x="3.873257" y="0.295312" style="font-weight: 700; font-size: 4.41px; font-family: 'Liberation Sans'; fill: #17212b">2</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 5.2px; font-family: 'Liberation Sans'; fill: #17212b" transform="translate(80.155781 92.364474)">field</text>
+    <text style="font-weight: 700; font-size: 5.2px; font-family: 'Liberation Sans'; fill: #17212b" transform="translate(73.941781 97.324901)">inversion</text>
+   </g>
+   <g id="text_8">
+    <!-- $d_2^{-1}$ -->
+    <g style="fill: #17212b" transform="translate(133.3995 95.2405)">
+     <text>
+      <tspan x="0" y="-0.892188" style="font-size: 5.9px; font-family: 'Liberation Sans'; fill: #17212b">d</tspan>
+      <tspan x="3.322903" y="-3.1125" style="font-size: 4.13px; font-family: 'Liberation Sans'; fill: #17212b">−</tspan>
+      <tspan x="3.322903" y="0.69375" style="font-size: 4.13px; font-family: 'Liberation Sans'; fill: #17212b">2</tspan>
+      <tspan x="5.724539" y="-3.1125" style="font-size: 4.13px; font-family: 'Liberation Sans'; fill: #17212b">1</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 5.8px; font-family: 'Liberation Sans'; text-anchor: middle; fill: #17212b" x="80" y="139.999844" transform="rotate(-0 80 139.999844)">Core cost: 2 field inversions</text>
+   </g>
+   <g id="text_10">
+    <!-- $d_1$ -->
+    <g style="fill: #17212b" transform="translate(181.276 51.103281)">
+     <text>
+      <tspan x="0" y="-0.65625" style="font-weight: 700; font-size: 6.2px; font-family: 'Liberation Sans'; fill: #17212b">d</tspan>
+      <tspan x="3.873257" y="0.295312" style="font-weight: 700; font-size: 4.34px; font-family: 'Liberation Sans'; fill: #17212b">1</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_11">
+    <!-- $d_2$ -->
+    <g style="fill: #17212b" transform="translate(181.276 91.103281)">
+     <text>
+      <tspan x="0" y="-0.65625" style="font-weight: 700; font-size: 6.2px; font-family: 'Liberation Sans'; fill: #17212b">d</tspan>
+      <tspan x="3.873257" y="0.295312" style="font-weight: 700; font-size: 4.34px; font-family: 'Liberation Sans'; fill: #17212b">2</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_12">
+    <text style="font-weight: 700; font-size: 4.9px; font-family: 'Liberation Sans'; fill: #17212b" transform="translate(207.834227 62.645719)">constant-time zero handling</text>
+    <text style="font-weight: 700; font-size: 4.9px; font-family: 'Liberation Sans'; fill: #17212b" transform="translate(211.9085 67.341405)">save one mask per input</text>
+    <!-- $\widetilde d_i=1$ if $d_i=0$ -->
+    <g style="fill: #17212b" transform="translate(226.0205 73.114952)">
+     <text>
+      <tspan x="3.769531" y="-2" style="font-size: 4.421264px; font-family: 'STIXSizeOneSym'; fill: #17212b">̃</tspan>
+      <tspan x="0" y="-0.153125" style="font-weight: 700; font-size: 4.9px; font-family: 'Liberation Sans'; fill: #17212b">d</tspan>
+      <tspan x="5.053956" y="-0.153125" style="font-weight: 700; font-size: 4.9px; font-family: 'Liberation Sans'; fill: #17212b">=</tspan>
+      <tspan x="8.850648" y="-0.153125" style="font-weight: 700; font-size: 4.9px; font-family: 'Liberation Sans'; fill: #17212b">1</tspan>
+      <tspan x="11.561891" y="-0.153125" style="font-weight: 700; font-size: 4.9px; font-family: 'Liberation Sans'; fill: #17212b"> </tspan>
+      <tspan x="12.916322" y="-0.153125" style="font-weight: 700; font-size: 4.9px; font-family: 'Liberation Sans'; fill: #17212b">i</tspan>
+      <tspan x="14.270753" y="-0.153125" style="font-weight: 700; font-size: 4.9px; font-family: 'Liberation Sans'; fill: #17212b">f</tspan>
+      <tspan x="15.894166" y="-0.153125" style="font-weight: 700; font-size: 4.9px; font-family: 'Liberation Sans'; fill: #17212b"> </tspan>
+      <tspan x="17.248597" y="-0.153125" style="font-weight: 700; font-size: 4.9px; font-family: 'Liberation Sans'; fill: #17212b">d</tspan>
+      <tspan x="22.302554" y="-0.153125" style="font-weight: 700; font-size: 4.9px; font-family: 'Liberation Sans'; fill: #17212b">=</tspan>
+      <tspan x="26.099246" y="-0.153125" style="font-weight: 700; font-size: 4.9px; font-family: 'Liberation Sans'; fill: #17212b">0</tspan>
+      <tspan x="3.024055" y="0.639062" style="font-weight: 700; font-size: 3.43px; font-family: 'Liberation Sans'; fill: #17212b">i</tspan>
+      <tspan x="20.272653" y="0.639062" style="font-weight: 700; font-size: 3.43px; font-family: 'Liberation Sans'; fill: #17212b">i</tspan>
+     </text>
+    </g>
+    <!-- otherwise $\widetilde d_i=d_i$ -->
+    <g style="fill: #17212b" transform="translate(221.8555 78.8885)">
+     <text>
+      <tspan x="0" y="-0.153125" style="font-weight: 700; font-size: 4.9px; font-family: 'Liberation Sans'; fill: #17212b">o</tspan>
+      <tspan x="2.977844" y="-0.153125" style="font-weight: 700; font-size: 4.9px; font-family: 'Liberation Sans'; fill: #17212b">t</tspan>
+      <tspan x="4.601257" y="-0.153125" style="font-weight: 700; font-size: 4.9px; font-family: 'Liberation Sans'; fill: #17212b">h</tspan>
+      <tspan x="7.579102" y="-0.153125" style="font-weight: 700; font-size: 4.9px; font-family: 'Liberation Sans'; fill: #17212b">e</tspan>
+      <tspan x="10.290344" y="-0.153125" style="font-weight: 700; font-size: 4.9px; font-family: 'Liberation Sans'; fill: #17212b">r</tspan>
+      <tspan x="12.1875" y="-0.153125" style="font-weight: 700; font-size: 4.9px; font-family: 'Liberation Sans'; fill: #17212b">w</tspan>
+      <tspan x="15.979431" y="-0.153125" style="font-weight: 700; font-size: 4.9px; font-family: 'Liberation Sans'; fill: #17212b">i</tspan>
+      <tspan x="17.333862" y="-0.153125" style="font-weight: 700; font-size: 4.9px; font-family: 'Liberation Sans'; fill: #17212b">s</tspan>
+      <tspan x="20.045105" y="-0.153125" style="font-weight: 700; font-size: 4.9px; font-family: 'Liberation Sans'; fill: #17212b">e</tspan>
+      <tspan x="22.756348" y="-0.153125" style="font-weight: 700; font-size: 4.9px; font-family: 'Liberation Sans'; fill: #17212b"> </tspan>
+      <tspan x="24.110779" y="-0.153125" style="font-weight: 700; font-size: 4.9px; font-family: 'Liberation Sans'; fill: #17212b">d</tspan>
+      <tspan x="29.164735" y="-0.153125" style="font-weight: 700; font-size: 4.9px; font-family: 'Liberation Sans'; fill: #17212b">=</tspan>
+      <tspan x="32.961427" y="-0.153125" style="font-weight: 700; font-size: 4.9px; font-family: 'Liberation Sans'; fill: #17212b">d</tspan>
+      <tspan x="27.88031" y="-2" style="font-size: 4.421264px; font-family: 'STIXSizeOneSym'; fill: #17212b">̃</tspan>
+      <tspan x="27.134834" y="0.639062" style="font-weight: 700; font-size: 3.43px; font-family: 'Liberation Sans'; fill: #17212b">i</tspan>
+      <tspan x="35.985482" y="0.639062" style="font-weight: 700; font-size: 3.43px; font-family: 'Liberation Sans'; fill: #17212b">i</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_13">
+    <!-- $t=(\widetilde d_1\widetilde d_2)^{-1}$ -->
+    <g style="fill: #17212b" transform="translate(294.446 65.982985)">
+     <text>
+      <tspan x="0" y="-0.940625" style="font-weight: 700; font-size: 5.35px; font-family: 'Liberation Sans'; fill: #17212b">t</tspan>
+      <tspan x="2.837097" y="-0.940625" style="font-weight: 700; font-size: 5.35px; font-family: 'Liberation Sans'; fill: #17212b">=</tspan>
+      <tspan x="7.023193" y="-0.940625" style="font-weight: 700; font-size: 5.35px; font-family: 'Liberation Sans'; fill: #17212b">(</tspan>
+      <tspan x="8.81311" y="-0.940625" style="font-weight: 700; font-size: 5.35px; font-family: 'Liberation Sans'; fill: #17212b">d</tspan>
+      <tspan x="14.36714" y="-0.940625" style="font-weight: 700; font-size: 5.35px; font-family: 'Liberation Sans'; fill: #17212b">d</tspan>
+      <tspan x="19.921169" y="-0.940625" style="font-weight: 700; font-size: 5.35px; font-family: 'Liberation Sans'; fill: #17212b">)</tspan>
+      <tspan x="13.004517" y="-2.25" style="font-size: 4.820573px; font-family: 'STIXSizeOneSym'; fill: #17212b">̃</tspan>
+      <tspan x="18.558546" y="-2.25" style="font-size: 4.820573px; font-family: 'STIXSizeOneSym'; fill: #17212b">̃</tspan>
+      <tspan x="12.142585" y="-0.148438" style="font-weight: 700; font-size: 3.745px; font-family: 'Liberation Sans'; fill: #17212b">1</tspan>
+      <tspan x="17.696615" y="-0.148438" style="font-weight: 700; font-size: 3.745px; font-family: 'Liberation Sans'; fill: #17212b">2</tspan>
+      <tspan x="21.757297" y="-2.789062" style="font-weight: 700; font-size: 3.745px; font-family: 'Liberation Sans'; fill: #17212b">−</tspan>
+      <tspan x="23.954539" y="-2.789062" style="font-weight: 700; font-size: 3.745px; font-family: 'Liberation Sans'; fill: #17212b">1</tspan>
+     </text>
+    </g>
+    <text style="font-weight: 700; font-size: 5.35px; font-family: 'Liberation Sans'; fill: #17212b" transform="translate(307.5 71.099875)"/>
+    <text style="font-weight: 700; font-size: 5.35px; font-family: 'Liberation Sans'; fill: #17212b" transform="translate(293.377672 76.20339)">1 inversion</text>
+   </g>
+   <g id="text_14">
+    <!-- $u_1=\widetilde d_2t,\quad u_2=\widetilde d_1t$ -->
+    <g style="fill: #17212b" transform="translate(235.475 126.067859)">
+     <text>
+      <tspan x="0" y="-0.140625" style="font-weight: 700; font-size: 5px; font-family: 'Liberation Sans'; fill: #17212b">u</tspan>
+      <tspan x="6.153096" y="-0.140625" style="font-weight: 700; font-size: 5px; font-family: 'Liberation Sans'; fill: #17212b">=</tspan>
+      <tspan x="10.047139" y="-0.140625" style="font-weight: 700; font-size: 5px; font-family: 'Liberation Sans'; fill: #17212b">d</tspan>
+      <tspan x="15.226113" y="-0.140625" style="font-weight: 700; font-size: 5px; font-family: 'Liberation Sans'; fill: #17212b">t</tspan>
+      <tspan x="16.891152" y="-0.140625" style="font-weight: 700; font-size: 5px; font-family: 'Liberation Sans'; fill: #17212b">,</tspan>
+      <tspan x="24.125039" y="-0.140625" style="font-weight: 700; font-size: 5px; font-family: 'Liberation Sans'; fill: #17212b">u</tspan>
+      <tspan x="30.278135" y="-0.140625" style="font-weight: 700; font-size: 5px; font-family: 'Liberation Sans'; fill: #17212b">=</tspan>
+      <tspan x="34.172178" y="-0.140625" style="font-weight: 700; font-size: 5px; font-family: 'Liberation Sans'; fill: #17212b">d</tspan>
+      <tspan x="39.351152" y="-0.140625" style="font-weight: 700; font-size: 5px; font-family: 'Liberation Sans'; fill: #17212b">t</tspan>
+      <tspan x="3.10041" y="0.651562" style="font-weight: 700; font-size: 3.5px; font-family: 'Liberation Sans'; fill: #17212b">1</tspan>
+      <tspan x="13.147549" y="0.651562" style="font-weight: 700; font-size: 3.5px; font-family: 'Liberation Sans'; fill: #17212b">2</tspan>
+      <tspan x="27.225449" y="0.651562" style="font-weight: 700; font-size: 3.5px; font-family: 'Liberation Sans'; fill: #17212b">2</tspan>
+      <tspan x="37.272588" y="0.651562" style="font-weight: 700; font-size: 3.5px; font-family: 'Liberation Sans'; fill: #17212b">1</tspan>
+      <tspan x="13.926045" y="-2" style="font-size: 4.497207px; font-family: 'STIXSizeOneSym'; fill: #17212b">̃</tspan>
+      <tspan x="38.051084" y="-2" style="font-size: 4.497207px; font-family: 'STIXSizeOneSym'; fill: #17212b">̃</tspan>
+     </text>
+    </g>
+    <text style="font-weight: 700; font-size: 5px; font-family: 'Liberation Sans'; fill: #17212b" transform="translate(215.861328 130.8375)">normalize both projective outputs</text>
+    <text style="font-weight: 700; font-size: 5px; font-family: 'Liberation Sans'; fill: #17212b" transform="translate(206.266016 135.607141)">restore all-zero outputs with saved masks</text>
+   </g>
+   <g id="text_15">
+    <text style="font-weight: 700; font-size: 4.95px; font-family: 'Liberation Sans'; text-anchor: middle; fill: #17212b" x="260" y="161.280039" transform="rotate(-0 260 161.280039)">Core cost: 1 inversion + 3 multiplications</text>
+   </g>
+   <g id="patch_17">
+    <path d="M 45 53.5 
+Q 53 53.5 60.105573 53.5 
+" clip-path="url(#p99cfb01c62)" style="fill: none; stroke: #b42318; stroke-width: 0.8; stroke-linecap: round"/>
+    <path d="M 57.545573 52.22 
+L 60.105573 53.5 
+L 57.545573 54.78 
+z
+" clip-path="url(#p99cfb01c62)" style="fill: #b42318; stroke: #b42318; stroke-width: 0.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_18">
+    <path d="M 110 53.5 
+Q 118 53.5 125.105573 53.5 
+" clip-path="url(#p99cfb01c62)" style="fill: none; stroke: #b42318; stroke-width: 0.8; stroke-linecap: round"/>
+    <path d="M 122.545573 52.22 
+L 125.105573 53.5 
+L 122.545573 54.78 
+z
+" clip-path="url(#p99cfb01c62)" style="fill: #b42318; stroke: #b42318; stroke-width: 0.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_19">
+    <path d="M 45 93.5 
+Q 53 93.5 60.105573 93.5 
+" clip-path="url(#p99cfb01c62)" style="fill: none; stroke: #b42318; stroke-width: 0.8; stroke-linecap: round"/>
+    <path d="M 57.545573 92.22 
+L 60.105573 93.5 
+L 57.545573 94.78 
+z
+" clip-path="url(#p99cfb01c62)" style="fill: #b42318; stroke: #b42318; stroke-width: 0.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_20">
+    <path d="M 110 93.5 
+Q 118 93.5 125.105573 93.5 
+" clip-path="url(#p99cfb01c62)" style="fill: none; stroke: #b42318; stroke-width: 0.8; stroke-linecap: round"/>
+    <path d="M 122.545573 92.22 
+L 125.105573 93.5 
+L 122.545573 94.78 
+z
+" clip-path="url(#p99cfb01c62)" style="fill: #b42318; stroke: #b42318; stroke-width: 0.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_21">
+    <path d="M 198 49.5 
+Q 202 53.5 205.367544 56.867544 
+" clip-path="url(#p99cfb01c62)" style="fill: none; stroke: #6b4fa1; stroke-width: 0.8; stroke-linecap: round"/>
+    <path d="M 204.462448 54.152254 
+L 205.367544 56.867544 
+L 202.652254 55.962448 
+z
+" clip-path="url(#p99cfb01c62)" style="fill: #6b4fa1; stroke: #6b4fa1; stroke-width: 0.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_22">
+    <path d="M 198 89.5 
+Q 202 85.5 205.367544 82.132456 
+" clip-path="url(#p99cfb01c62)" style="fill: none; stroke: #6b4fa1; stroke-width: 0.8; stroke-linecap: round"/>
+    <path d="M 202.652254 83.037552 
+L 205.367544 82.132456 
+L 204.462448 84.847746 
+z
+" clip-path="url(#p99cfb01c62)" style="fill: #6b4fa1; stroke: #6b4fa1; stroke-width: 0.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_23">
+    <path d="M 275 69.5 
+Q 279.5 69.5 283.049671 69.5 
+" clip-path="url(#p99cfb01c62)" style="fill: none; stroke: #287a4b; stroke-width: 0.85; stroke-linecap: round"/>
+    <path d="M 280.409671 68.18 
+L 283.049671 69.5 
+L 280.409671 70.82 
+z
+" clip-path="url(#p99cfb01c62)" style="fill: #287a4b; stroke: #287a4b; stroke-width: 0.85; stroke-linecap: round"/>
+   </g>
+   <g id="patch_24">
+    <path d="M 307.5 89 
+Q 307.5 99 307.5 108.049671 
+" clip-path="url(#p99cfb01c62)" style="fill: none; stroke: #287a4b; stroke-width: 0.85; stroke-linecap: round"/>
+    <path d="M 308.82 105.409671 
+L 307.5 108.049671 
+L 306.18 105.409671 
+z
+" clip-path="url(#p99cfb01c62)" style="fill: #287a4b; stroke: #287a4b; stroke-width: 0.85; stroke-linecap: round"/>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p99cfb01c62">
+   <rect x="0" y="0" width="345.827" height="176"/>
+  </clipPath>
+ </defs>
+</svg>

@@ -1,0 +1,158 @@
+CPU is running at low speed (8293 kHz).
+CPU is running at low speed (8292 kHz).
+measurement ELF SHA-256: 18C25CA0A42CC8049655D3395E531501DDAA6EA8C689F1AB0D5E97E8804C6FFF
+connected: Cortex-M85
+flash code readback PASS: bytes=855728 segments=2 sha256=90AC3DC118B942F5C219B243B7E761A388DA6BFD1C44B1E373C8EEC3F001DDE0
+=== EK-RA8M1 harness: KAT + DWT/PMU (ITCM/DTCM) ===
+
+== KAT: X25519 (RFC 7748 s6.1) ==
+alice_pk: OK
+bob_pk  : OK
+K(a,B)  : OK
+K(b,A)  : OK
+== KAT: SHA3-256 via asm Keccak-f1600 ==
+sha3("")   : OK
+sha3("abc"): OK
+
+KAT ALL PASS -- streams A+B verified on board
+
+DAUTHCTRL readback: 15
+
+[calib-empty] x1
+  dwt_cyc/op   : 142
+  pmu_cyc/op   : 179
+  insts        : 0
+  stall_op     : 0
+  stall_op_fe  : 0
+  stall_op_be  : 0
+  IPC x100     : 0
+  slot-waste % : 0
+
+[keccak-f1600] x1000
+  dwt_cyc/op   : 5504
+  pmu_cyc/op   : 5504
+  insts        : 0
+  stall_op     : 0
+  stall_op_fe  : 0
+  stall_op_be  : 0
+  IPC x100     : 0
+  slot-waste % : 0
+
+[x25519-scalarmult] x10
+  dwt_cyc/op   : 418135
+  pmu_cyc/op   : 418138
+  insts        : 0
+  stall_op     : 0
+  stall_op_fe  : 0
+  stall_op_be  : 0
+  IPC x100     : 0
+  slot-waste % : 0
+
+== K3: ML-KEM-768 (pqm4 m4fspeed) ==
+roundtrip+reject: OK
+keccak perms/op: keygen 43  encaps 44  decaps 44  combiner 1
+expX bytes-mm: 0 smoke-fails=0 align-base-bits=257 align-candidate-bits=257
+expX timing-mm: 0 stack-fails=0 stack-used=7672
+expY bytes-mm: 0 smoke-fails=0 oracle-mm=0 oracle-canary=0 align-base-bits=257 align-candidate-bits=257 input-min=-1664 input-max=1664 output-min=-14304 output-max=24656
+expY timing-mm: 0 stack-fails=0 stack-used=7672
+expZ bytes-mm: 0 smoke-fails=0 fwd-align-base=257 fwd-align-candidate=257 inv-align-base=257 inv-align-candidate=257
+expZ timing-mm: 0 stack-fails=0 stack-used=7672
+expAA bytes-mm: 0 smoke-fails=0 fwd-align-base=257 fwd-align-candidate=257
+expAA timing-mm: 0 stack-fails=0 stack-used=7672
+expAB bytes-mm: 0 smoke-fails=0
+expAB timing-mm: 0 stack-fails=0 stack-used=7864
+expAE x4-kat-fails: 0 u-kat-fails=0
+expAE bytes-mm: 0 smoke-fails=0
+expAE timing-mm: 0 stack-fails=0 stack-used=9044
+expAF path counts (u4-rounds/u8-rounds/real/dummy):
+  op0: 0/0/0/0
+  op1: 0/0/0/0
+  op2: 0/0/0/0
+expAF mismatch: 0
+expAI mismatch: 0 stack-fails=0 stack-used=9036
+bfull_slothy diag: prod-mm=0 lane-mm=0 first-bad-prod= first-bad-lane=
+mul256 full-vs-budget mismatch: 0  /  stitched(product+theta) mismatch: 0  /  bmid(theta x3) mismatch: 0  /  bfull mismatch: 0  /  expc mismatch: 0  /  expd mismatch: 0  /  expe mismatch: 0  /  mve4 mismatch: 0  /  coissue mismatch: 0  /  cosol mismatch: 0  /  expg mismatch: 0  /  exph mismatch: 0  /  expi mismatch: 0  /  v04 mismatch: 0  /  expj mismatch: 0  /  expk mismatch: 0  /  expl mismatch: 0  /  expm mismatch: 0  /  expt mismatch: 0  /  expu mismatch: 0  /  expv mismatch: 0  /  expw mismatch: 0 m55-unavailable=1 m85-inv-mm=0 m85-roundtrip-mm=0
+expAJ kat-mm: 0
+expAJ bytes-mm: 0 smoke-fails=0
+expAJ xw-bytes-mm: 0 xw-smoke-fails=0
+expAJ timing-mm: 0 stack-fails=0 stack-used=7864
+expAK timing-mm: 0 stack-fails=0 stack-used=7864
+expAL xw-bytes-mm: 0 xw-smoke-fails=0
+expAL timing-mm: 0 stack-fails=0 stack-used=7880
+expAM correctness: oracle-mm=0 lenn-mm=0 boundary-mm=0 alias-mm=0 align-mm=0 checks=1025 stack-fails=0 stack-used=1084
+expAM ct-delta: 0 batch=64 stack-fails=0 stack-used=348
+expAMb correctness: opt-mm=0 sqr-mm=0 sqrlenn-mm=0 conv-mm=0 sem-mm=0 checks=1000 stack-fails=0 stack-used=804
+expAMb bench done stack-fails=0 stack-used=404
+expAN equiv: bytes-mm=0 smoke-fails=0 checks=48
+expAN bench: stack-fails=0 stack-used=7896
+expAT correctness: scalar-mm=0 mve-mm=0 checks=240
+expAT bench: stack-fails=0 stack-used=176
+expAU correctness: kat-fails=0 diff-mm=0 checks=70
+expAU bench: stack-fails=0 stack-used=1096
+expAW equiv: bytes-mm=0 smoke-fails=0 reject-mm=0 checks=48
+expAW bench: stack-fails=0 stack-used=7872
+expBA done (128 instr/kernel, batch 64)
+expBB correctness: mm=0 mul-mm=0 checks=2014
+expBC equiv: bytes-mm=0 smoke-fails=0 reject-mm=0 checks=48
+expBC bench: stack-fails=0 stack-used=7872
+expBF state-mm=0 checks=3201
+expBF xw: bytes-mm=0 smoke=0 reject-mm=0
+expBF bench: stack-fails=0
+expBH cnt keygen memcpy-calls=1 memcpy-bytes=1184 memset-calls=17 memset-bytes=3400
+expBH cnt encaps memcpy-calls=0 memcpy-bytes=0 memset-calls=19 memset-bytes=3800
+expBH cnt decaps memcpy-calls=0 memcpy-bytes=0 memset-calls=19 memset-bytes=3800
+expBH xw: bytes-mm=0 smoke=0 reject-mm=0
+expBH bench done
+expBI smoke=0
+expBI bench done
+expBJ done
+expBK extract-mm=0 checks=400
+expBK xw: bytes-mm=0 smoke=0 reject-mm=0
+expBK bench done
+expBL done
+expBM flat-mm=0 sched-mm=0 checks=1049
+expBM bench done
+expBN xw: bytes-mm=0 smoke=0 reject-mm=0
+expBN bench done
+expBO done
+expBS xw: bytes-mm=0 smoke=0 reject-mm=0
+expBS bench done
+expBU d10: smoke=0 reject-fail=0 ekchk-fail=0 coldwarm-mm=0
+expBU bench done
+expBW d10kat: ss-mm=0 dec-mm=0 pk1216-mm=0 ct1120-mm=0
+expBV done
+expBX done
+expBZ done
+expCA correct: ntt-mm=0 kec-mm=0
+expCA bench done
+expCB done
+expCC done
+expCD selftest: SRAMvsDTCM=0 DTCMvsSRAM-again=0
+  expCD n=1 ntt-mm=0 kec-mm=0
+  expCD n=2 ntt-mm=0 kec-mm=0
+  expCD n=3 ntt-mm=0 kec-mm=0
+  expCD n=4 ntt-mm=0 kec-mm=0
+  expCD n=5 ntt-mm=0 kec-mm=0
+  expCD n=6 ntt-mm=0 kec-mm=0
+  expCD n=7 ntt-mm=0 kec-mm=0
+  expCD n=8 ntt-mm=0 kec-mm=0
+expCD correct: ntt-mm=0 kec-mm=0
+expCD bench done
+expCE correct: ntt-mm=0
+expCE bench done
+expCG host-mm=0 guest-mm=0 shl-mm=0 checks=1007
+expCG bench done
+expCJ equiv: bytes-mm=0 smoke=0 reject-mm=0 coldwarm-mm=0
+expCJ timing-mm=0 stack-fails=0 stack-used=11560
+rep arrays ready x100 (775 slots)
+HARNESS DONE
+
+
+=== expCJ — draft-10 최종 누적 동일-ELF A/B ===
+correctness=PASS stability=PASS harness_fails=0 checks={'bytes_mm': 0, 'smoke': 0, 'reject_mm': 0, 'coldwarm_mm': 0, 'timing_mm': 0, 'stack_fails': 0, 'stack_used': 11560}
+operation             A1         B1         B2         A2      save1      save2
+keygen            870400     644360     644380     870416    25.970%    25.969%
+encaps           1321227    1053690    1053686    1321235    20.249%    20.250%
+decaps-warm       934147     829313     829311     934147    11.222%    11.223%
+decaps-cold      1801444    1471800    1471816    1801430    18.299%    18.297%
+EXPCJ_JSON {"checks": {"bytes_mm": 0, "coldwarm_mm": 0, "reject_mm": 0, "smoke": 0, "stack_fails": 0, "stack_used": 11560, "timing_mm": 0}, "code_flash_readback_bytes": 855728, "code_flash_readback_sha256": "90AC3DC118B942F5C219B243B7E761A388DA6BFD1C44B1E373C8EEC3F001DDE0", "correctness_pass": true, "elf_sha256": "18C25CA0A42CC8049655D3395E531501DDAA6EA8C689F1AB0D5E97E8804C6FFF", "experiment": "CJ", "harness_fails": 0, "ops": {"decaps-cold": {"A1": 1801444, "A2": 1801430, "B1": 1471800, "B2": 1471816, "drift_A_pct": 0.0007771573471622932, "drift_B_pct": 0.001087098317171805, "saving_pct_conservative": 18.297352658721127, "saving_pct_pair1": 18.29887579075453, "saving_pct_pair2": 18.297352658721127}, "decaps-warm": {"A1": 934147, "A2": 934147, "B1": 829313, "B2": 829311, "drift_A_pct": 0.0, "drift_B_pct": 0.0002411637598394814, "saving_pct_conservative": 11.222430730923506, "saving_pct_pair1": 11.222430730923506, "saving_pct_pair2": 11.222644829989285}, "encaps": {"A1": 1321227, "A2": 1321235, "B1": 1053690, "B2": 1053686, "drift_A_pct": 0.0006054959352300998, "drift_B_pct": 0.00037961901435719115, "saving_pct_conservative": 20.249132056792664, "saving_pct_pair1": 20.249132056792664, "saving_pct_pair2": 20.249917690645496}, "keygen": {"A1": 870400, "A2": 870416, "B1": 644360, "B2": 644380, "drift_A_pct": 0.001838218398727953, "drift_B_pct": 0.0031038068190635815, "saving_pct_conservative": 25.968732192422934, "saving_pct_pair1": 25.969669117647058, "saving_pct_pair2": 25.968732192422934}}, "srec_sha256": "6318AEDC1727D659D272173F8F3A0307CE36924F46BF99D635B24CA626F3FB75", "valid": true, "within_run_stability_pass": true}

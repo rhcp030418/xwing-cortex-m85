@@ -1,0 +1,23 @@
+\begin{table}[t]
+\centering
+\caption{Leave-one-out contribution of the six transformations in one representative complete run. Each entry is the cycle increase when the named transformation is disabled from the six-transform implementation. These diagnostic values are not added to the final Reference--Integrated percentages.}
+\label{tab:leave-one-out}
+\footnotesize
+\setlength{\tabcolsep}{3.4pt}
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Disabled axis & KeyGen & Encaps & Warm & Cold \\
+\midrule
+Fixed-base signed comb & 152,860 & 152,710 & 16 & 152,732 \\
+MVE NTT/current-order store & 22,556 & 18,002 & 28,180 & 50,808 \\
+MVE data conversions & 11,120 & 33,300 & 39,386 & 50,552 \\
+Aligned \texttt{memcpy}/\texttt{memset} & 12,660 & 10,042 & 9,906 & 21,380 \\
+Field-squaring schedule & 3,488 & 22,770 & 19,296 & 22,794 \\
+Field-multiplication schedule & 4,182 & 11,950 & 7,632 & 11,898 \\
+\midrule
+Leave-one-out sum & 206,866 & 248,774 & 104,416 & 310,164 \\
+Same-run disabled--enabled difference & 226,096 & 268,196 & 104,717 & 329,445 \\
+Interaction residual & 19,230 & 19,422 & 301 & 19,281 \\
+\bottomrule
+\end{tabular}
+\end{table}

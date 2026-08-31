@@ -1,0 +1,16 @@
+CPU is running at low speed (8294 kHz).
+CPU is running at low speed (8296 kHz).
+connected: Cortex-M85
+flash code readback PASS: bytes=67420 segments=1 sha256=DB6C521C6916DC9BA3EC21E0E3BB906AF01F642CDECFAFEEEACD1A2E0779C292
+measurement ELF SHA-256: E5A74A891AA94C358AF3E6A9B411D7CC9E95D4E2B2DA4AE758E32E444584EE1C
+measurement SREC SHA-256: 6FC8D93A1FDAA9C1C4B0F1CCFAF8E2088DCE562796E35388F0A22473F645E87B
+expDE mode=B
+expDE KAT mm=0 smoke=0 reject-mm=0
+expDE stack op=keygen highwater=9176 guard-fail=0
+expDE stack op=encaps highwater=6664 guard-fail=0
+expDE stack op=warm highwater=6600 guard-fail=0
+expDE stack op=cold highwater=10264 guard-fail=0
+expDE GATE PASS
+
+harness_fails=0
+expDE HOST GATE PASS: mode=B KAT/8-seed/stack

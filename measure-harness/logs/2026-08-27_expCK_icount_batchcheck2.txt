@@ -1,0 +1,5 @@
+connected=Cortex-M85 target=x25519_u_bench_seq4 entry=0x020a4da4
+CPU is running at low speed (8296 kHz).
+CPU is running at low speed (8293 kHz).
+halted entry=0x020a4da4 return=0x0209baf0
+batch_steps=105308 stopped=0x0209baf0 at_return=True elapsed=0.008327s

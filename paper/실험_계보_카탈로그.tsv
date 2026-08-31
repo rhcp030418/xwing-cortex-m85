@@ -1,0 +1,206 @@
+record_type	id	family	first_date	last_date	file_count	raw_log_count	result_count	prereg_count	artifact_file_count	source_count	measurement_class	current_status	evidence_or_result	canonical_reference	notes
+experiment	A	A	2026-08-16	2026-08-16	12	0	0	0	2	7	실보드/직접 측정	`역사·실보드`	17명령 13.06→SLOTHY 11.07, 모델 약 11 | 소형 solver 실리콘 폐합	slothy-2stream/exp_a.s	
+experiment	B	B	2026-08-16	2026-08-16	22	0	0	0	7	13	대장 참조	`역사`	당시 순차 727, 지퍼 681, solver 657 | 다른 세대임을 후속 감사로 확인; 최신 solver 우위로 재사용 금지	slothy-2stream/exp_b.log	
+experiment	C	C	2026-08-16	2026-08-16	13	0	0	0	2	9	실보드/직접 측정	`역사·실보드`	fiat 1,130명령 순차 702→solver 630(−10.3%) | 실재료 초기 성과로 유지	slothy-2stream/exp_c.log	
+experiment	D	D	2026-08-16	2026-08-16	13	0	0	0	2	9	실보드/직접 측정	`역사·실보드`	bit-interleaved 순차 636→solver 579(−9.0%) | 초기 진화 계보의 끝값으로 유지	slothy-2stream/exp_d.log	
+experiment	E	E	2026-08-17	2026-08-20	14	0	0	0	2	10	실보드/직접 측정	플랜 A 희석의 역사 실측	실제 비율 1,573→1,521, 3.3%	slothy-2stream/exp_e.log	
+experiment	F	F	2026-08-17	2026-08-20	16	0	0	0	2	12	대장 참조	현행 초기 solver 최선; 당시 −2.2%는 역사	solver 996, 지퍼 대비 −1.7%, 은닉 60%	slothy-2stream/exp_f.log	
+experiment	G	G	2026-08-17	2026-08-20	0	0	0	0	0	0	대장 참조	초기 레지스터 예산 근거	MVE 베이스 5→3, 비용 0		
+experiment	H	H	2026-08-17	2026-08-20	0	0	0	0	0	0	실보드/직접 측정	글루 단가의 역사 실측	pack+unpack 448 cyc/batch, 2.5%		
+experiment	I	I	2026-08-17	2026-08-20	0	0	0	0	0	0	대장 참조	당시 빌드 역사값; 현행 같은 빌드 단가는 별도	yield3 287.6→326.5(+13.5%), spill 접근 187→233		
+experiment	J	J	2026-08-17	2026-08-20	10	0	0	0	2	6	실보드/직접 측정	J 분모를 추정에서 실측으로 교체	A 310, B 752, seq 1,066, stitch 979; 은닉 28.1%, 노출 223	slothy-2stream/gen_exp_j.py	
+experiment	K	K	2026-08-17	2026-08-20	0	0	0	0	0	0	대장 참조	과거 3,220/3,199은 출처 불명; 현행 3,206/3,219/2,943	3:3 굵은 교대≈순차, stitch 2,943		
+experiment	L	L	2026-08-17	2026-08-20	9	0	0	0	2	5	대장 참조	파이프 공유 대조 유지	scalar×scalar 은닉 −1%; scalar×MVE NTT형 62%	slothy-2stream/gen_exp_l.py	
+experiment	M	M	2026-08-17	2026-08-20	0	0	0	0	0	0	대장 참조	종단간 7.7/5.5/7.2%는 `파생`; 직접 E2E 아님	4:1 2,008→1,772, 8:1 3,256→3,010		
+experiment	N	N	2026-08-17	2026-08-20	9	0	0	0	2	5	대장 참조	합성 클래스 발행 규칙 유지	veor/vldrw/rotate 99%, vstrw −1%	slothy-2stream/gen_exp_n.py	
+experiment	O	O	2026-08-20	2026-08-20	1	0	0	0	0	1	실보드/직접 측정	`호스트·코드 생성`; 독립 보드 결과서 없음. 후속 T의 b0 재료로 흡수	생성기에서 GP base 0 gather/scatter 판 생성; instruction count 출력	slothy-2stream/mve_keccak.py	
+experiment	P	P	2026-08-21	2026-08-30	11	1	0	0	2	5	대장 참조	LSU 경합 확인. 뱅크 자체는 동시 발행이 없어 측정 불능	scalar load×MVE load: 611+1,222→1,833, 은닉 0%; 뱅크별 최대 2 cyc	measure-harness/logs/2026-08-21_expP_bank.txt	
+experiment	Q	Q	2026-08-21	2026-08-30	10	1	0	0	2	5	대장 참조	`242 cyc` 귀속 반증; 잔여 113은 미규명	121 `vstrw`→`vorr`: 노출 223→113, 직접 기여 110 cyc	measure-harness/logs/2026-08-21_expQ_nostore.txt	
+experiment	R	R	2026-08-21	2026-08-21	2	1	0	1	0	0	대장 참조	미채택	A-pair 4:1·8:1 변화 ±1% 이내	measure-harness/2026-08-21_expR_2to1_prereg.md	
+experiment	S	S	2026-08-21	2026-08-21	2	1	0	1	0	0	대장 참조	미채택	A-pair 4:1·8:1 변화 ±1% 이내	measure-harness/2026-08-21_expS_realratio_prereg.md	
+experiment	T	T	2026-08-21	2026-08-30	11	1	0	1	2	5	대장 참조	전역 교체 금지; 중간 후보	no-yield+b0: scalar −15.89%, MVE +28.25%; 8:1만 +2.62%	measure-harness/2026-08-21_expT_b0_noyield_prereg.md	
+experiment	U	U	2026-08-21	2026-08-30	16	2	0	1	2	8	대장 참조	직접 통합 전의 후보; AE2/AF가 대체	yield1+b1: 4:1 +0.68%, 8:1 +4.11%; E2E 8.89%는 투영	measure-harness/2026-08-21_expU_yield1_b1_prereg.md	
+experiment	V	V	2026-08-21	2026-08-21	4	2	0	1	0	1	대장 참조	X/Y full-operation 차분이 raw 투영을 대체	forward 47.44%, inverse 49.98% standalone	measure-harness/2026-08-21_expV_ntt_attribution_prereg.md	
+experiment	W	W	2026-08-21	2026-08-30	84	3	0	1	16	48	대장 참조	X/Y full-operation 차분이 raw 투영을 대체	forward 47.44%, inverse 49.98% standalone	measure-harness/2026-08-21_expW_pqmx_ntt_prereg.md	
+experiment	X	X	2026-08-21	2026-08-21	8	4	0	1	0	3	대장 참조	직접 ML-KEM 통합 성공	NTT 합계 절감 18,772/16,177/24,204 cyc	measure-harness/2026-08-21_expX_pqmx_forward_integration_prereg.md	
+experiment	Y	Y	2026-08-21	2026-08-30	19	3	0	1	2	11	대장 참조	직접 ML-KEM 통합 성공	NTT 합계 절감 18,772/16,177/24,204 cyc	measure-harness/2026-08-21_expY_pqmx_inverse_integration_prereg.md	
+experiment	Z	Z	2026-08-21	2026-08-21	11	5	1	1	0	4	대장 참조	귀속량이며 제거 가능량이 아님; 한 파일명 아래 두 단계를 별도 보존	Z1은 X+Y 동시 보존, Z2는 staged profiler로 C8/C9 귀속	measure-harness/2026-08-21_expZ_results.md	
+experiment	AA	A	2026-08-21	2026-08-21	7	2	1	1	0	3	대장 참조	직접 E2E 초기 기준; AL/CJ/CY가 누적 기준을 후속 대체	X/Y/C8 실제 X-Wing 2.85/1.54/3.25%	measure-harness/2026-08-21_expAA_AB_results.md	
+experiment	AB	A	2026-08-21	2026-08-21	6	2	1	1	0	2	대장 참조	직접 E2E 초기 기준; AL/CJ/CY가 누적 기준을 후속 대체	X/Y/C8 실제 X-Wing 2.85/1.54/3.25%	measure-harness/2026-08-21_expAA_AB_results.md	
+experiment	AC	A	2026-08-21	2026-08-21	21	4	1	1	0	9	종료/실패 판정	정확성 성공·성능 실패; U 직접 측정으로 인용 금지	b0+x4 직접 E2E −7.30/−7.64/−6.73%	measure-harness/2026-08-21_expAC_results.md	
+experiment	AD	A	2026-08-22	2026-08-22	2	0	1	1	0	0	대장 참조	AC 원인 분해; 새 성능 대표값 아님	AC 손실을 x4 약 25k 이득과 b0 stitch 약 32.4k/X25519 손실로 분해	measure-harness/2026-08-22_expAD_results.md	
+experiment	AE	A	2026-08-24	2026-08-24	10	1	0	1	0	8	대장 참조	잔여 ladder의 U만 dispatcher를 거쳐 단일변수 비교가 아님. 주 효과는 철회하고 AE→AE2 dispatcher 진단에만 사용	최초 staged U에서 U가 F보다 kg/enc/dec 206,092/730,410/206,994 cyc 느림	measure-harness/2026-08-24_expAE_true_u_endtoend_prereg.md	
+experiment	AF	A	2026-08-24	2026-08-24	22	14	2	2	4	0	종료/실패 판정	정확성 성공·성능 실패; 현행 F/U 이미지의 기원	U를 ITCM에 놓은 같은작업 F→U: −1.98/−3.72/−1.88%	measure-harness/2026-08-24_expAF_pilot_rebaseline_results.md	
+experiment	AG	A	2026-08-24	2026-08-24	12	2	1	1	8	0	대장 참조	solver가 manual보다 1.255% 빠름; B-full 657을 대체	현재 동일 입력: 순차 727.036, manual 662.35, solver 654.036	measure-harness/2026-08-24_expAG_results.md	
+experiment	AI	A	2026-08-24	2026-08-24	13	2	1	1	7	2	대장 참조	U8 계산보다 배치·문맥 손실 진단; 빌드 간 수치 혼합 금지	encaps F→U 손실 구간 분해	measure-harness/2026-08-24_expAI_results.md	
+experiment	AJ	A	2026-08-24	2026-08-24	10	2	1	1	5	1	대장 참조	강한 성공; AL에서 누적 확인	C9 MVE화: +1.46/+2.67/+4.66%	measure-harness/2026-08-24_expAJ_results.md	
+experiment	AK	A	2026-08-24	2026-08-24	14	4	1	1	7	1	종료/실패 판정	AK1 기각, AK2 미채택, C9 v1 유지	AK1: scatter v2가 encaps/decaps 약 1.0~1.3 kcyc 회귀. AK2: ITCM 변화가 유효 기준 1,000 cyc 미달	measure-harness/2026-08-24_expAK_results.md	
+experiment	AL	A	2026-08-24	2026-08-30	838	7	1	2	263	9	실보드/직접 측정	요인 분해 정본; 이후 draft-10 누적 대표는 CJ/CY	08-25 성공 실측. 같은-ELF 2×2: 4.29/4.16/7.71%; 상호작용≈0	measure-harness/2026-08-24_expAL_results.md	
+experiment	AM	A	2026-08-25	2026-08-30	58	0	0	0	10	27	실보드/직접 측정	`호스트·정적`; mul-only 15%→E2E 10~12% 산술을 6.1%로 사전 정정	X25519 MVE whole-ladder 정적 설계, expAL 빌드 기준선 동결; 신규 보드 측정 없음	measure-harness/artifacts/2026-08-25_expAM1/expAM_micro.S	
+experiment	AN	A	2026-08-25	2026-08-30	21	2	1	0	7	6	대장 참조	진단 분모; 절대 배포 성능 아님	AL cell-11 최상위 kg/enc/dec cycle 귀속	measure-harness/2026-08-25_expAN_results.md	
+experiment	AO	A	2026-08-25	2026-08-30	21	2	1	0	8	5	대장 참조	초기 투영을 in-context로 확인	X-Wing 문맥 Keccak 단가와 호출 수 직접 계측	measure-harness/2026-08-25_expAO_results.md	
+experiment	AP	A	2026-08-25	2026-08-30	34	2	1	0	11	5	대장 참조	C8/C9 채택 뒤 새 분해	ML-KEM을 Keccak/비-Keccak으로 재귀속	measure-harness/2026-08-25_expAP_results.md	
+experiment	AQ	A	2026-08-25	2026-08-30	28	2	1	0	10	5	대장 참조	K14/K15 후보의 계측 근거	matacc absorb/squeeze/rejection+MAC 분해	measure-harness/2026-08-25_expAQ_results.md	
+experiment	AR	A	2026-08-25	2026-08-30	34	2	1	0	12	5	대장 참조	probe 비용 한계와 함께 사용	X25519 field-op 호출 수·단가 계측; mul+sqr 74~77%	measure-harness/2026-08-25_expAR_results.md	
+experiment	AS	A	2026-08-25	2026-08-30	17	2	1	0	9	5	대장 참조	후보 우선순위 근거	add/sub와 ladder 나머지 귀속	measure-harness/2026-08-25_expAS_results.md	
+experiment	AT	A	2026-08-25	2026-08-30	17	2	0	1	7	7	대장 참조	PASS, 채택 가능	full X-Wing X06 통합	measure-harness/2026-08-25_expAT_x06_fixedbase_prereg.md	
+experiment	AU	A	2026-08-26	2026-08-30	23	2	1	0	14	6	종료/실패 판정	실패. `harvest_ra8m1_expAU514.py`의 `514`는 `SLOT_N`이고 별도 AU514 실험이 아님	fixed-base A/B +13.30%, 사전 gate 25% 미달	measure-harness/2026-08-26_expAU_AT2_results.md	expAU514의 514는 SLOT_N
+experiment	AV	A	2026-08-26	2026-08-26	16	4	1	1	10	0	대장 참조	gate PASS	native ABI fixed-base +26.80%	measure-harness/2026-08-26_expAV_results.md	
+experiment	AW	A	2026-08-26	2026-08-30	20	2	1	0	12	5	대장 참조	PASS, 채택 가능	full X-Wing X06 통합	measure-harness/2026-08-26_expAW_AT3_results.md	
+experiment	AX	A	2026-08-26	2026-08-26	16	4	1	0	10	0	대장 참조	X06 채택	scalarmult +34.56%; X-Wing kg +16.11%, enc +10.83%	measure-harness/2026-08-26_expAX_results.md	
+experiment	AY	A	2026-08-26	2026-08-30	15	2	1	0	7	5	대장 참조	X01/X02 후보의 새 분모	X06 뒤 field-op 분모 재측정	measure-harness/2026-08-26_expAY_results.md	
+experiment	AZ	A	2026-08-26	2026-08-26	1	0	0	1	0	0	대장 참조	사전 설계/우선순위; 독립 결과서 없음	X01/X02 후보·게이트 정리	measure-harness/2026-08-26_expAZ_x01x02_prereg.md	
+experiment	BA	B	2026-08-26	2026-08-30	20	2	1	0	8	9	대장 참조	null-slot 분석은 불가능 IPC 때문에 폐기	`umaal`+ALU 1 cycle 동시 발행	measure-harness/2026-08-26_expBA_results.md	
+experiment	BB	B	2026-08-26	2026-08-30	36	2	1	1	10	21	대장 참조	micro gate PASS	`fe25519_sqr` 순수 재정렬 +14.80%	measure-harness/2026-08-26_expBB_results.md	
+experiment	BC	B	2026-08-26	2026-08-30	16	2	1	0	8	5	대장 참조	채택	X02 full X-Wing +0.61/+2.17/+2.23%	measure-harness/2026-08-26_expBC_results.md	
+experiment	BD	B	2026-08-26	2026-08-26	11	2	1	0	8	0	종료/실패 판정	실패	X01 1차 mul 재정렬 +3.81% <5%	measure-harness/2026-08-26_expBD_results.md	
+experiment	BE	B	2026-08-26	2026-08-26	1	0	0	0	0	0	종료/실패 판정	종료; 독립 결과서 없음, T22에 통합	scalar Keccak K19 발행 여지 4.6%	measure-harness/2026-08-26_expBE_issue_bound_analysis.md	
+experiment	BF	B	2026-08-26	2026-08-30	25	2	1	1	10	6	종료/실패 판정	gate 실패	K22 absorb cache	measure-harness/2026-08-26_expBF_results.md	
+experiment	BG	B	2026-08-26	2026-08-26	8	0	1	1	6	0	종료/실패 판정	K22 종료, K31로 전환	K22 word-copy 개선도 gate 미달; K31 발견	measure-harness/2026-08-26_expBG_results.md	
+experiment	BH	B	2026-08-26	2026-08-30	14	0	1	1	7	5	대장 참조	gate PASS, K31 채택	libc `memcpy`/`memset` 워드 교체	measure-harness/2026-08-26_expBH_results.md	
+experiment	BI	B	2026-08-26	2026-08-30	21	0	1	1	9	5	대장 참조	정확성·대표값 PASS	채택 토글 제거 빌드	measure-harness/2026-08-26_expBI_results.md	
+experiment	BJ	B	2026-08-26	2026-08-30	12	0	1	0	6	5	대장 참조	메모리 배치를 측정 규율로 승격	`.bss` 대 DTCM: Keccak 37,705.94 vs 5,505.81, 6.85×	measure-harness/2026-08-26_expBJ_results.md	
+experiment	BK	B	2026-08-26	2026-08-30	14	0	1	1	7	5	종료/실패 판정	종료	K32 extract 교차 micro +17.57%, gate 미달	measure-harness/2026-08-26_expBK_results.md	
+experiment	BL	B	2026-08-26	2026-08-30	18	0	1	0	8	9	대장 참조	발행 규칙 정본	shifted-operand ALU는 평 ALU와 동일, `bfi`는 1/cyc·페어링 0	measure-harness/2026-08-26_expBL_results.md	
+experiment	BM	B	2026-08-26	2026-08-30	23	0	1	1	12	9	종료/실패 판정	당시 X01 종료 판정; BN이 다른 기준으로 후속 통합	X01-v2 평탄화의 사전 중립성 gate 미달	measure-harness/2026-08-26_expBM_results.md	
+experiment	BN	B	2026-08-26	2026-08-30	15	0	1	1	8	5	대장 참조	X01 채택	`fe25519_mul_sched` full X-Wing 모두 개선	measure-harness/2026-08-26_expBN_results.md	
+experiment	BO	B	2026-08-27	2026-08-30	6	0	0	0	1	5	보존 불완전/수치 인용 금지	실행 단계는 실재. 그러나 `EXPBO_JSON`/RAM `rep_cyc` 덤프·독립 결과서가 보존되지 않아 BO 숫자는 **미복원·인용 금지**; add/sub 현행 값은 AS/BQ 근거만 사용	ladder glue용 slots 662~665(add/sub/mul/sqr) 코드와 회수기, 여러 보드 로그의 `expBO done` 확인	measure-harness/artifacts/2026-08-27_expCJ/src/expBO_slots.inc	RAM rep_cyc/EXPBO_JSON 미보존; 수치 인용 금지
+experiment	BP	B	2026-08-26	2026-08-26	1	0	0	0	0	0	호스트·정적·파생	종료; 통합 결과는 T22	1% 종료 기준; X03/X05 상한 0.8/0.39%	measure-harness/2026-08-26_expBP_ceiling_analysis.md	
+experiment	BQ	B	2026-08-26	2026-08-26	1	0	0	0	0	0	호스트·정적·파생	종료; 통합 결과는 T22	1% 종료 기준; X03/X05 상한 0.8/0.39%	measure-harness/2026-08-26_expBQ_x03_ceiling.md	
+experiment	BR	B	2026-08-26	2026-08-26	1	0	0	0	0	0	종료/실패 판정	K14/K15 재정렬 접근 종료	`vmov` 오분류 교정 후 재정렬 회수 평균 0.20%	measure-harness/2026-08-26_expBR_matacc_ceiling.md	
+experiment	BS	B	2026-08-26	2026-08-30	13	0	1	1	6	5	종료/실패 판정	세 연산 모두 회귀, 종료	K21 matrix-XOF x4	measure-harness/2026-08-26_expBS_results.md	
+experiment	BT	B	2026-08-26	2026-08-26	1	0	0	0	0	0	종료/실패 판정	scalar 회전 무료라 종료; 독립 결과서 없음	MVE 2-way Keccak	measure-harness/2026-08-26_expBT_k20k21_ceiling.md	
+experiment	BU	B	2026-08-26	2026-08-30	21	0	1	0	7	8	대장 참조	절대 cycle 정본	draft-10 이동; 627,069/988,456/780,020 warm/1,406,887 cold	measure-harness/2026-08-26_expBU_draft10_results.md	
+experiment	BV	B	2026-08-26	2026-08-30	18	0	1	0	8	9	대장 참조	합성 proxy 61.7%를 대체	scalar×MVE ALU 혼합 은닉률 100%	measure-harness/2026-08-26_expBV_results.md	
+experiment	BW	B	2026-08-26	2026-08-30	18	0	0	0	7	11	대장 참조	부분 정확성 PASS; CM이 전량 대체	draft-10 vector 1 `ss` 전량, pk/ct 앞부분 일치	measure-harness/artifacts/2026-08-26_expBW/SHA256SUMS.txt	
+experiment	BX	B	2026-08-26	2026-08-30	19	0	1	0	9	9	종료/실패 판정	K14/K15 재정렬 접근 종료	`vmov` 오분류 교정 후 재정렬 회수 평균 0.20%	measure-harness/2026-08-26_expBX_results.md	
+experiment	BY	B	2026-08-26	2026-08-26	1	0	0	0	0	0	호스트·정적·파생	`파생`; objdump MVE 오분류 교정 포함	NTT/INTT scalar idle 96.0/95.8%, 평균 상한 3.89%	measure-harness/2026-08-26_expBY_stitch_ceiling.md	
+experiment	BZ	B	2026-08-26	2026-08-30	17	0	0	0	8	9	대장 참조	T24 발행 규칙의 전단계; 독립 결과서 없음	MVE 2 cyc/instr 및 scalar×MVE pairing 표	measure-harness/artifacts/2026-08-26_expBZ/SHA256SUMS.txt	
+experiment	CA	C	2026-08-26	2026-08-30	22	0	1	1	11	9	대장 참조	실물 stitching 가능성 최초 확인, 초기화 결함은 CD에서 교정	실제 NTT×Keccak extract 병합, 양쪽 출력 일치; 성능 gate 부분 성공	measure-harness/2026-08-26_expCA_results.md	
+experiment	CB	C	2026-08-26	2026-08-30	19	0	0	1	9	9	대장 참조	T24 발행 규칙의 전단계; 독립 결과서 없음	MVE 2 cyc/instr 및 scalar×MVE pairing 표	measure-harness/2026-08-26_expCB_prereg.md	
+experiment	CC	C	2026-08-27	2026-08-30	21	0	1	1	10	9	대장 참조	T24.2 현행 규칙으로 통합	scalar/MVE 연산·적재·저장 pairing 행렬 보강	measure-harness/2026-08-27_expCC_results.md	
+experiment	CD	C	2026-08-27	2026-08-30	20	0	1	1	9	9	대장 참조	초기 CA/CB/CC `mm=0` 우연을 교정	q 초기화 누락을 발견·수정; lane 1~8 은닉 85.1→60.3%, 2% 공짜 용량 0	measure-harness/2026-08-27_expCD_results.md	
+experiment	CE	C	2026-08-27	2026-08-30	20	0	1	1	9	9	대장 참조	메모리보다 명령 수가 원인; 적용 범위 제한	메모리 비율 0~32%에서 누출계수 평평; 약 0.34 cyc/삽입명령	measure-harness/2026-08-27_expCE_results.md	
+experiment	CF	C	2026-08-27	2026-08-27	1	0	0	0	0	0	실보드/직접 측정	“스필도 0.34”는 추론. 후속 CG의 재물질화·스택풀 실측이 적용 한계를 확인	CA--CE 종합과 정적 레지스터 회계(호스트 14+게스트 5>14); 새 보드 측정 없음	measure-harness/2026-08-27_expCF_stitch_closing.md	
+experiment	CG	C	2026-08-27	2026-08-30	13	0	1	0	2	9	종료/실패 판정	실물 X25519 stitching 종료; cycle gate 6개 실패	실제 `fe25519_sqr_bb` guest allocation 정확성 PASS, 병합은 +9.9~15.1% 회귀	measure-harness/2026-08-27_expCG_results.md	
+experiment	CH	C	2026-08-27	2026-08-27	2	0	1	0	0	1	종료/실패 판정	실물 X25519 stitching 종료; cycle gate 6개 실패	실제 `fe25519_sqr_bb` guest allocation 정확성 PASS, 병합은 +9.9~15.1% 회귀	measure-harness/2026-08-27_expCG_results.md	
+experiment	CI	C	2026-08-27	2026-08-27	2	0	1	0	0	1	종료/실패 판정	실물 X25519 stitching 종료; cycle gate 6개 실패	실제 `fe25519_sqr_bb` guest allocation 정확성 PASS, 병합은 +9.9~15.1% 회귀	measure-harness/2026-08-27_expCG_results.md	
+experiment	CJ	C	2026-08-27	2026-08-30	219	2	1	1	166	24	대장 참조	2-run 정본; CY 5-run이 후속 갱신	draft-10 동일-ELF 누적: 25.967/20.249/11.224/18.298%	measure-harness/2026-08-27_expCJ_results.md	
+experiment	CK	C	2026-08-27	2026-08-27	21	13	1	0	7	0	대장 참조	F/U는 역사 동시특성화; CL이 분류를 교정, 주 F/U 집합에는 미포함	AF 동결 이미지 F/U 명령 단일스텝·슬롯 회계	measure-harness/2026-08-27_expCK_results.md	
+experiment	CL	C	2026-08-28	2026-08-28	7	4	1	0	0	1	대장 참조	클래스 벡터 교체; 총수·기본 산술 불변	`bic.w` branch 오분류 교정; 동적 총명령 재감사	measure-harness/2026-08-28_expCL_results.md	
+experiment	CM	C	2026-08-28	2026-08-28	14	1	1	1	11	0	대장 참조	정확성 정본; 큰 vector 때문에 cycle은 성능 정본에 미사용	draft-10 공식 pk 1,216B, ct 1,120B, ss·dec 전량 일치	measure-harness/2026-08-28_expCM_d10_full_vector_results.md	
+experiment	CN	C	2026-08-28	2026-08-28	11	0	1	0	10	0	대장 참조	단일 설정 결정성 PASS; seed 민감도는 CT가 별도 제한	CP-SAT seed42/worker1 두 출력 바이트 동일	measure-harness/2026-08-28_expCN_cp_sat_repro_results.md	
+experiment	CO	C	2026-08-28	2026-08-30	25	2	1	1	12	5	대장 참조	직접 문맥에서도 음성; flash/ITCM 절대값 혼합 금지	in-context checkpoint; 1-job 은닉률 −28~-29%, ITCM 대조 −15.2%	measure-harness/2026-08-28_expCO_results.md	
+experiment	CP	C	2026-08-28	2026-08-30	43	3	1	1	21	5	미측정/부분 미측정	범위 확장해도 음성; 꼬리 원인은 미측정	배칭 3→5, 커버리지 21→35%; H −29.0/−26.1%	measure-harness/2026-08-28_expCP_results.md	
+experiment	CQ	C	2026-08-28	2026-08-28	8	1	1	0	5	1	미측정/부분 미측정	reset 재현성 확인; 전원 재인가·2번째 보드는 미측정	reset 부팅 5회, 셀 폭 최대 0.087%, 효과 폭 0.3~0.7%	measure-harness/2026-08-28_expCQ_results.md	
+experiment	CR	C	2026-08-28	2026-08-30	25	2	1	1	8	9	대장 참조	532k Fiat 교체비를 양보비로 부르는 해석 반증	Lenngren mul r11 양보 157.03→150.94, 세금 −3.88%	measure-harness/2026-08-28_expCR_results.md	
+experiment	CS	C	2026-08-28	2026-08-30	45	4	1	1	15	15	미측정/부분 미측정	음성; 전체 alias-safe solver 성능은 미측정	phase-0 solver: 원시 스케줄 이득은 있으나 변환 세금이 더 큼; U_s가 U보다 654~734 느림	measure-harness/2026-08-28_expCS_results.md	
+experiment	CT	C	2026-08-28	2026-08-28	20	0	1	1	18	0	미측정/부분 미측정	seed 불변 가설 기각; `호스트`, 보드 미측정	B-mid seed별 목적 82×4, 83×3, 84×1	measure-harness/2026-08-28_expCT_results.md	
+experiment	CU	C	2026-08-28	2026-08-30	13	0	1	1	3	4	대장 참조	run 간 min 혼합 표 철회, run2 정합표와 6-run 범위 채택	같은-ELF leave-one-out 6회; run 내부 합으로 잔차 0.001~8.6%	measure-harness/2026-08-28_expCU_CV_CW_CX_results.md	
+experiment	CV	C	2026-08-28	2026-08-28	14	5	1	1	7	0	대장 참조	CZ와 합쳐 주 F/U 정본 구성	AF 동결 이미지 5회 재플래시 F/U	measure-harness/2026-08-28_expCU_CV_CW_CX_results.md	
+experiment	CW	C	2026-08-28	2026-08-30	9	0	1	1	3	4	대장 참조	RAM 배치 분리; 누적 절대값과 혼합 금지	8-seed 순환 decaps 6회; warm 12.97~13.02%, cold 18.58~18.62%	measure-harness/2026-08-28_expCU_CV_CW_CX_results.md	
+experiment	CX	C	2026-08-28	2026-08-30	9	0	1	1	3	4	대장 참조	앞선 다른 버퍼·RNG 계측 가짜 양성 기록 보존	고정/무작위 ct Welch t, 정본 run5/6 최대 | t | 1.99	measure-harness/2026-08-28_expCU_CV_CW_CX_results.md	
+experiment	CY	C	2026-08-28	2026-08-28	7	5	1	1	0	0	대장 참조	현행 누적 개선률 정본	CJ 동결 이미지 5회: 25.96/20.25/11.22/18.30%	measure-harness/2026-08-28_expCY_results.md	
+experiment	CZ	C	2026-08-28	2026-08-28	4	2	1	1	0	0	대장 참조	CV+CZ 7회, 연산별 14 paired effects가 주 F/U 정본	AF 동결 이미지 2회 추가; keygen·decaps 효과 범위를 0.000791/0.000491%p 확장	measure-harness/2026-08-28_expCZ_results.md	
+experiment	DA	D	2026-08-28	2026-08-28	20	2	1	1	13	2	대장 참조	외삽 아닌 직접 음성 결과	실제 33/43=76.7% 배칭, U11이 10.969~10.975% 느림	measure-harness/2026-08-28_expDA_results.md	
+experiment	DB	D	2026-08-28	2026-08-28	75	9	1	1	42	21	미측정/부분 미측정	모든 cycle 폐기; 정확한 alias-safe 성능 미측정	전체 4 phase solver는 alias mismatch	measure-harness/2026-08-28_expDB_results.md	
+experiment	DC	D	2026-08-28	2026-08-28	17	2	1	1	10	3	종료/실패 판정	정확성 성공·성능 실패, 미채택	Lenngren y1 U′가 S′보다 kg 4.282~4.292%, enc 5.751~5.753%, dec 3.941~3.944% 느림	measure-harness/2026-08-28_expDC_results.md	
+experiment	DD	D	2026-08-30	2026-08-30	637	7	1	3	0	504	실보드/직접 측정	`실보드·현행`; 정본은 `expDD_wrap_run1/2.txt`. stall 3종의 0은 지원·구성 미확인	wrap ELF를 독립 2회 플래시. PMU cycle 감소 10.85~23.78%, 퇴직 명령 감소 9.23~27.08%; KAT·8-seed·16셀 PASS	measure-harness/2026-08-30_expDD_results.md	
+experiment	DE	D	2026-08-30	2026-08-31	311	5	1	2	1	224	실보드/직접 측정	`실보드·현행`; 관측 high-water, 모든 입력의 정적 최악 증명은 아님	보드 KAT·8-seed·거부 gate PASS. A/B 모두 kg/enc/warm/cold 9,176/6,664/6,600/10,264 B, guard 훼손 0	measure-harness/2026-08-30_expDE_results.md	
+experiment	DF	D	2026-08-31	2026-08-31	43	2	1	1	34	5	대장 참조	앞 둘만 전체 경로로 진행; 뒤 둘 폐기	MVE cswap −46.851%, paired inversion −47.487%; direct-64 Keccak +356.545%, MVE rejection/MAC +51.460%	measure-harness/2026-08-31_expDF_four_gates_results.md	
+experiment	DG	D	2026-08-31	2026-08-31	18	2	0	1	9	6	대장 참조	역사·설계 단계; 성능 정본은 DH	paired inversion의 producer/consumer 경계와 0 분모 처리를 확인하는 통합 단계	measure-harness/2026-08-31_expDG_full_xwing_prereg.md	
+experiment	DH	D	2026-08-31	2026-08-31	24	3	1	1	11	7	실보드/직접 측정	실보드·현행; 두 플래시, 정확성·저차점 PASS	1단계 승자 기준 encaps에서 MVE cswap −1.264~1.265%, paired inversion −2.957%, 둘 다 −4.226~4.228%; warm/cold −1.707~1.709/−0.928%	measure-harness/2026-08-31_expDH_draft10_full_results.md	
+experiment	DI	D	2026-08-31	2026-08-31	38	4	2	2	14	10	종료/실패 판정	cold 사전 문턱 실패로 미채택; 동일 명령/cycle 차이는 dual-beat 가설과 일치하나 인과 증명 아님	단독 12.883% 개선, 전체 enc/warm/cold 0.235/0.309/0.162~0.163%	measure-harness/2026-08-31_expDI_m85_schedule_results.md	
+experiment	DJ	D	2026-08-31	2026-08-31	55	0	2	2	22	16	미측정/부분 미측정	비교 wrapper 포함; 정확한 dispatcher-free B8 footprint는 미측정	A0/B8 모두 10,360/7,848/7,784/11,448 B, guard 0; 2단계 retained 코드 상계 922 B·상태 4 B	measure-harness/2026-08-31_expDJ_final_same_elf_results.md	
+experiment	G2	G	2026-08-20	2026-08-20	1	0	0	0	0	1	대장 참조	현행 T4는 같은 빌드 12.124%를 사용	베이스 3→2 비용 0, 양보 세금 약 12.1%	slothy-2stream/mve_keccak.py	
+experiment	K1	K	2026-08-16	2026-08-16	0	0	0	0	0	0	대장 참조	`역사→대체`	X25519 357,484 cyc, Keccak 5,526 cyc; Unicorn 366,934/9,162 inst; IPC 1.03/1.66 | X25519 cycle은 후속 정본 357,474로 교체; Keccak 5,526 유지		
+experiment	K2	K	2026-08-16	2026-08-16	0	0	0	0	0	0	대장 참조	`역사→대체`	X25519 357,484 cyc, Keccak 5,526 cyc; Unicorn 366,934/9,162 inst; IPC 1.03/1.66 | X25519 cycle은 후속 정본 357,474로 교체; Keccak 5,526 유지		
+experiment	K3	K	2026-08-16	2026-08-16	0	0	0	0	0	0	실보드/직접 측정	`역사·실보드`	ML-KEM kg/enc/dec 436,112/446,860/497,580; combiner 7,648; 상한 26.5/21.3/24.3% | ITCM 재측정·분모 교정으로 교체		
+experiment	K4	K	2026-08-16	2026-08-16	0	0	0	0	0	0	실보드/직접 측정	`역사·실보드`	ML-KEM kg/enc/dec 436,112/446,860/497,580; combiner 7,648; 상한 26.5/21.3/24.3% | ITCM 재측정·분모 교정으로 교체		
+experiment	M4	M	2026-08-17	2026-08-20	0	0	0	0	0	0	대장 참조	종단간 7.7/5.5/7.2%는 `파생`; 직접 E2E 아님	4:1 2,008→1,772, 8:1 3,256→3,010		
+experiment	N2	N	2026-08-17	2026-08-20	0	0	0	0	0	0	대장 참조	`121×2=242` 완전 귀속과 853 하한은 expQ로 철회	2:1 ldr/rot 수용, str 차단; lsmix 612		
+experiment	Z1	Z	2026-08-21	2026-08-21	11	5	1	1	0	4	대장 참조	귀속량이며 제거 가능량이 아님; 한 파일명 아래 두 단계를 별도 보존	Z1은 X+Y 동시 보존, Z2는 staged profiler로 C8/C9 귀속	measure-harness/2026-08-21_expZ_results.md	
+experiment	Z2	Z	2026-08-21	2026-08-21	11	5	1	1	0	4	대장 참조	귀속량이며 제거 가능량이 아님; 한 파일명 아래 두 단계를 별도 보존	Z1은 X+Y 동시 보존, Z2는 staged profiler로 C8/C9 귀속	measure-harness/2026-08-21_expZ_results.md	
+experiment	AE2	A	2026-08-24	2026-08-24	4	2	1	0	0	0	대장 참조	code-flash U8 배치 비용이 섞인 역사값; AF가 교체	dispatcher를 제거한 직접 재측정도 −4.14/−19.78~−19.81/−3.99%	measure-harness/2026-08-24_expAE2_results.md	
+experiment	AK1	A	2026-08-24	2026-08-24	12	4	1	0	7	0	종료/실패 판정	AK1 기각, AK2 미채택, C9 v1 유지	AK1: scatter v2가 encaps/decaps 약 1.0~1.3 kcyc 회귀. AK2: ITCM 변화가 유효 기준 1,000 cyc 미달	measure-harness/2026-08-24_expAK_results.md	
+experiment	AK2	A	2026-08-24	2026-08-24	12	4	1	0	7	0	종료/실패 판정	AK1 기각, AK2 미채택, C9 v1 유지	AK1: scatter v2가 encaps/decaps 약 1.0~1.3 kcyc 회귀. AK2: ITCM 변화가 유효 기준 1,000 cyc 미달	measure-harness/2026-08-24_expAK_results.md	
+experiment	AM0	A	2026-08-25	2026-08-25	1	0	0	0	0	0	실보드/직접 측정	`호스트·정적`; mul-only 15%→E2E 10~12% 산술을 6.1%로 사전 정정	X25519 MVE whole-ladder 정적 설계, expAL 빌드 기준선 동결; 신규 보드 측정 없음	measure-harness/2026-08-25_expAM_x25519_mve_design.md	
+experiment	AM1	A	2026-08-25	2026-08-25	13	2	1	1	8	1	종료/실패 판정	성능 기각; whole-ladder 미착수	MVE field-mul 정확성 전 게이트 PASS, 의존 체인 −102.62%	measure-harness/2026-08-25_expAM1_results.md	
+experiment	AT0	A	2026-08-25	2026-08-25	1	0	1	0	0	0	실보드/직접 측정	X06 선행 단가; 투영은 실측 아님	constant-time lookup: scalar 추정과 MVE 6~8× 가설 모두 반증	measure-harness/2026-08-25_expAT0_results.md	
+experiment	AT1	A	2026-08-25	2026-08-25	1	0	1	0	0	0	실보드/직접 측정	`호스트`; 보드 성능은 AU 이후	comb 표 생성·RFC/독립 구현 호스트 검증, 86 window 확정	measure-harness/2026-08-25_expAT1_results.md	
+experiment	AT2	A	2026-08-26	2026-08-26	1	0	1	0	0	0	종료/실패 판정	실패. `harvest_ra8m1_expAU514.py`의 `514`는 `SLOT_N`이고 별도 AU514 실험이 아님	fixed-base A/B +13.30%, 사전 gate 25% 미달	measure-harness/2026-08-26_expAU_AT2_results.md	
+experiment	AT3	A	2026-08-26	2026-08-26	1	0	1	0	0	0	대장 참조	PASS, 채택 가능	full X-Wing X06 통합	measure-harness/2026-08-26_expAW_AT3_results.md	
+experiment	AM1B	A	2026-08-25	2026-08-25	16	2	1	0	12	1	미측정/부분 미측정	AM1 기각 불변	sqr·로드재사용·표현변환·`vmlaldava` 미측정 항목 폐합	measure-harness/2026-08-25_expAM1b_results.md	
+candidate	K01	K			0	0	0	0	0	0	미측정/부분 미측정	`부분 채택·추가분 미측정`	X forward NTT baseline	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	K02	K			0	0	0	0	0	0	미측정/부분 미측정	`부분 채택·추가분 미측정`	Y inverse NTT baseline	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	K03	K			0	0	0	0	0	0	미측정/부분 미측정	`부분 실측·부분 미측정`	layer merge 조합 전체를 같은 gate로 전수 측정한 것은 아님	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	K04	K			0	0	0	0	0	0	미측정/부분 미측정	`미측정`	low-overhead loop·unroll·정렬	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	K05	K			0	0	0	0	0	0	미측정/부분 미측정	`미측정`	twiddle load/preload	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	K06	K			0	0	0	0	0	0	미측정/부분 미측정	`부분 채택`	C8 current-order/no-transpose; 다른 consumer 확대는 미측정	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	K07	K			0	0	0	0	0	0	호스트·정적·파생	`정적 상한·종료`	BP, 평균 ≤1.12%; 출력 바이트 동일 증명 위험	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	K08	K			0	0	0	0	0	0	미측정/부분 미측정	`미측정`	decompress→NTT 융합	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	K09	K			0	0	0	0	0	0	미측정/부분 미측정	`미측정`	inverse NTT→compress/compare 융합	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	K10	K			0	0	0	0	0	0	미측정/부분 미측정	`미측정`	K=3 NTT lockstep/SoA	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	K11	K			0	0	0	0	0	0	미측정/부분 미측정	`baseline·추가분 미측정`	improved Plantard 계약은 현행, range 재조정은 미측정	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	K12	K			0	0	0	0	0	0	미측정/부분 미측정	`미측정`	Montgomery·Barrett M85 재경쟁	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	K13	K			0	0	0	0	0	0	미측정/부분 미측정	`기존 구조·추가분 미측정`	basemul chain 재스케줄	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	K14	K			0	0	0	0	0	0	실보드/직접 측정	`실보드·해당 접근 종료`	BR/BX, rejection 분기 9 basic block; 회수 평균 0.20%	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	K15	K			0	0	0	0	0	0	실보드/직접 측정	`실보드·해당 접근 종료`	K14와 같은 BR/BX 재정렬 접근	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	K16	K			0	0	0	0	0	0	미측정/부분 미측정	`미측정`	세 matrix row/column lockstep	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	K17	K			0	0	0	0	0	0	미측정/부분 미측정	`API 조건부·미측정`	expanded matrix cache	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	K18	K			0	0	0	0	0	0	미측정/부분 미측정	`API 조건부·미측정`	decoded/ordered `t_hat` cache	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	K19	K			0	0	0	0	0	0	실보드/직접 측정	`실측 회계·종료`	BE, IPC 1.66·여지 4.6%	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	K20	K			0	0	0	0	0	0	실보드/직접 측정	`실보드·종료`	BT MVE 2-way Keccak	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	K21	K			0	0	0	0	0	0	실보드/직접 측정	`실보드·종료`	BS matrix-XOF x4 회귀	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	K22	K			0	0	0	0	0	0	실보드/직접 측정	`실보드·종료`	BF/BG gate 2회 미달	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	K23	K			0	0	0	0	0	0	미측정/부분 미측정	`분모 실측·후보 미측정`	AQ의 squeeze 배관 993 cyc; 전용 경로 자체는 미측정	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	K24	K			0	0	0	0	0	0	실보드/직접 측정	`실측 회계·종료`	BJ/BK, 배관의 93.2%가 남아야 할 bit-interleave extract	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	K25	K			0	0	0	0	0	0	실보드/직접 측정	`실보드·채택 baseline`	AJ C9 v1	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	K26	K			0	0	0	0	0	0	미측정/부분 미측정	`부분 실측·나머지 미측정`	AK1 scatter v2 실패; contiguous word-level 새 설계는 미측정	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	K27	K			0	0	0	0	0	0	미측정/부분 미측정	`부분 현행·확대 미측정`	일부 consumer fusion 존재	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	K28	K			0	0	0	0	0	0	호스트·정적·파생	`정적 상한·종료`	BP, 평균 ≤0.46%	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	K29	K			0	0	0	0	0	0	종료/실패 판정	`표적 오류·종료`	계산 제거가 아니라 병행 문제여서 W 계열로 귀속	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	K30	K			0	0	0	0	0	0	실보드/직접 측정	`실측 상한·종료`	AP, verify/cmov 262 cyc = 0.03%	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	K31	K			0	0	0	0	0	0	실보드/직접 측정	`실보드·채택`	BH libc word loop	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	K32	K			0	0	0	0	0	0	실보드/직접 측정	`실보드·종료`	BK micro +17.57%, 사전 gate 미달	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	T01	T			0	0	0	0	0	0	미측정/부분 미측정	`설계 원칙`	MVE와 `+nomve` build 분리 필요; M55/M52 성능은 미측정	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	T02	T			0	0	0	0	0	0	실보드/직접 측정	`부분 실측`	flash/ITCM 배치는 측정, P-NOCACHE까지 같은 실험으로 전수 비교하지 않음	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	T03	T			0	0	0	0	0	0	미측정/부분 미측정	`미측정`	DTCM 4-bank operand/stack 배치	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	T04	T			0	0	0	0	0	0	미측정/부분 미측정	`근거 있음·효과 미측정`	Helium loop 32-bit 정렬	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	T05	T			0	0	0	0	0	0	미측정/부분 미측정	`부분 실측`	AM1 load 비중첩; 다른 조합/full은 미측정	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	T06	T			0	0	0	0	0	0	미측정/부분 미측정	`부분 실보드 성공`	AG 두-stream SLOTHY; 다른 kernel/full DAG 미측정	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	T07	T			0	0	0	0	0	0	미측정/부분 미측정	`배치 민감성만 확인`	AF 등; speed/size codegen 공동 탐색 미측정	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	T08	T			0	0	0	0	0	0	실보드/직접 측정	`현행 방법론`	기능 검증과 실보드 cycle 분리 적용	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	T09	T			0	0	0	0	0	0	미측정/부분 미측정	`미측정·별도 트랙`	CDE/ACI custom instruction	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	W01	W			0	0	0	0	0	0	미측정/부분 미측정	`미측정`	operation-level 전체 DAG scheduler	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	W02	W			0	0	0	0	0	0	미측정/부분 미측정	`미측정`	keygen/cold DAG 병행	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	W03	W			0	0	0	0	0	0	미측정/부분 미측정	`미측정`	fixed/variable X25519×ML-KEM 3-job	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	W04	W			0	0	0	0	0	0	미측정/부분 미측정	`미측정`	ML-KEM decaps×X25519, cold DAG 포함	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	W05	W			0	0	0	0	0	0	실보드/직접 측정	`실보드·종료`	CG/CH/CI, 정확하지만 순차보다 느림	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	W06	W			0	0	0	0	0	0	미측정/부분 미측정	`미측정`	X25519×C9/packing 교차	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	W07	W			0	0	0	0	0	0	실보드/직접 측정	`실보드·종료`	U/AF/CV/CZ	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	W08	W			0	0	0	0	0	0	미측정/부분 미측정	`미측정`	두 X25519 공동 ladder API	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	W09	W			0	0	0	0	0	0	미측정/부분 미측정	`조건부·미측정`	zero-safe batch inversion	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	W10	W			0	0	0	0	0	0	호스트·정적·파생	`정적 상한·종료`	BP, 평균 0.194%	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	W11	W			0	0	0	0	0	0	실보드/직접 측정	`실측 상한·종료`	AN combiner 2,531~2,537 cyc	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	W12	W			0	0	0	0	0	0	실보드/직접 측정	`실측 상한·종료`	W11과 동일 분모	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	W13	W			0	0	0	0	0	0	미측정/부분 미측정	`미측정`	32→96 B key-expansion 전용 경로	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	W14	W			0	0	0	0	0	0	종료/실패 판정	`워크로드 분리·최적화 후보 종료`	BU가 cold/warm을 각각 측정; 같은 latency로 합치지 않음	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	W15	W			0	0	0	0	0	0	미측정/부분 미측정	`미측정`	`rkprf` 병행	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	W16	W			0	0	0	0	0	0	미측정/부분 미측정	`최상위 종료·내부 미측정`	AN top-level glue 25~32 cyc; 내부 arena는 별도 미측정	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	W17	W			0	0	0	0	0	0	미측정/부분 미측정	`미측정`	operation별 ITCM overlay	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	W18	W			0	0	0	0	0	0	미측정/부분 미측정	`부분 방법론 성공·full 미측정`	AG 두-stream만 성공	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	W19	W			0	0	0	0	0	0	미측정/부분 미측정	`미측정·별도 지표`	multi-request throughput backend	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	W20	W			0	0	0	0	0	0	미측정/부분 미측정	`cycle 외 미측정`	speed/size/stack/energy profile	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	X01	X			0	0	0	0	0	0	실보드/직접 측정	`실보드·채택`	BD 1차 gate 실패 뒤 BM/BN의 다른 재스케줄을 full X-Wing에서 채택	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	X02	X			0	0	0	0	0	0	실보드/직접 측정	`실보드·채택`	BB/BC	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	X03	X			0	0	0	0	0	0	미측정/부분 미측정	`정적 상한·종료`	BQ가 BP의 잘못된 27.7~35.4% 상한을 평균 0.8%로 정정; 융합 커널 자체는 미측정	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	X04	X			0	0	0	0	0	0	미측정/부분 미측정	`미측정`	xDBLADD pair schedule. BQ가 X03/X05는 닫았지만 X04 ID를 직접 시험·종료하지는 않음	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	X05	X			0	0	0	0	0	0	호스트·정적·파생	`정적 상한·종료`	X03으로 흡수, BQ에서 함께 종료	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	X06	X			0	0	0	0	0	0	실보드/직접 측정	`실보드·채택`	AX full X-Wing	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	X07	X			0	0	0	0	0	0	미측정/부분 미측정	`미측정`	두 scalar lockstep	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	X08	X			0	0	0	0	0	0	호스트·정적·파생	`정적·종료`	AM0의 `vmlaldava` 단일 누산기 제약으로 B2 두-job 설계 기각	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	X09	X			0	0	0	0	0	0	미측정/부분 미측정	`부분 실측·부분 미측정`	AM1 10×25/26 one-job 실패, 8×32·16-bit 정적 기각, radix-2^29 미측정	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	X10	X			0	0	0	0	0	0	미측정/부분 미측정	`조건부·미측정`	inversion 재스케줄·zero-safe batch	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	X11	X			0	0	0	0	0	0	미측정/부분 미측정	`상한 실측·내부 미측정`	AS에서 ladder 잔여 상한만 측정; cswap/loop 세분은 미측정	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함
+candidate	X12	X			0	0	0	0	0	0	미측정/부분 미측정	`방법론만 확인`	AG SLOTHY 방법은 성공, X25519 대상 schedule·ITCM 공동설계는 미측정	paper/데이터_누적_검증대장.md §2.2	후보 ID; 독립 실험 파일이 없어도 계보에 포함

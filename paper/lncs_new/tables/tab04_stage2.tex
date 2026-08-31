@@ -1,0 +1,21 @@
+\begin{table}[t]
+\centering
+\caption{End-to-end effect of the two additional X25519 transformations on top of the six-transform implementation. Values are ranges from two independent reflashes in a separate same-ELF experiment and are diagnostic rather than additive to Table~\ref{tab:final-direct}.}
+\label{tab:stage2}
+\scriptsize
+\setlength{\tabcolsep}{2.2pt}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Transformation/path & Baseline cycles & Candidate cycles & Reduction \\
+\midrule
+\multicolumn{4}{@{}l}{\emph{Encapsulation}} \\
+MVE \texttt{cswap} & 1,128,441--1,128,448 & 1,114,176--1,114,177 & 1.264--1.265\% \\
+Paired inversion & 1,128,441--1,128,448 & 1,095,069--1,095,076 & 2.957\% \\
+Both & 1,128,441--1,128,448 & 1,080,740--1,080,749 & \textbf{4.226--4.228\%} \\
+\addlinespace
+\multicolumn{4}{@{}l}{\emph{Decapsulation with MVE \texttt{cswap}}} \\
+Warm & 839,319--839,328 & 824,987--824,991 & 1.707--1.709\% \\
+Cold & 1,553,257--1,553,270 & 1,538,838--1,538,852 & 0.928\% \\
+\bottomrule
+\end{tabular}
+\end{table}

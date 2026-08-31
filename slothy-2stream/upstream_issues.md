@@ -59,8 +59,80 @@ mechanical and semantics-preserving for straight-line code.)
 
 ---
 
+## Issue 4 — `LSLL`/`LSRL` operand parity is not modeled (renaming produces
+unassemblable code)
+
+**Where.** `slothy/targets/arm_v81m/arch_v81m.py`, the long-shift classes
+(`lsll`, `lsrl`; in our tree the `lsll_imm`/`lsrl_imm` extension classes).
+
+**Problem.** Armv8.1-M encodes `LSLL{S}/LSRL{S} <RdaLo>, <RdaHi>, #<imm>` with
+3-bit register fields plus an implied LSB, so **`RdaLo` must be even-numbered and
+`RdaHi` odd-numbered**. The model declares both operands as ordinary GPRs, so
+register allocation may assign an illegal pair. The scheduler reports success and
+the selfcheck passes, but the emitted assembly does not assemble.
+
+**Evidence.** Rescheduling a 606-instruction kernel (compiled fiat-crypto field
+multiplication interleaved with an MVE Keccak fragment) containing 12 `lsll`/`lsrl`
+instructions produced, among others:
+
+```
+../src/gen/expCS_solver.S:1104: Error: Even register not allowed here -- `lsrl r8,r6,#25'
+../src/gen/expCS_solver.S:1223: Error: Even register not allowed here -- `lsrl r5,r2,#25'
+../src/gen/expCS_solver.S:1232: Error: Even register not allowed here -- `lsrl r6,r10,#26'
+../src/gen/expCS_solver.S:1245: Error: Even register not allowed here -- `lsll r1,r6,#3'
+```
+
+The corresponding inputs were legal pairs (`lsrl r8, r9`, `lsrl r2, r3`,
+`lsrl r6, r7`, `lsll r4, r5`).
+
+**Suggested fix.** Constrain the two operands to even/odd GPR subsets (or model the
+pair as a single wide register class). Until then, users must exclude every register
+appearing in a long shift from renaming.
+
+**Workaround we used.** Added the eight registers used by these instructions
+(`r2`–`r9`) to `config.reserved_regs`, leaving reordering unconstrained and renaming
+limited to the remaining pool.
+
+---
+
+## Issue 5 — MVE vector-base gather/scatter (`[<Qn>, #imm]`) is missing from the
+Armv8.1-M model
+
+**Where.** `slothy/targets/arm_v81m/arch_v81m.py`.
+
+**Problem.** The model has contiguous `vldrw/vstrw .. [<Rn>, <imm>]` and the
+scalar-base/vector-offset forms `vldrw_gather`/`vstrw_scatter .. [<Rn>, <Qm>]`, but
+not the **pure vector-base** encodings `VLDRW.32 <Qd>, [<Qn>, #<imm>]` and
+`VSTRW.32 <Qd>, [<Qn>, #<imm>]`. The parser rejects them outright:
+
+```
+ParsingException: Couldn't parse vstrw.u32 q0, [q7, #204]
+```
+
+**Why it matters beyond parsing.** Adding the two classes naively (pattern +
+inputs/outputs + execution unit) makes the parser accept them but leaves them out of
+`is_load_store_instruction` / `is_vector_load` / `is_vector_store`, whose member
+lists are hard-coded inside those methods. SLOTHY then does not treat them as memory
+accesses at all and freely reorders them against other accesses to the same buffer.
+The selfcheck still reports OK because it only checks the data flow SLOTHY knows about.
+
+**Evidence.** A 606-instruction kernel (compiled fiat-crypto field multiplication
+interleaved with an MVE Keccak fragment addressing its state through a vector base)
+was rescheduled with the naive classes. All 36 split windows reported OPTIMAL and all
+36 selfchecks passed, but on hardware 32 bytes of the Keccak state were wrong on every
+one of 100 repetitions (6,400 byte mismatches). Registering the classes as vector
+load/store and giving them `addr`/`pre_index` in `make()` is what we needed.
+
+**Suggested fix.** Add both encodings, and make the load/store membership tests
+data-driven (a class attribute) rather than hard-coded lists, so that out-of-tree
+instruction classes cannot silently become non-memory operations.
+
+---
+
 ### 공통 첨부물 체크리스트 (제출 시)
 
-- [ ] patch_slothy_v81m.py (v0.1~0.3) 최소 재현 diff로 축약
+- [ ] patch_slothy_v81m.py (v0.1~0.5) 최소 재현 diff로 축약
+- [ ] Issue 4: 12개 lsll/lsrl 만 남긴 최소 재현 케이스로 축약
+- [ ] Issue 5: 개더/스캐터 2개와 상태 버퍼 접근만 남긴 최소 재현 케이스로 축약
 - [ ] Issue 2·3: bfull 재료(mul256_flat + round6) 최소 재현 케이스로 축약
 - [ ] 보드 수치는 참고로만 (재현은 스케줄 결과의 메모리 의존성 위반으로 충분)

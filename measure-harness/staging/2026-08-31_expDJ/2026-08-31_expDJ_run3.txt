@@ -1,0 +1,32 @@
+CPU is running at low speed (8298 kHz).
+CPU is running at low speed (8297 kHz).
+connected: Cortex-M85
+flash code readback PASS: bytes=116960 segments=2 sha256=884531E285B15A1E1FE808510320C7CA2562C8F16C3B240E54783CCBDC983CD5
+measurement ELF SHA-256: C9B7BFC5044B09FF5E22894BE631B8A1668F75443D3212B2E07FEF7204780886
+measurement SREC SHA-256: BE9B0D50312D059B71FAFFC8062769A12CB1FCA381E2840EF4A7F88CB64118B1
+=== EK-RA8M1 harness: KAT + DWT/PMU (ITCM/DTCM) ===
+
+== KAT: X25519 (RFC 7748 s6.1) ==
+alice_pk: OK
+bob_pk  : OK
+K(a,B)  : OK
+K(b,A)  : OK
+== KAT: SHA3-256 via asm Keccak-f1600 ==
+sha3("")   : OK
+sha3("abc"): OK
+
+KAT ALL PASS -- streams A+B verified on board
+
+expDJ correctness full-mm=0 low-mm=0 eq-stack=11552 guard=0
+expDJ cell=0 mode=A0 key=870970 encaps=1326924 warm=934806 cold=1802629
+expDJ cell=1 mode=B8 key=700834 encaps=1064856 warm=825793 cold=1523490
+expDJ cell=2 mode=B8 key=700865 encaps=1064857 warm=825746 cold=1523463
+expDJ cell=3 mode=A0 key=870874 encaps=1326931 warm=934833 cold=1802655
+expDJ timing-mm=0
+expDJ stack mode=A0 key=10360 encaps=7848 warm=7784 cold=11448 guard=0
+expDJ stack mode=B8 key=10360 encaps=7848 warm=7784 cold=11448 guard=0
+expDJ CORRECTNESS GATE PASS
+HARNESS DONE
+
+harness_fails=0
+expDJ HOST GATE PASS: A0/B8 all operations, correctness, stack

@@ -1,0 +1,2842 @@
+Archive member included to satisfy reference by file (symbol)
+
+C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-exit.o)
+                              C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crt0.o (exit)
+C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-findfp.o)
+                              C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-exit.o) (__stdio_exit_handler)
+C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-fwalk.o)
+                              C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-findfp.o) (_fwalk_sglue)
+C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-stdio.o)
+                              C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-findfp.o) (__sread)
+C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-memcmp.o)
+                              ./src/harness.o (memcmp)
+C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-closer.o)
+                              C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-stdio.o) (_close_r)
+C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-reent.o)
+                              C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-closer.o) (errno)
+C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-impure.o)
+                              C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-reent.o) (_impure_ptr)
+C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-lseekr.o)
+                              C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-stdio.o) (_lseek_r)
+C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-readr.o)
+                              C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-stdio.o) (_read_r)
+C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-writer.o)
+                              C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-stdio.o) (_write_r)
+C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-errno.o)
+                              ./ra/fsp/src/bsp/mcu/all/bsp_sbrk.o (__errno)
+C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-init.o)
+                              C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crt0.o (__libc_init_array)
+C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-lock.o)
+                              C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-findfp.o) (__retarget_lock_init_recursive)
+C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-freer.o)
+                              C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-reent.o) (_free_r)
+C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-mallocr.o)
+                              C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-findfp.o) (_malloc_r)
+C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-mlock.o)
+                              C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-freer.o) (__malloc_lock)
+C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-fflush.o)
+                              C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-findfp.o) (_fflush_r)
+C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-sbrkr.o)
+                              C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-mallocr.o) (_sbrk_r)
+
+Discarded input sections
+
+ .text          0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crti.o
+ .data          0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crti.o
+ .bss           0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crti.o
+ .text          0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crtbegin.o
+ .data          0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crtbegin.o
+ .bss           0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crtbegin.o
+ .rodata.all_implied_fbits
+                0x00000000       0x24 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crtbegin.o
+ .data.__dso_handle
+                0x00000000        0x4 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crtbegin.o
+ .text          0x00000000       0x7c C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crt0.o
+ .data          0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crt0.o
+ .bss           0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crt0.o
+ .ARM.extab     0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crt0.o
+ .ARM.exidx     0x00000000       0x10 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crt0.o
+ .debug_line_str
+                0x00000000       0xda C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crt0.o
+ .ARM.attributes
+                0x00000000       0x22 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crt0.o
+ .text          0x00000000        0x0 ./src/x25519/x25519-cortex-m4-gcc.o
+ .data          0x00000000        0x0 ./src/x25519/x25519-cortex-m4-gcc.o
+ .bss           0x00000000        0x0 ./src/x25519/x25519-cortex-m4-gcc.o
+ .itcm_code_from_flash
+                0x00000000        0x0 ./src/x25519/x25519-cortex-m4-gcc.o
+ .itcm_code_from_flash.x25519_mul
+                0x00000000      0x1c0 ./src/x25519/x25519-cortex-m4-gcc.o
+ .itcm_code_from_flash.x25519_sqr
+                0x00000000      0x158 ./src/x25519/x25519-cortex-m4-gcc.o
+ .text          0x00000000        0x0 ./src/mlkem/cbd.o
+ .data          0x00000000        0x0 ./src/mlkem/cbd.o
+ .bss           0x00000000        0x0 ./src/mlkem/cbd.o
+ .text          0x00000000        0x0 ./src/mlkem/cmov_int16.o
+ .data          0x00000000        0x0 ./src/mlkem/cmov_int16.o
+ .bss           0x00000000        0x0 ./src/mlkem/cmov_int16.o
+ .itcm_code_from_flash
+                0x00000000       0x14 ./src/mlkem/cmov_int16.o
+ .debug_line    0x00000000       0x4e ./src/mlkem/cmov_int16.o
+ .debug_line_str
+                0x00000000       0x4a ./src/mlkem/cmov_int16.o
+ .debug_info    0x00000000       0x24 ./src/mlkem/cmov_int16.o
+ .debug_abbrev  0x00000000       0x14 ./src/mlkem/cmov_int16.o
+ .debug_aranges
+                0x00000000       0x20 ./src/mlkem/cmov_int16.o
+ .debug_str     0x00000000       0x58 ./src/mlkem/cmov_int16.o
+ .ARM.attributes
+                0x00000000       0x25 ./src/mlkem/cmov_int16.o
+ .text          0x00000000        0x0 ./src/mlkem/fastaddsub.o
+ .data          0x00000000        0x0 ./src/mlkem/fastaddsub.o
+ .bss           0x00000000        0x0 ./src/mlkem/fastaddsub.o
+ .text          0x00000000        0x0 ./src/mlkem/fastbasemul.o
+ .data          0x00000000        0x0 ./src/mlkem/fastbasemul.o
+ .bss           0x00000000        0x0 ./src/mlkem/fastbasemul.o
+ .text          0x00000000        0x0 ./src/mlkem/indcpa.o
+ .data          0x00000000        0x0 ./src/mlkem/indcpa.o
+ .bss           0x00000000        0x0 ./src/mlkem/indcpa.o
+ .text          0x00000000        0x0 ./src/mlkem/kem.o
+ .data          0x00000000        0x0 ./src/mlkem/kem.o
+ .bss           0x00000000        0x0 ./src/mlkem/kem.o
+ .text.crypto_kem_keypair
+                0x00000000       0x20 ./src/mlkem/kem.o
+ .text.crypto_kem_enc
+                0x00000000       0x24 ./src/mlkem/kem.o
+ .text          0x00000000        0x0 ./src/mlkem/matacc.o
+ .data          0x00000000        0x0 ./src/mlkem/matacc.o
+ .bss           0x00000000        0x0 ./src/mlkem/matacc.o
+ .text          0x00000000        0x0 ./src/mlkem/matacc_asm.o
+ .data          0x00000000        0x0 ./src/mlkem/matacc_asm.o
+ .bss           0x00000000        0x0 ./src/mlkem/matacc_asm.o
+ .text          0x00000000        0x0 ./src/mlkem/ntt.o
+ .data          0x00000000        0x0 ./src/mlkem/ntt.o
+ .bss           0x00000000        0x0 ./src/mlkem/ntt.o
+ .data.mlkem_invntt_input_max
+                0x00000000        0x4 ./src/mlkem/ntt.o
+ .data.mlkem_invntt_input_min
+                0x00000000        0x4 ./src/mlkem/ntt.o
+ .bss.mlkem_invntt_observe
+                0x00000000        0x4 ./src/mlkem/ntt.o
+ .bss.mlkem_invntt_alignment_offsets
+                0x00000000        0x4 ./src/mlkem/ntt.o
+ .bss.mlkem_invntt_mode
+                0x00000000        0x4 ./src/mlkem/ntt.o
+ .bss.mlkem_ntt_alignment_offsets
+                0x00000000        0x4 ./src/mlkem/ntt.o
+ .bss.mlkem_ntt_mode
+                0x00000000        0x4 ./src/mlkem/ntt.o
+ .rodata.zetas_inv_CT_asm
+                0x00000000      0x400 ./src/mlkem/ntt.o
+ .rodata.zetas_asm
+                0x00000000      0x200 ./src/mlkem/ntt.o
+ .text          0x00000000        0x0 ./src/mlkem/poly.o
+ .data          0x00000000        0x0 ./src/mlkem/poly.o
+ .bss           0x00000000        0x0 ./src/mlkem/poly.o
+ .text.poly_fromplant
+                0x00000000        0x4 ./src/mlkem/poly.o
+ .text.poly_zeroize
+                0x00000000        0xc ./src/mlkem/poly.o
+ .text          0x00000000        0x0 ./src/mlkem/poly_asm.o
+ .data          0x00000000        0x0 ./src/mlkem/poly_asm.o
+ .bss           0x00000000        0x0 ./src/mlkem/poly_asm.o
+ .text          0x00000000        0x0 ./src/mlkem/poly_mve.o
+ .data          0x00000000        0x0 ./src/mlkem/poly_mve.o
+ .bss           0x00000000        0x0 ./src/mlkem/poly_mve.o
+ .text.mve_cmp_poly_compress_v2.constprop.0
+                0x00000000       0x68 ./src/mlkem/poly_mve.o
+ .text.mve_poly_compress_v2.constprop.0
+                0x00000000       0x44 ./src/mlkem/poly_mve.o
+ .text.mve_cmp_poly_packcompress_v2.constprop.0
+                0x00000000      0x298 ./src/mlkem/poly_mve.o
+ .text.mve_c9_selftest
+                0x00000000      0xa2c ./src/mlkem/poly_mve.o
+ .bss.bufb.0    0x00000000      0x3c0 ./src/mlkem/poly_mve.o
+ .bss.pin.1     0x00000000      0x200 ./src/mlkem/poly_mve.o
+ .bss.pb.2      0x00000000      0x200 ./src/mlkem/poly_mve.o
+ .bss.pa.3      0x00000000      0x200 ./src/mlkem/poly_mve.o
+ .bss.bufa.4    0x00000000      0x3c0 ./src/mlkem/poly_mve.o
+ .bss.aj_lcg_state
+                0x00000000        0x4 ./src/mlkem/poly_mve.o
+ .text          0x00000000        0x0 ./src/mlkem/polyvec.o
+ .data          0x00000000        0x0 ./src/mlkem/polyvec.o
+ .bss           0x00000000        0x0 ./src/mlkem/polyvec.o
+ .text.polyvec_compress
+                0x00000000       0xe4 ./src/mlkem/polyvec.o
+ .text.polyvec_decompress
+                0x00000000       0xc4 ./src/mlkem/polyvec.o
+ .text.polyvec_invntt
+                0x00000000       0x1c ./src/mlkem/polyvec.o
+ .text.polyvec_reduce
+                0x00000000       0x1c ./src/mlkem/polyvec.o
+ .text.polyvec_add
+                0x00000000       0x20 ./src/mlkem/polyvec.o
+ .text          0x00000000        0x0 ./src/mlkem/randombytes_det.o
+ .data          0x00000000        0x0 ./src/mlkem/randombytes_det.o
+ .bss           0x00000000        0x0 ./src/mlkem/randombytes_det.o
+ .text.PQCLEAN_randombytes_reset
+                0x00000000        0xc ./src/mlkem/randombytes_det.o
+ .text          0x00000000        0x0 ./src/mlkem/reduce.o
+ .data          0x00000000        0x0 ./src/mlkem/reduce.o
+ .bss           0x00000000        0x0 ./src/mlkem/reduce.o
+ .text          0x00000000        0x0 ./src/mlkem/symmetric-fips202.o
+ .data          0x00000000        0x0 ./src/mlkem/symmetric-fips202.o
+ .bss           0x00000000        0x0 ./src/mlkem/symmetric-fips202.o
+ .text          0x00000000        0x0 ./src/mlkem/verify.o
+ .data          0x00000000        0x0 ./src/mlkem/verify.o
+ .bss           0x00000000        0x0 ./src/mlkem/verify.o
+ .text.verify   0x00000000       0x34 ./src/mlkem/verify.o
+ .text          0x00000000        0x0 ./src/keccak/fips202.o
+ .data          0x00000000        0x0 ./src/keccak/fips202.o
+ .bss           0x00000000        0x0 ./src/keccak/fips202.o
+ .text.shake128_inc_init
+                0x00000000       0x18 ./src/keccak/fips202.o
+ .text.shake128_inc_absorb
+                0x00000000        0xc ./src/keccak/fips202.o
+ .text.shake128_inc_finalize
+                0x00000000       0x5c ./src/keccak/fips202.o
+ .text.shake128_inc_squeeze
+                0x00000000        0x8 ./src/keccak/fips202.o
+ .text.shake128_inc_ctx_clone
+                0x00000000        0x8 ./src/keccak/fips202.o
+ .text.shake128_inc_ctx_release
+                0x00000000        0x4 ./src/keccak/fips202.o
+ .text.shake256_inc_ctx_clone
+                0x00000000        0x8 ./src/keccak/fips202.o
+ .text.cshake128_simple_absorb
+                0x00000000       0x5c ./src/keccak/fips202.o
+ .text.cshake128_simple_squeezeblocks
+                0x00000000       0x34 ./src/keccak/fips202.o
+ .text.cshake128_simple
+                0x00000000       0x78 ./src/keccak/fips202.o
+ .text.shake128
+                0x00000000       0x44 ./src/keccak/fips202.o
+ .text.shake128_ctx_release
+                0x00000000        0x4 ./src/keccak/fips202.o
+ .text.shake128_ctx_clone
+                0x00000000        0x8 ./src/keccak/fips202.o
+ .text.shake256_absorb
+                0x00000000       0x28 ./src/keccak/fips202.o
+ .text.shake256_squeezeblocks
+                0x00000000       0x34 ./src/keccak/fips202.o
+ .text.shake256_ctx_release
+                0x00000000        0x4 ./src/keccak/fips202.o
+ .text.shake256_ctx_clone
+                0x00000000        0x8 ./src/keccak/fips202.o
+ .text.sha3_256_inc_init
+                0x00000000       0x18 ./src/keccak/fips202.o
+ .text.sha3_256_inc_absorb
+                0x00000000        0xc ./src/keccak/fips202.o
+ .text.sha3_256_inc_finalize
+                0x00000000       0x50 ./src/keccak/fips202.o
+ .text.sha3_256_inc_ctx_clone
+                0x00000000        0x8 ./src/keccak/fips202.o
+ .text.sha3_256_inc_ctx_release
+                0x00000000        0x4 ./src/keccak/fips202.o
+ .text.sha3_384_inc_init
+                0x00000000       0x18 ./src/keccak/fips202.o
+ .text.sha3_384_inc_absorb
+                0x00000000        0xc ./src/keccak/fips202.o
+ .text.sha3_384_inc_finalize
+                0x00000000       0x5c ./src/keccak/fips202.o
+ .text.sha3_384_inc_ctx_clone
+                0x00000000        0x8 ./src/keccak/fips202.o
+ .text.sha3_384_inc_ctx_release
+                0x00000000        0x4 ./src/keccak/fips202.o
+ .text.sha3_384
+                0x00000000       0x4c ./src/keccak/fips202.o
+ .text.sha3_512_inc_init
+                0x00000000       0x18 ./src/keccak/fips202.o
+ .text.sha3_512_inc_absorb
+                0x00000000        0xc ./src/keccak/fips202.o
+ .text.sha3_512_inc_finalize
+                0x00000000       0x5c ./src/keccak/fips202.o
+ .text.sha3_512_inc_ctx_clone
+                0x00000000        0x8 ./src/keccak/fips202.o
+ .text.sha3_512_inc_ctx_release
+                0x00000000        0x4 ./src/keccak/fips202.o
+ .text.cshake256_simple_absorb
+                0x00000000       0x5c ./src/keccak/fips202.o
+ .text.cshake256_simple_squeezeblocks
+                0x00000000       0x34 ./src/keccak/fips202.o
+ .text.cshake256_simple
+                0x00000000       0x78 ./src/keccak/fips202.o
+ .text          0x00000000        0x0 ./src/keccak/keccakf1600.o
+ .data          0x00000000        0x0 ./src/keccak/keccakf1600.o
+ .bss           0x00000000        0x0 ./src/keccak/keccakf1600.o
+ .text          0x00000000        0x0 ./src/gen/expw_ntt_kyber_1_23_45_67_opt_m85.o
+ .bss           0x00000000        0x0 ./src/gen/expw_ntt_kyber_1_23_45_67_opt_m85.o
+ .text          0x00000000        0x0 ./src/gen/expy_intt_kyber_1_23_45_67_opt_m85_plantard.o
+ .bss           0x00000000        0x0 ./src/gen/expy_intt_kyber_1_23_45_67_opt_m85_plantard.o
+ .text          0x00000000        0x0 ./src/gen/fe25519_mul_sched.o
+ .data          0x00000000        0x0 ./src/gen/fe25519_mul_sched.o
+ .bss           0x00000000        0x0 ./src/gen/fe25519_mul_sched.o
+ .text          0x00000000        0x0 ./src/gen/fe25519_sqr_bb.o
+ .data          0x00000000        0x0 ./src/gen/fe25519_sqr_bb.o
+ .bss           0x00000000        0x0 ./src/gen/fe25519_sqr_bb.o
+ .text          0x00000000        0x0 ./src/gen/x01_dispatch.o
+ .data          0x00000000        0x0 ./src/gen/x01_dispatch.o
+ .bss           0x00000000        0x0 ./src/gen/x01_dispatch.o
+ .text          0x00000000        0x0 ./src/gen/x02_dispatch.o
+ .data          0x00000000        0x0 ./src/gen/x02_dispatch.o
+ .bss           0x00000000        0x0 ./src/gen/x02_dispatch.o
+ .text          0x00000000        0x0 ./src/gen/x25519_base_shim.o
+ .data          0x00000000        0x0 ./src/gen/x25519_base_shim.o
+ .bss           0x00000000        0x0 ./src/gen/x25519_base_shim.o
+ .text          0x00000000        0x0 ./src/gen/x25519_comb_asm.o
+ .data          0x00000000        0x0 ./src/gen/x25519_comb_asm.o
+ .bss           0x00000000        0x0 ./src/gen/x25519_comb_asm.o
+ .text          0x00000000        0x0 ./src/hal_entry.o
+ .data          0x00000000        0x0 ./src/hal_entry.o
+ .bss           0x00000000        0x0 ./src/hal_entry.o
+ .text          0x00000000        0x0 ./src/hal_warmstart.o
+ .data          0x00000000        0x0 ./src/hal_warmstart.o
+ .bss           0x00000000        0x0 ./src/hal_warmstart.o
+ .text          0x00000000        0x0 ./src/harness.o
+ .data          0x00000000        0x0 ./src/harness.o
+ .bss           0x00000000        0x0 ./src/harness.o
+ .bss.k32_mode  0x00000000        0x4 ./src/harness.o
+ .text          0x00000000        0x0 ./src/itcm_pad.o
+ .data          0x00000000        0x0 ./src/itcm_pad.o
+ .bss           0x00000000        0x0 ./src/itcm_pad.o
+ .text          0x00000000        0x0 ./src/x25519_base.o
+ .data          0x00000000        0x0 ./src/x25519_base.o
+ .bss           0x00000000        0x0 ./src/x25519_base.o
+ .bss.x25519b_cyc_total
+                0x00000000        0x4 ./src/x25519_base.o
+ .text          0x00000000        0x0 ./ra_gen/common_data.o
+ .data          0x00000000        0x0 ./ra_gen/common_data.o
+ .bss           0x00000000        0x0 ./ra_gen/common_data.o
+ .text.g_common_init
+                0x00000000        0x4 ./ra_gen/common_data.o
+ .rodata.g_ioport
+                0x00000000        0xc ./ra_gen/common_data.o
+ .text          0x00000000        0x0 ./ra_gen/hal_data.o
+ .data          0x00000000        0x0 ./ra_gen/hal_data.o
+ .bss           0x00000000        0x0 ./ra_gen/hal_data.o
+ .text.g_hal_init
+                0x00000000        0x4 ./ra_gen/hal_data.o
+ .debug_info    0x00000000       0xa6 ./ra_gen/hal_data.o
+ .debug_abbrev  0x00000000       0x62 ./ra_gen/hal_data.o
+ .debug_aranges
+                0x00000000       0x20 ./ra_gen/hal_data.o
+ .debug_rnglists
+                0x00000000       0x13 ./ra_gen/hal_data.o
+ .debug_line    0x00000000       0x58 ./ra_gen/hal_data.o
+ .debug_str     0x00000000      0x1fc ./ra_gen/hal_data.o
+ .comment       0x00000000       0x45 ./ra_gen/hal_data.o
+ .debug_frame   0x00000000       0x20 ./ra_gen/hal_data.o
+ .ARM.attributes
+                0x00000000       0x3e ./ra_gen/hal_data.o
+ .text          0x00000000        0x0 ./ra_gen/main.o
+ .data          0x00000000        0x0 ./ra_gen/main.o
+ .bss           0x00000000        0x0 ./ra_gen/main.o
+ .text          0x00000000        0x0 ./ra_gen/pin_data.o
+ .data          0x00000000        0x0 ./ra_gen/pin_data.o
+ .bss           0x00000000        0x0 ./ra_gen/pin_data.o
+ .text          0x00000000        0x0 ./ra_gen/vector_data.o
+ .data          0x00000000        0x0 ./ra_gen/vector_data.o
+ .bss           0x00000000        0x0 ./ra_gen/vector_data.o
+ .debug_info    0x00000000       0x7a ./ra_gen/vector_data.o
+ .debug_abbrev  0x00000000       0x26 ./ra_gen/vector_data.o
+ .debug_aranges
+                0x00000000       0x18 ./ra_gen/vector_data.o
+ .debug_line    0x00000000       0x38 ./ra_gen/vector_data.o
+ .debug_str     0x00000000      0x1e6 ./ra_gen/vector_data.o
+ .comment       0x00000000       0x45 ./ra_gen/vector_data.o
+ .ARM.attributes
+                0x00000000       0x3e ./ra_gen/vector_data.o
+ .text          0x00000000        0x0 ./ra/board/ra8m1_ek/board_init.o
+ .data          0x00000000        0x0 ./ra/board/ra8m1_ek/board_init.o
+ .bss           0x00000000        0x0 ./ra/board/ra8m1_ek/board_init.o
+ .text          0x00000000        0x0 ./ra/board/ra8m1_ek/board_leds.o
+ .data          0x00000000        0x0 ./ra/board/ra8m1_ek/board_leds.o
+ .bss           0x00000000        0x0 ./ra/board/ra8m1_ek/board_leds.o
+ .text          0x00000000        0x0 ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.o
+ .data          0x00000000        0x0 ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.o
+ .bss           0x00000000        0x0 ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.o
+ .bss.g_heap    0x00000000        0x0 ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.o
+ .text          0x00000000        0x0 ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.o
+ .data          0x00000000        0x0 ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.o
+ .bss           0x00000000        0x0 ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.o
+ .text.R_BSP_WarmStart
+                0x00000000        0x4 ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.o
+ .text          0x00000000        0x0 ./ra/fsp/src/bsp/mcu/all/bsp_clocks.o
+ .data          0x00000000        0x0 ./ra/fsp/src/bsp/mcu/all/bsp_clocks.o
+ .bss           0x00000000        0x0 ./ra/fsp/src/bsp/mcu/all/bsp_clocks.o
+ .text.bsp_prv_operating_mode_set
+                0x00000000       0x20 ./ra/fsp/src/bsp/mcu/all/bsp_clocks.o
+ .text.bsp_prv_prepare_pll
+                0x00000000       0x24 ./ra/fsp/src/bsp/mcu/all/bsp_clocks.o
+ .text.bsp_prv_clock_dividers_set
+                0x00000000       0x5c ./ra/fsp/src/bsp/mcu/all/bsp_clocks.o
+ .text.bsp_prv_clock_set
+                0x00000000      0x278 ./ra/fsp/src/bsp/mcu/all/bsp_clocks.o
+ .text.bsp_prv_clock_prepare_pre_sleep
+                0x00000000       0x48 ./ra/fsp/src/bsp/mcu/all/bsp_clocks.o
+ .text.bsp_prv_clock_prepare_post_sleep
+                0x00000000       0x2c ./ra/fsp/src/bsp/mcu/all/bsp_clocks.o
+ .text.R_BSP_SubClockStabilizeWait
+                0x00000000        0x8 ./ra/fsp/src/bsp/mcu/all/bsp_clocks.o
+ .text.R_BSP_OctaclkUpdate
+                0x00000000      0x114 ./ra/fsp/src/bsp/mcu/all/bsp_clocks.o
+ .text.R_BSP_SourceClockHzGet
+                0x00000000        0xc ./ra/fsp/src/bsp/mcu/all/bsp_clocks.o
+ .text          0x00000000        0x0 ./ra/fsp/src/bsp/mcu/all/bsp_common.o
+ .data          0x00000000        0x0 ./ra/fsp/src/bsp/mcu/all/bsp_common.o
+ .bss           0x00000000        0x0 ./ra/fsp/src/bsp/mcu/all/bsp_common.o
+ .text.R_FSP_VersionGet
+                0x00000000       0x10 ./ra/fsp/src/bsp/mcu/all/bsp_common.o
+ .text.bsp_init_internal
+                0x00000000        0x4 ./ra/fsp/src/bsp/mcu/all/bsp_common.o
+ .text.__assert_func
+                0x00000000        0x4 ./ra/fsp/src/bsp/mcu/all/bsp_common.o
+ .text          0x00000000        0x0 ./ra/fsp/src/bsp/mcu/all/bsp_delay.o
+ .data          0x00000000        0x0 ./ra/fsp/src/bsp/mcu/all/bsp_delay.o
+ .bss           0x00000000        0x0 ./ra/fsp/src/bsp/mcu/all/bsp_delay.o
+ .text          0x00000000        0x0 ./ra/fsp/src/bsp/mcu/all/bsp_group_irq.o
+ .data          0x00000000        0x0 ./ra/fsp/src/bsp/mcu/all/bsp_group_irq.o
+ .bss           0x00000000        0x0 ./ra/fsp/src/bsp/mcu/all/bsp_group_irq.o
+ .text.R_BSP_GroupIrqWrite
+                0x00000000       0x10 ./ra/fsp/src/bsp/mcu/all/bsp_group_irq.o
+ .text          0x00000000        0x0 ./ra/fsp/src/bsp/mcu/all/bsp_guard.o
+ .data          0x00000000        0x0 ./ra/fsp/src/bsp/mcu/all/bsp_guard.o
+ .bss           0x00000000        0x0 ./ra/fsp/src/bsp/mcu/all/bsp_guard.o
+ .debug_info    0x00000000       0x7a ./ra/fsp/src/bsp/mcu/all/bsp_guard.o
+ .debug_abbrev  0x00000000       0x26 ./ra/fsp/src/bsp/mcu/all/bsp_guard.o
+ .debug_aranges
+                0x00000000       0x18 ./ra/fsp/src/bsp/mcu/all/bsp_guard.o
+ .debug_line    0x00000000       0x46 ./ra/fsp/src/bsp/mcu/all/bsp_guard.o
+ .debug_str     0x00000000      0x1f4 ./ra/fsp/src/bsp/mcu/all/bsp_guard.o
+ .comment       0x00000000       0x45 ./ra/fsp/src/bsp/mcu/all/bsp_guard.o
+ .ARM.attributes
+                0x00000000       0x3e ./ra/fsp/src/bsp/mcu/all/bsp_guard.o
+ .text          0x00000000        0x0 ./ra/fsp/src/bsp/mcu/all/bsp_io.o
+ .data          0x00000000        0x0 ./ra/fsp/src/bsp/mcu/all/bsp_io.o
+ .bss           0x00000000        0x0 ./ra/fsp/src/bsp/mcu/all/bsp_io.o
+ .text          0x00000000        0x0 ./ra/fsp/src/bsp/mcu/all/bsp_ipc.o
+ .data          0x00000000        0x0 ./ra/fsp/src/bsp/mcu/all/bsp_ipc.o
+ .bss           0x00000000        0x0 ./ra/fsp/src/bsp/mcu/all/bsp_ipc.o
+ .debug_info    0x00000000       0x7a ./ra/fsp/src/bsp/mcu/all/bsp_ipc.o
+ .debug_abbrev  0x00000000       0x26 ./ra/fsp/src/bsp/mcu/all/bsp_ipc.o
+ .debug_aranges
+                0x00000000       0x18 ./ra/fsp/src/bsp/mcu/all/bsp_ipc.o
+ .debug_line    0x00000000       0x44 ./ra/fsp/src/bsp/mcu/all/bsp_ipc.o
+ .debug_str     0x00000000      0x1f2 ./ra/fsp/src/bsp/mcu/all/bsp_ipc.o
+ .comment       0x00000000       0x45 ./ra/fsp/src/bsp/mcu/all/bsp_ipc.o
+ .ARM.attributes
+                0x00000000       0x3e ./ra/fsp/src/bsp/mcu/all/bsp_ipc.o
+ .text          0x00000000        0x0 ./ra/fsp/src/bsp/mcu/all/bsp_irq.o
+ .data          0x00000000        0x0 ./ra/fsp/src/bsp/mcu/all/bsp_irq.o
+ .bss           0x00000000        0x0 ./ra/fsp/src/bsp/mcu/all/bsp_irq.o
+ .bss.gp_renesas_isr_context
+                0x00000000        0x4 ./ra/fsp/src/bsp/mcu/all/bsp_irq.o
+ .text          0x00000000        0x0 ./ra/fsp/src/bsp/mcu/all/bsp_macl.o
+ .data          0x00000000        0x0 ./ra/fsp/src/bsp/mcu/all/bsp_macl.o
+ .bss           0x00000000        0x0 ./ra/fsp/src/bsp/mcu/all/bsp_macl.o
+ .debug_info    0x00000000       0x7a ./ra/fsp/src/bsp/mcu/all/bsp_macl.o
+ .debug_abbrev  0x00000000       0x26 ./ra/fsp/src/bsp/mcu/all/bsp_macl.o
+ .debug_aranges
+                0x00000000       0x18 ./ra/fsp/src/bsp/mcu/all/bsp_macl.o
+ .debug_line    0x00000000       0x45 ./ra/fsp/src/bsp/mcu/all/bsp_macl.o
+ .debug_str     0x00000000      0x1f3 ./ra/fsp/src/bsp/mcu/all/bsp_macl.o
+ .comment       0x00000000       0x45 ./ra/fsp/src/bsp/mcu/all/bsp_macl.o
+ .ARM.attributes
+                0x00000000       0x3e ./ra/fsp/src/bsp/mcu/all/bsp_macl.o
+ .text          0x00000000        0x0 ./ra/fsp/src/bsp/mcu/all/bsp_ospi_b.o
+ .data          0x00000000        0x0 ./ra/fsp/src/bsp/mcu/all/bsp_ospi_b.o
+ .bss           0x00000000        0x0 ./ra/fsp/src/bsp/mcu/all/bsp_ospi_b.o
+ .text.R_BSP_OspiBInit
+                0x00000000       0x48 ./ra/fsp/src/bsp/mcu/all/bsp_ospi_b.o
+ .debug_info    0x00000000      0xac7 ./ra/fsp/src/bsp/mcu/all/bsp_ospi_b.o
+ .debug_abbrev  0x00000000      0x19b ./ra/fsp/src/bsp/mcu/all/bsp_ospi_b.o
+ .debug_loclists
+                0x00000000       0x7f ./ra/fsp/src/bsp/mcu/all/bsp_ospi_b.o
+ .debug_aranges
+                0x00000000       0x20 ./ra/fsp/src/bsp/mcu/all/bsp_ospi_b.o
+ .debug_rnglists
+                0x00000000       0x22 ./ra/fsp/src/bsp/mcu/all/bsp_ospi_b.o
+ .debug_line    0x00000000      0x374 ./ra/fsp/src/bsp/mcu/all/bsp_ospi_b.o
+ .debug_str     0x00000000     0x1ece ./ra/fsp/src/bsp/mcu/all/bsp_ospi_b.o
+ .comment       0x00000000       0x45 ./ra/fsp/src/bsp/mcu/all/bsp_ospi_b.o
+ .debug_frame   0x00000000       0x2c ./ra/fsp/src/bsp/mcu/all/bsp_ospi_b.o
+ .ARM.attributes
+                0x00000000       0x3e ./ra/fsp/src/bsp/mcu/all/bsp_ospi_b.o
+ .text          0x00000000        0x0 ./ra/fsp/src/bsp/mcu/all/bsp_register_protection.o
+ .data          0x00000000        0x0 ./ra/fsp/src/bsp/mcu/all/bsp_register_protection.o
+ .bss           0x00000000        0x0 ./ra/fsp/src/bsp/mcu/all/bsp_register_protection.o
+ .text          0x00000000        0x0 ./ra/fsp/src/bsp/mcu/all/bsp_sbrk.o
+ .data          0x00000000        0x0 ./ra/fsp/src/bsp/mcu/all/bsp_sbrk.o
+ .bss           0x00000000        0x0 ./ra/fsp/src/bsp/mcu/all/bsp_sbrk.o
+ .text._sbrk    0x00000000       0x14 ./ra/fsp/src/bsp/mcu/all/bsp_sbrk.o
+ .debug_info    0x00000000       0xd8 ./ra/fsp/src/bsp/mcu/all/bsp_sbrk.o
+ .debug_abbrev  0x00000000       0x90 ./ra/fsp/src/bsp/mcu/all/bsp_sbrk.o
+ .debug_loclists
+                0x00000000       0x29 ./ra/fsp/src/bsp/mcu/all/bsp_sbrk.o
+ .debug_aranges
+                0x00000000       0x20 ./ra/fsp/src/bsp/mcu/all/bsp_sbrk.o
+ .debug_rnglists
+                0x00000000       0x13 ./ra/fsp/src/bsp/mcu/all/bsp_sbrk.o
+ .debug_line    0x00000000       0xfb ./ra/fsp/src/bsp/mcu/all/bsp_sbrk.o
+ .debug_str     0x00000000      0x20e ./ra/fsp/src/bsp/mcu/all/bsp_sbrk.o
+ .comment       0x00000000       0x45 ./ra/fsp/src/bsp/mcu/all/bsp_sbrk.o
+ .debug_frame   0x00000000       0x28 ./ra/fsp/src/bsp/mcu/all/bsp_sbrk.o
+ .ARM.attributes
+                0x00000000       0x3e ./ra/fsp/src/bsp/mcu/all/bsp_sbrk.o
+ .text          0x00000000        0x0 ./ra/fsp/src/bsp/mcu/all/bsp_sdram.o
+ .data          0x00000000        0x0 ./ra/fsp/src/bsp/mcu/all/bsp_sdram.o
+ .bss           0x00000000        0x0 ./ra/fsp/src/bsp/mcu/all/bsp_sdram.o
+ .text.R_BSP_SdramInit
+                0x00000000       0xcc ./ra/fsp/src/bsp/mcu/all/bsp_sdram.o
+ .text.R_BSP_SdramSelfRefreshEnable
+                0x00000000       0x24 ./ra/fsp/src/bsp/mcu/all/bsp_sdram.o
+ .text.R_BSP_SdramSelfRefreshDisable
+                0x00000000       0x44 ./ra/fsp/src/bsp/mcu/all/bsp_sdram.o
+ .debug_info    0x00000000     0x7b12 ./ra/fsp/src/bsp/mcu/all/bsp_sdram.o
+ .debug_abbrev  0x00000000      0x26b ./ra/fsp/src/bsp/mcu/all/bsp_sdram.o
+ .debug_loclists
+                0x00000000       0x43 ./ra/fsp/src/bsp/mcu/all/bsp_sdram.o
+ .debug_aranges
+                0x00000000       0x30 ./ra/fsp/src/bsp/mcu/all/bsp_sdram.o
+ .debug_rnglists
+                0x00000000       0x20 ./ra/fsp/src/bsp/mcu/all/bsp_sdram.o
+ .debug_line    0x00000000      0x465 ./ra/fsp/src/bsp/mcu/all/bsp_sdram.o
+ .debug_str     0x00000000     0x2f65 ./ra/fsp/src/bsp/mcu/all/bsp_sdram.o
+ .comment       0x00000000       0x45 ./ra/fsp/src/bsp/mcu/all/bsp_sdram.o
+ .debug_frame   0x00000000       0x5c ./ra/fsp/src/bsp/mcu/all/bsp_sdram.o
+ .ARM.attributes
+                0x00000000       0x3e ./ra/fsp/src/bsp/mcu/all/bsp_sdram.o
+ .text          0x00000000        0x0 ./ra/fsp/src/bsp/mcu/all/bsp_security.o
+ .data          0x00000000        0x0 ./ra/fsp/src/bsp/mcu/all/bsp_security.o
+ .bss           0x00000000        0x0 ./ra/fsp/src/bsp/mcu/all/bsp_security.o
+ .debug_info    0x00000000       0x7a ./ra/fsp/src/bsp/mcu/all/bsp_security.o
+ .debug_abbrev  0x00000000       0x26 ./ra/fsp/src/bsp/mcu/all/bsp_security.o
+ .debug_aranges
+                0x00000000       0x18 ./ra/fsp/src/bsp/mcu/all/bsp_security.o
+ .debug_line    0x00000000       0x49 ./ra/fsp/src/bsp/mcu/all/bsp_security.o
+ .debug_str     0x00000000      0x1f7 ./ra/fsp/src/bsp/mcu/all/bsp_security.o
+ .comment       0x00000000       0x45 ./ra/fsp/src/bsp/mcu/all/bsp_security.o
+ .ARM.attributes
+                0x00000000       0x3e ./ra/fsp/src/bsp/mcu/all/bsp_security.o
+ .text          0x00000000        0x0 ./ra/fsp/src/bsp/mcu/ra8m1/bsp_linker.o
+ .data          0x00000000        0x0 ./ra/fsp/src/bsp/mcu/ra8m1/bsp_linker.o
+ .bss           0x00000000        0x0 ./ra/fsp/src/bsp/mcu/ra8m1/bsp_linker.o
+ .text          0x00000000        0x0 ./ra/fsp/src/r_ioport/r_ioport.o
+ .data          0x00000000        0x0 ./ra/fsp/src/r_ioport/r_ioport.o
+ .bss           0x00000000        0x0 ./ra/fsp/src/r_ioport/r_ioport.o
+ .text.R_IOPORT_Close
+                0x00000000        0xc ./ra/fsp/src/r_ioport/r_ioport.o
+ .text.R_IOPORT_PinRead
+                0x00000000       0x24 ./ra/fsp/src/r_ioport/r_ioport.o
+ .text.R_IOPORT_PortRead
+                0x00000000       0x14 ./ra/fsp/src/r_ioport/r_ioport.o
+ .text.R_IOPORT_PortWrite
+                0x00000000       0x1c ./ra/fsp/src/r_ioport/r_ioport.o
+ .text.R_IOPORT_PinWrite
+                0x00000000       0x28 ./ra/fsp/src/r_ioport/r_ioport.o
+ .text.R_IOPORT_PortDirectionSet
+                0x00000000       0x2c ./ra/fsp/src/r_ioport/r_ioport.o
+ .text.R_IOPORT_PortEventInputRead
+                0x00000000       0x18 ./ra/fsp/src/r_ioport/r_ioport.o
+ .text.R_IOPORT_PinEventInputRead
+                0x00000000       0x34 ./ra/fsp/src/r_ioport/r_ioport.o
+ .text.R_IOPORT_PortEventOutputWrite
+                0x00000000       0x1c ./ra/fsp/src/r_ioport/r_ioport.o
+ .text.R_IOPORT_PinEventOutputWrite
+                0x00000000       0x34 ./ra/fsp/src/r_ioport/r_ioport.o
+ .text.R_IOPORT_PinsCfg
+                0x00000000        0xc ./ra/fsp/src/r_ioport/r_ioport.o
+ .text.R_IOPORT_PinCfg
+                0x00000000       0xa8 ./ra/fsp/src/r_ioport/r_ioport.o
+ .rodata.g_ioport_on_ioport
+                0x00000000       0x34 ./ra/fsp/src/r_ioport/r_ioport.o
+ .text          0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-exit.o)
+ .data          0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-exit.o)
+ .bss           0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-exit.o)
+ .text.exit     0x00000000       0x24 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-exit.o)
+ .debug_frame   0x00000000       0x28 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-exit.o)
+ .ARM.attributes
+                0x00000000       0x36 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-exit.o)
+ .text          0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-findfp.o)
+ .data          0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-findfp.o)
+ .bss           0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-findfp.o)
+ .text.std      0x00000000       0x6c C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-findfp.o)
+ .text.stdio_exit_handler
+                0x00000000       0x18 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-findfp.o)
+ .text.cleanup_stdio
+                0x00000000       0x40 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-findfp.o)
+ .text.__fp_lock
+                0x00000000       0x18 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-findfp.o)
+ .text.__fp_unlock
+                0x00000000       0x18 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-findfp.o)
+ .text.global_stdio_init.part.0
+                0x00000000       0x3c C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-findfp.o)
+ .text.__sfp_lock_acquire
+                0x00000000        0xc C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-findfp.o)
+ .text.__sfp_lock_release
+                0x00000000        0xc C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-findfp.o)
+ .text.__sfp    0x00000000       0xa4 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-findfp.o)
+ .text.__sinit  0x00000000       0x30 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-findfp.o)
+ .text.__fp_lock_all
+                0x00000000       0x1c C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-findfp.o)
+ .text.__fp_unlock_all
+                0x00000000       0x1c C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-findfp.o)
+ .data.__sglue  0x00000000        0xc C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-findfp.o)
+ .bss.__sf      0x00000000      0x138 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-findfp.o)
+ .bss.__stdio_exit_handler
+                0x00000000        0x4 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-findfp.o)
+ .debug_frame   0x00000000      0x144 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-findfp.o)
+ .ARM.attributes
+                0x00000000       0x36 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-findfp.o)
+ .text          0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-fwalk.o)
+ .data          0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-fwalk.o)
+ .bss           0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-fwalk.o)
+ .text._fwalk_sglue
+                0x00000000       0x3c C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-fwalk.o)
+ .debug_frame   0x00000000       0x34 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-fwalk.o)
+ .ARM.attributes
+                0x00000000       0x36 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-fwalk.o)
+ .text          0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-stdio.o)
+ .data          0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-stdio.o)
+ .bss           0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-stdio.o)
+ .text.__sread  0x00000000       0x22 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-stdio.o)
+ .text.__seofread
+                0x00000000        0x4 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-stdio.o)
+ .text.__swrite
+                0x00000000       0x38 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-stdio.o)
+ .text.__sseek  0x00000000       0x24 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-stdio.o)
+ .text.__sclose
+                0x00000000        0x8 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-stdio.o)
+ .debug_frame   0x00000000       0x88 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-stdio.o)
+ .ARM.attributes
+                0x00000000       0x36 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-stdio.o)
+ .text          0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-memcmp.o)
+ .data          0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-memcmp.o)
+ .bss           0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-memcmp.o)
+ .text          0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-closer.o)
+ .data          0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-closer.o)
+ .bss           0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-closer.o)
+ .text._close_r
+                0x00000000       0x20 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-closer.o)
+ .debug_frame   0x00000000       0x2c C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-closer.o)
+ .ARM.attributes
+                0x00000000       0x36 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-closer.o)
+ .text          0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-reent.o)
+ .data          0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-reent.o)
+ .bss           0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-reent.o)
+ .text._reclaim_reent
+                0x00000000       0xac C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-reent.o)
+ .bss.errno     0x00000000        0x4 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-reent.o)
+ .debug_frame   0x00000000       0x38 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-reent.o)
+ .ARM.attributes
+                0x00000000       0x36 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-reent.o)
+ .text          0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-impure.o)
+ .data          0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-impure.o)
+ .bss           0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-impure.o)
+ .data._impure_ptr
+                0x00000000        0x4 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-impure.o)
+ .data._impure_data
+                0x00000000       0x4c C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-impure.o)
+ .ARM.attributes
+                0x00000000       0x36 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-impure.o)
+ .text          0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-lseekr.o)
+ .data          0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-lseekr.o)
+ .bss           0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-lseekr.o)
+ .text._lseek_r
+                0x00000000       0x24 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-lseekr.o)
+ .debug_frame   0x00000000       0x2c C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-lseekr.o)
+ .ARM.attributes
+                0x00000000       0x36 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-lseekr.o)
+ .text          0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-readr.o)
+ .data          0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-readr.o)
+ .bss           0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-readr.o)
+ .text._read_r  0x00000000       0x24 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-readr.o)
+ .debug_frame   0x00000000       0x2c C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-readr.o)
+ .ARM.attributes
+                0x00000000       0x36 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-readr.o)
+ .text          0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-writer.o)
+ .data          0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-writer.o)
+ .bss           0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-writer.o)
+ .text._write_r
+                0x00000000       0x24 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-writer.o)
+ .debug_frame   0x00000000       0x2c C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-writer.o)
+ .ARM.attributes
+                0x00000000       0x36 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-writer.o)
+ .text          0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-errno.o)
+ .data          0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-errno.o)
+ .bss           0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-errno.o)
+ .text.__errno  0x00000000        0xc C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-errno.o)
+ .debug_frame   0x00000000       0x20 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-errno.o)
+ .ARM.attributes
+                0x00000000       0x36 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-errno.o)
+ .text          0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-init.o)
+ .data          0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-init.o)
+ .bss           0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-init.o)
+ .text.__libc_init_array
+                0x00000000       0x48 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-init.o)
+ .debug_frame   0x00000000       0x2c C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-init.o)
+ .ARM.attributes
+                0x00000000       0x36 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-init.o)
+ .text          0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-lock.o)
+ .data          0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-lock.o)
+ .bss           0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-lock.o)
+ .text.__retarget_lock_init
+                0x00000000        0x2 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-lock.o)
+ .text.__retarget_lock_init_recursive
+                0x00000000        0x2 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-lock.o)
+ .text.__retarget_lock_close
+                0x00000000        0x2 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-lock.o)
+ .text.__retarget_lock_close_recursive
+                0x00000000        0x2 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-lock.o)
+ .text.__retarget_lock_acquire
+                0x00000000        0x2 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-lock.o)
+ .text.__retarget_lock_acquire_recursive
+                0x00000000        0x2 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-lock.o)
+ .text.__retarget_lock_try_acquire
+                0x00000000        0x4 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-lock.o)
+ .text.__retarget_lock_try_acquire_recursive
+                0x00000000        0x4 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-lock.o)
+ .text.__retarget_lock_release
+                0x00000000        0x2 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-lock.o)
+ .text.__retarget_lock_release_recursive
+                0x00000000        0x2 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-lock.o)
+ .bss.__lock___arc4random_mutex
+                0x00000000        0x1 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-lock.o)
+ .bss.__lock___dd_hash_mutex
+                0x00000000        0x1 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-lock.o)
+ .bss.__lock___tz_mutex
+                0x00000000        0x1 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-lock.o)
+ .bss.__lock___env_recursive_mutex
+                0x00000000        0x1 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-lock.o)
+ .bss.__lock___malloc_recursive_mutex
+                0x00000000        0x1 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-lock.o)
+ .bss.__lock___at_quick_exit_mutex
+                0x00000000        0x1 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-lock.o)
+ .bss.__lock___atexit_recursive_mutex
+                0x00000000        0x1 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-lock.o)
+ .bss.__lock___sfp_recursive_mutex
+                0x00000000        0x1 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-lock.o)
+ .debug_frame   0x00000000       0xb0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-lock.o)
+ .ARM.attributes
+                0x00000000       0x36 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-lock.o)
+ .text          0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-freer.o)
+ .data          0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-freer.o)
+ .bss           0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-freer.o)
+ .text._free_r  0x00000000       0x94 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-freer.o)
+ .debug_frame   0x00000000       0x38 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-freer.o)
+ .ARM.attributes
+                0x00000000       0x36 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-freer.o)
+ .text          0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-mallocr.o)
+ .data          0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-mallocr.o)
+ .bss           0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-mallocr.o)
+ .text.sbrk_aligned
+                0x00000000       0x44 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-mallocr.o)
+ .text._malloc_r
+                0x00000000      0x100 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-mallocr.o)
+ .bss.__malloc_sbrk_start
+                0x00000000        0x4 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-mallocr.o)
+ .bss.__malloc_free_list
+                0x00000000        0x4 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-mallocr.o)
+ .debug_frame   0x00000000       0x50 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-mallocr.o)
+ .ARM.attributes
+                0x00000000       0x36 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-mallocr.o)
+ .text          0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-mlock.o)
+ .data          0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-mlock.o)
+ .bss           0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-mlock.o)
+ .text.__malloc_lock
+                0x00000000        0xc C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-mlock.o)
+ .text.__malloc_unlock
+                0x00000000        0xc C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-mlock.o)
+ .debug_frame   0x00000000       0x30 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-mlock.o)
+ .ARM.attributes
+                0x00000000       0x36 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-mlock.o)
+ .text          0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-fflush.o)
+ .data          0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-fflush.o)
+ .bss           0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-fflush.o)
+ .text.__sflush_r
+                0x00000000      0x108 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-fflush.o)
+ .text._fflush_r
+                0x00000000       0x50 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-fflush.o)
+ .text.fflush   0x00000000       0x28 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-fflush.o)
+ .debug_frame   0x00000000       0x5c C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-fflush.o)
+ .ARM.attributes
+                0x00000000       0x36 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-fflush.o)
+ .text          0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-sbrkr.o)
+ .data          0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-sbrkr.o)
+ .bss           0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-sbrkr.o)
+ .text._sbrk_r  0x00000000       0x20 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-sbrkr.o)
+ .debug_frame   0x00000000       0x2c C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-sbrkr.o)
+ .ARM.attributes
+                0x00000000       0x36 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-sbrkr.o)
+ .text          0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crtend.o
+ .data          0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crtend.o
+ .bss           0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crtend.o
+ .rodata.all_implied_fbits
+                0x00000000       0x24 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crtend.o
+ .eh_frame      0x00000000        0x4 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crtend.o
+ .text          0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crtn.o
+ .data          0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crtn.o
+ .bss           0x00000000        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crtn.o
+ .init          0x00000000        0x8 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crtn.o
+ .fini          0x00000000        0x8 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crtn.o
+ .ARM.attributes
+                0x00000000       0x24 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crtn.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+RAM              0x22000000         0x000e0000         xrw
+FLASH            0x02000000         0x001f8000         xr
+DATA_FLASH       0x27000000         0x00003000         xr
+SDRAM            0x68000000         0x08000000         xrw
+OSPI0_CS0        0x80000000         0x10000000         xrw
+OSPI0_CS1        0x90000000         0x10000000         xr
+OPTION_SETTING_OFS0 0x0300a100         0x00000004         r
+OPTION_SETTING_OFS2 0x0300a104         0x00000004         r
+OPTION_SETTING_DUALSEL 0x0300a110         0x00000004         r
+OPTION_SETTING_OFS1 0x1300a180         0x00000004         r
+OPTION_SETTING_BANKSEL 0x1300a190         0x00000004         r
+OPTION_SETTING_BPS 0x1300a1c0         0x00000010         r
+OPTION_SETTING_PBPS 0x1300a1e0         0x00000010         r
+OPTION_SETTING_OFS1_SEC 0x0300a200         0x00000004         r
+OPTION_SETTING_BANKSEL_SEC 0x0300a210         0x00000004         r
+OPTION_SETTING_BPS_SEC 0x0300a240         0x00000010         r
+OPTION_SETTING_PBPS_SEC 0x0300a260         0x00000010         r
+OPTION_SETTING_OFS1_SEL 0x0300a280         0x00000004         r
+OPTION_SETTING_BANKSEL_SEL 0x0300a290         0x00000004         r
+OPTION_SETTING_BPS_SEL 0x0300a2c0         0x00000010         r
+OPTION_SETTING_DATA_FLASH_FSBLCTRL0 0x27030080         0x00000004         r
+OPTION_SETTING_DATA_FLASH_FSBLCTRL1 0x27030084         0x00000004         r
+OPTION_SETTING_DATA_FLASH_FSBLCTRL2 0x27030088         0x00000004         r
+OPTION_SETTING_DATA_FLASH_SACC0 0x2703008c         0x00000004         r
+OPTION_SETTING_DATA_FLASH_SACC1 0x27030090         0x00000004         r
+OPTION_SETTING_DATA_FLASH_SAMR 0x27030094         0x00000004         r
+ITCM             0x00000000         0x00010000         xrw
+DTCM             0x20000000         0x00010000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crti.o
+LOAD C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crtbegin.o
+LOAD C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crt0.o
+START GROUP
+LOAD ./src/x25519/x25519-cortex-m4-gcc.o
+LOAD ./src/mlkem/cbd.o
+LOAD ./src/mlkem/cmov_int16.o
+LOAD ./src/mlkem/fastaddsub.o
+LOAD ./src/mlkem/fastbasemul.o
+LOAD ./src/mlkem/indcpa.o
+LOAD ./src/mlkem/kem.o
+LOAD ./src/mlkem/matacc.o
+LOAD ./src/mlkem/matacc_asm.o
+LOAD ./src/mlkem/ntt.o
+LOAD ./src/mlkem/poly.o
+LOAD ./src/mlkem/poly_asm.o
+LOAD ./src/mlkem/poly_mve.o
+LOAD ./src/mlkem/polyvec.o
+LOAD ./src/mlkem/randombytes_det.o
+LOAD ./src/mlkem/reduce.o
+LOAD ./src/mlkem/symmetric-fips202.o
+LOAD ./src/mlkem/verify.o
+LOAD ./src/keccak/fips202.o
+LOAD ./src/keccak/keccakf1600.o
+LOAD ./src/gen/expw_ntt_kyber_1_23_45_67_opt_m85.o
+LOAD ./src/gen/expy_intt_kyber_1_23_45_67_opt_m85_plantard.o
+LOAD ./src/gen/fe25519_mul_sched.o
+LOAD ./src/gen/fe25519_sqr_bb.o
+LOAD ./src/gen/x01_dispatch.o
+LOAD ./src/gen/x02_dispatch.o
+LOAD ./src/gen/x25519_base_shim.o
+LOAD ./src/gen/x25519_comb_asm.o
+LOAD ./src/hal_entry.o
+LOAD ./src/hal_warmstart.o
+LOAD ./src/harness.o
+LOAD ./src/itcm_pad.o
+LOAD ./src/x25519_base.o
+LOAD ./ra_gen/common_data.o
+LOAD ./ra_gen/hal_data.o
+LOAD ./ra_gen/main.o
+LOAD ./ra_gen/pin_data.o
+LOAD ./ra_gen/vector_data.o
+LOAD ./ra/board/ra8m1_ek/board_init.o
+LOAD ./ra/board/ra8m1_ek/board_leds.o
+LOAD ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.o
+LOAD ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.o
+LOAD ./ra/fsp/src/bsp/mcu/all/bsp_clocks.o
+LOAD ./ra/fsp/src/bsp/mcu/all/bsp_common.o
+LOAD ./ra/fsp/src/bsp/mcu/all/bsp_delay.o
+LOAD ./ra/fsp/src/bsp/mcu/all/bsp_group_irq.o
+LOAD ./ra/fsp/src/bsp/mcu/all/bsp_guard.o
+LOAD ./ra/fsp/src/bsp/mcu/all/bsp_io.o
+LOAD ./ra/fsp/src/bsp/mcu/all/bsp_ipc.o
+LOAD ./ra/fsp/src/bsp/mcu/all/bsp_irq.o
+LOAD ./ra/fsp/src/bsp/mcu/all/bsp_macl.o
+LOAD ./ra/fsp/src/bsp/mcu/all/bsp_ospi_b.o
+LOAD ./ra/fsp/src/bsp/mcu/all/bsp_register_protection.o
+LOAD ./ra/fsp/src/bsp/mcu/all/bsp_sbrk.o
+LOAD ./ra/fsp/src/bsp/mcu/all/bsp_sdram.o
+LOAD ./ra/fsp/src/bsp/mcu/all/bsp_security.o
+LOAD ./ra/fsp/src/bsp/mcu/ra8m1/bsp_linker.o
+LOAD ./ra/fsp/src/r_ioport/r_ioport.o
+END GROUP
+START GROUP
+LOAD C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libgcc.a
+LOAD C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a
+LOAD C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libc_nano.a
+END GROUP
+START GROUP
+LOAD C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libgcc.a
+LOAD C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libc_nano.a
+END GROUP
+LOAD C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crtend.o
+LOAD C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crtn.o
+                0x22000000                        RAM_START = 0x22000000
+                0x000e0000                        RAM_LENGTH = 0xe0000
+                0x02000000                        FLASH_START = 0x2000000
+                0x001f8000                        FLASH_LENGTH = 0x1f8000
+                0x27000000                        DATA_FLASH_START = 0x27000000
+                0x00003000                        DATA_FLASH_LENGTH = 0x3000
+                0x68000000                        SDRAM_START = 0x68000000
+                0x08000000                        SDRAM_LENGTH = 0x8000000
+                0x80000000                        OSPI0_CS0_START = 0x80000000
+                0x10000000                        OSPI0_CS0_LENGTH = 0x10000000
+                0x90000000                        OSPI0_CS1_START = 0x90000000
+                0x10000000                        OSPI0_CS1_LENGTH = 0x10000000
+                0x0300a100                        OPTION_SETTING_OFS0_START = 0x300a100
+                0x00000004                        OPTION_SETTING_OFS0_LENGTH = 0x4
+                0x0300a104                        OPTION_SETTING_OFS2_START = 0x300a104
+                0x00000004                        OPTION_SETTING_OFS2_LENGTH = 0x4
+                0x0300a110                        OPTION_SETTING_DUALSEL_START = 0x300a110
+                0x00000004                        OPTION_SETTING_DUALSEL_LENGTH = 0x4
+                0x1300a180                        OPTION_SETTING_OFS1_START = 0x1300a180
+                0x00000004                        OPTION_SETTING_OFS1_LENGTH = 0x4
+                0x1300a190                        OPTION_SETTING_BANKSEL_START = 0x1300a190
+                0x00000004                        OPTION_SETTING_BANKSEL_LENGTH = 0x4
+                0x1300a1c0                        OPTION_SETTING_BPS_START = 0x1300a1c0
+                0x00000010                        OPTION_SETTING_BPS_LENGTH = 0x10
+                0x1300a1e0                        OPTION_SETTING_PBPS_START = 0x1300a1e0
+                0x00000010                        OPTION_SETTING_PBPS_LENGTH = 0x10
+                0x0300a200                        OPTION_SETTING_OFS1_SEC_START = 0x300a200
+                0x00000004                        OPTION_SETTING_OFS1_SEC_LENGTH = 0x4
+                0x0300a210                        OPTION_SETTING_BANKSEL_SEC_START = 0x300a210
+                0x00000004                        OPTION_SETTING_BANKSEL_SEC_LENGTH = 0x4
+                0x0300a240                        OPTION_SETTING_BPS_SEC_START = 0x300a240
+                0x00000010                        OPTION_SETTING_BPS_SEC_LENGTH = 0x10
+                0x0300a260                        OPTION_SETTING_PBPS_SEC_START = 0x300a260
+                0x00000010                        OPTION_SETTING_PBPS_SEC_LENGTH = 0x10
+                0x0300a280                        OPTION_SETTING_OFS1_SEL_START = 0x300a280
+                0x00000004                        OPTION_SETTING_OFS1_SEL_LENGTH = 0x4
+                0x0300a290                        OPTION_SETTING_BANKSEL_SEL_START = 0x300a290
+                0x00000004                        OPTION_SETTING_BANKSEL_SEL_LENGTH = 0x4
+                0x0300a2c0                        OPTION_SETTING_BPS_SEL_START = 0x300a2c0
+                0x00000010                        OPTION_SETTING_BPS_SEL_LENGTH = 0x10
+                0x27030080                        OPTION_SETTING_DATA_FLASH_FSBLCTRL0_START = 0x27030080
+                0x00000004                        OPTION_SETTING_DATA_FLASH_FSBLCTRL0_LENGTH = 0x4
+                0x27030084                        OPTION_SETTING_DATA_FLASH_FSBLCTRL1_START = 0x27030084
+                0x00000004                        OPTION_SETTING_DATA_FLASH_FSBLCTRL1_LENGTH = 0x4
+                0x27030088                        OPTION_SETTING_DATA_FLASH_FSBLCTRL2_START = 0x27030088
+                0x00000004                        OPTION_SETTING_DATA_FLASH_FSBLCTRL2_LENGTH = 0x4
+                0x2703008c                        OPTION_SETTING_DATA_FLASH_SACC0_START = 0x2703008c
+                0x00000004                        OPTION_SETTING_DATA_FLASH_SACC0_LENGTH = 0x4
+                0x27030090                        OPTION_SETTING_DATA_FLASH_SACC1_START = 0x27030090
+                0x00000004                        OPTION_SETTING_DATA_FLASH_SACC1_LENGTH = 0x4
+                0x27030094                        OPTION_SETTING_DATA_FLASH_SAMR_START = 0x27030094
+                0x00000004                        OPTION_SETTING_DATA_FLASH_SAMR_LENGTH = 0x4
+                0x00000000                        ITCM_START = 0x0
+                0x00010000                        ITCM_LENGTH = 0x10000
+                0x20000000                        DTCM_START = 0x20000000
+                0x00010000                        DTCM_LENGTH = 0x10000
+START GROUP
+LOAD C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libgcc.a
+LOAD C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libc.a
+LOAD C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libm.a
+END GROUP
+
+.ospi0_cs1.startof
+                0x90000000        0x0
+                0x90000000                        __ddsc_OSPI0_CS1_START = .
+
+.sdram.startof  0x68000000        0x0
+                0x68000000                        __ddsc_SDRAM_START = .
+
+__sdram_from_ospi0_cs1$$
+                0x68000000        0x0 load address 0x90000000
+                0x68000000                        __sdram_from_ospi0_cs1$$Base = .
+                0x90000000                        __sdram_from_ospi0_cs1$$Load = LOADADDR (__sdram_from_ospi0_cs1$$)
+ *(.sdram_from_ospi0_cs1)
+ *(.sdram_code_from_ospi0_cs1)
+                0x68000000                        __sdram_from_ospi0_cs1$$Limit = .
+
+.ospi0_cs0.startof
+                0x80000000        0x0
+                0x80000000                        __ddsc_OSPI0_CS0_START = .
+
+__ospi0_cs0_from_ospi0_cs1$$
+                0x80000000        0x0 load address 0x90000000
+                0x80000000                        __ospi0_cs0_from_ospi0_cs1$$Base = .
+                0x90000000                        __ospi0_cs0_from_ospi0_cs1$$Load = LOADADDR (__ospi0_cs0_from_ospi0_cs1$$)
+ *(.ospi0_cs0_from_ospi0_cs1)
+ *(.ospi0_cs0_code_from_ospi0_cs1)
+                0x80000000                        __ospi0_cs0_from_ospi0_cs1$$Limit = .
+
+.itcm.startof   0x00000000        0x0
+                0x00000000                        __ddsc_ITCM_START = .
+
+__itcm_from_ospi0_cs1$$
+                0x00000000        0x0 load address 0x90000000
+                0x00000000                        __itcm_from_ospi0_cs1$$Base = .
+                0x90000000                        __itcm_from_ospi0_cs1$$Load = LOADADDR (__itcm_from_ospi0_cs1$$)
+ *(.itcm_from_ospi0_cs1)
+ *(.itcm_code_from_ospi0_cs1)
+                0x00000000                        __itcm_from_ospi0_cs1$$Limit = .
+
+.dtcm.startof   0x20000000        0x0
+                0x20000000                        __ddsc_DTCM_START = .
+
+__dtcm_from_ospi0_cs1$$
+                0x20000000        0x0 load address 0x90000000
+                0x20000000                        __dtcm_from_ospi0_cs1$$Base = .
+                0x90000000                        __dtcm_from_ospi0_cs1$$Load = LOADADDR (__dtcm_from_ospi0_cs1$$)
+ *(.dtcm_from_ospi0_cs1)
+ *(.dtcm_code_from_ospi0_cs1)
+                0x20000000                        __dtcm_from_ospi0_cs1$$Limit = .
+
+.ram.startof    0x22000000        0x0
+                0x22000000                        __ddsc_RAM_START = .
+
+__ram_dtc_vector$$
+                0x22000000        0x0
+                0x22000000                        __ram_dtc_vector$$Base = .
+ *(.fsp_dtc_vector_table)
+                0x22000000                        __ram_dtc_vector$$Limit = .
+
+__ram_from_ospi0_cs1$$
+                0x22000000        0x0 load address 0x90000000
+                0x22000000                        __ram_from_ospi0_cs1$$Base = .
+                0x90000000                        __ram_from_ospi0_cs1$$Load = LOADADDR (__ram_from_ospi0_cs1$$)
+ *(.ram_from_ospi0_cs1)
+ *(.ram_code_from_ospi0_cs1)
+                0x22000000                        __ram_from_ospi0_cs1$$Limit = .
+
+__ospi0_cs1_readonly$$
+                0x90000000        0x0
+                0x90000000                        __ospi0_cs1_readonly$$Base = .
+ *(.ospi0_cs1)
+ *(.ospi0_cs1_code)
+                0x90000000                        __ospi0_cs1_readonly$$Limit = .
+
+__ospi0_cs1_noinit$$
+                0x90000000        0x0
+                0x90000000                        __ospi0_cs1_noinit$$Base = .
+ *(.ospi0_cs1_noinit)
+                0x90000000                        __ospi0_cs1_noinit$$Limit = .
+
+.ospi0_cs1.endof
+                0x90000000        0x0
+                0x90000000                        __ddsc_OSPI0_CS1_END = .
+
+.data_flash.startof
+                0x27000000        0x0
+                0x27000000                        __ddsc_DATA_FLASH_START = .
+
+__sdram_from_data_flash$$
+                0x68000000        0x0 load address 0x27000000
+                0x68000000                        __sdram_from_data_flash$$Base = .
+                0x27000000                        __sdram_from_data_flash$$Load = LOADADDR (__sdram_from_data_flash$$)
+ *(.sdram_from_data_flash)
+ *(.sdram_code_from_data_flash)
+                0x68000000                        __sdram_from_data_flash$$Limit = .
+
+__ospi0_cs0_from_data_flash$$
+                0x80000000        0x0 load address 0x27000000
+                0x80000000                        __ospi0_cs0_from_data_flash$$Base = .
+                0x27000000                        __ospi0_cs0_from_data_flash$$Load = LOADADDR (__ospi0_cs0_from_data_flash$$)
+ *(.ospi0_cs0_from_data_flash)
+ *(.ospi0_cs0_code_from_data_flash)
+                0x80000000                        __ospi0_cs0_from_data_flash$$Limit = .
+
+__itcm_from_data_flash$$
+                0x00000000        0x0 load address 0x27000000
+                0x00000000                        __itcm_from_data_flash$$Base = .
+                0x27000000                        __itcm_from_data_flash$$Load = LOADADDR (__itcm_from_data_flash$$)
+ *(.itcm_from_data_flash)
+ *(.itcm_code_from_data_flash)
+                0x00000000                        __itcm_from_data_flash$$Limit = .
+
+__dtcm_from_data_flash$$
+                0x20000000        0x0 load address 0x27000000
+                0x20000000                        __dtcm_from_data_flash$$Base = .
+                0x27000000                        __dtcm_from_data_flash$$Load = LOADADDR (__dtcm_from_data_flash$$)
+ *(.dtcm_from_data_flash)
+ *(.dtcm_code_from_data_flash)
+                0x20000000                        __dtcm_from_data_flash$$Limit = .
+
+__ram_from_data_flash$$
+                0x22000000        0x0 load address 0x27000000
+                0x22000000                        __ram_from_data_flash$$Base = .
+                0x27000000                        __ram_from_data_flash$$Load = LOADADDR (__ram_from_data_flash$$)
+ *(.ram_from_data_flash)
+ *(.ram_code_from_data_flash)
+                0x22000000                        __ram_from_data_flash$$Limit = .
+
+__data_flash_readonly$$
+                0x27000000        0x0
+                0x27000000                        __data_flash_readonly$$Base = .
+ *(.data_flash)
+ *(.data_flash_code)
+                0x27000000                        __data_flash_readonly$$Limit = .
+
+__data_flash_noinit$$
+                0x27000000        0x0
+                0x27000000                        __data_flash_noinit$$Base = .
+ *(.data_flash_noinit)
+                0x27000000                        __data_flash_noinit$$Limit = .
+
+.data_flash.endof
+                0x27000000        0x0
+                0x27000000                        __ddsc_DATA_FLASH_END = .
+
+.flash.startof  0x02000000        0x0
+                0x02000000                        __ddsc_FLASH_START = .
+
+__flash_vectors$$
+                0x02000000       0x40
+                0x02000000                        __flash_vectors$$Base = .
+                0x02000000                        _VECTORS = .
+ *(.fixed_vectors)
+ .fixed_vectors
+                0x02000000       0x40 ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.o
+                0x02000000                __Vectors
+ *(.application_vectors)
+                0x02000040                        __flash_vectors$$Limit = .
+
+__flash_noinit$$
+                0x02000040        0x0
+                0x02000040                        __flash_noinit$$Base = .
+ *(.flash_noinit)
+                0x02000040                        __flash_noinit$$Limit = .
+
+__sdram_from_flash$$
+                0x68000000        0x0 load address 0x02000040
+                0x68000000                        __sdram_from_flash$$Base = .
+                0x02000040                        __sdram_from_flash$$Load = LOADADDR (__sdram_from_flash$$)
+ *(.sdram_from_flash)
+ *(.sdram_code_from_flash)
+                0x68000000                        __sdram_from_flash$$Limit = .
+
+__sdram_noinit_nocache$$
+                0x68000000        0x0 load address 0x02000040
+                0x68000000                        __sdram_noinit_nocache$$Base = .
+ *(.sdram_noinit_nocache)
+                0x68000000                        __sdram_noinit_nocache$$Limit = .
+
+__sdram_zero_nocache$$
+                0x68000000        0x0 load address 0x02000040
+                0x68000000                        __sdram_zero_nocache$$Base = .
+ *(.sdram_nocache)
+                0x68000000                        . = ALIGN (0x20)
+                0x68000000                        __sdram_zero_nocache$$Limit = .
+
+__sdram_noinit$$
+                0x68000000        0x0 load address 0x02000040
+                0x68000000                        __sdram_noinit$$Base = .
+ *(.sdram_noinit)
+                0x68000000                        __sdram_noinit$$Limit = .
+
+__sdram_zero$$  0x68000000        0x0 load address 0x02000040
+                0x68000000                        __sdram_zero$$Base = .
+ *(.sdram)
+                0x68000000                        __sdram_zero$$Limit = .
+
+.sdram.endof    0x68000000        0x0
+                0x68000000                        __ddsc_SDRAM_END = .
+
+__ospi0_cs0_from_flash$$
+                0x80000000        0x0 load address 0x02000040
+                0x80000000                        __ospi0_cs0_from_flash$$Base = .
+                0x02000040                        __ospi0_cs0_from_flash$$Load = LOADADDR (__ospi0_cs0_from_flash$$)
+ *(.ospi0_cs0_from_flash)
+ *(.ospi0_cs0_code_from_flash)
+                0x80000000                        __ospi0_cs0_from_flash$$Limit = .
+
+__ospi0_cs0_noinit_nocache$$
+                0x80000000        0x0 load address 0x02000040
+                0x80000000                        __ospi0_cs0_noinit_nocache$$Base = .
+ *(.ospi0_cs0_noinit_nocache)
+                0x80000000                        __ospi0_cs0_noinit_nocache$$Limit = .
+
+__ospi0_cs0_zero_nocache$$
+                0x80000000        0x0 load address 0x02000040
+                0x80000000                        __ospi0_cs0_zero_nocache$$Base = .
+ *(.ospi0_cs0_nocache)
+                0x80000000                        . = ALIGN (0x20)
+                0x80000000                        __ospi0_cs0_zero_nocache$$Limit = .
+
+__ospi0_cs0_noinit$$
+                0x80000000        0x0 load address 0x02000040
+                0x80000000                        __ospi0_cs0_noinit$$Base = .
+ *(.ospi0_cs0_noinit)
+                0x80000000                        __ospi0_cs0_noinit$$Limit = .
+
+__ospi0_cs0_zero$$
+                0x80000000        0x0 load address 0x02000040
+                0x80000000                        __ospi0_cs0_zero$$Base = .
+ *(.ospi0_cs0)
+                0x80000000                        __ospi0_cs0_zero$$Limit = .
+
+.ospi0_cs0.endof
+                0x80000000        0x0
+                0x80000000                        __ddsc_OSPI0_CS0_END = .
+
+__itcm_from_flash$$
+                0x00000000     0x44f8 load address 0x02000040
+                0x00000000                        __itcm_from_flash$$Base = .
+                0x02000040                        __itcm_from_flash$$Load = LOADADDR (__itcm_from_flash$$)
+ *(.itcm_from_flash)
+ .itcm_from_flash
+                0x00000000      0x100 ./src/itcm_pad.o
+                0x00000000                g_itcm_bad_granule_pad
+ *(.itcm_code_from_flash*)
+ .itcm_code_from_flash.x25519_add
+                0x00000100       0x58 ./src/x25519/x25519-cortex-m4-gcc.o
+                0x00000100                fe25519_add
+                0x00000100                apx_real_fe25519_add
+ .itcm_code_from_flash.x25519_sub
+                0x00000158       0x62 ./src/x25519/x25519-cortex-m4-gcc.o
+                0x00000158                fe25519_sub
+                0x00000158                apx_real_fe25519_sub
+ .itcm_code_from_flash.x25519_sqr_many
+                0x000001ba       0x22 ./src/x25519/x25519-cortex-m4-gcc.o
+                0x000001ba                fe25519_sqr_many
+ .itcm_code_from_flash.x25519_loadm
+                0x000001dc       0x12 ./src/x25519/x25519-cortex-m4-gcc.o
+ *fill*         0x000001ee        0x2 
+ .itcm_code_from_flash.x25519_scalarmult
+                0x000001f0      0x35c ./src/x25519/x25519-cortex-m4-gcc.o
+                0x000001f0                curve25519_scalarmult
+ .itcm_code_from_flash
+                0x0000054c       0x88 ./src/mlkem/fastaddsub.o
+                0x0000054c                pointwise_sub
+                0x00000590                pointwise_add
+ .itcm_code_from_flash
+                0x000005d4      0x138 ./src/mlkem/fastbasemul.o
+                0x000005d4                basemul_asm_opt_16_32
+                0x00000620                basemul_asm_acc_opt_32_32
+                0x0000067c                basemul_asm_acc_opt_32_16
+ .itcm_code_from_flash
+                0x0000070c      0xc20 ./src/mlkem/matacc_asm.o
+                0x0000070c                matacc_asm_cache_16_32
+                0x00000908                matacc_asm_cache_32_32
+                0x00000b1c                matacc_asm_cache_32_16
+                0x00000d98                matacc_asm_opt_16_32
+                0x00000f40                matacc_asm_opt_32_32
+                0x00001104                matacc_asm_opt_32_16
+ .itcm_code_from_flash
+                0x0000132c       0x70 ./src/mlkem/ntt.o
+ .itcm_code_from_flash
+                0x0000139c      0x224 ./src/mlkem/poly_asm.o
+                0x0000139c                frombytes_mul_asm_16_32
+                0x00001438                frombytes_mul_asm_acc_32_32
+                0x000014dc                frombytes_mul_asm_acc_32_16
+ .itcm_code_from_flash
+                0x000015c0      0x1f0 ./src/mlkem/reduce.o
+                0x000015c0                asm_barrett_reduce
+                0x000016e4                asm_fromplant
+ *fill*         0x000017b0       0x50 
+ .itcm_code_from_flash
+                0x00001800     0x1fa0 ./src/keccak/keccakf1600.o
+                0x00001800                KeccakF1600_Initialize
+                0x00001900                KeccakF1600_StateXORBytes
+                0x00001c00                KeccakF1600_StateExtractBytes
+                0x00002000                KeccakF1600_StatePermute
+ .itcm_code_from_flash
+                0x000037a0      0x3b0 ./src/gen/expw_ntt_kyber_1_23_45_67_opt_m85.o
+                0x000037a4                ntt_kyber_1_23_45_67_opt_m85
+ .itcm_code_from_flash
+                0x00003b50      0x470 ./src/gen/expy_intt_kyber_1_23_45_67_opt_m85_plantard.o
+                0x00003b60                intt_kyber_1_23_45_67_opt_m85_plantard
+ .itcm_code_from_flash
+                0x00003fc0      0x1c8 ./src/gen/fe25519_mul_sched.o
+                0x00003fc0                fe25519_mul_sched
+ .itcm_code_from_flash
+                0x00004188      0x158 ./src/gen/fe25519_sqr_bb.o
+                0x00004188                fe25519_sqr_bb
+ .itcm_code_from_flash
+                0x000042e0        0x4 ./src/gen/x01_dispatch.o
+                0x000042e0                fe25519_mul
+ .itcm_code_from_flash
+                0x000042e4        0x4 ./src/gen/x02_dispatch.o
+                0x000042e4                fe25519_sqr
+ .itcm_code_from_flash
+                0x000042e8       0x78 ./src/gen/x25519_base_shim.o
+                0x000042e8                fe25519_mul_lenn
+                0x00004302                fe25519_sqr_lenn
+                0x00004322                fe25519_add_lenn
+                0x00004340                fe25519_sub_lenn
+ .itcm_code_from_flash
+                0x00004360      0x18c ./src/gen/x25519_comb_asm.o
+                0x00004360                ge_madd_native
+                0x000044ba                fe25519_sqr_chain
+ *fill*         0x000044ec        0x4 
+ .itcm_code_from_flash.__stub
+                0x000044f0        0x8 linker stubs
+                0x000044f8                        __itcm_from_flash$$Limit = .
+
+__itcm_noinit$$
+                0x000044f8        0x0 load address 0x02004538
+                0x000044f8                        __itcm_noinit$$Base = .
+ *(.itcm_noinit)
+                0x000044f8                        __itcm_noinit$$Limit = .
+
+__itcm_zero$$   0x000044f8        0x0 load address 0x02004538
+                0x000044f8                        __itcm_zero$$Base = .
+ *(.itcm)
+                0x000044f8                        __itcm_zero$$Limit = .
+
+.itcm.endof     0x00004600        0x0
+                0x00004600                        __ddsc_ITCM_END = .
+
+__dtcm_from_flash$$
+                0x20000000        0x0 load address 0x02004538
+                0x20000000                        __dtcm_from_flash$$Base = .
+                0x02004538                        __dtcm_from_flash$$Load = LOADADDR (__dtcm_from_flash$$)
+ *(.dtcm_from_flash)
+ *(.dtcm_code_from_flash)
+                0x20000000                        __dtcm_from_flash$$Limit = .
+
+__dtcm_noinit$$
+                0x20000000        0x0 load address 0x02004538
+                0x20000000                        __dtcm_noinit$$Base = .
+ *(.dtcm_noinit)
+                0x20000000                        __dtcm_noinit$$Limit = .
+
+__dtcm_zero$$   0x20000000        0x0 load address 0x02004538
+                0x20000000                        __dtcm_zero$$Base = .
+ *(.dtcm)
+                0x20000000                        __dtcm_zero$$Limit = .
+
+.dtcm.endof     0x20000000        0x0
+                0x20000000                        __ddsc_DTCM_END = .
+
+__ram_from_flash$$
+                0x22000000      0x7f8 load address 0x02004538
+                0x22000000                        __ram_from_flash$$Base = .
+                0x02004538                        __ram_from_flash$$Load = LOADADDR (__ram_from_flash$$)
+ *(.ram_from_flash)
+ *(.ram_code_from_flash)
+ *(.data*)
+ .data.state    0x22000000        0x4 ./src/mlkem/randombytes_det.o
+ .data          0x22000004      0x3f8 ./src/gen/expw_ntt_kyber_1_23_45_67_opt_m85.o
+ *fill*         0x220003fc        0x4 
+ .data          0x22000400      0x3f8 ./src/gen/expy_intt_kyber_1_23_45_67_opt_m85_plantard.o
+ *(vtable)
+                0x220007f8                        __ram_from_flash$$Limit = .
+
+.tm_clone_table
+                0x220007f8        0x0 load address 0x02004d30
+ .tm_clone_table
+                0x220007f8        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crtbegin.o
+ .tm_clone_table
+                0x220007f8        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crtend.o
+
+.igot.plt       0x220007f8        0x0 load address 0x02004d30
+ .igot.plt      0x220007f8        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crtbegin.o
+
+__ram_noinit_nocache$$
+                0x22000800        0x0 load address 0x02004d40
+                0x22000800                        __ram_noinit_nocache$$Base = .
+ *(.ram_noinit_nocache)
+                0x22000800                        __ram_noinit_nocache$$Limit = .
+
+__ram_zero_nocache$$
+                0x220007f8        0x8 load address 0x02004d30
+                0x220007f8                        __ram_zero_nocache$$Base = .
+ *(.bss.*_fsp_nocache)
+ *(.ram_nocache)
+                0x22000800                        . = ALIGN (0x20)
+ *fill*         0x220007f8        0x8 
+                0x22000800                        __ram_zero_nocache$$Limit = .
+
+__ram_noinit$$  0x22000800      0x42c load address 0x02004d30
+                0x22000800                        __ram_noinit$$Base = .
+ *(.bss.g_heap)
+ *(.bss.g_main_stack)
+ .bss.g_main_stack
+                0x22000800      0x400 ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.o
+                0x22000800                g_main_stack
+ *(.ram_noinit)
+ .ram_noinit    0x22000c00       0x2c ./ra/fsp/src/bsp/mcu/all/bsp_clocks.o
+ *(.noinit)
+                0x22000c2c                        __ram_noinit$$Limit = .
+
+__ram_zero$$    0x22000c30      0x18e load address 0x02004d30
+                0x22000c30                        __ram_zero$$Base = .
+ *(.ram)
+ *(.bss*)
+ .bss.completed.1
+                0x22000c30        0x1 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crtbegin.o
+ *fill*         0x22000c31        0x3 
+ .bss.object.0  0x22000c34       0x18 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crtbegin.o
+ .bss.k22_cache_valid
+                0x22000c4c        0x4 ./src/mlkem/symmetric-fips202.o
+ .bss.k22_cache_seed
+                0x22000c50       0x20 ./src/mlkem/symmetric-fips202.o
+ .bss.k22_cache
+                0x22000c70       0xc8 ./src/mlkem/symmetric-fips202.o
+ .bss.mlkem_k22_mode
+                0x22000d38        0x4 ./src/mlkem/symmetric-fips202.o
+                0x22000d38                mlkem_k22_mode
+ .bss.g_keccak_perm_calls
+                0x22000d3c        0x4 ./src/keccak/fips202.o
+                0x22000d3c                g_keccak_perm_calls
+ .bss.expde_api_anchor
+                0x22000d40        0x4 ./src/harness.o
+                0x22000d40                expde_api_anchor
+ .bss.harness_fails
+                0x22000d44        0x4 ./src/harness.o
+                0x22000d44                harness_fails
+ .bss.harness_done
+                0x22000d48        0x4 ./src/harness.o
+                0x22000d48                harness_done
+ .bss.x25519b_cyc_inv
+                0x22000d4c        0x4 ./src/x25519_base.o
+                0x22000d4c                x25519b_cyc_inv
+ .bss.x25519b_cyc_recode
+                0x22000d50        0x4 ./src/x25519_base.o
+                0x22000d50                x25519b_cyc_recode
+ .bss.x25519b_cyc_madd
+                0x22000d54        0x4 ./src/x25519_base.o
+                0x22000d54                x25519b_cyc_madd
+ .bss.x25519b_cyc_select
+                0x22000d58        0x4 ./src/x25519_base.o
+                0x22000d58                x25519b_cyc_select
+ .bss.x25519b_prof
+                0x22000d5c        0x4 ./src/x25519_base.o
+                0x22000d5c                x25519b_prof
+ .bss.g_ioport_ctrl
+                0x22000d60        0x8 ./ra_gen/common_data.o
+                0x22000d60                g_ioport_ctrl
+ .bss.SystemCoreClock
+                0x22000d68        0x4 ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.o
+                0x22000d68                SystemCoreClock
+ *fill*         0x22000d6c        0x4 
+ .bss.g_bsp_group_irq_sources
+                0x22000d70       0x40 ./ra/fsp/src/bsp/mcu/all/bsp_group_irq.o
+                0x22000d70                g_bsp_group_irq_sources
+ .bss.g_protect_pfswe_counter
+                0x22000db0        0x4 ./ra/fsp/src/bsp/mcu/all/bsp_io.o
+                0x22000db0                g_protect_pfswe_counter
+ .bss.g_protect_counters
+                0x22000db4        0xa ./ra/fsp/src/bsp/mcu/all/bsp_register_protection.o
+                0x22000db4                g_protect_counters
+                0x22000dbe                        __ram_zero$$Limit = .
+
+__ram_thread_stack$$
+                0x22000dc0        0x0 load address 0x02004d30
+                0x22000dc0                        __ram_thread_stack$$Base = .
+ *(.stack?*)
+                0x22000dc0                        __ram_thread_stack$$Limit = .
+
+.ram.endof      0x22000e00        0x0
+                0x22000e00                        __ddsc_RAM_END = .
+
+.ram.flat_nsc   0x22000e00        0x0
+                0x22000e00                        __ddsc_RAM_NSC = .
+
+__flash_readonly$$
+                0x02004d30     0xb0dc
+                0x02004d30                        __flash_readonly$$Base = .
+ *(.flash)
+ *(.flash_code)
+ *(.text*)
+ .text.deregister_tm_clones
+                0x02004d30       0x1c C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crtbegin.o
+ .text.register_tm_clones
+                0x02004d4c       0x28 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crtbegin.o
+ .text.__do_global_dtors_aux
+                0x02004d74       0x28 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crtbegin.o
+ .text.frame_dummy
+                0x02004d9c       0x24 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crtbegin.o
+ .text.cbd      0x02004dc0        0x4 ./src/mlkem/cbd.o
+                0x02004dc0                cbd
+ .text.indcpa_keypair_derand
+                0x02004dc4      0x14c ./src/mlkem/indcpa.o
+                0x02004dc4                indcpa_keypair_derand
+ .text.indcpa_enc
+                0x02004f10      0x164 ./src/mlkem/indcpa.o
+                0x02004f10                indcpa_enc
+ .text.indcpa_enc_cmp
+                0x02005074      0x184 ./src/mlkem/indcpa.o
+                0x02005074                indcpa_enc_cmp
+ .text.indcpa_dec
+                0x020051f8       0x94 ./src/mlkem/indcpa.o
+                0x020051f8                indcpa_dec
+ .text.crypto_kem_keypair_derand
+                0x0200528c       0x5c ./src/mlkem/kem.o
+                0x0200528c                crypto_kem_keypair_derand
+ .text.crypto_kem_enc_derand
+                0x020052e8       0x74 ./src/mlkem/kem.o
+                0x020052e8                crypto_kem_enc_derand
+ .text.crypto_kem_dec
+                0x0200535c       0x7c ./src/mlkem/kem.o
+                0x0200535c                crypto_kem_dec
+ .text.matacc_cache32
+                0x020053d8      0x10c ./src/mlkem/matacc.o
+                0x020053d8                matacc_cache32
+ .text.matacc_opt32
+                0x020054e4       0xf4 ./src/mlkem/matacc.o
+                0x020054e4                matacc_opt32
+ .text.ntt      0x020055d8        0x4 ./src/mlkem/ntt.o
+                0x020055d8                ntt
+ .text.invntt   0x020055dc       0x14 ./src/mlkem/ntt.o
+                0x020055dc                invntt
+ .text.poly_compress
+                0x020055f0        0x4 ./src/mlkem/poly.o
+                0x020055f0                poly_compress
+ .text.poly_decompress
+                0x020055f4        0x4 ./src/mlkem/poly.o
+                0x020055f4                poly_decompress
+ .text.poly_packcompress
+                0x020055f8        0x4 ./src/mlkem/poly.o
+                0x020055f8                poly_packcompress
+ .text.poly_unpackdecompress
+                0x020055fc        0x4 ./src/mlkem/poly.o
+                0x020055fc                poly_unpackdecompress
+ .text.cmp_poly_compress
+                0x02005600        0x4 ./src/mlkem/poly.o
+                0x02005600                cmp_poly_compress
+ .text.cmp_poly_packcompress
+                0x02005604        0x4 ./src/mlkem/poly.o
+                0x02005604                cmp_poly_packcompress
+ .text.poly_tobytes
+                0x02005608        0x4 ./src/mlkem/poly.o
+                0x02005608                poly_tobytes
+ .text.poly_frombytes
+                0x0200560c        0x4 ./src/mlkem/poly.o
+                0x0200560c                poly_frombytes
+ .text.poly_frombytes_mul_16_32
+                0x02005610        0xc ./src/mlkem/poly.o
+                0x02005610                poly_frombytes_mul_16_32
+ .text.poly_frombytes_mul_32_32
+                0x0200561c        0xc ./src/mlkem/poly.o
+                0x0200561c                poly_frombytes_mul_32_32
+ .text.poly_frombytes_mul_32_16
+                0x02005628       0x18 ./src/mlkem/poly.o
+                0x02005628                poly_frombytes_mul_32_16
+ .text.poly_noise
+                0x02005640       0x28 ./src/mlkem/poly.o
+                0x02005640                poly_noise
+ .text.poly_basemul_opt_16_32
+                0x02005668        0x4 ./src/mlkem/poly.o
+                0x02005668                poly_basemul_opt_16_32
+ .text.poly_basemul_acc_opt_32_32
+                0x0200566c        0x4 ./src/mlkem/poly.o
+                0x0200566c                poly_basemul_acc_opt_32_32
+ .text.poly_basemul_acc_opt_32_16
+                0x02005670        0x4 ./src/mlkem/poly.o
+                0x02005670                poly_basemul_acc_opt_32_16
+ .text.poly_ntt
+                0x02005674        0x4 ./src/mlkem/poly.o
+                0x02005674                poly_ntt
+ .text.poly_invntt
+                0x02005678        0x4 ./src/mlkem/poly.o
+                0x02005678                poly_invntt
+ .text.poly_reduce
+                0x0200567c        0x4 ./src/mlkem/poly.o
+                0x0200567c                poly_reduce
+ .text.poly_add
+                0x02005680        0x4 ./src/mlkem/poly.o
+                0x02005680                poly_add
+ .text.poly_sub
+                0x02005684        0x4 ./src/mlkem/poly.o
+                0x02005684                poly_sub
+ .text.poly_frommsg
+                0x02005688        0x4 ./src/mlkem/poly.o
+                0x02005688                poly_frommsg
+ .text.poly_tomsg
+                0x0200568c        0x4 ./src/mlkem/poly.o
+                0x0200568c                poly_tomsg
+ .text.mve_quant10
+                0x02005690       0x60 ./src/mlkem/poly_mve.o
+ .text.mve_poly_packcompress_v1
+                0x020056f0       0x6c ./src/mlkem/poly_mve.o
+ .text.mve_cmp_poly_packcompress_v1
+                0x0200575c       0x8c ./src/mlkem/poly_mve.o
+ .text.mve_quant4
+                0x020057e8       0x5c ./src/mlkem/poly_mve.o
+ .text.mve_poly_compress_v1
+                0x02005844       0x34 ./src/mlkem/poly_mve.o
+ .text.mve_cmp_poly_compress_v1
+                0x02005878       0x3c ./src/mlkem/poly_mve.o
+ .text.mve_cbd  0x020058b4       0x80 ./src/mlkem/poly_mve.o
+                0x020058b4                mve_cbd
+ .text.mve_poly_tobytes
+                0x02005934       0x88 ./src/mlkem/poly_mve.o
+                0x02005934                mve_poly_tobytes
+ .text.mve_poly_frombytes
+                0x020059bc       0x78 ./src/mlkem/poly_mve.o
+                0x020059bc                mve_poly_frombytes
+ .text.mve_poly_unpackdecompress
+                0x02005a34      0x19c ./src/mlkem/poly_mve.o
+                0x02005a34                mve_poly_unpackdecompress
+ .text.mve_poly_packcompress
+                0x02005bd0        0x4 ./src/mlkem/poly_mve.o
+                0x02005bd0                mve_poly_packcompress
+ .text.mve_cmp_poly_packcompress
+                0x02005bd4        0x4 ./src/mlkem/poly_mve.o
+                0x02005bd4                mve_cmp_poly_packcompress
+ .text.mve_poly_compress
+                0x02005bd8        0x4 ./src/mlkem/poly_mve.o
+                0x02005bd8                mve_poly_compress
+ .text.mve_cmp_poly_compress
+                0x02005bdc        0x4 ./src/mlkem/poly_mve.o
+                0x02005bdc                mve_cmp_poly_compress
+ .text.mve_poly_decompress
+                0x02005be0       0x7c ./src/mlkem/poly_mve.o
+                0x02005be0                mve_poly_decompress
+ .text.mve_poly_tomsg
+                0x02005c5c       0xb8 ./src/mlkem/poly_mve.o
+                0x02005c5c                mve_poly_tomsg
+ .text.mve_poly_frommsg
+                0x02005d14       0x78 ./src/mlkem/poly_mve.o
+                0x02005d14                mve_poly_frommsg
+ .text.polyvec_tobytes
+                0x02005d8c       0x28 ./src/mlkem/polyvec.o
+                0x02005d8c                polyvec_tobytes
+ .text.polyvec_frombytes
+                0x02005db4       0x28 ./src/mlkem/polyvec.o
+                0x02005db4                polyvec_frombytes
+ .text.polyvec_ntt
+                0x02005ddc       0x1c ./src/mlkem/polyvec.o
+                0x02005ddc                polyvec_ntt
+ .text.PQCLEAN_randombytes
+                0x02005df8       0x34 ./src/mlkem/randombytes_det.o
+                0x02005df8                PQCLEAN_randombytes
+ .text.kyber_shake128_absorb
+                0x02005e2c      0x120 ./src/mlkem/symmetric-fips202.o
+                0x02005e2c                kyber_shake128_absorb
+ .text.kyber_shake256_prf
+                0x02005f4c       0x48 ./src/mlkem/symmetric-fips202.o
+                0x02005f4c                kyber_shake256_prf
+ .text.kyber_shake256_rkprf
+                0x02005f94       0x40 ./src/mlkem/symmetric-fips202.o
+                0x02005f94                kyber_shake256_rkprf
+ .text.cmov     0x02005fd4       0x30 ./src/mlkem/verify.o
+                0x02005fd4                cmov
+ .text.keccak_inc_finalize
+                0x02006004       0x5c ./src/keccak/fips202.o
+ .text.keccak_inc_absorb
+                0x02006060       0x88 ./src/keccak/fips202.o
+ .text.keccak_absorb
+                0x020060e8       0x90 ./src/keccak/fips202.o
+ .text.keccak_inc_squeeze
+                0x02006178       0xa0 ./src/keccak/fips202.o
+ .text.shake256_inc_init
+                0x02006218       0x18 ./src/keccak/fips202.o
+                0x02006218                shake256_inc_init
+ .text.shake256_inc_absorb
+                0x02006230        0xc ./src/keccak/fips202.o
+                0x02006230                shake256_inc_absorb
+ .text.shake256_inc_finalize
+                0x0200623c       0x5c ./src/keccak/fips202.o
+                0x0200623c                shake256_inc_finalize
+ .text.shake256_inc_squeeze
+                0x02006298        0x8 ./src/keccak/fips202.o
+                0x02006298                shake256_inc_squeeze
+ .text.shake256_inc_ctx_release
+                0x020062a0        0x4 ./src/keccak/fips202.o
+                0x020062a0                shake256_inc_ctx_release
+ .text.shake128_absorb
+                0x020062a4       0x28 ./src/keccak/fips202.o
+                0x020062a4                shake128_absorb
+ .text.shake128_squeezeblocks
+                0x020062cc       0x34 ./src/keccak/fips202.o
+                0x020062cc                shake128_squeezeblocks
+ .text.shake256
+                0x02006300       0x44 ./src/keccak/fips202.o
+                0x02006300                shake256
+ .text.sha3_256
+                0x02006344       0x4c ./src/keccak/fips202.o
+                0x02006344                sha3_256
+ .text.sha3_512
+                0x02006390       0x4c ./src/keccak/fips202.o
+                0x02006390                sha3_512
+ .text.hal_entry
+                0x020063dc       0xc8 ./src/hal_entry.o
+                0x020063dc                hal_entry
+ .text.R_BSP_WarmStart
+                0x020064a4       0x18 ./src/hal_warmstart.o
+                0x020064a4                R_BSP_WarmStart
+ .text.expde_expand
+                0x020064bc       0xa0 ./src/harness.o
+                0x020064bc                expde_expand
+ .text.expde_keypair
+                0x0200655c       0x5c ./src/harness.o
+                0x0200655c                expde_keypair
+ .text.expde_ek_check
+                0x020065b8       0x38 ./src/harness.o
+ .text.expde_combine
+                0x020065f0       0xb4 ./src/harness.o
+ .text.expde_encaps
+                0x020066a4       0x94 ./src/harness.o
+                0x020066a4                expde_encaps
+ .text.expde_decaps_warm
+                0x02006738       0x7c ./src/harness.o
+                0x02006738                expde_decaps_warm
+ .text.expde_decaps_cold
+                0x020067b4       0x24 ./src/harness.o
+                0x020067b4                expde_decaps_cold
+ .text.__wrap_memcpy
+                0x020067d8       0x50 ./src/harness.o
+                0x020067d8                __wrap_memcpy
+ .text.__wrap_memset
+                0x02006828       0x50 ./src/harness.o
+                0x02006828                __wrap_memset
+ .text.harness_main
+                0x02006878       0x5c ./src/harness.o
+                0x02006878                harness_main
+ .text.curve25519_scalarmult_base
+                0x020068d4      0x4d0 ./src/x25519_base.o
+                0x020068d4                curve25519_scalarmult_base
+ .text.startup.main
+                0x02006da4        0xc ./ra_gen/main.o
+                0x02006da4                main
+ .text.bsp_init
+                0x02006db0        0x4 ./ra/board/ra8m1_ek/board_init.o
+                0x02006db0                bsp_init
+ .text.Default_Handler
+                0x02006db4        0x4 ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.o
+                0x02006db4                DebugMon_Handler
+                0x02006db4                HardFault_Handler
+                0x02006db4                SysTick_Handler
+                0x02006db4                PendSV_Handler
+                0x02006db4                UsageFault_Handler
+                0x02006db4                SecureFault_Handler
+                0x02006db4                Default_Handler
+                0x02006db4                MemManage_Handler
+                0x02006db4                SVC_Handler
+                0x02006db4                BusFault_Handler
+ .text.Reset_Handler
+                0x02006db8        0xc ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.o
+                0x02006db8                Reset_Handler
+ .text.SystemRuntimeInit
+                0x02006dc4       0x64 ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.o
+ .text.SystemInit
+                0x02006e28      0x1bc ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.o
+                0x02006e28                SystemInit
+ .text.SystemCoreClockUpdate
+                0x02006fe4       0x8c ./ra/fsp/src/bsp/mcu/all/bsp_clocks.o
+                0x02006fe4                SystemCoreClockUpdate
+ .text.R_BSP_SubClockStabilizeWaitAfterReset
+                0x02007070        0x4 ./ra/fsp/src/bsp/mcu/all/bsp_clocks.o
+                0x02007070                R_BSP_SubClockStabilizeWaitAfterReset
+ *fill*         0x02007074        0x4 
+ .text.bsp_clock_init
+                0x02007078      0x150 ./ra/fsp/src/bsp/mcu/all/bsp_clocks.o
+                0x02007078                bsp_clock_init
+ .text.R_BSP_Init_RTC
+                0x020071c8       0xb0 ./ra/fsp/src/bsp/mcu/all/bsp_clocks.o
+                0x020071c8                R_BSP_Init_RTC
+ .text.bsp_prv_software_delay_loop
+                0x02007278        0xc ./ra/fsp/src/bsp/mcu/all/bsp_delay.o
+                0x02007278                bsp_prv_software_delay_loop
+ .text.R_BSP_SoftwareDelay
+                0x02007284       0x88 ./ra/fsp/src/bsp/mcu/all/bsp_delay.o
+                0x02007284                R_BSP_SoftwareDelay
+ .text.NMI_Handler
+                0x0200730c       0x44 ./ra/fsp/src/bsp/mcu/all/bsp_group_irq.o
+                0x0200730c                NMI_Handler
+ .text.bsp_irq_cfg
+                0x02007350       0x18 ./ra/fsp/src/bsp/mcu/all/bsp_irq.o
+                0x02007350                bsp_irq_cfg
+ .text.R_BSP_RegisterProtectEnable
+                0x02007368       0x60 ./ra/fsp/src/bsp/mcu/all/bsp_register_protection.o
+                0x02007368                R_BSP_RegisterProtectEnable
+ .text.R_BSP_RegisterProtectDisable
+                0x020073c8       0x54 ./ra/fsp/src/bsp/mcu/all/bsp_register_protection.o
+                0x020073c8                R_BSP_RegisterProtectDisable
+ .text.bsp_vbatt_init
+                0x0200741c       0xec ./ra/fsp/src/r_ioport/r_ioport.o
+ .text.r_ioport_pins_config
+                0x02007508       0xac ./ra/fsp/src/r_ioport/r_ioport.o
+ .text.R_IOPORT_Open
+                0x020075b4       0x14 ./ra/fsp/src/r_ioport/r_ioport.o
+                0x020075b4                R_IOPORT_Open
+ .text.memcmp   0x020075c8       0x20 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-memcmp.o)
+                0x020075c8                memcmp
+ .text.memcmp.__stub
+                0x020075e8       0xe0 linker stubs
+ *(.rodata*)
+ .rodata.zetas  0x020076c8      0x100 ./src/mlkem/ntt.o
+                0x020076c8                zetas
+ .rodata.bit_w_hi
+                0x020077c8       0x10 ./src/mlkem/poly_mve.o
+ .rodata.bit_w_lo
+                0x020077d8       0x10 ./src/mlkem/poly_mve.o
+ .rodata.off_seq4
+                0x020077e8       0x10 ./src/mlkem/poly_mve.o
+ .rodata.off_h_4g
+                0x020077f8       0x10 ./src/mlkem/poly_mve.o
+ .rodata.off_h_odd
+                0x02007808       0x10 ./src/mlkem/poly_mve.o
+ .rodata.off_h_even
+                0x02007818       0x10 ./src/mlkem/poly_mve.o
+ .rodata.off_5x4_4
+                0x02007828       0x10 ./src/mlkem/poly_mve.o
+ .rodata.off_5x4_3
+                0x02007838       0x10 ./src/mlkem/poly_mve.o
+ .rodata.off_5x4_2
+                0x02007848       0x10 ./src/mlkem/poly_mve.o
+ .rodata.off_5x4_1
+                0x02007858       0x10 ./src/mlkem/poly_mve.o
+ .rodata.off_5x4_0
+                0x02007868       0x10 ./src/mlkem/poly_mve.o
+ .rodata.off_3x4_2
+                0x02007878       0x10 ./src/mlkem/poly_mve.o
+ .rodata.off_3x4_1
+                0x02007888       0x10 ./src/mlkem/poly_mve.o
+ .rodata.off_3x4_0
+                0x02007898       0x10 ./src/mlkem/poly_mve.o
+ .rodata.expde_combine.str1.4
+                0x020078a8        0x7 ./src/harness.o
+ *fill*         0x020078af        0x1 
+ .rodata.expde_api
+                0x020078b0       0x14 ./src/harness.o
+                0x020078b0                expde_api
+ *fill*         0x020078c4        0x4 
+ .rodata.fe_one
+                0x020078c8       0x20 ./src/x25519_base.o
+ .rodata.fe_zero
+                0x020078e8       0x20 ./src/x25519_base.o
+ .rodata.x25519_base_comb
+                0x02007908     0x8100 ./src/x25519_base.o
+ .rodata.g_bsp_pin_cfg
+                0x0200fa08        0xc ./ra_gen/pin_data.o
+                0x0200fa08                g_bsp_pin_cfg
+ .rodata.g_bsp_pin_cfg_data
+                0x0200fa14      0x200 ./ra_gen/pin_data.o
+                0x0200fa14                g_bsp_pin_cfg_data
+ .rodata.g_bsp_leds
+                0x0200fc14        0x8 ./ra/board/ra8m1_ek/board_leds.o
+                0x0200fc14                g_bsp_leds
+ .rodata.g_bsp_prv_leds
+                0x0200fc1c        0x6 ./ra/board/ra8m1_ek/board_leds.o
+ *fill*         0x0200fc22        0x2 
+ .rodata.g_interrupt_event_link_select
+                0x0200fc24        0x2 ./ra/fsp/src/bsp/mcu/all/bsp_irq.o
+                0x0200fc24                g_interrupt_event_link_select
+ *fill*         0x0200fc26        0x2 
+ .rodata.g_prcr_masks
+                0x0200fc28        0xa ./ra/fsp/src/bsp/mcu/all/bsp_register_protection.o
+ *fill*         0x0200fc32        0x2 
+ .rodata.g_init_info
+                0x0200fc34       0x18 ./ra/fsp/src/bsp/mcu/ra8m1/bsp_linker.o
+                0x0200fc34                g_init_info
+ .rodata.nocache_list
+                0x0200fc4c       0x18 ./ra/fsp/src/bsp/mcu/ra8m1/bsp_linker.o
+ .rodata.copy_list
+                0x0200fc64       0xf0 ./ra/fsp/src/bsp/mcu/ra8m1/bsp_linker.o
+ .rodata.zero_list
+                0x0200fd54       0x60 ./ra/fsp/src/bsp/mcu/ra8m1/bsp_linker.o
+ .rodata.g_vbatt_pins_input
+                0x0200fdb4        0x6 ./ra/fsp/src/r_ioport/r_ioport.o
+ *(.mcuboot_sce9_key)
+ *(.version)
+ *fill*         0x0200fdba        0x2 
+ .version       0x0200fdbc       0x50 ./ra/fsp/src/bsp/mcu/all/bsp_common.o
+                0x0200fe0c                        __flash_readonly$$Limit = .
+
+.glue_7         0x0200fe0c        0x0
+ .glue_7        0x0200fe0c        0x0 linker stubs
+
+.glue_7t        0x0200fe0c        0x0
+ .glue_7t       0x0200fe0c        0x0 linker stubs
+
+.vfp11_veneer   0x0200fe0c        0x0
+ .vfp11_veneer  0x0200fe0c        0x0 linker stubs
+
+.v4_bx          0x0200fe0c        0x0
+ .v4_bx         0x0200fe0c        0x0 linker stubs
+
+.init           0x0200fe0c        0x4
+ .init          0x0200fe0c        0x4 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crti.o
+                0x0200fe0c                _init
+
+.fini           0x0200fe10        0x4
+ .fini          0x0200fe10        0x4 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crti.o
+                0x0200fe10                _fini
+
+.iplt           0x0200fe14        0x0
+ .iplt          0x0200fe14        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crtbegin.o
+
+__flash_ctor$$
+ *crtbegin.o(.ctors)
+ *crtbegin?.o(.ctors)
+ EXCLUDE_FILE(*crtend.o *crtend?.o) *(.ctors)
+ *(SORT_BY_NAME(.ctors.*))
+ *(.ctors)
+ *crtbegin.o(.dtors)
+ *crtbegin?.o(.dtors)
+ EXCLUDE_FILE(*crtend.o *crtend?.o) *(.dtors)
+ *(SORT_BY_NAME(.dtors.*))
+ *(.dtors)
+
+__flash_preinit_array$$
+                0x0200fe14        0x0
+                0x0200fe14                        __preinit_array_start = .
+ *(.preinit_array)
+                0x0200fe14                        __preinit_array_end = .
+
+__flash_.got$$
+ *(.got.plt)
+ *(.got)
+
+__flash_init_array$$
+                0x0200fe14        0x4
+                0x0200fe14                        __init_array_start = .
+ *(SORT_BY_NAME(.init_array.*))
+ *(.init_array)
+ .init_array    0x0200fe14        0x4 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crtbegin.o
+                0x0200fe18                        __init_array_end = .
+
+__flash_fini_array$$
+                0x0200fe18        0x4
+                0x0200fe18                        __fini_array_start = .
+ *(SORT_BY_NAME(.fini_array.*))
+ *(.fini_array)
+ .fini_array    0x0200fe18        0x4 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crtbegin.o
+                0x0200fe1c                        __fini_array_end = .
+
+__flash_arm.extab$$
+ *(.ARM.extab*)
+ *(.gnu.linkonce.armextab.*)
+
+__flash_arm.exidx$$
+                0x0200fe1c        0x0
+                0x0200fe1c                        __exidx_start = .
+ *(.ARM.exidx*)
+ *(.gnu.linkonce.armexidx.*)
+                0x0200fe1c                        __exidx_end = .
+
+.flash.endof    0x02010000        0x0
+                0x02010000                        __ddsc_FLASH_END = .
+
+.flash.flat_nsc
+                0x02010000        0x0
+                0x02010000                        __ddsc_FLASH_NSC = .
+
+.option_setting_ofs0.startof
+                0x0300a100        0x0
+                0x0300a100                        __ddsc_OPTION_SETTING_OFS0_START = .
+
+__option_setting_ofs0_reg$$
+                0x0300a100        0x4
+                0x0300a100                        __option_setting_ofs0_reg$$Base = .
+ *(.option_setting_ofs0)
+ .option_setting_ofs0
+                0x0300a100        0x4 ./ra/fsp/src/bsp/mcu/ra8m1/bsp_linker.o
+                0x0300a104                        __option_setting_ofs0_reg$$Limit = .
+
+.option_setting_ofs0.endof
+                0x0300a104        0x0
+                0x0300a104                        __ddsc_OPTION_SETTING_OFS0_END = .
+
+.option_setting_ofs2.startof
+                0x0300a104        0x0
+                0x0300a104                        __ddsc_OPTION_SETTING_OFS2_START = .
+
+__option_setting_ofs2_reg$$
+                0x0300a104        0x4
+                0x0300a104                        __option_setting_ofs2_reg$$Base = .
+ *(.option_setting_ofs2)
+ .option_setting_ofs2
+                0x0300a104        0x4 ./ra/fsp/src/bsp/mcu/ra8m1/bsp_linker.o
+                0x0300a108                        __option_setting_ofs2_reg$$Limit = .
+
+.option_setting_ofs2.endof
+                0x0300a108        0x0
+                0x0300a108                        __ddsc_OPTION_SETTING_OFS2_END = .
+
+.option_setting_dualsel.startof
+                0x0300a110        0x0
+                0x0300a110                        __ddsc_OPTION_SETTING_DUALSEL_START = .
+
+__option_setting_dualsel_reg$$
+                0x0300a110        0x0
+                0x0300a110                        __option_setting_dualsel_reg$$Base = .
+ *(.option_setting_dualsel)
+                0x0300a110                        __option_setting_dualsel_reg$$Limit = .
+
+.option_setting_dualsel.endof
+                0x0300a110        0x0
+                0x0300a110                        __ddsc_OPTION_SETTING_DUALSEL_END = .
+
+.option_setting_ofs1.startof
+                0x1300a180        0x0
+                0x1300a180                        __ddsc_OPTION_SETTING_OFS1_START = .
+
+__option_setting_ofs1_reg$$
+                0x1300a180        0x0
+                0x1300a180                        __option_setting_ofs1_reg$$Base = .
+ *(.option_setting_ofs1)
+                0x1300a180                        __option_setting_ofs1_reg$$Limit = .
+
+.option_setting_ofs1.endof
+                0x1300a180        0x0
+                0x1300a180                        __ddsc_OPTION_SETTING_OFS1_END = .
+
+.option_setting_banksel.startof
+                0x1300a190        0x0
+                0x1300a190                        __ddsc_OPTION_SETTING_BANKSEL_START = .
+
+__option_setting_banksel_reg$$
+                0x1300a190        0x0
+                0x1300a190                        __option_setting_banksel_reg$$Base = .
+ *(.option_setting_banksel)
+                0x1300a190                        __option_setting_banksel_reg$$Limit = .
+
+.option_setting_banksel.endof
+                0x1300a190        0x0
+                0x1300a190                        __ddsc_OPTION_SETTING_BANKSEL_END = .
+
+.option_setting_bps.startof
+                0x1300a1c0        0x0
+                0x1300a1c0                        __ddsc_OPTION_SETTING_BPS_START = .
+
+__option_setting_bps_reg$$
+                0x1300a1c0        0x0
+                0x1300a1c0                        __option_setting_bps_reg$$Base = .
+ *(.option_setting_bps)
+                0x1300a1c0                        __option_setting_bps_reg$$Limit = .
+
+.option_setting_bps.endof
+                0x1300a1c0        0x0
+                0x1300a1c0                        __ddsc_OPTION_SETTING_BPS_END = .
+
+.option_setting_pbps.startof
+                0x1300a1e0        0x0
+                0x1300a1e0                        __ddsc_OPTION_SETTING_PBPS_START = .
+
+__option_setting_pbps_reg$$
+                0x1300a1e0        0x0
+                0x1300a1e0                        __option_setting_pbps_reg$$Base = .
+ *(.option_setting_pbps)
+                0x1300a1e0                        __option_setting_pbps_reg$$Limit = .
+
+.option_setting_pbps.endof
+                0x1300a1e0        0x0
+                0x1300a1e0                        __ddsc_OPTION_SETTING_PBPS_END = .
+
+.option_setting_ofs1_sec.startof
+                0x0300a200        0x0
+                0x0300a200                        __ddsc_OPTION_SETTING_OFS1_SEC_START = .
+
+__option_setting_ofs1_sec_reg$$
+                0x0300a200        0x4
+                0x0300a200                        __option_setting_ofs1_sec_reg$$Base = .
+ *(.option_setting_ofs1_sec)
+ .option_setting_ofs1_sec
+                0x0300a200        0x4 ./ra/fsp/src/bsp/mcu/ra8m1/bsp_linker.o
+                0x0300a204                        __option_setting_ofs1_sec_reg$$Limit = .
+
+.option_setting_ofs1_sec.endof
+                0x0300a204        0x0
+                0x0300a204                        __ddsc_OPTION_SETTING_OFS1_SEC_END = .
+
+.option_setting_banksel_sec.startof
+                0x0300a210        0x0
+                0x0300a210                        __ddsc_OPTION_SETTING_BANKSEL_SEC_START = .
+
+__option_setting_banksel_sec_reg$$
+                0x0300a210        0x0
+                0x0300a210                        __option_setting_banksel_sec_reg$$Base = .
+ *(.option_setting_banksel_sec)
+                0x0300a210                        __option_setting_banksel_sec_reg$$Limit = .
+
+.option_setting_banksel_sec.endof
+                0x0300a210        0x0
+                0x0300a210                        __ddsc_OPTION_SETTING_BANKSEL_SEC_END = .
+
+.option_setting_bps_sec.startof
+                0x0300a240        0x0
+                0x0300a240                        __ddsc_OPTION_SETTING_BPS_SEC_START = .
+
+__option_setting_bps_sec_reg$$
+                0x0300a240        0x0
+                0x0300a240                        __option_setting_bps_sec_reg$$Base = .
+ *(.option_setting_bps_sec)
+                0x0300a240                        __option_setting_bps_sec_reg$$Limit = .
+
+.option_setting_bps_sec.endof
+                0x0300a240        0x0
+                0x0300a240                        __ddsc_OPTION_SETTING_BPS_SEC_END = .
+
+.option_setting_pbps_sec.startof
+                0x0300a260        0x0
+                0x0300a260                        __ddsc_OPTION_SETTING_PBPS_SEC_START = .
+
+__option_setting_pbps_sec_reg$$
+                0x0300a260        0x0
+                0x0300a260                        __option_setting_pbps_sec_reg$$Base = .
+ *(.option_setting_pbps_sec)
+                0x0300a260                        __option_setting_pbps_sec_reg$$Limit = .
+
+.option_setting_pbps_sec.endof
+                0x0300a260        0x0
+                0x0300a260                        __ddsc_OPTION_SETTING_PBPS_SEC_END = .
+
+.option_setting_ofs1_sel.startof
+                0x0300a280        0x0
+                0x0300a280                        __ddsc_OPTION_SETTING_OFS1_SEL_START = .
+
+__option_setting_ofs1_sel_reg$$
+                0x0300a280        0x4
+                0x0300a280                        __option_setting_ofs1_sel_reg$$Base = .
+ *(.option_setting_ofs1_sel)
+ .option_setting_ofs1_sel
+                0x0300a280        0x4 ./ra/fsp/src/bsp/mcu/ra8m1/bsp_linker.o
+                0x0300a284                        __option_setting_ofs1_sel_reg$$Limit = .
+
+.eh_frame       0x0300a284        0x0
+ .eh_frame      0x0300a284        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crtbegin.o
+
+.rel.dyn        0x0300a284        0x0
+ .rel.iplt      0x0300a284        0x0 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crtbegin.o
+
+.option_setting_ofs1_sel.endof
+                0x0300a284        0x0
+                0x0300a284                        __ddsc_OPTION_SETTING_OFS1_SEL_END = .
+
+.option_setting_banksel_sel.startof
+                0x0300a290        0x0
+                0x0300a290                        __ddsc_OPTION_SETTING_BANKSEL_SEL_START = .
+
+__option_setting_banksel_sel_reg$$
+                0x0300a290        0x0
+                0x0300a290                        __option_setting_banksel_sel_reg$$Base = .
+ *(.option_setting_banksel_sel)
+                0x0300a290                        __option_setting_banksel_sel_reg$$Limit = .
+
+.option_setting_banksel_sel.endof
+                0x0300a290        0x0
+                0x0300a290                        __ddsc_OPTION_SETTING_BANKSEL_SEL_END = .
+
+.option_setting_bps_sel.startof
+                0x0300a2c0        0x0
+                0x0300a2c0                        __ddsc_OPTION_SETTING_BPS_SEL_START = .
+
+__option_setting_bps_sel_reg$$
+                0x0300a2c0        0x0
+                0x0300a2c0                        __option_setting_bps_sel_reg$$Base = .
+ *(.option_setting_bps_sel)
+                0x0300a2c0                        __option_setting_bps_sel_reg$$Limit = .
+
+.option_setting_bps_sel.endof
+                0x0300a2c0        0x0
+                0x0300a2c0                        __ddsc_OPTION_SETTING_BPS_SEL_END = .
+
+.option_setting_data_flash_fsblctrl0.startof
+                0x27030080        0x0
+                0x27030080                        __ddsc_OPTION_SETTING_DATA_FLASH_FSBLCTRL0_START = .
+
+__option_setting_data_flash_fsblctrl0_reg$$
+                0x27030080        0x0
+                0x27030080                        __option_setting_data_flash_fsblctrl0_reg$$Base = .
+ *(.option_setting_data_flash_fsblctrl0)
+                0x27030080                        __option_setting_data_flash_fsblctrl0_reg$$Limit = .
+
+.option_setting_data_flash_fsblctrl0.endof
+                0x27030080        0x0
+                0x27030080                        __ddsc_OPTION_SETTING_DATA_FLASH_FSBLCTRL0_END = .
+
+.option_setting_data_flash_fsblctrl1.startof
+                0x27030084        0x0
+                0x27030084                        __ddsc_OPTION_SETTING_DATA_FLASH_FSBLCTRL1_START = .
+
+__option_setting_data_flash_fsblctrl1_reg$$
+                0x27030084        0x0
+                0x27030084                        __option_setting_data_flash_fsblctrl1_reg$$Base = .
+ *(.option_setting_data_flash_fsblctrl1)
+                0x27030084                        __option_setting_data_flash_fsblctrl1_reg$$Limit = .
+
+.option_setting_data_flash_fsblctrl1.endof
+                0x27030084        0x0
+                0x27030084                        __ddsc_OPTION_SETTING_DATA_FLASH_FSBLCTRL1_END = .
+
+.option_setting_data_flash_fsblctrl2.startof
+                0x27030088        0x0
+                0x27030088                        __ddsc_OPTION_SETTING_DATA_FLASH_FSBLCTRL2_START = .
+
+__option_setting_data_flash_fsblctrl2_reg$$
+                0x27030088        0x0
+                0x27030088                        __option_setting_data_flash_fsblctrl2_reg$$Base = .
+ *(.option_setting_data_flash_fsblctrl2)
+                0x27030088                        __option_setting_data_flash_fsblctrl2_reg$$Limit = .
+
+.option_setting_data_flash_fsblctrl2.endof
+                0x27030088        0x0
+                0x27030088                        __ddsc_OPTION_SETTING_DATA_FLASH_FSBLCTRL2_END = .
+
+.option_setting_data_flash_sacc0.startof
+                0x2703008c        0x0
+                0x2703008c                        __ddsc_OPTION_SETTING_DATA_FLASH_SACC0_START = .
+
+__option_setting_data_flash_sacc0_reg$$
+                0x2703008c        0x0
+                0x2703008c                        __option_setting_data_flash_sacc0_reg$$Base = .
+ *(.option_setting_data_flash_sacc0)
+                0x2703008c                        __option_setting_data_flash_sacc0_reg$$Limit = .
+
+.option_setting_data_flash_sacc0.endof
+                0x2703008c        0x0
+                0x2703008c                        __ddsc_OPTION_SETTING_DATA_FLASH_SACC0_END = .
+
+.option_setting_data_flash_sacc1.startof
+                0x27030090        0x0
+                0x27030090                        __ddsc_OPTION_SETTING_DATA_FLASH_SACC1_START = .
+
+__option_setting_data_flash_sacc1_reg$$
+                0x27030090        0x0
+                0x27030090                        __option_setting_data_flash_sacc1_reg$$Base = .
+ *(.option_setting_data_flash_sacc1)
+                0x27030090                        __option_setting_data_flash_sacc1_reg$$Limit = .
+
+.option_setting_data_flash_sacc1.endof
+                0x27030090        0x0
+                0x27030090                        __ddsc_OPTION_SETTING_DATA_FLASH_SACC1_END = .
+
+.option_setting_data_flash_samr.startof
+                0x27030094        0x0
+                0x27030094                        __ddsc_OPTION_SETTING_DATA_FLASH_SAMR_START = .
+
+__option_setting_data_flash_samr_reg$$
+                0x27030094        0x0
+                0x27030094                        __option_setting_data_flash_samr_reg$$Base = .
+ *(.option_setting_data_flash_samr)
+                0x27030094                        __option_setting_data_flash_samr_reg$$Limit = .
+
+.option_setting_data_flash_samr.endof
+                0x27030094        0x0
+                0x27030094                        __ddsc_OPTION_SETTING_DATA_FLASH_SAMR_END = .
+OUTPUT(minimal_B.elf elf32-littlearm)
+LOAD linker stubs
+
+.ARM.attributes
+                0x00000000       0x3a
+ .ARM.attributes
+                0x00000000       0x24 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crti.o
+ .ARM.attributes
+                0x00000024       0x36 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crtbegin.o
+ .ARM.attributes
+                0x0000005a       0x28 ./src/x25519/x25519-cortex-m4-gcc.o
+ .ARM.attributes
+                0x00000082       0x3e ./src/mlkem/cbd.o
+ .ARM.attributes
+                0x000000c0       0x25 ./src/mlkem/fastaddsub.o
+ .ARM.attributes
+                0x000000e5       0x25 ./src/mlkem/fastbasemul.o
+ .ARM.attributes
+                0x0000010a       0x3e ./src/mlkem/indcpa.o
+ .ARM.attributes
+                0x00000148       0x3e ./src/mlkem/kem.o
+ .ARM.attributes
+                0x00000186       0x3e ./src/mlkem/matacc.o
+ .ARM.attributes
+                0x000001c4       0x25 ./src/mlkem/matacc_asm.o
+ .ARM.attributes
+                0x000001e9       0x3e ./src/mlkem/ntt.o
+ .ARM.attributes
+                0x00000227       0x3e ./src/mlkem/poly.o
+ .ARM.attributes
+                0x00000265       0x25 ./src/mlkem/poly_asm.o
+ .ARM.attributes
+                0x0000028a       0x3e ./src/mlkem/poly_mve.o
+ .ARM.attributes
+                0x000002c8       0x3e ./src/mlkem/polyvec.o
+ .ARM.attributes
+                0x00000306       0x3e ./src/mlkem/randombytes_det.o
+ .ARM.attributes
+                0x00000344       0x25 ./src/mlkem/reduce.o
+ .ARM.attributes
+                0x00000369       0x3e ./src/mlkem/symmetric-fips202.o
+ .ARM.attributes
+                0x000003a7       0x3e ./src/mlkem/verify.o
+ .ARM.attributes
+                0x000003e5       0x3e ./src/keccak/fips202.o
+ .ARM.attributes
+                0x00000423       0x28 ./src/keccak/keccakf1600.o
+ .ARM.attributes
+                0x0000044b       0x28 ./src/gen/expw_ntt_kyber_1_23_45_67_opt_m85.o
+ .ARM.attributes
+                0x00000473       0x28 ./src/gen/expy_intt_kyber_1_23_45_67_opt_m85_plantard.o
+ .ARM.attributes
+                0x0000049b       0x28 ./src/gen/fe25519_mul_sched.o
+ .ARM.attributes
+                0x000004c3       0x28 ./src/gen/fe25519_sqr_bb.o
+ .ARM.attributes
+                0x000004eb       0x28 ./src/gen/x01_dispatch.o
+ .ARM.attributes
+                0x00000513       0x28 ./src/gen/x02_dispatch.o
+ .ARM.attributes
+                0x0000053b       0x28 ./src/gen/x25519_base_shim.o
+ .ARM.attributes
+                0x00000563       0x28 ./src/gen/x25519_comb_asm.o
+ .ARM.attributes
+                0x0000058b       0x3e ./src/hal_entry.o
+ .ARM.attributes
+                0x000005c9       0x3e ./src/hal_warmstart.o
+ .ARM.attributes
+                0x00000607       0x3e ./src/harness.o
+ .ARM.attributes
+                0x00000645       0x3e ./src/itcm_pad.o
+ .ARM.attributes
+                0x00000683       0x3e ./src/x25519_base.o
+ .ARM.attributes
+                0x000006c1       0x3e ./ra_gen/common_data.o
+ .ARM.attributes
+                0x000006ff       0x3e ./ra_gen/main.o
+ .ARM.attributes
+                0x0000073d       0x3e ./ra_gen/pin_data.o
+ .ARM.attributes
+                0x0000077b       0x3e ./ra/board/ra8m1_ek/board_init.o
+ .ARM.attributes
+                0x000007b9       0x3e ./ra/board/ra8m1_ek/board_leds.o
+ .ARM.attributes
+                0x000007f7       0x3e ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.o
+ .ARM.attributes
+                0x00000835       0x3e ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.o
+ .ARM.attributes
+                0x00000873       0x3e ./ra/fsp/src/bsp/mcu/all/bsp_clocks.o
+ .ARM.attributes
+                0x000008b1       0x3e ./ra/fsp/src/bsp/mcu/all/bsp_common.o
+ .ARM.attributes
+                0x000008ef       0x3e ./ra/fsp/src/bsp/mcu/all/bsp_delay.o
+ .ARM.attributes
+                0x0000092d       0x3e ./ra/fsp/src/bsp/mcu/all/bsp_group_irq.o
+ .ARM.attributes
+                0x0000096b       0x3e ./ra/fsp/src/bsp/mcu/all/bsp_io.o
+ .ARM.attributes
+                0x000009a9       0x3e ./ra/fsp/src/bsp/mcu/all/bsp_irq.o
+ .ARM.attributes
+                0x000009e7       0x3e ./ra/fsp/src/bsp/mcu/all/bsp_register_protection.o
+ .ARM.attributes
+                0x00000a25       0x3e ./ra/fsp/src/bsp/mcu/ra8m1/bsp_linker.o
+ .ARM.attributes
+                0x00000a63       0x3e ./ra/fsp/src/r_ioport/r_ioport.o
+ .ARM.attributes
+                0x00000aa1       0x36 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-memcmp.o)
+ .ARM.attributes
+                0x00000ad7       0x36 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard/crtend.o
+
+.comment        0x00000000       0x44
+ .comment       0x00000000       0x44 ./src/mlkem/cbd.o
+                                 0x45 (size before relaxing)
+ .comment       0x00000044       0x45 ./src/mlkem/indcpa.o
+ .comment       0x00000044       0x45 ./src/mlkem/kem.o
+ .comment       0x00000044       0x45 ./src/mlkem/matacc.o
+ .comment       0x00000044       0x45 ./src/mlkem/ntt.o
+ .comment       0x00000044       0x45 ./src/mlkem/poly.o
+ .comment       0x00000044       0x45 ./src/mlkem/poly_mve.o
+ .comment       0x00000044       0x45 ./src/mlkem/polyvec.o
+ .comment       0x00000044       0x45 ./src/mlkem/randombytes_det.o
+ .comment       0x00000044       0x45 ./src/mlkem/symmetric-fips202.o
+ .comment       0x00000044       0x45 ./src/mlkem/verify.o
+ .comment       0x00000044       0x45 ./src/keccak/fips202.o
+ .comment       0x00000044       0x45 ./src/hal_entry.o
+ .comment       0x00000044       0x45 ./src/hal_warmstart.o
+ .comment       0x00000044       0x45 ./src/harness.o
+ .comment       0x00000044       0x45 ./src/itcm_pad.o
+ .comment       0x00000044       0x45 ./src/x25519_base.o
+ .comment       0x00000044       0x45 ./ra_gen/common_data.o
+ .comment       0x00000044       0x45 ./ra_gen/main.o
+ .comment       0x00000044       0x45 ./ra_gen/pin_data.o
+ .comment       0x00000044       0x45 ./ra/board/ra8m1_ek/board_init.o
+ .comment       0x00000044       0x45 ./ra/board/ra8m1_ek/board_leds.o
+ .comment       0x00000044       0x45 ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.o
+ .comment       0x00000044       0x45 ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.o
+ .comment       0x00000044       0x45 ./ra/fsp/src/bsp/mcu/all/bsp_clocks.o
+ .comment       0x00000044       0x45 ./ra/fsp/src/bsp/mcu/all/bsp_common.o
+ .comment       0x00000044       0x45 ./ra/fsp/src/bsp/mcu/all/bsp_delay.o
+ .comment       0x00000044       0x45 ./ra/fsp/src/bsp/mcu/all/bsp_group_irq.o
+ .comment       0x00000044       0x45 ./ra/fsp/src/bsp/mcu/all/bsp_io.o
+ .comment       0x00000044       0x45 ./ra/fsp/src/bsp/mcu/all/bsp_irq.o
+ .comment       0x00000044       0x45 ./ra/fsp/src/bsp/mcu/all/bsp_register_protection.o
+ .comment       0x00000044       0x45 ./ra/fsp/src/bsp/mcu/ra8m1/bsp_linker.o
+ .comment       0x00000044       0x45 ./ra/fsp/src/r_ioport/r_ioport.o
+
+.debug_line     0x00000000     0xcaf4
+ .debug_line    0x00000000      0x2ca ./src/x25519/x25519-cortex-m4-gcc.o
+ .debug_line    0x000002ca      0x141 ./src/mlkem/cbd.o
+ .debug_line    0x0000040b       0x6e ./src/mlkem/fastaddsub.o
+ .debug_line    0x00000479       0x9a ./src/mlkem/fastbasemul.o
+ .debug_line    0x00000513      0x630 ./src/mlkem/indcpa.o
+ .debug_line    0x00000b43      0x354 ./src/mlkem/kem.o
+ .debug_line    0x00000e97      0x3bc ./src/mlkem/matacc.o
+ .debug_line    0x00001253       0xf9 ./src/mlkem/matacc_asm.o
+ .debug_line    0x0000134c      0x1f9 ./src/mlkem/ntt.o
+ .debug_line    0x00001545      0x41c ./src/mlkem/poly.o
+ .debug_line    0x00001961       0x84 ./src/mlkem/poly_asm.o
+ .debug_line    0x000019e5     0x3781 ./src/mlkem/poly_mve.o
+ .debug_line    0x00005166      0x54d ./src/mlkem/polyvec.o
+ .debug_line    0x000056b3      0x225 ./src/mlkem/randombytes_det.o
+ .debug_line    0x000058d8       0x74 ./src/mlkem/reduce.o
+ .debug_line    0x0000594c      0x443 ./src/mlkem/symmetric-fips202.o
+ .debug_line    0x00005d8f      0x244 ./src/mlkem/verify.o
+ .debug_line    0x00005fd3      0xee8 ./src/keccak/fips202.o
+ .debug_line    0x00006ebb       0xdf ./src/keccak/keccakf1600.o
+ .debug_line    0x00006f9a      0x14a ./src/gen/expw_ntt_kyber_1_23_45_67_opt_m85.o
+ .debug_line    0x000070e4      0x18b ./src/gen/expy_intt_kyber_1_23_45_67_opt_m85_plantard.o
+ .debug_line    0x0000726f       0xc0 ./src/gen/fe25519_mul_sched.o
+ .debug_line    0x0000732f       0xa8 ./src/gen/fe25519_sqr_bb.o
+ .debug_line    0x000073d7       0x49 ./src/gen/x01_dispatch.o
+ .debug_line    0x00007420       0x49 ./src/gen/x02_dispatch.o
+ .debug_line    0x00007469       0x6e ./src/gen/x25519_base_shim.o
+ .debug_line    0x000074d7       0xb7 ./src/gen/x25519_comb_asm.o
+ .debug_line    0x0000758e      0x47c ./src/hal_entry.o
+ .debug_line    0x00007a0a      0x2e8 ./src/hal_warmstart.o
+ .debug_line    0x00007cf2      0x6df ./src/harness.o
+ .debug_line    0x000083d1      0x11f ./src/itcm_pad.o
+ .debug_line    0x000084f0      0x75b ./src/x25519_base.o
+ .debug_line    0x00008c4b      0x291 ./ra_gen/common_data.o
+ .debug_line    0x00008edc       0x5e ./ra_gen/main.o
+ .debug_line    0x00008f3a      0x207 ./ra_gen/pin_data.o
+ .debug_line    0x00009141       0x5a ./ra/board/ra8m1_ek/board_init.o
+ .debug_line    0x0000919b      0x1c8 ./ra/board/ra8m1_ek/board_leds.o
+ .debug_line    0x00009363      0x1e9 ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.o
+ .debug_line    0x0000954c      0x897 ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.o
+ .debug_line    0x00009de3     0x1001 ./ra/fsp/src/bsp/mcu/all/bsp_clocks.o
+ .debug_line    0x0000ade4      0x29d ./ra/fsp/src/bsp/mcu/all/bsp_common.o
+ .debug_line    0x0000b081      0x2e2 ./ra/fsp/src/bsp/mcu/all/bsp_delay.o
+ .debug_line    0x0000b363      0x361 ./ra/fsp/src/bsp/mcu/all/bsp_group_irq.o
+ .debug_line    0x0000b6c4      0x17d ./ra/fsp/src/bsp/mcu/all/bsp_io.o
+ .debug_line    0x0000b841      0x293 ./ra/fsp/src/bsp/mcu/all/bsp_irq.o
+ .debug_line    0x0000bad4      0x3b7 ./ra/fsp/src/bsp/mcu/all/bsp_register_protection.o
+ .debug_line    0x0000be8b      0x14d ./ra/fsp/src/bsp/mcu/ra8m1/bsp_linker.o
+ .debug_line    0x0000bfd8      0xb1c ./ra/fsp/src/r_ioport/r_ioport.o
+
+.debug_line_str
+                0x00000000      0x17f
+ .debug_line_str
+                0x00000000      0x17f ./src/x25519/x25519-cortex-m4-gcc.o
+                                 0x55 (size before relaxing)
+ .debug_line_str
+                0x0000017f       0x4a ./src/mlkem/fastaddsub.o
+ .debug_line_str
+                0x0000017f       0x4b ./src/mlkem/fastbasemul.o
+ .debug_line_str
+                0x0000017f       0x4a ./src/mlkem/matacc_asm.o
+ .debug_line_str
+                0x0000017f       0x48 ./src/mlkem/poly_asm.o
+ .debug_line_str
+                0x0000017f       0x46 ./src/mlkem/reduce.o
+ .debug_line_str
+                0x0000017f       0x4c ./src/keccak/keccakf1600.o
+ .debug_line_str
+                0x0000017f       0x5f ./src/gen/expw_ntt_kyber_1_23_45_67_opt_m85.o
+ .debug_line_str
+                0x0000017f       0x69 ./src/gen/expy_intt_kyber_1_23_45_67_opt_m85_plantard.o
+ .debug_line_str
+                0x0000017f       0x4f ./src/gen/fe25519_mul_sched.o
+ .debug_line_str
+                0x0000017f       0x4c ./src/gen/fe25519_sqr_bb.o
+ .debug_line_str
+                0x0000017f       0x4a ./src/gen/x01_dispatch.o
+ .debug_line_str
+                0x0000017f       0x4a ./src/gen/x02_dispatch.o
+ .debug_line_str
+                0x0000017f       0x4e ./src/gen/x25519_base_shim.o
+ .debug_line_str
+                0x0000017f       0x4d ./src/gen/x25519_comb_asm.o
+
+.debug_info     0x00000000    0x3831f
+ .debug_info    0x00000000       0x9d ./src/x25519/x25519-cortex-m4-gcc.o
+ .debug_info    0x0000009d      0x1aa ./src/mlkem/cbd.o
+ .debug_info    0x00000247       0x25 ./src/mlkem/fastaddsub.o
+ .debug_info    0x0000026c       0x25 ./src/mlkem/fastbasemul.o
+ .debug_info    0x00000291     0x12f6 ./src/mlkem/indcpa.o
+ .debug_info    0x00001587      0x5fe ./src/mlkem/kem.o
+ .debug_info    0x00001b85      0xd4a ./src/mlkem/matacc.o
+ .debug_info    0x000028cf       0x6f ./src/mlkem/matacc_asm.o
+ .debug_info    0x0000293e      0x33f ./src/mlkem/ntt.o
+ .debug_info    0x00002c7d     0x1037 ./src/mlkem/poly.o
+ .debug_info    0x00003cb4       0x4b ./src/mlkem/poly_asm.o
+ .debug_info    0x00003cff     0x745c ./src/mlkem/poly_mve.o
+ .debug_info    0x0000b15b      0x60a ./src/mlkem/polyvec.o
+ .debug_info    0x0000b765      0x135 ./src/mlkem/randombytes_det.o
+ .debug_info    0x0000b89a       0x25 ./src/mlkem/reduce.o
+ .debug_info    0x0000b8bf      0x6c2 ./src/mlkem/symmetric-fips202.o
+ .debug_info    0x0000bf81      0x183 ./src/mlkem/verify.o
+ .debug_info    0x0000c104     0x2250 ./src/keccak/fips202.o
+ .debug_info    0x0000e354       0x25 ./src/keccak/keccakf1600.o
+ .debug_info    0x0000e379       0x25 ./src/gen/expw_ntt_kyber_1_23_45_67_opt_m85.o
+ .debug_info    0x0000e39e       0x25 ./src/gen/expy_intt_kyber_1_23_45_67_opt_m85_plantard.o
+ .debug_info    0x0000e3c3       0x33 ./src/gen/fe25519_mul_sched.o
+ .debug_info    0x0000e3f6       0x33 ./src/gen/fe25519_sqr_bb.o
+ .debug_info    0x0000e429       0x31 ./src/gen/x01_dispatch.o
+ .debug_info    0x0000e45a       0x31 ./src/gen/x02_dispatch.o
+ .debug_info    0x0000e48b       0x52 ./src/gen/x25519_base_shim.o
+ .debug_info    0x0000e4dd       0x3e ./src/gen/x25519_comb_asm.o
+ .debug_info    0x0000e51b      0xfbb ./src/hal_entry.o
+ .debug_info    0x0000f4d6      0xff8 ./src/hal_warmstart.o
+ .debug_info    0x000104ce      0xdc4 ./src/harness.o
+ .debug_info    0x00011292       0xa9 ./src/itcm_pad.o
+ .debug_info    0x0001133b      0xeb2 ./src/x25519_base.o
+ .debug_info    0x000121ed     0x125c ./ra_gen/common_data.o
+ .debug_info    0x00013449       0xaa ./ra_gen/main.o
+ .debug_info    0x000134f3      0xa34 ./ra_gen/pin_data.o
+ .debug_info    0x00013f27       0xa5 ./ra/board/ra8m1_ek/board_init.o
+ .debug_info    0x00013fcc      0x7a5 ./ra/board/ra8m1_ek/board_leds.o
+ .debug_info    0x00014771      0x187 ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.o
+ .debug_info    0x000148f8     0x8047 ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.o
+ .debug_info    0x0001c93f     0x8af2 ./ra/fsp/src/bsp/mcu/all/bsp_clocks.o
+ .debug_info    0x00025431      0x96f ./ra/fsp/src/bsp/mcu/all/bsp_common.o
+ .debug_info    0x00025da0      0x204 ./ra/fsp/src/bsp/mcu/all/bsp_delay.o
+ .debug_info    0x00025fa4     0x11c7 ./ra/fsp/src/bsp/mcu/all/bsp_group_irq.o
+ .debug_info    0x0002716b       0xb2 ./ra/fsp/src/bsp/mcu/all/bsp_io.o
+ .debug_info    0x0002721d     0x11f6 ./ra/fsp/src/bsp/mcu/all/bsp_irq.o
+ .debug_info    0x00028413     0x5dac ./ra/fsp/src/bsp/mcu/all/bsp_register_protection.o
+ .debug_info    0x0002e1bf      0x642 ./ra/fsp/src/bsp/mcu/ra8m1/bsp_linker.o
+ .debug_info    0x0002e801     0x9b1e ./ra/fsp/src/r_ioport/r_ioport.o
+
+.debug_abbrev   0x00000000     0x40bd
+ .debug_abbrev  0x00000000       0x26 ./src/x25519/x25519-cortex-m4-gcc.o
+ .debug_abbrev  0x00000026       0xec ./src/mlkem/cbd.o
+ .debug_abbrev  0x00000112       0x14 ./src/mlkem/fastaddsub.o
+ .debug_abbrev  0x00000126       0x14 ./src/mlkem/fastbasemul.o
+ .debug_abbrev  0x0000013a      0x1a3 ./src/mlkem/indcpa.o
+ .debug_abbrev  0x000002dd      0x162 ./src/mlkem/kem.o
+ .debug_abbrev  0x0000043f      0x1f6 ./src/mlkem/matacc.o
+ .debug_abbrev  0x00000635       0x28 ./src/mlkem/matacc_asm.o
+ .debug_abbrev  0x0000065d      0x18f ./src/mlkem/ntt.o
+ .debug_abbrev  0x000007ec      0x232 ./src/mlkem/poly.o
+ .debug_abbrev  0x00000a1e       0x28 ./src/mlkem/poly_asm.o
+ .debug_abbrev  0x00000a46      0x5d5 ./src/mlkem/poly_mve.o
+ .debug_abbrev  0x0000101b      0x134 ./src/mlkem/polyvec.o
+ .debug_abbrev  0x0000114f       0xda ./src/mlkem/randombytes_det.o
+ .debug_abbrev  0x00001229       0x14 ./src/mlkem/reduce.o
+ .debug_abbrev  0x0000123d      0x230 ./src/mlkem/symmetric-fips202.o
+ .debug_abbrev  0x0000146d       0xaa ./src/mlkem/verify.o
+ .debug_abbrev  0x00001517      0x3a7 ./src/keccak/fips202.o
+ .debug_abbrev  0x000018be       0x14 ./src/keccak/keccakf1600.o
+ .debug_abbrev  0x000018d2       0x14 ./src/gen/expw_ntt_kyber_1_23_45_67_opt_m85.o
+ .debug_abbrev  0x000018e6       0x14 ./src/gen/expy_intt_kyber_1_23_45_67_opt_m85_plantard.o
+ .debug_abbrev  0x000018fa       0x28 ./src/gen/fe25519_mul_sched.o
+ .debug_abbrev  0x00001922       0x28 ./src/gen/fe25519_sqr_bb.o
+ .debug_abbrev  0x0000194a       0x28 ./src/gen/x01_dispatch.o
+ .debug_abbrev  0x00001972       0x28 ./src/gen/x02_dispatch.o
+ .debug_abbrev  0x0000199a       0x28 ./src/gen/x25519_base_shim.o
+ .debug_abbrev  0x000019c2       0x28 ./src/gen/x25519_comb_asm.o
+ .debug_abbrev  0x000019ea      0x365 ./src/hal_entry.o
+ .debug_abbrev  0x00001d4f      0x158 ./src/hal_warmstart.o
+ .debug_abbrev  0x00001ea7      0x310 ./src/harness.o
+ .debug_abbrev  0x000021b7       0x61 ./src/itcm_pad.o
+ .debug_abbrev  0x00002218      0x2d1 ./src/x25519_base.o
+ .debug_abbrev  0x000024e9      0x13a ./ra_gen/common_data.o
+ .debug_abbrev  0x00002623       0x61 ./ra_gen/main.o
+ .debug_abbrev  0x00002684      0x111 ./ra_gen/pin_data.o
+ .debug_abbrev  0x00002795       0x5b ./ra/board/ra8m1_ek/board_init.o
+ .debug_abbrev  0x000027f0       0xc6 ./ra/board/ra8m1_ek/board_leds.o
+ .debug_abbrev  0x000028b6      0x102 ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.o
+ .debug_abbrev  0x000029b8      0x404 ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.o
+ .debug_abbrev  0x00002dbc      0x409 ./ra/fsp/src/bsp/mcu/all/bsp_clocks.o
+ .debug_abbrev  0x000031c5      0x188 ./ra/fsp/src/bsp/mcu/all/bsp_common.o
+ .debug_abbrev  0x0000334d      0x10d ./ra/fsp/src/bsp/mcu/all/bsp_delay.o
+ .debug_abbrev  0x0000345a      0x25d ./ra/fsp/src/bsp/mcu/all/bsp_group_irq.o
+ .debug_abbrev  0x000036b7       0x5e ./ra/fsp/src/bsp/mcu/all/bsp_io.o
+ .debug_abbrev  0x00003715      0x1ce ./ra/fsp/src/bsp/mcu/all/bsp_irq.o
+ .debug_abbrev  0x000038e3      0x26c ./ra/fsp/src/bsp/mcu/all/bsp_register_protection.o
+ .debug_abbrev  0x00003b4f       0xe3 ./ra/fsp/src/bsp/mcu/ra8m1/bsp_linker.o
+ .debug_abbrev  0x00003c32      0x48b ./ra/fsp/src/r_ioport/r_ioport.o
+
+.debug_aranges  0x00000000      0xae8
+ .debug_aranges
+                0x00000000       0x50 ./src/x25519/x25519-cortex-m4-gcc.o
+ .debug_aranges
+                0x00000050       0x20 ./src/mlkem/cbd.o
+ .debug_aranges
+                0x00000070       0x20 ./src/mlkem/fastaddsub.o
+ .debug_aranges
+                0x00000090       0x20 ./src/mlkem/fastbasemul.o
+ .debug_aranges
+                0x000000b0       0x38 ./src/mlkem/indcpa.o
+ .debug_aranges
+                0x000000e8       0x40 ./src/mlkem/kem.o
+ .debug_aranges
+                0x00000128       0x28 ./src/mlkem/matacc.o
+ .debug_aranges
+                0x00000150       0x20 ./src/mlkem/matacc_asm.o
+ .debug_aranges
+                0x00000170       0x30 ./src/mlkem/ntt.o
+ .debug_aranges
+                0x000001a0       0xd8 ./src/mlkem/poly.o
+ .debug_aranges
+                0x00000278       0x20 ./src/mlkem/poly_asm.o
+ .debug_aranges
+                0x00000298       0xc0 ./src/mlkem/poly_mve.o
+ .debug_aranges
+                0x00000358       0x58 ./src/mlkem/polyvec.o
+ .debug_aranges
+                0x000003b0       0x28 ./src/mlkem/randombytes_det.o
+ .debug_aranges
+                0x000003d8       0x20 ./src/mlkem/reduce.o
+ .debug_aranges
+                0x000003f8       0x30 ./src/mlkem/symmetric-fips202.o
+ .debug_aranges
+                0x00000428       0x28 ./src/mlkem/verify.o
+ .debug_aranges
+                0x00000450      0x1a8 ./src/keccak/fips202.o
+ .debug_aranges
+                0x000005f8       0x20 ./src/keccak/keccakf1600.o
+ .debug_aranges
+                0x00000618       0x20 ./src/gen/expw_ntt_kyber_1_23_45_67_opt_m85.o
+ .debug_aranges
+                0x00000638       0x20 ./src/gen/expy_intt_kyber_1_23_45_67_opt_m85_plantard.o
+ .debug_aranges
+                0x00000658       0x20 ./src/gen/fe25519_mul_sched.o
+ .debug_aranges
+                0x00000678       0x20 ./src/gen/fe25519_sqr_bb.o
+ .debug_aranges
+                0x00000698       0x20 ./src/gen/x01_dispatch.o
+ .debug_aranges
+                0x000006b8       0x20 ./src/gen/x02_dispatch.o
+ .debug_aranges
+                0x000006d8       0x20 ./src/gen/x25519_base_shim.o
+ .debug_aranges
+                0x000006f8       0x20 ./src/gen/x25519_comb_asm.o
+ .debug_aranges
+                0x00000718       0x20 ./src/hal_entry.o
+ .debug_aranges
+                0x00000738       0x20 ./src/hal_warmstart.o
+ .debug_aranges
+                0x00000758       0x68 ./src/harness.o
+ .debug_aranges
+                0x000007c0       0x18 ./src/itcm_pad.o
+ .debug_aranges
+                0x000007d8       0x20 ./src/x25519_base.o
+ .debug_aranges
+                0x000007f8       0x20 ./ra_gen/common_data.o
+ .debug_aranges
+                0x00000818       0x20 ./ra_gen/main.o
+ .debug_aranges
+                0x00000838       0x18 ./ra_gen/pin_data.o
+ .debug_aranges
+                0x00000850       0x20 ./ra/board/ra8m1_ek/board_init.o
+ .debug_aranges
+                0x00000870       0x18 ./ra/board/ra8m1_ek/board_leds.o
+ .debug_aranges
+                0x00000888       0x28 ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.o
+ .debug_aranges
+                0x000008b0       0x30 ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.o
+ .debug_aranges
+                0x000008e0       0x80 ./ra/fsp/src/bsp/mcu/all/bsp_clocks.o
+ .debug_aranges
+                0x00000960       0x30 ./ra/fsp/src/bsp/mcu/all/bsp_common.o
+ .debug_aranges
+                0x00000990       0x28 ./ra/fsp/src/bsp/mcu/all/bsp_delay.o
+ .debug_aranges
+                0x000009b8       0x28 ./ra/fsp/src/bsp/mcu/all/bsp_group_irq.o
+ .debug_aranges
+                0x000009e0       0x18 ./ra/fsp/src/bsp/mcu/all/bsp_io.o
+ .debug_aranges
+                0x000009f8       0x20 ./ra/fsp/src/bsp/mcu/all/bsp_irq.o
+ .debug_aranges
+                0x00000a18       0x28 ./ra/fsp/src/bsp/mcu/all/bsp_register_protection.o
+ .debug_aranges
+                0x00000a40       0x18 ./ra/fsp/src/bsp/mcu/ra8m1/bsp_linker.o
+ .debug_aranges
+                0x00000a58       0x90 ./ra/fsp/src/r_ioport/r_ioport.o
+
+.debug_str      0x00000000     0xd067
+ .debug_str     0x00000000     0xd067 ./src/x25519/x25519-cortex-m4-gcc.o
+                                 0xfc (size before relaxing)
+ .debug_str     0x0000d067      0x209 ./src/mlkem/cbd.o
+ .debug_str     0x0000d067       0x58 ./src/mlkem/fastaddsub.o
+ .debug_str     0x0000d067       0x59 ./src/mlkem/fastbasemul.o
+ .debug_str     0x0000d067      0x482 ./src/mlkem/indcpa.o
+ .debug_str     0x0000d067      0x2ec ./src/mlkem/kem.o
+ .debug_str     0x0000d067      0x3e4 ./src/mlkem/matacc.o
+ .debug_str     0x0000d067       0xdc ./src/mlkem/matacc_asm.o
+ .debug_str     0x0000d067      0x33d ./src/mlkem/ntt.o
+ .debug_str     0x0000d067      0x5db ./src/mlkem/poly.o
+ .debug_str     0x0000d067       0xa6 ./src/mlkem/poly_asm.o
+ .debug_str     0x0000d067      0x9c3 ./src/mlkem/poly_mve.o
+ .debug_str     0x0000d067      0x2f7 ./src/mlkem/polyvec.o
+ .debug_str     0x0000d067      0x248 ./src/mlkem/randombytes_det.o
+ .debug_str     0x0000d067       0x54 ./src/mlkem/reduce.o
+ .debug_str     0x0000d067      0x3af ./src/mlkem/symmetric-fips202.o
+ .debug_str     0x0000d067      0x1fe ./src/mlkem/verify.o
+ .debug_str     0x0000d067      0x791 ./src/keccak/fips202.o
+ .debug_str     0x0000d067       0x5a ./src/keccak/keccakf1600.o
+ .debug_str     0x0000d067       0x6d ./src/gen/expw_ntt_kyber_1_23_45_67_opt_m85.o
+ .debug_str     0x0000d067       0x77 ./src/gen/expy_intt_kyber_1_23_45_67_opt_m85_plantard.o
+ .debug_str     0x0000d067       0x6f ./src/gen/fe25519_mul_sched.o
+ .debug_str     0x0000d067       0x69 ./src/gen/fe25519_sqr_bb.o
+ .debug_str     0x0000d067       0x64 ./src/gen/x01_dispatch.o
+ .debug_str     0x0000d067       0x64 ./src/gen/x02_dispatch.o
+ .debug_str     0x0000d067       0xa0 ./src/gen/x25519_base_shim.o
+ .debug_str     0x0000d067       0x7c ./src/gen/x25519_comb_asm.o
+ .debug_str     0x0000d067     0x1a08 ./src/hal_entry.o
+ .debug_str     0x0000d067     0x3235 ./src/hal_warmstart.o
+ .debug_str     0x0000d067      0x52b ./src/harness.o
+ .debug_str     0x0000d067      0x1f7 ./src/itcm_pad.o
+ .debug_str     0x0000d067      0x3f3 ./src/x25519_base.o
+ .debug_str     0x0000d067     0x3400 ./ra_gen/common_data.o
+ .debug_str     0x0000d067      0x1ee ./ra_gen/main.o
+ .debug_str     0x0000d067     0x1dc4 ./ra_gen/pin_data.o
+ .debug_str     0x0000d067      0x200 ./ra/board/ra8m1_ek/board_init.o
+ .debug_str     0x0000d067     0x1710 ./ra/board/ra8m1_ek/board_leds.o
+ .debug_str     0x0000d067      0x28c ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.o
+ .debug_str     0x0000d067     0x380e ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.o
+ .debug_str     0x0000d067     0x3a5d ./ra/fsp/src/bsp/mcu/all/bsp_clocks.o
+ .debug_str     0x0000d067     0x1cf5 ./ra/fsp/src/bsp/mcu/all/bsp_common.o
+ .debug_str     0x0000d067      0x33e ./ra/fsp/src/bsp/mcu/all/bsp_delay.o
+ .debug_str     0x0000d067     0x214a ./ra/fsp/src/bsp/mcu/all/bsp_group_irq.o
+ .debug_str     0x0000d067      0x21d ./ra/fsp/src/bsp/mcu/all/bsp_io.o
+ .debug_str     0x0000d067     0x247d ./ra/fsp/src/bsp/mcu/all/bsp_irq.o
+ .debug_str     0x0000d067     0x2874 ./ra/fsp/src/bsp/mcu/all/bsp_register_protection.o
+ .debug_str     0x0000d067      0xbdb ./ra/fsp/src/bsp/mcu/ra8m1/bsp_linker.o
+ .debug_str     0x0000d067     0x6a37 ./ra/fsp/src/r_ioport/r_ioport.o
+
+.debug_rnglists
+                0x00000000     0x21e0
+ .debug_rnglists
+                0x00000000       0x3a ./src/x25519/x25519-cortex-m4-gcc.o
+ .debug_rnglists
+                0x0000003a       0x13 ./src/mlkem/cbd.o
+ .debug_rnglists
+                0x0000004d       0x29 ./src/mlkem/indcpa.o
+ .debug_rnglists
+                0x00000076       0x2b ./src/mlkem/kem.o
+ .debug_rnglists
+                0x000000a1       0x4b ./src/mlkem/matacc.o
+ .debug_rnglists
+                0x000000ec       0x52 ./src/mlkem/ntt.o
+ .debug_rnglists
+                0x0000013e       0x9d ./src/mlkem/poly.o
+ .debug_rnglists
+                0x000001db     0x175c ./src/mlkem/poly_mve.o
+ .debug_rnglists
+                0x00001937       0x3f ./src/mlkem/polyvec.o
+ .debug_rnglists
+                0x00001976       0x25 ./src/mlkem/randombytes_det.o
+ .debug_rnglists
+                0x0000199b       0x39 ./src/mlkem/symmetric-fips202.o
+ .debug_rnglists
+                0x000019d4       0x19 ./src/mlkem/verify.o
+ .debug_rnglists
+                0x000019ed      0x23e ./src/keccak/fips202.o
+ .debug_rnglists
+                0x00001c2b       0x53 ./src/hal_entry.o
+ .debug_rnglists
+                0x00001c7e       0x13 ./src/hal_warmstart.o
+ .debug_rnglists
+                0x00001c91       0xa6 ./src/harness.o
+ .debug_rnglists
+                0x00001d37      0x144 ./src/x25519_base.o
+ .debug_rnglists
+                0x00001e7b       0x13 ./ra_gen/common_data.o
+ .debug_rnglists
+                0x00001e8e       0x13 ./ra_gen/main.o
+ .debug_rnglists
+                0x00001ea1       0x13 ./ra/board/ra8m1_ek/board_init.o
+ .debug_rnglists
+                0x00001eb4       0x19 ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.o
+ .debug_rnglists
+                0x00001ecd       0x59 ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.o
+ .debug_rnglists
+                0x00001f26      0x12f ./ra/fsp/src/bsp/mcu/all/bsp_clocks.o
+ .debug_rnglists
+                0x00002055       0x1f ./ra/fsp/src/bsp/mcu/all/bsp_common.o
+ .debug_rnglists
+                0x00002074       0x35 ./ra/fsp/src/bsp/mcu/all/bsp_delay.o
+ .debug_rnglists
+                0x000020a9       0x37 ./ra/fsp/src/bsp/mcu/all/bsp_group_irq.o
+ .debug_rnglists
+                0x000020e0       0x13 ./ra/fsp/src/bsp/mcu/all/bsp_irq.o
+ .debug_rnglists
+                0x000020f3       0x31 ./ra/fsp/src/bsp/mcu/all/bsp_register_protection.o
+ .debug_rnglists
+                0x00002124       0xbc ./ra/fsp/src/r_ioport/r_ioport.o
+
+.debug_loclists
+                0x00000000     0x9598
+ .debug_loclists
+                0x00000000       0x63 ./src/mlkem/cbd.o
+ .debug_loclists
+                0x00000063      0xce0 ./src/mlkem/indcpa.o
+ .debug_loclists
+                0x00000d43      0x1ca ./src/mlkem/kem.o
+ .debug_loclists
+                0x00000f0d      0x5ae ./src/mlkem/matacc.o
+ .debug_loclists
+                0x000014bb       0xb1 ./src/mlkem/ntt.o
+ .debug_loclists
+                0x0000156c      0x6db ./src/mlkem/poly.o
+ .debug_loclists
+                0x00001c47     0x4164 ./src/mlkem/poly_mve.o
+ .debug_loclists
+                0x00005dab      0x327 ./src/mlkem/polyvec.o
+ .debug_loclists
+                0x000060d2       0x9c ./src/mlkem/randombytes_det.o
+ .debug_loclists
+                0x0000616e      0x317 ./src/mlkem/symmetric-fips202.o
+ .debug_loclists
+                0x00006485      0x1f0 ./src/mlkem/verify.o
+ .debug_loclists
+                0x00006675      0xff7 ./src/keccak/fips202.o
+ .debug_loclists
+                0x0000766c      0x122 ./src/hal_entry.o
+ .debug_loclists
+                0x0000778e       0x29 ./src/hal_warmstart.o
+ .debug_loclists
+                0x000077b7      0x43a ./src/harness.o
+ .debug_loclists
+                0x00007bf1      0x6f7 ./src/x25519_base.o
+ .debug_loclists
+                0x000082e8      0x1a6 ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.o
+ .debug_loclists
+                0x0000848e      0x605 ./ra/fsp/src/bsp/mcu/all/bsp_clocks.o
+ .debug_loclists
+                0x00008a93       0x20 ./ra/fsp/src/bsp/mcu/all/bsp_common.o
+ .debug_loclists
+                0x00008ab3      0x1ac ./ra/fsp/src/bsp/mcu/all/bsp_delay.o
+ .debug_loclists
+                0x00008c5f       0x73 ./ra/fsp/src/bsp/mcu/all/bsp_group_irq.o
+ .debug_loclists
+                0x00008cd2       0x3a ./ra/fsp/src/bsp/mcu/all/bsp_irq.o
+ .debug_loclists
+                0x00008d0c       0xa7 ./ra/fsp/src/bsp/mcu/all/bsp_register_protection.o
+ .debug_loclists
+                0x00008db3      0x7e5 ./ra/fsp/src/r_ioport/r_ioport.o
+
+.debug_frame    0x00000000     0x18c0
+ .debug_frame   0x00000000       0x20 ./src/mlkem/cbd.o
+ .debug_frame   0x00000020       0xc4 ./src/mlkem/indcpa.o
+ .debug_frame   0x000000e4       0xbc ./src/mlkem/kem.o
+ .debug_frame   0x000001a0       0xf0 ./src/mlkem/matacc.o
+ .debug_frame   0x00000290       0x64 ./src/mlkem/ntt.o
+ .debug_frame   0x000002f4      0x1b0 ./src/mlkem/poly.o
+ .debug_frame   0x000004a4      0x59c ./src/mlkem/poly_mve.o
+ .debug_frame   0x00000a40      0x114 ./src/mlkem/polyvec.o
+ .debug_frame   0x00000b54       0x3c ./src/mlkem/randombytes_det.o
+ .debug_frame   0x00000b90       0x88 ./src/mlkem/symmetric-fips202.o
+ .debug_frame   0x00000c18       0x48 ./src/mlkem/verify.o
+ .debug_frame   0x00000c60      0x540 ./src/keccak/fips202.o
+ .debug_frame   0x000011a0       0x34 ./src/hal_entry.o
+ .debug_frame   0x000011d4       0x20 ./src/hal_warmstart.o
+ .debug_frame   0x000011f4      0x158 ./src/harness.o
+ .debug_frame   0x0000134c       0x40 ./src/x25519_base.o
+ .debug_frame   0x0000138c       0x20 ./ra_gen/common_data.o
+ .debug_frame   0x000013ac       0x28 ./ra_gen/main.o
+ .debug_frame   0x000013d4       0x20 ./ra/board/ra8m1_ek/board_init.o
+ .debug_frame   0x000013f4       0x38 ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.o
+ .debug_frame   0x0000142c       0x6c ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.o
+ .debug_frame   0x00001498      0x154 ./ra/fsp/src/bsp/mcu/all/bsp_clocks.o
+ .debug_frame   0x000015ec       0x40 ./ra/fsp/src/bsp/mcu/all/bsp_common.o
+ .debug_frame   0x0000162c       0x4c ./ra/fsp/src/bsp/mcu/all/bsp_delay.o
+ .debug_frame   0x00001678       0x3c ./ra/fsp/src/bsp/mcu/all/bsp_group_irq.o
+ .debug_frame   0x000016b4       0x20 ./ra/fsp/src/bsp/mcu/all/bsp_irq.o
+ .debug_frame   0x000016d4       0x48 ./ra/fsp/src/bsp/mcu/all/bsp_register_protection.o
+ .debug_frame   0x0000171c      0x17c ./ra/fsp/src/r_ioport/r_ioport.o
+ .debug_frame   0x00001898       0x28 C:/Renesas/RA/e2studio_v2026-04.2_fsp_v6.5.0/toolchains/gcc_arm/13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+dp/hard\libg_nano.a(libc_a-memcmp.o)

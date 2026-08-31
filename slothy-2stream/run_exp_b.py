@@ -1,16 +1,20 @@
 # 실험 B 드라이버: 전체 연접(약 1.3k 명령)을 분할 휴리스틱으로 최적화
-# 사용법(WSL): ~/slothy/venv/bin/python run_exp_b.py exp_b.s exp_b_opt.s
+# 사용법(WSL): PYTHONHASHSEED=0 ~/slothy/venv/bin/python run_exp_b.py exp_b.s exp_b_opt.s
 import logging
+import os
 import sys
 
-sys.path.insert(0, "/home/cnscjs1395/slothy")
+sys.path.insert(0, os.environ.get("SLOTHY_ROOT", "/home/cnscjs1395/slothy"))
 
 import slothy.targets.arm_v81m.arch_v81m as Arch_Armv81M
 import slothy.targets.arm_v81m.cortex_m85r1 as Target_CortexM85
 from slothy import Slothy
+from solver_repro import force_single_worker, print_manifest
 
 logging.basicConfig(level=logging.INFO, stream=sys.stdout)
 
+solver_manifest = force_single_worker(seed=42)
+print_manifest(solver_manifest)
 sl = Slothy(Arch_Armv81M, Target_CortexM85)
 sl.load_source_from_file(sys.argv[1])
 sl.config.variable_size = True
@@ -25,6 +29,7 @@ sl.config.split_heuristic_factor = 12
 sl.config.split_heuristic_repeat = 1
 sl.config.split_heuristic_stepsize = 0.08
 sl.config.timeout = 600
+sl.config.solver_random_seed = 42
 sl.optimize(start="start", end="end")
 try:
     code = sl.get_source_as_string()

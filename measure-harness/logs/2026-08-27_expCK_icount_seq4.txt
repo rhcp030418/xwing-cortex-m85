@@ -1,0 +1,18 @@
+CPU is running at low speed (8289 kHz).
+CPU is running at low speed (8292 kHz).
+connected=Cortex-M85 target=x25519_u_bench_seq4 entry=0x020a4da4
+halted entry=0x020a4da4 return=0x0209baf0
+progress=10000 rate=163.9 instr/s
+progress=20000 rate=165.3 instr/s
+progress=30000 rate=163.2 instr/s
+progress=40000 rate=162.9 instr/s
+progress=50000 rate=162.6 instr/s
+progress=60000 rate=161.7 instr/s
+progress=70000 rate=162.0 instr/s
+progress=80000 rate=161.4 instr/s
+progress=90000 rate=161.1 instr/s
+progress=100000 rate=161.2 instr/s
+completed=True instructions=105310 elapsed=653.182s
+classes=branch_loop:3468,mve_alu_shift:7416,mve_load_store:7392,scalar_alu_shift:27804,scalar_load_store:43656,scalar_multiply_mac:15574
+top_mnemonics=ldr:21612,umlal:10995,str:7184,ldr.w:5626,str.w:5400,ldc:4416,mov:4144,adc.w:3804,veor:3648,add.w:3639,adds:3375,umull:3085,stc:2928,bic.w:2316,orr.w:1686,mov.w:1402,subs:1331,ldrd:1277,adds.w:1260,vshl.s32:1248,vsri.32:1248,vbic:1200,and.w:1160,orrs.w:1152,strd:1026,lsls:990,mla:780,add:779,mul.w:714,lsrs:641
+missing=

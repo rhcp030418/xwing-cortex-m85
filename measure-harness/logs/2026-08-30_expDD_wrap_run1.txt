@@ -1,0 +1,43 @@
+CPU is running at low speed (8295 kHz).
+CPU is running at low speed (8295 kHz).
+connected: Cortex-M85
+flash code readback PASS: bytes=114876 segments=1 sha256=545505DB68A75B70F57FF83BF34FA9C4B4CB00B10B992C4F46E031B9F999E543
+measurement ELF SHA-256: CBBE967DDD78085326AE1EF0681539A8CBA0CCEA8DD8FE4EABBE92DDDD919F0D
+measurement SREC SHA-256: 0389C54DAC28FBB8AA85E535731390507868741C0432A5679E005880E4FFC822
+=== EK-RA8M1 harness: KAT + DWT/PMU (ITCM/DTCM) ===
+
+== KAT: X25519 (RFC 7748 s6.1) ==
+alice_pk: OK
+bob_pk  : OK
+K(a,B)  : OK
+K(b,A)  : OK
+== KAT: SHA3-256 via asm Keccak-f1600 ==
+sha3("")   : OK
+sha3("abc"): OK
+
+KAT ALL PASS -- streams A+B verified on board
+
+expDD equiv: bytes-mm=0 smoke=0 reject-mm=0 coldwarm-mm=0
+expDD selftest: dwt_ctrl=2147483648 cyccntena=0 sw100=100 chain=700014 high=10
+expDD calib: cyc=35 inst=5 stall=0 fe=0 be=0
+expDD cell=0 mode=A op=keygen cyc=866203 inst=990042 stall=0 fe=0 be=0
+expDD cell=0 mode=A op=encaps cyc=1317037 inst=1408965 stall=0 fe=0 be=0
+expDD cell=0 mode=A op=warm cyc=929813 inst=1045841 stall=0 fe=0 be=0
+expDD cell=0 mode=A op=cold cyc=1792503 inst=2030943 stall=0 fe=0 be=0
+expDD cell=1 mode=B op=keygen cyc=659897 inst=721891 stall=0 fe=0 be=0
+expDD cell=1 mode=B op=encaps cyc=1069815 inst=1132096 stall=0 fe=0 be=0
+expDD cell=1 mode=B op=warm cyc=828907 inst=949308 stall=0 fe=0 be=0
+expDD cell=1 mode=B op=cold cyc=1487467 inst=1670099 stall=0 fe=0 be=0
+expDD cell=2 mode=B op=keygen cyc=659967 inst=721891 stall=0 fe=0 be=0
+expDD cell=2 mode=B op=encaps cyc=1069713 inst=1132096 stall=0 fe=0 be=0
+expDD cell=2 mode=B op=warm cyc=828919 inst=949308 stall=0 fe=0 be=0
+expDD cell=2 mode=B op=cold cyc=1487463 inst=1670099 stall=0 fe=0 be=0
+expDD cell=3 mode=A op=keygen cyc=865437 inst=990042 stall=0 fe=0 be=0
+expDD cell=3 mode=A op=encaps cyc=1317071 inst=1408965 stall=0 fe=0 be=0
+expDD cell=3 mode=A op=warm cyc=929833 inst=1045841 stall=0 fe=0 be=0
+expDD cell=3 mode=A op=cold cyc=1792157 inst=2030943 stall=0 fe=0 be=0
+expDD PMU GATE PASS
+HARNESS DONE
+
+harness_fails=0
+expDD HOST GATE PASS: KAT/equivalence/selftest/16 PMU cells
