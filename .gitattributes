@@ -1,0 +1,28 @@
+* text=auto
+.gitattributes text eol=lf
+.gitignore text eol=lf
+
+# Keep source files stable across Windows and Unix checkouts.
+*.bib text eol=lf
+*.c text eol=lf
+*.h text eol=lf
+*.md text eol=lf
+*.py text eol=lf
+*.s text eol=lf
+*.S text eol=lf
+*.sh text eol=lf
+*.tex text eol=lf
+*.ps1 text eol=crlf
+
+# Publication assets are generated; textual diffs are large and not useful.
+paper/**/assets/*.eps binary -whitespace
+paper/**/assets/*.svg binary -whitespace
+
+# Common binary research artifacts.
+*.elf binary
+*.jpg binary
+*.jpeg binary
+*.pdf binary
+*.png binary
+*.xlsx binary
+*.zip binary

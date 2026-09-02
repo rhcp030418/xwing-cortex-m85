@@ -9,6 +9,9 @@
 
 단일 명령으로 빌드되는 제품용 X-Wing 라이브러리는 아니다. 실험 세대마다 펌웨어, 메모리 배치, ELF와 측정 목적이 다르므로 결과 문서와 동결 아티팩트를 함께 읽어야 한다.
 
+> [!IMPORTANT]
+> 이 저장소는 연구·재현용 코퍼스이며, 보안 감사를 거친 배포용 암호 라이브러리가 아니다. 현재 원고 정본은 [`paper/ko/main.tex`](paper/ko/main.tex)이고, `paper/lncs_new*`는 신규 논문 구조와 영문 초안·출판 자산이다.
+
 ## 제출용 최신 상태
 
 - 최신 정본은 [`paper/ko/main.tex`](paper/ko/main.tex)과 [`paper/ko/main.pdf`](paper/ko/main.pdf)다.
@@ -113,6 +116,17 @@ X06 트랙은 AT-0/AT-1 기능 gate를 통과하고, AT-2의 성능 gate 실패 
 
 `*.bak-*` 파일은 정본이 아니다. `artifact/README.md`, `measure-harness/README.md`, `paper/README.md`, `slothy-2stream/README.md`에는 각각 2026-08-17~21 시점의 상태가 남아 있으므로 최신 대표 결론의 단독 근거로 사용하지 않는다.
 
+## 저장소 가져오기
+
+두 `pqmx-*` 디렉터리는 Git submodule이므로 처음부터 함께 받는다.
+
+```bash
+git clone --recurse-submodules https://github.com/rhcp030418/xwing-cortex-m85.git
+cd xwing-cortex-m85
+```
+
+이미 복제했다면 `git submodule update --init --recursive`를 한 번 실행한다.
+
 ## 디렉터리 구조
 
 | 위치 | 역할 |
@@ -121,12 +135,12 @@ X06 트랙은 AT-0/AT-1 기능 gate를 통과하고, AT-2의 성능 gate 실패 
 | [`slothy-2stream/`](slothy-2stream/) | Armv8.1-M/M85 SLOTHY 패치, 두 스트림 생성기, 솔버 입력·출력과 실험 로그 |
 | [`artifact/`](artifact/) | 2026-08-17 v0.1 조기 재현 패키지. 최신 전체 펌웨어가 아니라 당시 board/host 소스 모음 |
 | [`asm-practice/`](asm-practice/) | M4/M55 QEMU 기능·KAT 연습, M85 compile/link 확인 |
-| [`paper/`](paper/) | 한국어 작업 정본 `ko/main.tex`, 이전 영문판 `en/main.tex`, 참고문헌과 빌드 스크립트 |
+| [`paper/`](paper/) | 한국어 정본 `ko/main.tex`, 이전 영문판 `en/main.tex`, 신규 LNCS 초안·출판 자산 `lncs_new*`, 참고문헌과 빌드 스크립트 |
 | [`papers/`](papers/) | X-Wing, FIPS 203, RFC 7748, SLOTHY, Keccak 등 외부 참고자료 |
 | [`pqmx-mve-ntts/`](pqmx-mve-ntts/) | pqmx `mve-ntts` 작업 스냅샷, commit `1eeaf85` |
 | [`pqmx-upstream/`](pqmx-upstream/) | 비교용 pqmx `main` 스냅샷, commit `89465b9` |
 
-`A주제/` 자체는 하나의 독립 Git 저장소가 아니며 두 `pqmx-*` 폴더는 각각 별도 Git 저장소다. 각 폴더의 라이선스와 이력을 따로 확인한다.
+이 루트가 `xwing-cortex-m85` Git 저장소이며, 두 `pqmx-*` 폴더는 원 저장소의 특정 commit을 가리키는 submodule이다. 각 폴더의 라이선스와 이력을 따로 확인한다.
 
 ## 결과 표기 규칙
 
@@ -186,7 +200,7 @@ cd slothy-2stream
 /path/to/slothy/venv/bin/python run_exp_a.py exp_a.s /tmp/exp_a_opt.s
 ```
 
-기대 결과는 9 cycles, IPC 1.89, `OPTIMAL`, `EXP_A_DONE`이다. 현재 `run_exp_*.py` 일부는 `/home/cnscjs1395/slothy`를 하드코딩하므로 다른 머신에서는 해당 경로 또는 `sys.path`를 먼저 고쳐야 한다. LLVM 도구가 없으면 binary self-test는 비활성화되고, 최종 정확성 근거는 보드 KAT와 differential gate다.
+기대 결과는 9 cycles, IPC 1.89, `OPTIMAL`, `EXP_A_DONE`이다. 현재 `run_exp_*.py` 일부는 로컬 SLOTHY 절대 경로를 하드코딩하므로 다른 머신에서는 해당 경로 또는 `sys.path`를 먼저 고쳐야 한다. LLVM 도구가 없으면 binary self-test는 비활성화되고, 최종 정확성 근거는 보드 KAT와 differential gate다.
 
 ## 원고 빌드
 
@@ -230,8 +244,7 @@ sha256sum -c SHA256SUMS.txt
 대표 expAL 동결 이미지를 다시 플래시하고 RAM 로그를 회수하는 명령은 다음과 같다.
 
 ```powershell
-$Python = 'C:\Users\cnscj\AppData\Local\Programs\Python\Python314\python.exe'
-& $Python .\measure-harness\artifacts\2026-08-24_expAL\harvest_ra8m1_expAL.py `
+python .\measure-harness\artifacts\2026-08-24_expAL\harvest_ra8m1_expAL.py `
   --elf .\measure-harness\artifacts\2026-08-24_expAL\blinky.elf `
   --srec .\measure-harness\artifacts\2026-08-24_expAL\blinky.srec
 ```
@@ -259,11 +272,12 @@ $Python = 'C:\Users\cnscj\AppData\Local\Programs\Python\Python314\python.exe'
 - X25519 variable-base `mul`·`sqr`의 실제 재스케줄 이득과 `ldm`/`stm` 발행 차단 폭
 - 머신별 절대 경로를 제거한 완전한 one-command clean-room 빌드
 
-## GitHub 공개 전 확인
+## 공개 저장소 범위
 
-- `A주제/` 전체를 포괄하는 단일 라이선스는 현재 없다. 공개·재사용 조건을 정하려면 프로젝트 라이선스를 별도로 추가한다.
+- 저장소 전체를 포괄하는 단일 라이선스는 현재 없다. 공개·재사용 조건을 정하려면 프로젝트 라이선스를 별도로 추가한다.
 - `papers/`의 외부 논문 PDF와 X25519, pqmx, CMSIS, SLOTHY 사본은 각각의 저작권·재배포 조건을 확인한다.
-- 두 `pqmx-*` 폴더는 별도 Git 저장소 스냅샷이다. 공개 저장소에 포함할지, submodule이나 출처 링크로 바꿀지 결정한다.
-- 로그·스크립트의 사용자명, 절대 경로, 장치 식별 정보와 불필요한 ELF/SREC/PDF 빌드 산출물을 공개 범위에 넣을지 검토한다.
+- 두 `pqmx-*` 폴더는 원 저장소의 특정 commit을 가리키는 Git submodule이다.
+- 로컬 임시 디렉터리, 백업 파일과 업로드 ZIP은 `.gitignore`로 제외한다. 동결 ELF/SREC/map과 원시 로그는 재현 근거이므로 추적한다.
+- 새 로그나 스크립트를 추가할 때는 사용자명, 절대 경로와 장치 식별 정보가 필요한 재현 정보인지 먼저 확인한다.
 
 외부 자료는 각 하위 폴더의 원 라이선스를 따른다.
