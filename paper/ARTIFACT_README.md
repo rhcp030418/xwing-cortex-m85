@@ -1,6 +1,8 @@
-# Reproducibility artifact
+# Reproducibility guide
 
-This archive accompanies the Korean LNCS manuscript v32. Its primary result is
+This public repository and its generated archive accompany the English LNCS
+manuscript. The public repository is not anonymous because its owner and Git
+history identify the author. Its primary result is
 the direct initial-A0 versus final-B8 same-ELF improvement: 19.52% key generation,
 19.75% encapsulation, 11.66% warm decapsulation, and 15.48% cold decapsulation
 across five independent reflashes. The 11.22--25.96% Stage-1 and 0.928--4.228%
@@ -13,20 +15,25 @@ in a board result.
 
 ## Contents
 
-- `paper/`: canonical `ko/main.tex`, its PDF, references, build/package scripts,
-  the numerical source of truth (`논문_데이터_표.md`), the cumulative historical
+- In this repository, `paper/lncs_new_en/` contains the English `main.tex`, its
+  PDF, references, publication assets and their dependency-free generator, the
+  LNCS class/style, and the translation criteria. The generated archive places
+  the same files under `paper/manuscript/`.
+- `paper/`: the numerical source of truth (`논문_데이터_표.md`), the cumulative historical
   ledger (`데이터_누적_검증대장.md`), the current data-lineage/version ledger
   (`데이터_계보_아티팩트_정합성.md`), the frozen-ELF resource audit
-  (`자원_비용_감사.md`), and the ready-to-upload Overleaf ZIP.
+  (`자원_비용_감사.md`), and the denominator catalog.
 - `measure-harness/`: preregistrations, result notes, scripts, frozen firmware,
   flash/readback evidence, instruction histograms, and raw logs.
 - `slothy-2stream/`: solver inputs, frozen historical outputs/logs, model patch,
   board-code generators, and deterministic replay driver.
-- `ANONYMIZATION.md`: blind-review transformations and original/submitted ELF
+- In the generated archive, `ANONYMIZATION.md` records blind-review
+  transformations and the original/submitted ELF
   hash mapping. Absolute home/project paths are redacted only in staged text;
   ELF/object debug metadata is stripped only when it contains a private build
   path. Executable load images and the measured SREC files remain unchanged.
-- `MANIFEST.sha256`: SHA-256 for every other file in this archive.
+- In the generated archive, `MANIFEST.sha256` records the SHA-256 of every other
+  file.
 
 Frozen directories preserve measurement-time snapshots. If a duplicated result
 note inside `measure-harness/artifacts/` uses older count terminology, the
@@ -37,7 +44,7 @@ Raw logs, ELF, and SREC files are not rewritten by terminology errata.
 
 ## Fast gates
 
-Run from the extracted archive root.
+Run from the repository root or the extracted archive root.
 
 ```powershell
 python .\measure-harness\artifacts\2026-08-27_expCK_fiatx4_slot_accounting\test_jlink_icount_frozen_af.py
@@ -57,6 +64,22 @@ The gate fixes `PYTHONHASHSEED=0`, CP-SAT seed 42, and one worker, runs two
 independent Python processes, and requires byte-identical generated assembly.
 The frozen result is documented in
 `measure-harness/2026-08-28_expCN_cp_sat_repro_results.md`.
+
+## Manuscript rebuild
+
+The manuscript uses XeLaTeX and BibTeX. In this repository, run from
+`paper/lncs_new_en/`; in the generated archive, run from `paper/manuscript/`:
+
+```powershell
+python .\build_assets.py
+xelatex main.tex
+bibtex main
+xelatex main.tex
+xelatex main.tex
+```
+
+The expected result is a 17-page anonymous PDF with no unresolved references,
+undefined control sequences, or overfull boxes.
 
 ## Hardware-only evidence
 

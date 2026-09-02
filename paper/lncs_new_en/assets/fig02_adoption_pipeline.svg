@@ -1,253 +1,42 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
-  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="345.827pt" height="171pt" viewBox="0 0 345.827 171" xmlns="http://www.w3.org/2000/svg" version="1.1">
- <title>fig02_adoption_pipeline</title>
- <metadata>
-  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-   <cc:Work>
-    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:title>fig02_adoption_pipeline</dc:title>
-    <dc:date>2026-08-31T14:20:26.998454</dc:date>
-    <dc:format>image/svg+xml</dc:format>
-    <dc:creator>
-     <cc:Agent>
-      <dc:title>OpenAI - publication figure redraw</dc:title>
-     </cc:Agent>
-    </dc:creator>
-   </cc:Work>
-  </rdf:RDF>
- </metadata>
- <defs>
-  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
- </defs>
- <g id="figure_1">
-  <g id="patch_1">
-   <path d="M 0 171 
-L 345.827 171 
-L 345.827 0 
-L 0 0 
-z
-" style="fill: #ffffff"/>
-  </g>
-  <g id="axes_1">
-   <g id="patch_2">
-    <path d="M 12.5 24 
-L 50.5 24 
-Q 53 24 53 26.5 
-L 53 73.5 
-Q 53 76 50.5 76 
-L 12.5 76 
-Q 10 76 10 73.5 
-L 10 26.5 
-Q 10 24 12.5 24 
-z
-" clip-path="url(#pa458a57942)" style="fill: #f2f4f7; stroke: #8793a2; stroke-width: 0.85; stroke-linejoin: miter"/>
-   </g>
-   <g id="patch_3">
-    <path d="M 63.5 24 
-L 128.5 24 
-Q 131 24 131 26.5 
-L 131 73.5 
-Q 131 76 128.5 76 
-L 63.5 76 
-Q 61 76 61 73.5 
-L 61 26.5 
-Q 61 24 63.5 24 
-z
-" clip-path="url(#pa458a57942)" style="fill: #eaf2fb; stroke: #2563a6; stroke-width: 0.85; stroke-linejoin: miter"/>
-   </g>
-   <g id="patch_4">
-    <path d="M 141.5 24 
-L 234.5 24 
-Q 237 24 237 26.5 
-L 237 73.5 
-Q 237 76 234.5 76 
-L 141.5 76 
-Q 139 76 139 73.5 
-L 139 26.5 
-Q 139 24 141.5 24 
-z
-" clip-path="url(#pa458a57942)" style="fill: #fff2df; stroke: #b85f00; stroke-width: 0.85; stroke-linejoin: miter"/>
-   </g>
-   <g id="patch_5">
-    <path d="M 247.5 24 
-L 333.5 24 
-Q 336 24 336 26.5 
-L 336 73.5 
-Q 336 76 333.5 76 
-L 247.5 76 
-Q 245 76 245 73.5 
-L 245 26.5 
-Q 245 24 247.5 24 
-z
-" clip-path="url(#pa458a57942)" style="fill: #f1ecfa; stroke: #6b4fa1; stroke-width: 0.85; stroke-linejoin: miter"/>
-   </g>
-   <g id="patch_6">
-    <path d="M 63.5 92 
-L 234.5 92 
-Q 237 92 237 94.5 
-L 237 114.5 
-Q 237 117 234.5 117 
-L 63.5 117 
-Q 61 117 61 114.5 
-L 61 94.5 
-Q 61 92 63.5 92 
-z
-" clip-path="url(#pa458a57942)" style="fill: #fcebe9; stroke: #b42318; stroke-width: 0.82; stroke-linejoin: miter"/>
-   </g>
-   <g id="patch_7">
-    <path d="M 247.5 88 
-L 333.5 88 
-Q 336 88 336 90.5 
-L 336 136.5 
-Q 336 139 333.5 139 
-L 247.5 139 
-Q 245 139 245 136.5 
-L 245 90.5 
-Q 245 88 247.5 88 
-z
-" clip-path="url(#pa458a57942)" style="fill: #e9f5ed; stroke: #287a4b; stroke-width: 0.9; stroke-linejoin: miter"/>
-   </g>
-   <g id="patch_8">
-    <path d="M 12.5 146 
-L 333.5 146 
-Q 336 146 336 148.5 
-L 336 161.5 
-Q 336 164 333.5 164 
-L 12.5 164 
-Q 10 164 10 161.5 
-L 10 148.5 
-Q 10 146 12.5 146 
-z
-" clip-path="url(#pa458a57942)" style="fill: #f7f8fa; stroke: #cbd3dd; stroke-width: 0.65; stroke-linejoin: miter"/>
-   </g>
-   <g id="text_1">
-    <text style="font-weight: 700; font-size: 6.2px; font-family: 'Liberation Sans'; text-anchor: start; fill: #586473" x="10" y="13.603281" transform="rotate(-0 10 13.603281)">Candidate-level evaluation</text>
-   </g>
-   <g id="text_2">
-    <text style="font-weight: 700; font-size: 5.8px; font-family: 'Liberation Sans'; fill: #17212b" transform="translate(17.482578 48.720765)">Candidate</text>
-    <text style="font-weight: 700; font-size: 5.8px; font-family: 'Liberation Sans'; fill: #17212b" transform="translate(21.348188 54.253548)">change</text>
-   </g>
-   <g id="text_3">
-    <text style="font-size: 5.55px; font-family: 'Liberation Sans'; fill: #17212b" transform="translate(75.56516 48.788045)">1  Correctness +</text>
-    <text style="font-size: 5.55px; font-family: 'Liberation Sans'; fill: #17212b" transform="translate(71.16982 54.082346)">function-level cycles</text>
-   </g>
-   <g id="text_4">
-    <text style="font-size: 5.35px; font-family: 'Liberation Sans'; fill: #17212b" transform="translate(159.74782 46.279961)">2  Integrate into the real</text>
-    <text style="font-size: 5.35px; font-family: 'Liberation Sans'; fill: #17212b" transform="translate(167.781598 51.383477)">X-Wing call path;</text>
-    <text style="font-size: 5.35px; font-family: 'Liberation Sans'; fill: #17212b" transform="translate(160.348023 56.486992)">measure full API cycles</text>
-   </g>
-   <g id="text_5">
-    <text style="font-size: 5.25px; font-family: 'Liberation Sans'; fill: #17212b" transform="translate(272.844004 46.349495)">3  Retained set</text>
-    <text style="font-size: 5.25px; font-family: 'Liberation Sans'; fill: #17212b" transform="translate(260.295273 51.357617)">combined diagnostic build</text>
-    <text style="font-size: 5.25px; font-family: 'Liberation Sans'; fill: #17212b" transform="translate(264.600273 56.36574)">+ leave-one-out check</text>
-   </g>
-   <g id="text_6">
-    <text style="font-weight: 700; font-size: 5.25px; font-family: 'Liberation Sans'; text-anchor: middle; fill: #17212b" x="149" y="105.846133" transform="rotate(-0 149 105.846133)">Fail any gate: reject the candidate; preserve its diagnostic log</text>
-   </g>
-   <g id="text_7">
-    <text style="font-weight: 700; font-size: 4.9px; font-family: 'Liberation Sans'; fill: #17212b" transform="translate(257.827719 104.10144)">Final same-ELF comparison</text>
-    <text style="font-weight: 700; font-size: 4.9px; font-family: 'Liberation Sans'; fill: #17212b" transform="translate(256.327094 108.775688)">Reference vs. final integrated</text>
-    <text style="font-weight: 700; font-size: 4.9px; font-family: 'Liberation Sans'; fill: #17212b" transform="translate(260.347773 113.471373)">Ref -&gt; Final -&gt; Final -&gt; Ref</text>
-    <text style="font-weight: 700; font-size: 4.9px; font-family: 'Liberation Sans'; fill: #17212b" transform="translate(257.820063 118.145621)">5 reflashes / 10 paired gains</text>
-    <!-- report $\min_i r_i$ -->
-    <g style="fill: #17212b" transform="translate(276.192 123.019529)">
-     <text>
-      <tspan x="0" y="-0.203125" style="font-weight: 700; font-size: 4.9px; font-family: 'Liberation Sans'; fill: #17212b">r</tspan>
-      <tspan x="1.897156" y="-0.203125" style="font-weight: 700; font-size: 4.9px; font-family: 'Liberation Sans'; fill: #17212b">e</tspan>
-      <tspan x="4.608398" y="-0.203125" style="font-weight: 700; font-size: 4.9px; font-family: 'Liberation Sans'; fill: #17212b">p</tspan>
-      <tspan x="7.586243" y="-0.203125" style="font-weight: 700; font-size: 4.9px; font-family: 'Liberation Sans'; fill: #17212b">o</tspan>
-      <tspan x="10.564087" y="-0.203125" style="font-weight: 700; font-size: 4.9px; font-family: 'Liberation Sans'; fill: #17212b">r</tspan>
-      <tspan x="12.461243" y="-0.203125" style="font-weight: 700; font-size: 4.9px; font-family: 'Liberation Sans'; fill: #17212b">t</tspan>
-      <tspan x="14.084656" y="-0.203125" style="font-weight: 700; font-size: 4.9px; font-family: 'Liberation Sans'; fill: #17212b"> </tspan>
-      <tspan x="24.63208" y="-0.203125" style="font-weight: 700; font-size: 4.9px; font-family: 'Liberation Sans'; fill: #17212b">r</tspan>
-      <tspan x="15.439087" y="-0.203125" style="font-size: 4.9px; font-family: 'DejaVu Sans'; fill: #17212b">m</tspan>
-      <tspan x="20.187927" y="-0.203125" style="font-size: 4.9px; font-family: 'DejaVu Sans'; fill: #17212b">i</tspan>
-      <tspan x="21.542358" y="-0.203125" style="font-size: 4.9px; font-family: 'DejaVu Sans'; fill: #17212b">n</tspan>
-      <tspan x="19.439087" y="3.253125" style="font-weight: 700; font-size: 3.43px; font-family: 'Liberation Sans'; fill: #17212b">i</tspan>
-      <tspan x="26.575447" y="0.589062" style="font-weight: 700; font-size: 3.43px; font-family: 'Liberation Sans'; fill: #17212b">i</tspan>
-     </text>
-    </g>
-   </g>
-   <g id="text_8">
-    <text style="font-weight: 700; font-size: 5.2px; font-family: 'Liberation Sans'; text-anchor: middle; fill: #586473" x="173" y="156.333313" transform="rotate(-0 173 156.333313)">Intermediate, cumulative, and leave-one-out percentages are diagnostic only; never add or multiply them into the headline.</text>
-   </g>
-   <g id="patch_9">
-    <path d="M 53 50 
-Q 57 50 60.049671 50 
-" clip-path="url(#pa458a57942)" style="fill: none; stroke: #586473; stroke-width: 0.85; stroke-linecap: round"/>
-    <path d="M 57.249671 48.6 
-L 60.049671 50 
-L 57.249671 51.4 
-z
-" clip-path="url(#pa458a57942)" style="fill: #586473; stroke: #586473; stroke-width: 0.85; stroke-linecap: round"/>
-   </g>
-   <g id="patch_10">
-    <path d="M 131 50 
-Q 135 50 138.049671 50 
-" clip-path="url(#pa458a57942)" style="fill: none; stroke: #586473; stroke-width: 0.85; stroke-linecap: round"/>
-    <path d="M 135.249671 48.6 
-L 138.049671 50 
-L 135.249671 51.4 
-z
-" clip-path="url(#pa458a57942)" style="fill: #586473; stroke: #586473; stroke-width: 0.85; stroke-linecap: round"/>
-   </g>
-   <g id="patch_11">
-    <path d="M 237 50 
-Q 241 50 244.049671 50 
-" clip-path="url(#pa458a57942)" style="fill: none; stroke: #586473; stroke-width: 0.85; stroke-linecap: round"/>
-    <path d="M 241.249671 48.6 
-L 244.049671 50 
-L 241.249671 51.4 
-z
-" clip-path="url(#pa458a57942)" style="fill: #586473; stroke: #586473; stroke-width: 0.85; stroke-linecap: round"/>
-   </g>
-   <g id="patch_12">
-    <path d="M 96 76 
-Q 96 84 96 91.195016 
-" clip-path="url(#pa458a57942)" style="fill: none; stroke-dasharray: 2.664,1.152; stroke-dashoffset: 0; stroke: #b42318; stroke-width: 0.72; stroke-linecap: round"/>
-    <path d="M 97.22 88.755016 
-L 96 91.195016 
-L 94.78 88.755016 
-z
-" clip-path="url(#pa458a57942)" style="fill: #b42318; stroke-dasharray: 2.664,1.152; stroke-dashoffset: 0; stroke: #b42318; stroke-width: 0.72; stroke-linecap: round"/>
-   </g>
-   <g id="patch_13">
-    <path d="M 188 76 
-Q 188 84 188 91.195016 
-" clip-path="url(#pa458a57942)" style="fill: none; stroke-dasharray: 2.664,1.152; stroke-dashoffset: 0; stroke: #b42318; stroke-width: 0.72; stroke-linecap: round"/>
-    <path d="M 189.22 88.755016 
-L 188 91.195016 
-L 186.78 88.755016 
-z
-" clip-path="url(#pa458a57942)" style="fill: #b42318; stroke-dasharray: 2.664,1.152; stroke-dashoffset: 0; stroke: #b42318; stroke-width: 0.72; stroke-linecap: round"/>
-   </g>
-   <g id="patch_14">
-    <path d="M 257 76 
-Q 244.36 84.6 237.387533 97.294438 
-" clip-path="url(#pa458a57942)" style="fill: none; stroke-dasharray: 2.664,1.152; stroke-dashoffset: 0; stroke: #b42318; stroke-width: 0.72; stroke-linecap: round"/>
-    <path d="M 239.631509 95.743125 
-L 237.387533 97.294438 
-L 237.492869 94.568469 
-z
-" clip-path="url(#pa458a57942)" style="fill: #b42318; stroke-dasharray: 2.664,1.152; stroke-dashoffset: 0; stroke: #b42318; stroke-width: 0.72; stroke-linecap: round"/>
-   </g>
-   <g id="patch_15">
-    <path d="M 290.5 76 
-Q 290.5 82 290.5 87.01613 
-" clip-path="url(#pa458a57942)" style="fill: none; stroke: #287a4b; stroke-width: 0.88; stroke-linecap: round"/>
-    <path d="M 291.84 84.33613 
-L 290.5 87.01613 
-L 289.16 84.33613 
-z
-" clip-path="url(#pa458a57942)" style="fill: #287a4b; stroke: #287a4b; stroke-width: 0.88; stroke-linecap: round"/>
-   </g>
-  </g>
- </g>
- <defs>
-  <clipPath id="pa458a57942">
-   <rect x="0" y="0" width="345.827" height="171"/>
-  </clipPath>
- </defs>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="345.827pt" height="155.906pt" viewBox="0 0 345.827 155.906">
+<title>fig02_adoption_pipeline</title>
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<text x="172.913" y="18.425" font-family="Arial, Helvetica, sans-serif" font-size="9.000" font-weight="700" fill="#1F2933" text-anchor="middle">A candidate becomes a result only after end-to-end gates</text>
+<text x="172.913" y="28.346" font-family="Arial, Helvetica, sans-serif" font-size="5.700" font-weight="400" fill="#4B5563" text-anchor="middle">Intermediate percentages remain diagnostic; the headline comes from one reference-to-final-integrated comparison</text>
+<rect x="11.339" y="51.024" width="51.024" height="36.850" rx="4.000" fill="#F5F7FA" stroke="#7B8794" stroke-width="0.800"/>
+<text x="36.850" y="67.912" font-family="Arial, Helvetica, sans-serif" font-size="6.100" font-weight="700" fill="#1F2933" text-anchor="middle">Candidate</text>
+<text x="36.850" y="75.012" font-family="Arial, Helvetica, sans-serif" font-size="5.300" font-weight="400" fill="#4B5563" text-anchor="middle">one change</text>
+<line x1="62.362" y1="69.449" x2="76.535" y2="69.449" stroke="#4B5563" stroke-width="0.900"/>
+<polygon points="76.535,69.449 72.314,72.128 72.314,66.770" fill="#4B5563"/>
+<rect x="76.535" y="51.024" width="53.858" height="36.850" rx="4.000" fill="#E8F2FA" stroke="#1769AA" stroke-width="0.800"/>
+<text x="103.465" y="67.912" font-family="Arial, Helvetica, sans-serif" font-size="6.100" font-weight="700" fill="#1F2933" text-anchor="middle">Micro gate</text>
+<text x="103.465" y="75.012" font-family="Arial, Helvetica, sans-serif" font-size="5.300" font-weight="400" fill="#4B5563" text-anchor="middle">KAT + local cycles</text>
+<line x1="130.394" y1="69.449" x2="144.567" y2="69.449" stroke="#4B5563" stroke-width="0.900"/>
+<polygon points="144.567,69.449 140.345,72.128 140.345,66.770" fill="#4B5563"/>
+<rect x="144.567" y="51.024" width="56.693" height="36.850" rx="4.000" fill="#FFF3E0" stroke="#D97706" stroke-width="0.800"/>
+<text x="172.913" y="67.912" font-family="Arial, Helvetica, sans-serif" font-size="6.100" font-weight="700" fill="#1F2933" text-anchor="middle">Real consumer</text>
+<text x="172.913" y="75.012" font-family="Arial, Helvetica, sans-serif" font-size="5.300" font-weight="400" fill="#4B5563" text-anchor="middle">full API path</text>
+<line x1="201.260" y1="69.449" x2="215.433" y2="69.449" stroke="#4B5563" stroke-width="0.900"/>
+<polygon points="215.433,69.449 211.211,72.128 211.211,66.770" fill="#4B5563"/>
+<rect x="215.433" y="51.024" width="56.693" height="36.850" rx="4.000" fill="#F0EBF8" stroke="#6B4FA1" stroke-width="0.800"/>
+<text x="243.780" y="67.912" font-family="Arial, Helvetica, sans-serif" font-size="6.100" font-weight="700" fill="#1F2933" text-anchor="middle">Cumulative ELF</text>
+<text x="243.780" y="75.012" font-family="Arial, Helvetica, sans-serif" font-size="5.300" font-weight="400" fill="#4B5563" text-anchor="middle">interaction check</text>
+<line x1="272.126" y1="69.449" x2="286.299" y2="69.449" stroke="#4B5563" stroke-width="0.900"/>
+<polygon points="286.299,69.449 282.078,72.128 282.078,66.770" fill="#4B5563"/>
+<rect x="286.299" y="51.024" width="48.189" height="36.850" rx="4.000" fill="#EAF5EA" stroke="#2E7D32" stroke-width="0.800"/>
+<text x="310.394" y="64.362" font-family="Arial, Helvetica, sans-serif" font-size="6.100" font-weight="700" fill="#1F2933" text-anchor="middle">Reference /</text>
+<text x="310.394" y="71.462" font-family="Arial, Helvetica, sans-serif" font-size="6.100" font-weight="700" fill="#1F2933" text-anchor="middle">Final integrated</text>
+<text x="310.394" y="78.562" font-family="Arial, Helvetica, sans-serif" font-size="5.300" font-weight="400" fill="#4B5563" text-anchor="middle">final headline</text>
+<line x1="103.465" y1="87.874" x2="103.465" y2="107.717" stroke="#B42318" stroke-width="0.800"/>
+<line x1="103.465" y1="107.717" x2="103.465" y2="116.220" stroke="#B42318" stroke-width="0.800"/>
+<polygon points="103.465,116.220 101.321,112.843 105.608,112.843" fill="#B42318"/>
+<line x1="172.913" y1="87.874" x2="172.913" y2="107.717" stroke="#B42318" stroke-width="0.800"/>
+<line x1="172.913" y1="107.717" x2="172.913" y2="116.220" stroke="#B42318" stroke-width="0.800"/>
+<polygon points="172.913,116.220 170.770,112.843 175.057,112.843" fill="#B42318"/>
+<line x1="243.780" y1="87.874" x2="243.780" y2="107.717" stroke="#B42318" stroke-width="0.800"/>
+<line x1="243.780" y1="107.717" x2="243.780" y2="116.220" stroke="#B42318" stroke-width="0.800"/>
+<polygon points="243.780,116.220 241.636,112.843 245.923,112.843" fill="#B42318"/>
+<rect x="102.047" y="116.220" width="144.567" height="19.843" rx="4.000" fill="#FCEBE9" stroke="#B42318" stroke-width="0.800"/>
+<text x="174.331" y="128.023" font-family="Arial, Helvetica, sans-serif" font-size="5.700" font-weight="400" fill="#1F2933" text-anchor="middle">Reject, preserve logs, and never add its cycles</text>
 </svg>

@@ -1,274 +1,40 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
-  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="345.827pt" height="157pt" viewBox="0 0 345.827 157" xmlns="http://www.w3.org/2000/svg" version="1.1">
- <title>fig04_final_performance</title>
- <metadata>
-  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-   <cc:Work>
-    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:title>fig04_final_performance</dc:title>
-    <dc:date>2026-08-31T14:20:31.130583</dc:date>
-    <dc:format>image/svg+xml</dc:format>
-    <dc:creator>
-     <cc:Agent>
-      <dc:title>OpenAI - publication figure redraw</dc:title>
-     </cc:Agent>
-    </dc:creator>
-   </cc:Work>
-  </rdf:RDF>
- </metadata>
- <defs>
-  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
- </defs>
- <g id="figure_1">
-  <g id="patch_1">
-   <path d="M 0 157 
-L 345.827 157 
-L 345.827 0 
-L 0 0 
-z
-" style="fill: #ffffff"/>
-  </g>
-  <g id="axes_1">
-   <g id="line2d_1">
-    <path d="M 98 19 
-L 98 132 
-" clip-path="url(#p12af2a04f6)" style="fill: none; stroke: #d9e0e8; stroke-width: 0.55; stroke-linecap: square"/>
-   </g>
-   <g id="line2d_2">
-    <path d="M 144.4 19 
-L 144.4 132 
-" clip-path="url(#p12af2a04f6)" style="fill: none; stroke: #d9e0e8; stroke-width: 0.55; stroke-linecap: square"/>
-   </g>
-   <g id="line2d_3">
-    <path d="M 190.8 19 
-L 190.8 132 
-" clip-path="url(#p12af2a04f6)" style="fill: none; stroke: #d9e0e8; stroke-width: 0.55; stroke-linecap: square"/>
-   </g>
-   <g id="line2d_4">
-    <path d="M 237.2 19 
-L 237.2 132 
-" clip-path="url(#p12af2a04f6)" style="fill: none; stroke: #d9e0e8; stroke-width: 0.55; stroke-linecap: square"/>
-   </g>
-   <g id="line2d_5">
-    <path d="M 283.6 19 
-L 283.6 132 
-" clip-path="url(#p12af2a04f6)" style="fill: none; stroke: #d9e0e8; stroke-width: 0.55; stroke-linecap: square"/>
-   </g>
-   <g id="line2d_6">
-    <path d="M 330 19 
-L 330 132 
-" clip-path="url(#p12af2a04f6)" style="fill: none; stroke: #d9e0e8; stroke-width: 0.55; stroke-linecap: square"/>
-   </g>
-   <g id="patch_2">
-    <path d="M 99.8 25 
-L 328.2 25 
-Q 330 25 330 26.8 
-L 330 39.2 
-Q 330 41 328.2 41 
-L 99.8 41 
-Q 98 41 98 39.2 
-L 98 26.8 
-Q 98 25 99.8 25 
-z
-" clip-path="url(#p12af2a04f6)" style="fill: #e9eef4; stroke: #cbd3dd; stroke-width: 0.7; stroke-linejoin: miter"/>
-   </g>
-   <g id="patch_3">
-    <path d="M 99.8 53 
-L 328.2 53 
-Q 330 53 330 54.8 
-L 330 67.2 
-Q 330 69 328.2 69 
-L 99.8 69 
-Q 98 69 98 67.2 
-L 98 54.8 
-Q 98 53 99.8 53 
-z
-" clip-path="url(#p12af2a04f6)" style="fill: #e9eef4; stroke: #cbd3dd; stroke-width: 0.7; stroke-linejoin: miter"/>
-   </g>
-   <g id="patch_4">
-    <path d="M 99.8 81 
-L 328.2 81 
-Q 330 81 330 82.8 
-L 330 95.2 
-Q 330 97 328.2 97 
-L 99.8 97 
-Q 98 97 98 95.2 
-L 98 82.8 
-Q 98 81 99.8 81 
-z
-" clip-path="url(#p12af2a04f6)" style="fill: #e9eef4; stroke: #cbd3dd; stroke-width: 0.7; stroke-linejoin: miter"/>
-   </g>
-   <g id="patch_5">
-    <path d="M 99.8 109 
-L 328.2 109 
-Q 330 109 330 110.8 
-L 330 123.2 
-Q 330 125 328.2 125 
-L 99.8 125 
-Q 98 125 98 123.2 
-L 98 110.8 
-Q 98 109 99.8 109 
-z
-" clip-path="url(#p12af2a04f6)" style="fill: #e9eef4; stroke: #cbd3dd; stroke-width: 0.7; stroke-linejoin: miter"/>
-   </g>
-   <g id="text_1">
-    <text style="font-weight: 700; font-size: 6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #586473" x="98" y="12.038437" transform="rotate(-0 98 12.038437)">Final integrated / Reference cycle cost</text>
-   </g>
-   <g id="text_2">
-    <text style="font-weight: 700; font-size: 6px; font-family: 'Liberation Sans'; text-anchor: end; fill: #586473" x="330" y="12.051562" transform="rotate(-0 330 12.051562)">Reference = 100%</text>
-   </g>
-   <g id="text_3">
-    <text style="font-size: 5.2px; font-family: 'Liberation Sans'; text-anchor: middle; fill: #586473" x="98" y="144.544687" transform="rotate(-0 98 144.544687)">0</text>
-   </g>
-   <g id="text_4">
-    <text style="font-size: 5.2px; font-family: 'Liberation Sans'; text-anchor: middle; fill: #586473" x="144.4" y="144.544687" transform="rotate(-0 144.4 144.544687)">20</text>
-   </g>
-   <g id="text_5">
-    <text style="font-size: 5.2px; font-family: 'Liberation Sans'; text-anchor: middle; fill: #586473" x="190.8" y="144.544687" transform="rotate(-0 190.8 144.544687)">40</text>
-   </g>
-   <g id="text_6">
-    <text style="font-size: 5.2px; font-family: 'Liberation Sans'; text-anchor: middle; fill: #586473" x="237.2" y="144.544687" transform="rotate(-0 237.2 144.544687)">60</text>
-   </g>
-   <g id="text_7">
-    <text style="font-size: 5.2px; font-family: 'Liberation Sans'; text-anchor: middle; fill: #586473" x="283.6" y="144.544687" transform="rotate(-0 283.6 144.544687)">80</text>
-   </g>
-   <g id="text_8">
-    <text style="font-size: 5.2px; font-family: 'Liberation Sans'; text-anchor: middle; fill: #586473" x="330" y="144.544687" transform="rotate(-0 330 144.544687)">100</text>
-   </g>
-   <g id="text_9">
-    <text style="font-size: 5.75px; font-family: 'Liberation Sans'; text-anchor: end; fill: #17212b" x="91" y="34.486914" transform="rotate(-0 91 34.486914)">Key generation</text>
-   </g>
-   <g id="patch_6">
-    <path d="M 98 25 
-L 284.7136 25 
-L 284.7136 41 
-L 98 41 
-z
-" clip-path="url(#p12af2a04f6)" style="fill: #286fae"/>
-   </g>
-   <g id="text_10">
-    <text style="font-size: 5.75px; font-family: 'Liberation Sans'; text-anchor: end; fill: #17212b" x="91" y="62.486914" transform="rotate(-0 91 62.486914)">Encapsulation</text>
-   </g>
-   <g id="patch_7">
-    <path d="M 98 53 
-L 284.18 53 
-L 284.18 69 
-L 98 69 
-z
-" clip-path="url(#p12af2a04f6)" style="fill: #286fae"/>
-   </g>
-   <g id="text_11">
-    <text style="font-size: 5.75px; font-family: 'Liberation Sans'; text-anchor: end; fill: #17212b" x="91" y="90.486914" transform="rotate(-0 91 90.486914)">Decapsulation (warm)</text>
-   </g>
-   <g id="patch_8">
-    <path d="M 98 81 
-L 302.9488 81 
-L 302.9488 97 
-L 98 97 
-z
-" clip-path="url(#p12af2a04f6)" style="fill: #286fae"/>
-   </g>
-   <g id="text_12">
-    <text style="font-size: 5.75px; font-family: 'Liberation Sans'; text-anchor: end; fill: #17212b" x="91" y="118.486914" transform="rotate(-0 91 118.486914)">Decapsulation (cold)</text>
-   </g>
-   <g id="patch_9">
-    <path d="M 98 109 
-L 294.0864 109 
-L 294.0864 125 
-L 98 125 
-z
-" clip-path="url(#p12af2a04f6)" style="fill: #286fae"/>
-   </g>
-   <g id="text_13">
-    <text style="font-size: 5.55px; font-family: 'Liberation Sans'; text-anchor: middle; fill: #586473" x="214" y="154.435195" transform="rotate(-0 214 154.435195)">Normalized cycle cost (%)</text>
-   </g>
-   <g id="patch_10">
-    <path d="M 99.8 25 
-L 328.2 25 
-Q 330 25 330 26.8 
-L 330 39.2 
-Q 330 41 328.2 41 
-L 99.8 41 
-Q 98 41 98 39.2 
-L 98 26.8 
-Q 98 25 99.8 25 
-L 99.8 25 
-z
-" clip-path="url(#p12af2a04f6)" style="fill: none; stroke: #cbd3dd; stroke-width: 0.7; stroke-linejoin: miter"/>
-   </g>
-   <g id="patch_11">
-    <path d="M 99.8 53 
-L 328.2 53 
-Q 330 53 330 54.8 
-L 330 67.2 
-Q 330 69 328.2 69 
-L 99.8 69 
-Q 98 69 98 67.2 
-L 98 54.8 
-Q 98 53 99.8 53 
-L 99.8 53 
-z
-" clip-path="url(#p12af2a04f6)" style="fill: none; stroke: #cbd3dd; stroke-width: 0.7; stroke-linejoin: miter"/>
-   </g>
-   <g id="patch_12">
-    <path d="M 99.8 81 
-L 328.2 81 
-Q 330 81 330 82.8 
-L 330 95.2 
-Q 330 97 328.2 97 
-L 99.8 97 
-Q 98 97 98 95.2 
-L 98 82.8 
-Q 98 81 99.8 81 
-L 99.8 81 
-z
-" clip-path="url(#p12af2a04f6)" style="fill: none; stroke: #cbd3dd; stroke-width: 0.7; stroke-linejoin: miter"/>
-   </g>
-   <g id="patch_13">
-    <path d="M 99.8 109 
-L 328.2 109 
-Q 330 109 330 110.8 
-L 330 123.2 
-Q 330 125 328.2 125 
-L 99.8 125 
-Q 98 125 98 123.2 
-L 98 110.8 
-Q 98 109 99.8 109 
-L 99.8 109 
-z
-" clip-path="url(#p12af2a04f6)" style="fill: none; stroke: #cbd3dd; stroke-width: 0.7; stroke-linejoin: miter"/>
-   </g>
-   <g id="text_14">
-    <text style="font-weight: 700; font-size: 5.4px; font-family: 'Liberation Sans'; text-anchor: start; fill: #ffffff" x="104" y="34.396406" transform="rotate(-0 104 34.396406)">Final 80.48%</text>
-   </g>
-   <g id="text_15">
-    <text style="font-weight: 700; font-size: 5.25px; font-family: 'Liberation Sans'; text-anchor: middle; fill: #586473" x="307.3568" y="34.357617" transform="rotate(-0 307.3568 34.357617)">-19.52%</text>
-   </g>
-   <g id="text_16">
-    <text style="font-weight: 700; font-size: 5.4px; font-family: 'Liberation Sans'; text-anchor: start; fill: #ffffff" x="104" y="62.396406" transform="rotate(-0 104 62.396406)">Final 80.25%</text>
-   </g>
-   <g id="text_17">
-    <text style="font-weight: 700; font-size: 5.25px; font-family: 'Liberation Sans'; text-anchor: middle; fill: #586473" x="307.09" y="62.357617" transform="rotate(-0 307.09 62.357617)">-19.75%</text>
-   </g>
-   <g id="text_18">
-    <text style="font-weight: 700; font-size: 5.4px; font-family: 'Liberation Sans'; text-anchor: start; fill: #ffffff" x="104" y="90.396406" transform="rotate(-0 104 90.396406)">Final 88.34%</text>
-   </g>
-   <g id="text_19">
-    <text style="font-weight: 700; font-size: 5.25px; font-family: 'Liberation Sans'; text-anchor: middle; fill: #586473" x="316.4744" y="90.357617" transform="rotate(-0 316.4744 90.357617)">-11.66%</text>
-   </g>
-   <g id="text_20">
-    <text style="font-weight: 700; font-size: 5.4px; font-family: 'Liberation Sans'; text-anchor: start; fill: #ffffff" x="104" y="118.396406" transform="rotate(-0 104 118.396406)">Final 84.52%</text>
-   </g>
-   <g id="text_21">
-    <text style="font-weight: 700; font-size: 5.25px; font-family: 'Liberation Sans'; text-anchor: middle; fill: #586473" x="312.0432" y="118.357617" transform="rotate(-0 312.0432 118.357617)">-15.48%</text>
-   </g>
-  </g>
- </g>
- <defs>
-  <clipPath id="p12af2a04f6">
-   <rect x="0" y="0" width="345.827" height="157"/>
-  </clipPath>
- </defs>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="345.827pt" height="198.425pt" viewBox="0 0 345.827 198.425">
+<title>fig04_final_performance</title>
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<text x="172.913" y="18.425" font-family="Arial, Helvetica, sans-serif" font-size="9.000" font-weight="700" fill="#1F2933" text-anchor="middle">Final same-ELF Reference-Integrated comparison</text>
+<text x="172.913" y="28.346" font-family="Arial, Helvetica, sans-serif" font-size="5.700" font-weight="400" fill="#4B5563" text-anchor="middle">Reference is normalized to 100%; blue bars show the cycle cost remaining in Integrated</text>
+<line x1="93.543" y1="42.520" x2="93.543" y2="164.409" stroke="#E4E7EB" stroke-width="0.500"/>
+<text x="93.543" y="175.748" font-family="Arial, Helvetica, sans-serif" font-size="5.400" font-weight="400" fill="#4B5563" text-anchor="middle">0</text>
+<line x1="140.031" y1="42.520" x2="140.031" y2="164.409" stroke="#E4E7EB" stroke-width="0.500"/>
+<text x="140.031" y="175.748" font-family="Arial, Helvetica, sans-serif" font-size="5.400" font-weight="400" fill="#4B5563" text-anchor="middle">20</text>
+<line x1="186.520" y1="42.520" x2="186.520" y2="164.409" stroke="#E4E7EB" stroke-width="0.500"/>
+<text x="186.520" y="175.748" font-family="Arial, Helvetica, sans-serif" font-size="5.400" font-weight="400" fill="#4B5563" text-anchor="middle">40</text>
+<line x1="233.008" y1="42.520" x2="233.008" y2="164.409" stroke="#E4E7EB" stroke-width="0.500"/>
+<text x="233.008" y="175.748" font-family="Arial, Helvetica, sans-serif" font-size="5.400" font-weight="400" fill="#4B5563" text-anchor="middle">60</text>
+<line x1="279.496" y1="42.520" x2="279.496" y2="164.409" stroke="#E4E7EB" stroke-width="0.500"/>
+<text x="279.496" y="175.748" font-family="Arial, Helvetica, sans-serif" font-size="5.400" font-weight="400" fill="#4B5563" text-anchor="middle">80</text>
+<line x1="325.984" y1="42.520" x2="325.984" y2="164.409" stroke="#E4E7EB" stroke-width="0.500"/>
+<text x="325.984" y="175.748" font-family="Arial, Helvetica, sans-serif" font-size="5.400" font-weight="400" fill="#4B5563" text-anchor="middle">100</text>
+<text x="209.764" y="189.921" font-family="Arial, Helvetica, sans-serif" font-size="5.800" font-weight="400" fill="#4B5563" text-anchor="middle">Normalized cycle cost (%)</text>
+<text x="87.874" y="64.346" font-family="Arial, Helvetica, sans-serif" font-size="6.000" font-weight="400" fill="#1F2933" text-anchor="end">Key generation</text>
+<rect x="93.543" y="53.858" width="232.441" height="15.591" rx="3.000" fill="#F5F7FA" stroke="#CBD2D9" stroke-width="0.700"/>
+<rect x="93.543" y="53.858" width="187.068" height="15.591" rx="3.000" fill="#1769AA" stroke="#1769AA" stroke-width="0.000"/>
+<text x="99.213" y="64.346" font-family="Arial, Helvetica, sans-serif" font-size="5.600" font-weight="700" fill="#FFFFFF" text-anchor="start">Integrated 80.48%</text>
+<text x="303.298" y="64.346" font-family="Arial, Helvetica, sans-serif" font-size="5.500" font-weight="700" fill="#4B5563" text-anchor="middle">-19.52%</text>
+<text x="87.874" y="94.110" font-family="Arial, Helvetica, sans-serif" font-size="6.000" font-weight="400" fill="#1F2933" text-anchor="end">Encapsulation</text>
+<rect x="93.543" y="83.622" width="232.441" height="15.591" rx="3.000" fill="#F5F7FA" stroke="#CBD2D9" stroke-width="0.700"/>
+<rect x="93.543" y="83.622" width="186.534" height="15.591" rx="3.000" fill="#1769AA" stroke="#1769AA" stroke-width="0.000"/>
+<text x="99.213" y="94.110" font-family="Arial, Helvetica, sans-serif" font-size="5.600" font-weight="700" fill="#FFFFFF" text-anchor="start">Integrated 80.25%</text>
+<text x="303.031" y="94.110" font-family="Arial, Helvetica, sans-serif" font-size="5.500" font-weight="700" fill="#4B5563" text-anchor="middle">-19.75%</text>
+<text x="87.874" y="123.874" font-family="Arial, Helvetica, sans-serif" font-size="6.000" font-weight="400" fill="#1F2933" text-anchor="end">Decapsulation (warm)</text>
+<rect x="93.543" y="113.386" width="232.441" height="15.591" rx="3.000" fill="#F5F7FA" stroke="#CBD2D9" stroke-width="0.700"/>
+<rect x="93.543" y="113.386" width="205.338" height="15.591" rx="3.000" fill="#1769AA" stroke="#1769AA" stroke-width="0.000"/>
+<text x="99.213" y="123.874" font-family="Arial, Helvetica, sans-serif" font-size="5.600" font-weight="700" fill="#FFFFFF" text-anchor="start">Integrated 88.34%</text>
+<text x="312.433" y="123.874" font-family="Arial, Helvetica, sans-serif" font-size="5.500" font-weight="700" fill="#4B5563" text-anchor="middle">-11.66%</text>
+<text x="87.874" y="153.638" font-family="Arial, Helvetica, sans-serif" font-size="6.000" font-weight="400" fill="#1F2933" text-anchor="end">Decapsulation (cold)</text>
+<rect x="93.543" y="143.150" width="232.441" height="15.591" rx="3.000" fill="#F5F7FA" stroke="#CBD2D9" stroke-width="0.700"/>
+<rect x="93.543" y="143.150" width="196.459" height="15.591" rx="3.000" fill="#1769AA" stroke="#1769AA" stroke-width="0.000"/>
+<text x="99.213" y="153.638" font-family="Arial, Helvetica, sans-serif" font-size="5.600" font-weight="700" fill="#FFFFFF" text-anchor="start">Integrated 84.52%</text>
+<text x="307.993" y="153.638" font-family="Arial, Helvetica, sans-serif" font-size="5.500" font-weight="700" fill="#4B5563" text-anchor="middle">-15.48%</text>
 </svg>

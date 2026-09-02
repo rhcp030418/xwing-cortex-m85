@@ -1,9 +1,10 @@
-# Build the supplementary reproducibility archive in an ASCII-named ZIP.
+﻿# Build the supplementary reproducibility archive in an ASCII-named ZIP.
 $ErrorActionPreference = 'Stop'
 
 $paperRoot = if ($PSScriptRoot) { $PSScriptRoot } else { (Get-Location).Path }
 $topicRoot = Split-Path $paperRoot -Parent
 $harnessRoot = Join-Path $topicRoot 'measure-harness'
+$manuscriptRoot = Join-Path $paperRoot 'lncs_new_en'
 $tempRoot = [System.IO.Path]::GetFullPath([System.IO.Path]::GetTempPath()).TrimEnd('\')
 $stageRoot = Join-Path $tempRoot ('a-paper-artifact-' + [System.Guid]::NewGuid().ToString('N'))
 $verifyRoot = Join-Path $tempRoot ('a-paper-artifact-verify-' + [System.Guid]::NewGuid().ToString('N'))
@@ -151,7 +152,7 @@ function Protect-ArtifactAnonymity([string]$root) {
     else {
         Split-Path $env:USERPROFILE -Leaf
     }
-    $privateTokens = @($profileUser, $outerProject) |
+    $privateTokens = @($profileUser, $outerProject, 'rhcp030418', '박도윤') |
         Where-Object { -not [string]::IsNullOrWhiteSpace($_) }
     $textExtensions = [System.Collections.Generic.HashSet[string]]::new(
         [System.StringComparer]::OrdinalIgnoreCase
@@ -306,14 +307,23 @@ New-Item -ItemType Directory -Path $stageRoot | Out-Null
 New-Item -ItemType Directory -Path $verifyRoot | Out-Null
 try {
     Copy-ArtifactFile (Join-Path $paperRoot 'ARTIFACT_README.md') 'README.md'
-    Copy-ArtifactFile (Join-Path $paperRoot 'ko\main.tex') 'paper\ko\main.tex'
-    Copy-ArtifactFile (Join-Path $paperRoot 'ko\main.pdf') 'paper\ko\main.pdf'
-    Copy-ArtifactFile (Join-Path $paperRoot 'references.bib') 'paper\references.bib'
-    Copy-ArtifactFile (Join-Path $paperRoot 'build.ps1') 'paper\build.ps1'
-    Copy-ArtifactFile (Join-Path $paperRoot 'package_overleaf.ps1') 'paper\package_overleaf.ps1'
-    Copy-ArtifactFile (Join-Path $paperRoot 'package_artifact.ps1') 'paper\package_artifact.ps1'
-    Copy-ArtifactFile (Join-Path $paperRoot 'overleaf-upload.zip') 'paper\overleaf-upload.zip'
-    Copy-ArtifactFile (Join-Path $paperRoot 'README.md') 'paper\README.md'
+    foreach ($name in @(
+        'main.tex',
+        'main.pdf',
+        'references.bib',
+        'build_assets.py',
+        'llncs.cls',
+        'splncs04.bst',
+        'TRANSLATION_CRITERIA.md',
+        'README.md'
+    )) {
+        Copy-ArtifactFile (Join-Path $manuscriptRoot $name) (Join-Path 'paper\manuscript' $name)
+    }
+    $manuscriptStage = Join-Path $stageRoot 'paper\manuscript'
+    Copy-Item -LiteralPath (Join-Path $manuscriptRoot 'assets') `
+        -Destination $manuscriptStage -Recurse -Force
+    Copy-Item -LiteralPath (Join-Path $manuscriptRoot 'data') `
+        -Destination $manuscriptStage -Recurse -Force
     Copy-ArtifactFile (Join-Path $topicRoot '논문_데이터_표.md') 'paper\논문_데이터_표.md'
     Copy-ArtifactFile (Join-Path $topicRoot '분모_정의_통일.md') 'paper\분모_정의_통일.md'
     Copy-ArtifactFile (Join-Path $paperRoot '데이터_누적_검증대장.md') 'paper\데이터_누적_검증대장.md'
@@ -483,8 +493,9 @@ try {
         }
         $verifiedCount++
     }
-    $packedTex = Join-Path $verifyRoot 'paper\ko\main.tex'
-    $packedPdf = Join-Path $verifyRoot 'paper\ko\main.pdf'
+    $packedTex = Join-Path $verifyRoot 'paper\manuscript\main.tex'
+    $packedPdf = Join-Path $verifyRoot 'paper\manuscript\main.pdf'
+    $packedBib = Join-Path $verifyRoot 'paper\manuscript\references.bib'
     $packedData = Join-Path $verifyRoot 'paper\논문_데이터_표.md'
     $packedDenominatorPolicy = Join-Path $verifyRoot 'paper\분모_정의_통일.md'
     $packedHistory = Join-Path $verifyRoot 'paper\데이터_누적_검증대장.md'
@@ -492,12 +503,16 @@ try {
     $packedResourceAudit = Join-Path $verifyRoot 'paper\자원_비용_감사.md'
     $packedDenominatorCatalog = Join-Path $verifyRoot 'paper\분모_표준화_카탈로그.tsv'
     if ((Get-FileHash -Algorithm SHA256 -LiteralPath $packedTex).Hash -ne
-        (Get-FileHash -Algorithm SHA256 -LiteralPath (Join-Path $paperRoot 'ko\main.tex')).Hash) {
-        throw 'Artifact manuscript source is not the current canonical main.tex'
+        (Get-FileHash -Algorithm SHA256 -LiteralPath (Join-Path $manuscriptRoot 'main.tex')).Hash) {
+        throw 'Artifact manuscript source is not the current English main.tex'
     }
     if ((Get-FileHash -Algorithm SHA256 -LiteralPath $packedPdf).Hash -ne
-        (Get-FileHash -Algorithm SHA256 -LiteralPath (Join-Path $paperRoot 'ko\main.pdf')).Hash) {
-        throw 'Artifact manuscript PDF is not the current canonical main.pdf'
+        (Get-FileHash -Algorithm SHA256 -LiteralPath (Join-Path $manuscriptRoot 'main.pdf')).Hash) {
+        throw 'Artifact manuscript PDF is not the current English main.pdf'
+    }
+    if ((Get-FileHash -Algorithm SHA256 -LiteralPath $packedBib).Hash -ne
+        (Get-FileHash -Algorithm SHA256 -LiteralPath (Join-Path $manuscriptRoot 'references.bib')).Hash) {
+        throw 'Artifact manuscript bibliography is not the current English references.bib'
     }
     if ((Get-FileHash -Algorithm SHA256 -LiteralPath $packedData).Hash -ne
         (Get-FileHash -Algorithm SHA256 -LiteralPath (Join-Path $topicRoot '논문_데이터_표.md')).Hash) {

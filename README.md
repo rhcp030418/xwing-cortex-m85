@@ -1,5 +1,12 @@
 # X-Wing on Cortex-M85: Architecture-Aware Integration and End-to-End Evaluation
 
+> [!IMPORTANT]
+> **Artifact evaluators:** start with the concise English
+> [evaluation guide](EVALUATION.md). It links the current 17-page English
+> manuscript, the primary same-ELF result, frozen evidence, fast checks, and
+> hardware requirements. The Korean material below is the detailed research
+> ledger and includes intermediate historical snapshots.
+
 > 저자: 박도윤 (GitHub: [@rhcp030418](https://github.com/rhcp030418))  
 > 상태 기준: 2026-08-31, 한국어 LNCS 원고 v32  
 > 성격: 연구 노트, 생성기, 실보드 측정 하네스, 원시 로그, 동결 아티팩트와 논문 원고를 함께 보관한 연구 코퍼스  

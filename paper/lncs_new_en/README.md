@@ -1,8 +1,8 @@
-# English LNCS draft
+# English LNCS manuscript
 
-This directory contains the English draft for the new LNCS paper structure.
-It is not the canonical manuscript; substantive edits should first be checked
-against `../ko/main.tex` and the evidence listed in `../README.md`.
+This directory contains the current English manuscript and its publication
+assets. The repository [evaluation guide](../../EVALUATION.md) maps its claims
+to frozen board evidence and states the reproduction limits.
 
 ## Contents
 
@@ -23,5 +23,6 @@ xelatex main.tex
 xelatex main.tex
 ```
 
-The author and institute fields are placeholders until submission metadata is
-finalized.
+The PDF author and institute fields are intentionally anonymous. The public
+GitHub repository itself is not anonymous because its owner and history identify
+the author.
